@@ -1,0 +1,1575 @@
+app:
+  description: 五大联赛赛前预测：采集赛程与积分榜，逐场调用 LLM 生成胜平负概率，并通过 GitHub Contents API 直接写入 data/matches 目录。
+  icon: ''
+  icon_background: '#E8F6EE'
+  mode: workflow
+  name: FootballCoin 五大联赛预测
+  use_icon_as_answer_icon: false
+dependencies: []
+kind: app
+version: 0.7.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: football-data.org 的 X-Auth-Token
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f01
+    name: FD_TOKEN
+    selector:
+    - env
+    - FD_TOKEN
+    value: ''
+    value_type: secret
+  - description: GitHub 仓库 owner
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f02
+    name: GH_OWNER
+    selector:
+    - env
+    - GH_OWNER
+    value: ''
+    value_type: string
+  - description: GitHub 仓库名
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f03
+    name: GH_REPO
+    selector:
+    - env
+    - GH_REPO
+    value: ''
+    value_type: string
+  - description: 目标分支
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f04
+    name: GH_BRANCH
+    selector:
+    - env
+    - GH_BRANCH
+    value: main
+    value_type: string
+  - description: fine-grained PAT，需要目标仓库 Contents 读写权限
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f05
+    name: GH_TOKEN
+    selector:
+    - env
+    - GH_TOKEN
+    value: ''
+    value_type: secret
+  - description: 写入数据文件 model 字段的模型名
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f06
+    name: MODEL_NAME
+    selector:
+    - env
+    - MODEL_NAME
+    value: gpt-4o-mini
+    value_type: string
+  - description: 是否把生成的数据同步到 GitHub；填 false 时只输出文件内容，便于本地测试
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f07
+    name: SYNC_TO_GITHUB
+    selector:
+    - env
+    - SYNC_TO_GITHUB
+    value: 'true'
+    value_type: string
+  features:
+    file_upload:
+      allowed_file_extensions: []
+      allowed_file_types: []
+      allowed_file_upload_methods: []
+      enabled: false
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInLoop: false
+        sourceType: start
+        targetType: code
+      id: start-source-code_leagues-target
+      source: start
+      sourceHandle: source
+      target: code_leagues
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_leagues-source-iter_leagues-target
+      source: code_leagues
+      sourceHandle: source
+      target: iter_leagues
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_leagues-source-code_normalize-target
+      source: iter_leagues
+      sourceHandle: source
+      target: code_normalize
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_normalize-source-iter_matches-target
+      source: code_normalize
+      sourceHandle: source
+      target: iter_matches
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_matches-source-code_group-target
+      source: iter_matches
+      sourceHandle: source
+      target: code_group
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_group-source-iter_dates-target
+      source: code_group
+      sourceHandle: source
+      target: iter_dates
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_dates-source-code_summary-target
+      source: iter_dates
+      sourceHandle: source
+      target: code_summary
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: code_summary-source-end-target
+      source: code_summary
+      sourceHandle: source
+      target: end
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_leagues
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_leagues_start-source-http_matches-target
+      source: iter_leagues_start
+      sourceHandle: source
+      target: http_matches
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_leagues
+        sourceType: http-request
+        targetType: http-request
+      id: http_matches-source-http_standings-target
+      source: http_matches
+      sourceHandle: source
+      target: http_standings
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_leagues
+        sourceType: http-request
+        targetType: code
+      id: http_standings-source-code_merge_league-target
+      source: http_standings
+      sourceHandle: source
+      target: code_merge_league
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_matches
+        sourceType: iteration-start
+        targetType: code
+      id: iter_matches_start-source-code_prompt-target
+      source: iter_matches_start
+      sourceHandle: source
+      target: code_prompt
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_matches
+        sourceType: code
+        targetType: llm
+      id: code_prompt-source-llm_predict-target
+      source: code_prompt
+      sourceHandle: source
+      target: llm_predict
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_matches
+        sourceType: llm
+        targetType: code
+      id: llm_predict-source-code_validate-target
+      source: llm_predict
+      sourceHandle: source
+      target: code_validate
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: iteration-start
+        targetType: code
+      id: iter_dates_start-source-code_build-target
+      source: iter_dates_start
+      sourceHandle: source
+      target: code_build
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: code
+        targetType: if-else
+      id: code_build-source-if_sync-target
+      source: code_build
+      sourceHandle: source
+      target: if_sync
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: if-else
+        targetType: http-request
+      id: if_sync-true-http_list-target
+      source: if_sync
+      sourceHandle: 'true'
+      target: http_list
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: if-else
+        targetType: code
+      id: if_sync-false-code_skip_sync-target
+      source: if_sync
+      sourceHandle: 'false'
+      target: code_skip_sync
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: http-request
+        targetType: code
+      id: http_list-source-code_sha-target
+      source: http_list
+      sourceHandle: source
+      target: code_sha
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: code
+        targetType: if-else
+      id: code_sha-source-if_sha-target
+      source: code_sha
+      sourceHandle: source
+      target: if_sha
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: if-else
+        targetType: http-request
+      id: if_sha-true-http_put_update-target
+      source: if_sha
+      sourceHandle: 'true'
+      target: http_put_update
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: if-else
+        targetType: http-request
+      id: if_sha-false-http_put_create-target
+      source: if_sha
+      sourceHandle: 'false'
+      target: http_put_create
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    nodes:
+    - data:
+        desc: ''
+        selected: false
+        title: 开始
+        type: start
+        variables: []
+      height: 54
+      id: start
+      position:
+        x: 40
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: |
+          def main() -> dict:
+              return {"result": ["PL", "PD", "SA", "BL1", "FL1"]}
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: array[string]
+        selected: false
+        title: 联赛列表
+        type: code
+        variables: []
+      height: 90
+      id: code_leagues
+      position:
+        x: 340
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[string]
+        iterator_selector:
+        - code_leagues
+        - result
+        output_selector:
+        - code_merge_league
+        - result
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_leagues_start
+        title: 联赛迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_leagues
+      position:
+        x: 640
+        y: 250
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_leagues_start
+      parentId: iter_leagues
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          X-Auth-Token: {{#env.FD_TOKEN#}}
+          Accept: application/json
+        isInIteration: true
+        iteration_id: iter_leagues
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 拉赛程
+        type: http-request
+        url: 'https://api.football-data.org/v4/competitions/{{#iter_leagues.item#}}/matches'
+        variables: []
+      height: 113
+      id: http_matches
+      parentId: iter_leagues
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          X-Auth-Token: {{#env.FD_TOKEN#}}
+          Accept: application/json
+        isInIteration: true
+        iteration_id: iter_leagues
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 拉积分榜
+        type: http-request
+        url: 'https://api.football-data.org/v4/competitions/{{#iter_leagues.item#}}/standings'
+        variables: []
+      height: 113
+      id: http_standings
+      parentId: iter_leagues
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+
+          def _text(value):
+              if isinstance(value, str):
+                  return value
+              return json.dumps(value, ensure_ascii=False)
+
+
+          def main(code: str, fixtures, standings) -> dict:
+              return {
+                  "result": {
+                      "code": code,
+                      "fixtures": _text(fixtures),
+                      "standings": _text(standings),
+                  }
+              }
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_leagues
+        outputs:
+          result:
+            children: null
+            type: object
+        selected: false
+        title: 合并联赛数据
+        type: code
+        variables:
+        - value_selector:
+          - iter_leagues
+          - item
+          variable: code
+        - value_selector:
+          - http_matches
+          - body
+          variable: fixtures
+        - value_selector:
+          - http_standings
+          - body
+          variable: standings
+      height: 90
+      id: code_merge_league
+      parentId: iter_leagues
+      position:
+        x: 736
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+
+          LEAGUE_NAMES = {
+              "PL": "英超",
+              "PD": "西甲",
+              "SA": "意甲",
+              "BL1": "德甲",
+              "FL1": "法甲",
+          }
+
+          TEAM_TLA = {
+              "ARS": "阿森纳", "AVL": "阿斯顿维拉", "BOU": "伯恩茅斯", "BRE": "布伦特福德",
+              "BHA": "布莱顿", "CHE": "切尔西", "CRY": "水晶宫", "EVE": "埃弗顿",
+              "FUL": "富勒姆", "LEE": "利兹联", "LIV": "利物浦", "MCI": "曼城",
+              "MUN": "曼联", "NEW": "纽卡斯尔联", "NFO": "诺丁汉森林", "SUN": "桑德兰",
+              "TOT": "热刺", "WHU": "西汉姆联", "WOL": "狼队", "BUR": "伯恩利",
+              "ALA": "阿拉维斯", "ATH": "毕尔巴鄂竞技", "ATM": "马德里竞技", "BAR": "巴塞罗那",
+              "BET": "皇家贝蒂斯", "CEL": "塞尔塔", "ESP": "西班牙人", "GET": "赫塔菲",
+              "GIR": "赫罗纳", "LEG": "莱加内斯", "MLL": "马略卡", "OSA": "奥萨苏纳",
+              "RAY": "巴列卡诺", "RMA": "皇家马德里", "RSO": "皇家社会", "SEV": "塞维利亚",
+              "VAL": "瓦伦西亚", "VIL": "比利亚雷亚尔", "VLL": "巴拉多利德", "LPA": "拉斯帕尔马斯",
+              "ATA": "亚特兰大", "BOL": "博洛尼亚", "CAG": "卡利亚里", "COM": "科莫",
+              "EMP": "恩波利", "FIO": "佛罗伦萨", "GEN": "热那亚", "VER": "维罗纳",
+              "INT": "国际米兰", "JUV": "尤文图斯", "LAZ": "拉齐奥", "LEC": "莱切",
+              "MIL": "AC米兰", "MON": "蒙扎", "NAP": "那不勒斯", "PAR": "帕尔马",
+              "ROM": "罗马", "TOR": "都灵", "UDI": "乌迪内斯", "VEN": "威尼斯",
+              "B04": "勒沃库森", "BAY": "拜仁慕尼黑", "BOC": "波鸿", "BMG": "门兴格拉德巴赫",
+              "BVB": "多特蒙德", "FCA": "奥格斯堡", "FCU": "柏林联合", "M05": "美因茨",
+              "HDH": "海登海姆", "KIE": "荷尔斯泰因基尔", "RBL": "莱比锡红牛", "SCF": "弗赖堡",
+              "SGE": "法兰克福", "STP": "圣保利", "SVW": "云达不莱梅", "TSG": "霍芬海姆",
+              "VFB": "斯图加特", "WOB": "沃尔夫斯堡",
+              "AJA": "欧塞尔", "SCO": "昂热", "ASM": "摩纳哥", "ASSE": "圣埃蒂安",
+              "FCN": "南特", "HAC": "勒阿弗尔", "LIL": "里尔", "MHSC": "蒙彼利埃",
+              "NIC": "尼斯", "OL": "里昂", "OM": "马赛", "PSG": "巴黎圣日耳曼",
+              "RCL": "朗斯", "RCSA": "斯特拉斯堡", "SDR": "兰斯", "SB29": "布雷斯特",
+              "SRFC": "雷恩", "TFC": "图卢兹",
+          }
+
+
+          def _parse(raw):
+              if isinstance(raw, (dict, list)):
+                  return raw
+              if not raw:
+                  return {}
+              try:
+                  return json.loads(raw)
+              except (TypeError, ValueError):
+                  return {}
+
+
+          def _team_name(team):
+              team = team or {}
+              tla = team.get("tla")
+              if tla and tla in TEAM_TLA:
+                  return TEAM_TLA[tla]
+              return team.get("shortName") or team.get("name") or "未知球队"
+
+
+          def _code(team):
+              team = team or {}
+              tla = team.get("tla")
+              if tla:
+                  return str(tla).upper()
+              name = team.get("shortName") or team.get("name") or "XXX"
+              letters = "".join(ch for ch in name if ch.isalnum()).upper()
+              return letters[:3] or "XXX"
+
+
+          def _table_map(standings):
+              result = {}
+              for block in (standings or {}).get("standings") or []:
+                  if block.get("type") != "TOTAL":
+                      continue
+                  for row in block.get("table") or []:
+                      team_id = (row.get("team") or {}).get("id")
+                      if team_id is not None:
+                          result[team_id] = row
+              return result
+
+
+          def _forms(matches):
+              forms = {}
+              ordered = sorted(matches, key=lambda item: item.get("utcDate") or "", reverse=True)
+              for match in ordered:
+                  full = ((match.get("score") or {}).get("fullTime") or {})
+                  home_goals, away_goals = full.get("home"), full.get("away")
+                  if home_goals is None or away_goals is None:
+                      continue
+                  home_id = (match.get("homeTeam") or {}).get("id")
+                  away_id = (match.get("awayTeam") or {}).get("id")
+                  if home_id is not None:
+                      forms.setdefault(home_id, []).append(
+                          "W" if home_goals > away_goals else "D" if home_goals == away_goals else "L"
+                      )
+                  if away_id is not None:
+                      forms.setdefault(away_id, []).append(
+                          "W" if away_goals > home_goals else "D" if away_goals == home_goals else "L"
+                      )
+              return {key: value[:5] for key, value in forms.items()}
+
+
+          def _team_entry(team, row, form):
+              return {
+                  "name": _team_name(team),
+                  "nameEn": team.get("name") or "Unknown",
+                  "rank": int(row.get("position") or 20),
+                  "form": form,
+                  "goalsFor": int(row.get("goalsFor") or 0),
+                  "goalsAgainst": int(row.get("goalsAgainst") or 0),
+              }
+
+
+          def main(league_results: list) -> dict:
+              current = datetime.now(timezone.utc)
+              deadline = current + timedelta(days=7)
+              flat = []
+
+              for item in league_results or []:
+                  if not isinstance(item, dict):
+                      continue
+                  code = item.get("code")
+                  league_name = LEAGUE_NAMES.get(code, code or "未知联赛")
+                  fixtures = _parse(item.get("fixtures"))
+                  standings = _parse(item.get("standings"))
+                  raw_matches = fixtures.get("matches") or []
+                  if not raw_matches:
+                      continue
+
+                  table = _table_map(standings)
+                  finished = [m for m in raw_matches if m.get("status") == "FINISHED"]
+                  forms = _forms(finished)
+
+                  for match in raw_matches:
+                      if match.get("status") not in ("SCHEDULED", "TIMED"):
+                          continue
+                      try:
+                          kickoff = datetime.fromisoformat(str(match.get("utcDate")).replace("Z", "+00:00"))
+                      except (TypeError, ValueError):
+                          continue
+                      if kickoff.tzinfo is None:
+                          kickoff = kickoff.replace(tzinfo=timezone.utc)
+                      if kickoff < current or kickoff > deadline:
+                          continue
+
+                      bj_date = kickoff.astimezone(BJ).strftime("%Y-%m-%d")
+                      home = match.get("homeTeam") or {}
+                      away = match.get("awayTeam") or {}
+
+                      flat.append({
+                          "id": f"{code}-{bj_date}-{_code(home)}-{_code(away)}",
+                          "league": code,
+                          "leagueName": league_name,
+                          "kickoff": kickoff.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                          "status": "scheduled",
+                          "matchday": match.get("matchday"),
+                          "venue": match.get("venue") or "",
+                          "home": _team_entry(home, table.get(home.get("id")) or {}, forms.get(home.get("id"), [])),
+                          "away": _team_entry(away, table.get(away.get("id")) or {}, forms.get(away.get("id"), [])),
+                          "prediction": None,
+                          "degraded": False,
+                          "result": None,
+                      })
+
+              flat.sort(key=lambda item: item["kickoff"])
+              return {"matches": flat}
+        code_language: python3
+        desc: ''
+        outputs:
+          matches:
+            children: null
+            type: array[object]
+        selected: false
+        title: 清洗与筛选
+        type: code
+        variables:
+        - value_selector:
+          - iter_leagues
+          - output
+          variable: league_results
+      height: 90
+      id: code_normalize
+      position:
+        x: 1680
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: true
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_normalize
+        - matches
+        output_selector:
+        - code_validate
+        - match
+        output_type: array[object]
+        parallel_nums: 3
+        selected: false
+        start_node_id: iter_matches_start
+        title: 比赛迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_matches
+      position:
+        x: 1980
+        y: 250
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_matches_start
+      parentId: iter_matches
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        code: |
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+
+
+          def main(match: dict) -> dict:
+              home = match.get("home") or {}
+              away = match.get("away") or {}
+              kickoff = match.get("kickoff")
+              try:
+                  bj = datetime.fromisoformat(str(kickoff).replace("Z", "+00:00")).astimezone(BJ).strftime("%Y-%m-%d %H:%M")
+              except (TypeError, ValueError):
+                  bj = str(kickoff)
+
+              form_home = " ".join(home.get("form") or []) or "暂无"
+              form_away = " ".join(away.get("form") or []) or "暂无"
+
+              text = (
+                  f"比赛：{home.get('name')}（主） vs {away.get('name')}（客）\n"
+                  f"联赛：{match.get('leagueName')}（{match.get('league')}），第 {match.get('matchday') or '-'} 轮\n"
+                  f"开赛：{bj}（北京时间），场地：{match.get('venue') or '未提供'}\n"
+                  f"积分排名：主队第 {home.get('rank')}，客队第 {away.get('rank')}\n"
+                  f"近 5 场：主队 {form_home}，客队 {form_away}\n"
+                  f"赛季进失球：主队 {home.get('goalsFor')}/{home.get('goalsAgainst')}，客队 {away.get('goalsFor')}/{away.get('goalsAgainst')}\n"
+                  f"其他信息：未提供"
+              )
+              return {"result": text}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_matches
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 生成比赛提示词
+        type: code
+        variables:
+        - value_selector:
+          - iter_matches
+          - item
+          variable: match
+      height: 90
+      id: code_prompt
+      parentId: iter_matches
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: ''
+        default_value:
+        - key: text
+          type: string
+          value: ''
+        error_strategy: default-value
+        isInIteration: true
+        iteration_id: iter_matches
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: gpt-4o-mini
+          provider: langgenius/openai/openai
+        prompt_template:
+        - id: 5b0f3c2a-8d61-4a7e-9c15-6f2b7e8a9d01
+          role: system
+          text: |
+            你是足球赛前预测分析师。你会收到一场比赛的结构化事实，请输出一份可解释的赛前预测。
+
+            必须遵守：
+            1. 只输出一个 JSON 对象，不要 Markdown 代码块，不要任何解释性文字。
+            2. prob 的 home/draw/away 必须是 1 到 98 的整数，三者之和必须等于 100。
+            3. score 的主客进球数必须是 0 到 9 的整数，且要与 prob 的倾向一致。
+            4. confidence 是 0 到 100 的整数；只有在数据充分、双方实力差距明显时才高于 80。
+            5. reasons 输出 2 到 4 条，每条不超过 40 字，必须引用给定事实，不得编造未提供的伤停、转会、天气、裁判信息。
+            6. factors 输出 1 到 5 条关键词短语，每条不超过 12 字。
+            7. risk 用一句话说明最大不确定性，不超过 60 字。
+            8. 如果关键数据缺失（例如排名缺失、近期比赛不足 3 场），必须在 risk 中说明，并把 confidence 控制在 55 以下。
+            9. 使用简体中文，球队名必须与输入完全一致，不要改写或翻译。
+
+            输出结构（严格按此键名）：
+            {
+              "prob": {"home": 0, "draw": 0, "away": 0},
+              "score": {"home": 0, "away": 0},
+              "confidence": 0,
+              "pick": "home|draw|away",
+              "reasons": ["..."],
+              "factors": ["..."],
+              "risk": "..."
+            }
+        - id: 5b0f3c2a-8d61-4a7e-9c15-6f2b7e8a9d02
+          role: user
+          text: '{{#code_prompt.result#}}'
+        selected: false
+        title: 单场预测
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 98
+      id: llm_predict
+      parentId: iter_matches
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+          KEYS = ("home", "draw", "away")
+
+
+          def _clamp(value, lo, hi, default):
+              try:
+                  return max(lo, min(hi, int(round(float(value)))))
+              except (TypeError, ValueError):
+                  return default
+
+
+          def _parse_match(match):
+              if isinstance(match, dict):
+                  return dict(match)
+              try:
+                  return json.loads(match)
+              except (TypeError, ValueError):
+                  return {}
+
+
+          def _normalize_prob(raw):
+              if not isinstance(raw, dict):
+                  return None
+              if not all(isinstance(raw.get(key), (int, float)) for key in KEYS):
+                  return None
+              total = sum(float(raw[key]) for key in KEYS)
+              if total <= 0:
+                  return None
+              prob = {key: _clamp(float(raw[key]) / total * 100, 1, 98, 1) for key in KEYS}
+              diff = 100 - sum(prob.values())
+              top = max(prob, key=prob.get)
+              prob[top] += diff
+              return prob
+
+
+          def _fallback(match):
+              home_rank = _clamp((match.get("home") or {}).get("rank"), 1, 40, 20)
+              away_rank = _clamp((match.get("away") or {}).get("rank"), 1, 40, 20)
+              home = max(15, min(70, int(round(45 + (away_rank - home_rank) * 1.2))))
+              draw = 27
+              away = max(1, 100 - home - draw)
+              prob = {"home": home, "draw": draw, "away": away}
+              return {
+                  "prob": prob,
+                  "score": {"home": 1, "away": 1},
+                  "confidence": 30,
+                  "pick": max(prob, key=prob.get),
+                  "reasons": [
+                      "模型未返回有效结果，使用排名先验估计",
+                      "该结果仅基于积分榜排名差，参考价值有限",
+                  ],
+                  "factors": ["排名差"],
+                  "risk": "该场为兜底结果，仅供参考",
+              }
+
+
+          def main(raw_text: str, match) -> dict:
+              item = _parse_match(match)
+              merged = dict(item)
+
+              try:
+                  data = json.loads(raw_text)
+              except (TypeError, ValueError):
+                  merged["prediction"] = _fallback(item)
+                  merged["degraded"] = True
+                  return {"match": merged}
+
+              prob = _normalize_prob(data.get("prob"))
+              if prob is None:
+                  merged["prediction"] = _fallback(item)
+                  merged["degraded"] = True
+                  return {"match": merged}
+
+              score = data.get("score") or {}
+              reasons = [str(text)[:40] for text in (data.get("reasons") or []) if str(text).strip()][:4]
+              if len(reasons) < 2:
+                  reasons.append("综合双方近期状态与排名给出判断")
+              factors = [str(text)[:12] for text in (data.get("factors") or []) if str(text).strip()][:5]
+
+              merged["prediction"] = {
+                  "prob": prob,
+                  "score": {
+                      "home": _clamp(score.get("home"), 0, 9, 1),
+                      "away": _clamp(score.get("away"), 0, 9, 1),
+                  },
+                  "confidence": _clamp(data.get("confidence"), 0, 100, 50),
+                  "pick": max(prob, key=prob.get),
+                  "reasons": reasons,
+                  "factors": factors,
+                  "risk": str(data.get("risk") or "")[:60],
+              }
+              merged["degraded"] = False
+              return {"match": merged}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_matches
+        outputs:
+          match:
+            children: null
+            type: object
+        selected: false
+        title: 校验与兜底
+        type: code
+        variables:
+        - value_selector:
+          - llm_predict
+          - text
+          variable: raw_text
+        - value_selector:
+          - iter_matches
+          - item
+          variable: match
+      height: 90
+      id: code_validate
+      parentId: iter_matches
+      position:
+        x: 736
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+
+
+          def main(matches: list) -> dict:
+              days = {}
+              for match in matches or []:
+                  try:
+                      kickoff = datetime.fromisoformat(str(match.get("kickoff")).replace("Z", "+00:00"))
+                  except (TypeError, ValueError):
+                      continue
+                  date = kickoff.astimezone(BJ).strftime("%Y-%m-%d")
+                  days.setdefault(date, []).append(match)
+
+              result = []
+              for date in sorted(days.keys()):
+                  items = sorted(days[date], key=lambda item: item["kickoff"])
+                  result.append({
+                      "date": date,
+                      "matches": items,
+                      "degradedCount": sum(1 for item in items if item.get("degraded")),
+                  })
+              return {"days": result}
+        code_language: python3
+        desc: ''
+        outputs:
+          days:
+            children: null
+            type: array[object]
+        selected: false
+        title: 按日期分组
+        type: code
+        variables:
+        - value_selector:
+          - iter_matches
+          - output
+          variable: matches
+      height: 90
+      id: code_group
+      position:
+        x: 3000
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: terminated
+        height: 300
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_group
+        - days
+        output_selector:
+        - code_build
+        - file
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_dates_start
+        title: 日期迭代
+        type: iteration
+        width: 1600
+      height: 300
+      id: iter_dates
+      position:
+        x: 3300
+        y: 200
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1600
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_dates_start
+      parentId: iter_dates
+      position:
+        x: 24
+        y: 120
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        code: |
+          import base64
+          import json
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+
+
+          def main(day: dict, model: str) -> dict:
+              date = day.get("date")
+              matches = day.get("matches") or []
+              payload = {
+                  "schemaVersion": 1,
+                  "date": date,
+                  "generatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
+                  "source": "football-data.org",
+                  "model": model,
+                  "matchCount": len(matches),
+                  "degradedCount": sum(1 for item in matches if item.get("degraded")),
+                  "matches": matches,
+              }
+              text = json.dumps(payload, ensure_ascii=False, indent=2)
+              byte_size = len(text.encode("utf-8"))
+              return {
+                  "date": date,
+                  "content": text,
+                  "file": {
+                      "date": date,
+                      "content": text,
+                      "byteSize": byte_size,
+                  },
+                  "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                  "commitMessage": f"data: {date} 预测（{len(matches)} 场）",
+                  "byteSize": byte_size,
+              }
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_dates
+        outputs:
+          date:
+            children: null
+            type: string
+          content:
+            children: null
+            type: string
+          file:
+            children: null
+            type: object
+          contentBase64:
+            children: null
+            type: string
+          commitMessage:
+            children: null
+            type: string
+          byteSize:
+            children: null
+            type: number
+        selected: false
+        title: 组装数据文件
+        type: code
+        variables:
+        - value_selector:
+          - iter_dates
+          - item
+          variable: day
+        - value_selector:
+          - env
+          - MODEL_NAME
+          variable: model
+      height: 90
+      id: code_build
+      parentId: iter_dates
+      position:
+        x: 128
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: 7c3a1e5d-9b24-4f86-a1d7-2e5c8b9f4a02
+            value: 'true'
+            varType: string
+            variable_selector:
+            - env
+            - SYNC_TO_GITHUB
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_dates
+        selected: false
+        title: 是否同步到 GitHub
+        type: if-else
+      height: 90
+      id: if_sync
+      parentId: iter_dates
+      position:
+        x: 432
+        y: 340
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          def main() -> dict:
+              return {"result": "skipped"}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_dates
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 跳过同步
+        type: code
+        variables: []
+      height: 90
+      id: code_skip_sync
+      parentId: iter_dates
+      position:
+        x: 736
+        y: 340
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+        isInIteration: true
+        iteration_id: iter_dates
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 读取目录列表
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches?ref={{#env.GH_BRANCH#}}'
+        variables: []
+      height: 113
+      id: http_list
+      parentId: iter_dates
+      position:
+        x: 432
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+
+          def main(body, date: str) -> dict:
+              if isinstance(body, list):
+                  data = body
+              else:
+                  try:
+                      data = json.loads(body or "[]")
+                  except (TypeError, ValueError):
+                      data = []
+              if not isinstance(data, list):
+                  data = []
+              target = f"{date}.json"
+              for item in data:
+                  if isinstance(item, dict) and item.get("name") == target:
+                      return {"sha": str(item.get("sha") or "")}
+              return {"sha": ""}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_dates
+        outputs:
+          sha:
+            children: null
+            type: string
+        selected: false
+        title: 解析文件 sha
+        type: code
+        variables:
+        - value_selector:
+          - http_list
+          - body
+          variable: body
+        - value_selector:
+          - code_build
+          - date
+          variable: date
+      height: 90
+      id: code_sha
+      parentId: iter_dates
+      position:
+        x: 736
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 7c3a1e5d-9b24-4f86-a1d7-2e5c8b9f4a01
+            value: ''
+            varType: string
+            variable_selector:
+            - code_sha
+            - sha
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_dates
+        selected: false
+        title: 文件是否已存在
+        type: if-else
+      height: 90
+      id: if_sha
+      parentId: iter_dates
+      position:
+        x: 1040
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: '{"message": "{{#code_build.commitMessage#}}", "content": "{{#code_build.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}", "sha": "{{#code_sha.sha#}}"}'
+          type: json
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          Content-Type: application/json
+        isInIteration: true
+        iteration_id: iter_dates
+        method: put
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 覆盖写入
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches/{{#code_build.date#}}.json'
+        variables: []
+      height: 113
+      id: http_put_update
+      parentId: iter_dates
+      position:
+        x: 1344
+        y: 40
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: '{"message": "{{#code_build.commitMessage#}}", "content": "{{#code_build.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}"}'
+          type: json
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          Content-Type: application/json
+        isInIteration: true
+        iteration_id: iter_dates
+        method: put
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 新建写入
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches/{{#code_build.date#}}.json'
+        variables: []
+      height: 113
+      id: http_put_create
+      parentId: iter_dates
+      position:
+        x: 1344
+        y: 200
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          def main(files: list, sync: str) -> dict:
+              items = files or []
+              count = len(items)
+              if str(sync) == "true":
+                  summary = f"已同步 {count} 个日期文件到 GitHub"
+              else:
+                  summary = f"已生成 {count} 个日期文件，未同步 GitHub，可从 files 复制"
+              return {"result": summary, "files": items}
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+          files:
+            children: null
+            type: array[object]
+        selected: false
+        title: 汇总
+        type: code
+        variables:
+        - value_selector:
+          - iter_dates
+          - output
+          variable: files
+        - value_selector:
+          - env
+          - SYNC_TO_GITHUB
+          variable: sync
+      height: 90
+      id: code_summary
+      position:
+        x: 4960
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        outputs:
+        - value_selector:
+          - code_summary
+          - result
+          value_type: string
+          variable: summary
+        - value_selector:
+          - code_summary
+          - files
+          value_type: array[object]
+          variable: files
+        selected: false
+        title: 结束
+        type: end
+      height: 90
+      id: end
+      position:
+        x: 5260
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244

@@ -1,0 +1,14 @@
+node_modules/
+web/node_modules/
+web/dist/
+web/public/data/
+data/index.json
+data/stats.json
+__pycache__/
+*.pyc
+.screenshots/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
