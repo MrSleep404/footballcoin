@@ -1389,27 +1389,24 @@ workflow:
                           scores = _split(game.get("score"))
                           if not scores:
                               continue
-                          if game.get("lowIsHome"):
-                              item = {
-                                  "date": game.get("date"),
-                                  "home": game.get("home"),
-                                  "away": game.get("away"),
-                                  "score": f"{scores[0]}-{scores[1]}",
-                              }
-                          else:
-                              item = {
-                                  "date": game.get("date"),
-                                  "home": game.get("away"),
-                                  "away": game.get("home"),
-                                  "score": f"{scores[1]}-{scores[0]}",
-                              }
+                          # last 保留真实主客场与真实比分，不做视角换算
+                          item = {
+                              "date": game.get("date"),
+                              "home": game.get("home"),
+                              "away": game.get("away"),
+                              "score": f"{scores[0]}-{scores[1]}",
+                          }
                           if (item["date"], item["score"]) in known:
                               continue
-                          home_goals, away_goals = _split(item["score"])
+                          # 统计口径以小编号球队为主视角，用 lowIsHome 校正胜负归属
+                          home_goals, away_goals = scores
+                          low_goals, high_goals = (
+                              (home_goals, away_goals) if game.get("lowIsHome") else (away_goals, home_goals)
+                          )
                           entry["played"] = int(entry.get("played") or 0) + 1
-                          if home_goals == away_goals:
+                          if low_goals == high_goals:
                               entry["draws"] = int(entry.get("draws") or 0) + 1
-                          elif home_goals > away_goals:
+                          elif low_goals > high_goals:
                               entry["homeWins"] = int(entry.get("homeWins") or 0) + 1
                           else:
                               entry["awayWins"] = int(entry.get("awayWins") or 0) + 1
@@ -1706,30 +1703,23 @@ workflow:
 
 
           def _h2h_cached(cache, home_id, away_id):
-              # data/h2h.json 以「较小编号-较大编号」为键，统计口径同样以小编号球队为主视角
+              # 缓存键为「较小编号-较大编号」；统计口径以小编号球队为主视角，
+              # 但 last 保存的是真实主客场与真实比分，任何情况下都原样透传。
               if not cache or home_id is None or away_id is None:
                   return None
               low, high = sorted([home_id, away_id])
               entry = cache.get(f"{low}-{high}")
               if not isinstance(entry, dict) or not entry.get("played"):
                   return None
+              last = entry.get("last") or []
               if home_id == low:
                   return {
                       "played": int(entry.get("played") or 0),
                       "homeWins": int(entry.get("homeWins") or 0),
                       "draws": int(entry.get("draws") or 0),
                       "awayWins": int(entry.get("awayWins") or 0),
-                      "last": entry.get("last") or [],
+                      "last": last,
                   }
-              last = []
-              for item in entry.get("last") or []:
-                  score = str(item.get("score") or "")
-                  last.append({
-                      "date": item.get("date"),
-                      "home": item.get("away"),
-                      "away": item.get("home"),
-                      "score": "-".join(reversed(score.split("-"))) if "-" in score else score,
-                  })
               return {
                   "played": int(entry.get("played") or 0),
                   "homeWins": int(entry.get("awayWins") or 0),

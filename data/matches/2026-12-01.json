@@ -59,9 +59,9 @@
           },
           {
             "date": "2025-09-14",
-            "home": "Lecce",
-            "away": "Atalanta",
-            "score": "1-4"
+            "home": "Atalanta",
+            "away": "Lecce",
+            "score": "4-1"
           }
         ]
       },
@@ -154,9 +154,9 @@
         "last": [
           {
             "date": "2026-05-24",
-            "home": "Cagliari",
-            "away": "Milan",
-            "score": "2-1"
+            "home": "Milan",
+            "away": "Cagliari",
+            "score": "1-2"
           },
           {
             "date": "2026-01-02",
@@ -264,22 +264,28 @@
         "goalsAgainst": 21
       },
       "h2h": {
-        "played": 2,
-        "homeWins": 1,
+        "played": 3,
+        "homeWins": 3,
         "draws": 0,
-        "awayWins": 1,
+        "awayWins": 0,
         "last": [
           {
-            "date": "2026-03-21",
-            "home": "Espanyol",
+            "date": "2026-10-10",
+            "home": "Barça",
             "away": "Getafe",
-            "score": "1-2"
+            "score": "3-0"
           },
           {
-            "date": "2025-12-13",
-            "home": "Espanyol",
+            "date": "2026-04-25",
+            "home": "Getafe",
+            "away": "Barça",
+            "score": "0-2"
+          },
+          {
+            "date": "2025-09-21",
+            "home": "Barça",
             "away": "Getafe",
-            "score": "1-0"
+            "score": "3-0"
           }
         ]
       },
