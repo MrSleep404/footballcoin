@@ -53,6 +53,7 @@ const groups = computed<Group[]>(() => {
 
 const todayAvailable = computed(() => index.value?.dates.includes(bjToday()) ?? false);
 const shownCount = computed(() => groups.value.reduce((total, group) => total + group.matches.length, 0));
+const dayLeagues = computed(() => new Set((day.value?.matches ?? []).map((item) => item.league)).size);
 
 async function loadDay() {
   if (!date.value) return;
@@ -183,7 +184,7 @@ onUnmounted(() => {
         </div>
         <div class="stat">
           <span class="k">联赛</span>
-          <span class="v numeric">{{ index?.leagues.length ?? 6 }}</span>
+          <span class="v numeric">{{ dayLeagues }}</span>
         </div>
       </div>
     </section>
