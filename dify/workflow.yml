@@ -367,9 +367,53 @@ workflow:
         isInLoop: false
         sourceType: iteration
         targetType: code
-      id: iter_matches-source-code_group-target
+      id: iter_matches-source-code_h2h_changed-target
       source: iter_matches
       sourceHandle: source
+      target: code_h2h_changed
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: if-else
+      id: code_h2h_changed-source-if_h2h_changed-target
+      source: code_h2h_changed
+      sourceHandle: source
+      target: if_h2h_changed
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: if_h2h_changed-true-source-http_h2h_put-target
+      source: if_h2h_changed
+      sourceHandle: 'true'
+      target: http_h2h_put
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: http_h2h_put-source-code_group-target
+      source: http_h2h_put
+      sourceHandle: source
+      target: code_group
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: code
+      id: if_h2h_changed-false-source-code_group-target
+      source: if_h2h_changed
+      sourceHandle: 'false'
       target: code_group
       targetHandle: target
       type: custom
@@ -1140,6 +1184,200 @@ workflow:
 
           BJ = timezone(timedelta(hours=8))
 
+
+          def _decode(payload):
+              if not isinstance(payload, dict):
+                  return {}
+              text = payload.get("content") or ""
+              if not text:
+                  return {}
+              try:
+                  return json.loads(base64.b64decode(str(text)).decode("utf-8"))
+              except (TypeError, ValueError):
+                  return {}
+
+
+          def _split(score):
+              try:
+                  home, away = [int(part) for part in str(score).split("-")]
+                  return home, away
+              except (TypeError, ValueError):
+                  return None
+
+
+          def main(additions, cache, enabled) -> dict:
+              body = cache if isinstance(cache, dict) else {}
+              if str(enabled or "").strip().lower() != "true":
+                  return {"changed": False, "contentBase64": "", "sha": body.get("sha") or "", "updated": 0}
+              data = _decode(body)
+              leagues = data.get("leagues") or {}
+              updated = 0
+              for code, pairs in (additions or {}).items():
+                  target = leagues.setdefault(code, {})
+                  for key, games in (pairs or {}).items():
+                      entry = target.get(key)
+                      if not isinstance(entry, dict):
+                          entry = {"played": 0, "homeWins": 0, "draws": 0, "awayWins": 0, "last": []}
+                      last = list(entry.get("last") or [])
+                      known = {(item.get("date"), item.get("score")) for item in last}
+                      for game in games or []:
+                          scores = _split(game.get("score"))
+                          if not scores:
+                              continue
+                          if game.get("lowIsHome"):
+                              item = {
+                                  "date": game.get("date"),
+                                  "home": game.get("home"),
+                                  "away": game.get("away"),
+                                  "score": f"{scores[0]}-{scores[1]}",
+                              }
+                          else:
+                              item = {
+                                  "date": game.get("date"),
+                                  "home": game.get("away"),
+                                  "away": game.get("home"),
+                                  "score": f"{scores[1]}-{scores[0]}",
+                              }
+                          if (item["date"], item["score"]) in known:
+                              continue
+                          home_goals, away_goals = _split(item["score"])
+                          entry["played"] = int(entry.get("played") or 0) + 1
+                          if home_goals == away_goals:
+                              entry["draws"] = int(entry.get("draws") or 0) + 1
+                          elif home_goals > away_goals:
+                              entry["homeWins"] = int(entry.get("homeWins") or 0) + 1
+                          else:
+                              entry["awayWins"] = int(entry.get("awayWins") or 0) + 1
+                          last.append(item)
+                          known.add((item["date"], item["score"]))
+                          updated += 1
+                      if last:
+                          entry["last"] = sorted(last, key=lambda item: item.get("date") or "", reverse=True)[:5]
+                      target[key] = entry
+              if not updated:
+                  return {"changed": False, "contentBase64": "", "sha": body.get("sha") or "", "updated": 0}
+              data["updatedAt"] = datetime.now(BJ).isoformat(timespec="seconds")
+              text = json.dumps(data, ensure_ascii=False, indent=2)
+              return {
+                  "changed": True,
+                  "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                  "sha": body.get("sha") or "",
+                  "updated": updated,
+              }
+        code_language: python3
+        desc: ''
+        outputs:
+          changed:
+            children: null
+            type: boolean
+          contentBase64:
+            children: null
+            type: string
+          sha:
+            children: null
+            type: string
+          updated:
+            children: null
+            type: number
+        selected: false
+        title: 合并交锋缓存
+        type: code
+        variables:
+        - value_selector:
+          - code_normalize
+          - h2hAdditions
+          variable: additions
+        - value_selector:
+          - http_h2h_cache
+          - body
+          variable: cache
+        - value_selector:
+          - env
+          - SYNC_TO_GITHUB
+          variable: enabled
+      height: 90
+      id: code_h2h_changed
+      position:
+        x: 1400
+        y: 620
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: '>'
+            id: 3f9c2a71-5d84-4c1e-9a63-8b0e4d2f7c15
+            value: '0'
+            varType: number
+            variable_selector:
+            - code_h2h_changed
+            - updated
+          id: 'true'
+          logical_operator: and
+        desc: 有新赛果才写回
+        selected: false
+        title: 交锋缓存有新增
+        type: if-else
+      height: 90
+      id: if_h2h_changed
+      position:
+        x: 1680
+        y: 620
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: '{"message": "chore: 更新交锋缓存", "content": "{{#code_h2h_changed.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}", "sha": "{{#code_h2h_changed.sha#}}"}'
+          type: json
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          Content-Type: application/json
+          User-Agent: footballcoin-dify
+        method: put
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 写回交锋缓存
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/h2h.json'
+        variables: []
+      height: 113
+      id: http_h2h_put
+      position:
+        x: 1960
+        y: 620
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: |
+          import base64
+          import json
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+
           LEAGUE_NAMES = {
               "PL": "英超",
               "PD": "西甲",
@@ -1430,6 +1668,7 @@ workflow:
               cache = _cache_map(h2h_cache)
               flat = []
               tables = []
+              additions = {}
 
               for item in league_results or []:
                   if not isinstance(item, dict):
@@ -1489,6 +1728,27 @@ workflow:
                           "result": None,
                       })
 
+                  league_add = {}
+                  for done in finished:
+                      home_team = done.get("homeTeam") or {}
+                      away_team = done.get("awayTeam") or {}
+                      if not home_team.get("id") or not away_team.get("id"):
+                          continue
+                      full = (done.get("score") or {}).get("fullTime") or {}
+                      hg, ag = full.get("home"), full.get("away")
+                      if hg is None or ag is None:
+                          continue
+                      low, high = sorted([home_team["id"], away_team["id"]])
+                      league_add.setdefault(f"{low}-{high}", []).append({
+                          "date": str(done.get("utcDate") or "")[:10],
+                          "home": home_team.get("shortName") or home_team.get("name") or "",
+                          "away": away_team.get("shortName") or away_team.get("name") or "",
+                          "score": f"{hg}-{ag}",
+                          "lowIsHome": home_team["id"] == low,
+                      })
+                  if league_add:
+                      additions[code] = league_add
+
               flat.sort(key=lambda item: item["kickoff"])
 
               tasks = []
@@ -1504,7 +1764,7 @@ workflow:
                       "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
                       "commitMessage": f"data: 五大联赛积分榜（{len(tables)} 个联赛）",
                   })
-              return {"matches": flat, "syncTasks": tasks}
+              return {"matches": flat, "syncTasks": tasks, "h2hAdditions": additions}
         code_language: python3
         desc: ''
         outputs:
@@ -1514,6 +1774,9 @@ workflow:
           syncTasks:
             children: null
             type: array[object]
+          h2hAdditions:
+            children: null
+            type: object
         selected: false
         title: 清洗与筛选
         type: code
