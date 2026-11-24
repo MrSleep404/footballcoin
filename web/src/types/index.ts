@@ -29,6 +29,33 @@ export interface MatchResult {
   status: string;
 }
 
+export interface H2HItem {
+  date: string;
+  home: string;
+  away: string;
+  score: string;
+}
+
+export interface H2HInfo {
+  played: number;
+  homeWins: number;
+  draws: number;
+  awayWins: number;
+  last: H2HItem[];
+}
+
+export interface WeatherInfo {
+  temp: number | null;
+  precip: number | null;
+  wind: number | null;
+}
+
+export interface MarketInfo {
+  bookmaker?: string;
+  capturedAt?: string;
+  prob: Record<Outcome, number>;
+}
+
 export interface Match {
   id: string;
   league: LeagueCode;
@@ -42,6 +69,9 @@ export interface Match {
   prediction: Prediction;
   degraded: boolean;
   result: MatchResult | null;
+  h2h?: H2HInfo;
+  weather?: WeatherInfo;
+  market?: MarketInfo;
 }
 
 export interface MatchDayFile {

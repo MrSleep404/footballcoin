@@ -16,7 +16,7 @@
       "matchday": 12,
       "venue": "",
       "home": {
-        "name": "Angers SCO",
+        "name": "昂热",
         "nameEn": "Angers SCO",
         "crest": "https://crests.football-data.org/532.png",
         "rank": 17,
@@ -150,7 +150,7 @@
       "matchday": 12,
       "venue": "",
       "home": {
-        "name": "Ipswich Town",
+        "name": "伊普斯维奇",
         "nameEn": "Ipswich Town FC",
         "crest": "https://crests.football-data.org/349.png",
         "rank": 16,
@@ -217,7 +217,7 @@
       "matchday": 14,
       "venue": "",
       "home": {
-        "name": "Elche",
+        "name": "埃尔切",
         "nameEn": "Elche CF",
         "crest": "https://crests.football-data.org/285.png",
         "rank": 19,
@@ -232,7 +232,7 @@
         "goalsAgainst": 21
       },
       "away": {
-        "name": "Atleti",
+        "name": "马德里竞技",
         "nameEn": "Club Atlético de Madrid",
         "crest": "https://crests.football-data.org/78.png",
         "rank": 3,
@@ -417,7 +417,7 @@
       "matchday": 12,
       "venue": "",
       "home": {
-        "name": "Le Mans",
+        "name": "勒芒",
         "nameEn": "Le Mans FC",
         "crest": "https://crests.football-data.org/535.png",
         "rank": 13,
@@ -497,7 +497,7 @@
         "goalsAgainst": 15
       },
       "away": {
-        "name": "Troyes",
+        "name": "特鲁瓦",
         "nameEn": "ES Troyes AC",
         "crest": "https://crests.football-data.org/531.png",
         "rank": 14,
@@ -564,7 +564,7 @@
         "goalsAgainst": 25
       },
       "away": {
-        "name": "Strasbourg",
+        "name": "斯特拉斯堡",
         "nameEn": "RC Strasbourg Alsace",
         "crest": "https://crests.football-data.org/576.png",
         "rank": 16,
@@ -631,7 +631,7 @@
         "goalsAgainst": 12
       },
       "away": {
-        "name": "Lorient",
+        "name": "洛里昂",
         "nameEn": "FC Lorient",
         "crest": "https://crests.football-data.org/525.png",
         "rank": 10,
@@ -951,7 +951,7 @@
       "matchday": 13,
       "venue": "",
       "home": {
-        "name": "Sassuolo",
+        "name": "萨索洛",
         "nameEn": "US Sassuolo Calcio",
         "crest": "https://crests.football-data.org/471.png",
         "rank": 18,
@@ -1033,7 +1033,7 @@
         "goalsAgainst": 25
       },
       "away": {
-        "name": "Marseille",
+        "name": "马赛",
         "nameEn": "Olympique de Marseille",
         "crest": "https://crests.football-data.org/516.png",
         "rank": 5,
@@ -1301,7 +1301,7 @@
         "goalsAgainst": 27
       },
       "away": {
-        "name": "Hull City",
+        "name": "赫尔城",
         "nameEn": "Hull City AFC",
         "crest": "https://crests.football-data.org/322.png",
         "rank": 11,
@@ -1421,7 +1421,7 @@
       "matchday": 14,
       "venue": "",
       "home": {
-        "name": "Deportivo",
+        "name": "拉科鲁尼亚",
         "nameEn": "RC Deportivo La Coruña",
         "crest": "https://crests.football-data.org/560.png",
         "rank": 12,
@@ -1436,7 +1436,7 @@
         "goalsAgainst": 17
       },
       "away": {
-        "name": "Barça",
+        "name": "巴塞罗那",
         "nameEn": "FC Barcelona",
         "crest": "https://crests.football-data.org/81.png",
         "rank": 1,

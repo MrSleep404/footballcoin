@@ -16,7 +16,7 @@
       "matchday": 12,
       "venue": "",
       "home": {
-        "name": "Toulouse",
+        "name": "图卢兹",
         "nameEn": "Toulouse FC",
         "crest": "https://crests.football-data.org/511.png",
         "rank": 12,
@@ -31,7 +31,7 @@
         "goalsAgainst": 15
       },
       "away": {
-        "name": "Stade Rennais",
+        "name": "雷恩",
         "nameEn": "Stade Rennais FC 1901",
         "crest": "https://crests.football-data.org/529.png",
         "rank": 9,
@@ -488,7 +488,7 @@
       "matchday": 12,
       "venue": "",
       "home": {
-        "name": "Olympique Lyon",
+        "name": "里昂",
         "nameEn": "Olympique Lyonnais",
         "crest": "https://crests.football-data.org/523.png",
         "rank": 4,

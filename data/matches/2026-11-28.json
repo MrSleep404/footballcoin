@@ -165,7 +165,7 @@
         "goalsAgainst": 12
       },
       "away": {
-        "name": "Paris FC",
+        "name": "巴黎FC",
         "nameEn": "Paris FC",
         "crest": "https://crests.football-data.org/1045.png",
         "rank": 2,
@@ -217,7 +217,7 @@
       "matchday": 12,
       "venue": "",
       "home": {
-        "name": "Nottingham",
+        "name": "诺丁汉森林",
         "nameEn": "Nottingham Forest FC",
         "crest": "https://crests.football-data.org/351.png",
         "rank": 17,
@@ -284,7 +284,7 @@
       "matchday": 14,
       "venue": "",
       "home": {
-        "name": "Levante",
+        "name": "莱万特",
         "nameEn": "Levante UD",
         "crest": "https://crests.football-data.org/88.png",
         "rank": 15,
@@ -299,7 +299,7 @@
         "goalsAgainst": 22
       },
       "away": {
-        "name": "Santander",
+        "name": "桑坦德竞技",
         "nameEn": "Real Racing Club de Santander",
         "crest": "https://crests.football-data.org/5335.png",
         "rank": 7,
@@ -419,7 +419,7 @@
       "matchday": 13,
       "venue": "",
       "home": {
-        "name": "Frosinone",
+        "name": "弗罗西诺内",
         "nameEn": "Frosinone Calcio",
         "crest": "https://crests.football-data.org/470.png",
         "rank": 7,
@@ -486,7 +486,7 @@
       "matchday": 11,
       "venue": "",
       "home": {
-        "name": "1. FC Köln",
+        "name": "科隆",
         "nameEn": "1. FC Köln",
         "crest": "https://crests.football-data.org/1.png",
         "rank": 14,
@@ -501,7 +501,7 @@
         "goalsAgainst": 15
       },
       "away": {
-        "name": "Elversberg",
+        "name": "埃尔弗斯贝格",
         "nameEn": "SV 07 Elversberg",
         "crest": "https://crests.football-data.org/719.png",
         "rank": 9,
@@ -569,7 +569,7 @@
         "goalsAgainst": 22
       },
       "away": {
-        "name": "Union Berlin",
+        "name": "柏林联合",
         "nameEn": "1. FC Union Berlin",
         "crest": "https://crests.football-data.org/28.png",
         "rank": 17,
@@ -621,7 +621,7 @@
       "matchday": 11,
       "venue": "",
       "home": {
-        "name": "SC Paderborn",
+        "name": "帕德博恩",
         "nameEn": "SC Paderborn 07",
         "crest": "https://crests.football-data.org/29.png",
         "rank": 15,
@@ -636,7 +636,7 @@
         "goalsAgainst": 15
       },
       "away": {
-        "name": "Schalke",
+        "name": "沙尔克04",
         "nameEn": "FC Schalke 04",
         "crest": "https://crests.football-data.org/6.png",
         "rank": 16,
@@ -688,7 +688,7 @@
       "matchday": 11,
       "venue": "",
       "home": {
-        "name": "HSV",
+        "name": "汉堡",
         "nameEn": "Hamburger SV",
         "crest": "https://crests.football-data.org/7.png",
         "rank": 12,
@@ -703,7 +703,7 @@
         "goalsAgainst": 24
       },
       "away": {
-        "name": "Bayern",
+        "name": "拜仁慕尼黑",
         "nameEn": "FC Bayern München",
         "crest": "https://crests.football-data.org/5.png",
         "rank": 2,
@@ -769,7 +769,7 @@
         "goalsAgainst": 9
       },
       "away": {
-        "name": "Coventry City",
+        "name": "考文垂",
         "nameEn": "Coventry City FC",
         "crest": "https://crests.football-data.org/1076.png",
         "rank": 14,
@@ -888,7 +888,7 @@
       "matchday": 14,
       "venue": "",
       "home": {
-        "name": "Málaga",
+        "name": "马拉加",
         "nameEn": "Málaga CF",
         "crest": "https://crests.football-data.org/84.png",
         "rank": 20,

@@ -16,7 +16,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Galatasaray",
+        "name": "加拉塔萨雷",
         "nameEn": "Galatasaray SK",
         "crest": "https://crests.football-data.org/610.png",
         "rank": 18,
@@ -81,7 +81,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Bodø/Glimt",
+        "name": "博多格林特",
         "nameEn": "FK Bodø/Glimt",
         "crest": "https://crests.football-data.org/5721.png",
         "rank": 25,
@@ -95,7 +95,7 @@
         "goalsAgainst": 9
       },
       "away": {
-        "name": "LASK",
+        "name": "LASK林茨",
         "nameEn": "LASK Linz",
         "crest": "https://crests.football-data.org/2016.png",
         "rank": 16,
@@ -161,7 +161,7 @@
         "goalsAgainst": 7
       },
       "away": {
-        "name": "PSV",
+        "name": "埃因霍温",
         "nameEn": "PSV",
         "crest": "https://crests.football-data.org/674.png",
         "rank": 24,
@@ -343,7 +343,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Feyenoord",
+        "name": "费耶诺德",
         "nameEn": "Feyenoord Rotterdam",
         "crest": "https://crests.football-data.org/675.png",
         "rank": 32,
@@ -357,7 +357,7 @@
         "goalsAgainst": 11
       },
       "away": {
-        "name": "Porto",
+        "name": "波尔图",
         "nameEn": "FC Porto",
         "crest": "https://crests.football-data.org/503.png",
         "rank": 26,
@@ -408,7 +408,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Sl. Bratislava",
+        "name": "布拉迪斯拉发",
         "nameEn": "ŠK Slovan Bratislava",
         "crest": "https://crests.football-data.org/7509.png",
         "rank": 36,
@@ -551,7 +551,7 @@
         "goalsAgainst": 6
       },
       "away": {
-        "name": "PAE AEK",
+        "name": "AEK雅典",
         "nameEn": "PAE AEK",
         "crest": "https://crests.football-data.org/1899.png",
         "rank": 29,

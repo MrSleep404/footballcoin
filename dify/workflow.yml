@@ -1078,7 +1078,28 @@ workflow:
                   "PFC": "巴黎FC", "LYO": "里昂", "MAR": "马赛", "REN": "雷恩", "FCL": "洛里昂",
                   "TOU": "图卢兹", "LMF": "勒芒", "ETR": "特鲁瓦", "RC": "斯特拉斯堡", "ANG": "昂热",
               },
+              "CL": {
+                  "BRU": "布鲁日", "SPO": "葡萄牙体育", "LIN": "LASK林茨", "GAL": "加拉塔萨雷",
+                  "FEN": "费内巴切", "SHD": "顿涅茨克矿工", "VIK": "维京", "ATL": "马德里竞技",
+                  "PSV": "埃因霍温", "FCP": "波尔图", "AEK": "AEK雅典", "SAB": "萨巴巴库",
+                  "FEY": "费耶诺德", "SLP": "布拉格斯拉维亚", "SBA": "布拉迪斯拉发", "FK": "博多格林特",
+              },
           }
+
+          # tla 无法区分时的队名关键词（如欧冠 FCB 可能是拜仁或巴萨）
+          NAME_HINTS = (
+              ("bayern", "拜仁慕尼黑"),
+              ("barcelona", "巴塞罗那"),
+              ("barça", "巴塞罗那"),
+              ("atleti", "马德里竞技"),
+              ("bodø", "博多格林特"),
+              ("bodo", "博多格林特"),
+              ("slavia", "布拉格斯拉维亚"),
+              ("bratislava", "布拉迪斯拉发"),
+              ("shak", "顿涅茨克矿工"),
+              ("lask", "LASK林茨"),
+              ("aek", "AEK雅典"),
+          )
 
 
           def _parse(raw):
@@ -1100,6 +1121,10 @@ workflow:
                   return names[tla]
               if tla and tla in TEAM_TLA:
                   return TEAM_TLA[tla]
+              hint_text = f"{team.get('shortName') or ''} {team.get('name') or ''}".lower()
+              for keyword, value in NAME_HINTS:
+                  if keyword in hint_text:
+                      return value
               return team.get("shortName") or team.get("name") or "未知球队"
 
 

@@ -16,7 +16,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Sabah FK",
+        "name": "萨巴巴库",
         "nameEn": "Sabah FK",
         "crest": "https://crests.football-data.org/10233.png",
         "rank": 31,
@@ -30,7 +30,7 @@
         "goalsAgainst": 10
       },
       "away": {
-        "name": "Barça",
+        "name": "巴塞罗那",
         "nameEn": "FC Barcelona",
         "crest": "https://crests.football-data.org/81.png",
         "rank": 5,
@@ -80,7 +80,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Slavia Praha",
+        "name": "布拉格斯拉维亚",
         "nameEn": "SK Slavia Praha",
         "crest": "https://crests.football-data.org/930.png",
         "rank": 34,
@@ -210,7 +210,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Atleti",
+        "name": "马德里竞技",
         "nameEn": "Club Atlético de Madrid",
         "crest": "https://crests.football-data.org/78.png",
         "rank": 23,
@@ -224,7 +224,7 @@
         "goalsAgainst": 5
       },
       "away": {
-        "name": "Viking",
+        "name": "维京",
         "nameEn": "Viking FK",
         "crest": "https://crests.football-data.org/5720.png",
         "rank": 22,
@@ -341,7 +341,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Club Brugge",
+        "name": "布鲁日",
         "nameEn": "Club Brugge KV",
         "crest": "https://crests.football-data.org/851.png",
         "rank": 9,
@@ -420,7 +420,7 @@
         "goalsAgainst": 10
       },
       "away": {
-        "name": "Bayern",
+        "name": "拜仁慕尼黑",
         "nameEn": "FC Bayern München",
         "crest": "https://crests.football-data.org/5.png",
         "rank": 13,
@@ -470,7 +470,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Sporting CP",
+        "name": "葡萄牙体育",
         "nameEn": "Sporting Clube de Portugal",
         "crest": "https://crests.football-data.org/498.png",
         "rank": 10,
@@ -536,7 +536,7 @@
       "matchday": 5,
       "venue": "",
       "home": {
-        "name": "Shaktar",
+        "name": "顿涅茨克矿工",
         "nameEn": "FK Shakhtar Donetsk",
         "crest": "https://crests.football-data.org/1887.png",
         "rank": 21,
@@ -550,7 +550,7 @@
         "goalsAgainst": 4
       },
       "away": {
-        "name": "Fenerbahçe",
+        "name": "费内巴切",
         "nameEn": "Fenerbahçe SK",
         "crest": "https://crests.football-data.org/613.png",
         "rank": 19,

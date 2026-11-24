@@ -47,6 +47,11 @@ const scoreHit = computed(() => {
   return score.home === result.homeGoals && score.away === result.awayGoals;
 });
 
+const h2h = computed(() => match.value?.h2h ?? null);
+const weather = computed(() => match.value?.weather ?? null);
+const market = computed(() => match.value?.market ?? null);
+const hasIntel = computed(() => Boolean(h2h.value || weather.value || market.value));
+
 async function init() {
   loading.value = true;
   error.value = "";
@@ -188,6 +193,48 @@ onMounted(() => {
             比分：{{ scoreHit ? "命中" : "未中" }}
           </span>
         </p>
+      </section>
+
+      <section v-if="hasIntel" class="block">
+        <h2>赛前情报</h2>
+        <div class="intel">
+          <div v-if="h2h" class="intel-item">
+            <span class="intel-label">交手记录（近 {{ h2h.played }} 次）</span>
+            <span class="intel-value numeric">
+              主队 {{ h2h.homeWins }} 胜 · {{ h2h.draws }} 平 · 客队 {{ h2h.awayWins }} 胜
+            </span>
+            <ul v-if="h2h.last.length" class="intel-list">
+              <li v-for="item in h2h.last" :key="`${item.date}-${item.home}`">
+                <span class="intel-date numeric">{{ item.date }}</span>
+                <span>{{ item.home }}</span>
+                <strong class="numeric">{{ item.score }}</strong>
+                <span>{{ item.away }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div v-if="weather" class="intel-item">
+            <span class="intel-label">开赛天气</span>
+            <span class="intel-value numeric">
+              <template v-if="weather.temp !== null">{{ weather.temp }}℃</template>
+              <template v-if="weather.precip !== null"> · 降水 {{ weather.precip }}%</template>
+              <template v-if="weather.wind !== null"> · 风速 {{ weather.wind }} km/h</template>
+            </span>
+          </div>
+
+          <div v-if="market" class="intel-item">
+            <span class="intel-label">
+              市场概率{{ market.bookmaker ? `（${market.bookmaker}）` : "" }}
+            </span>
+            <span class="intel-value numeric">
+              主 {{ market.prob.home }}% · 平 {{ market.prob.draw }}% · 客 {{ market.prob.away }}%
+            </span>
+            <span class="intel-compare numeric">
+              模型：主 {{ match.prediction.prob.home }}% · 平 {{ match.prediction.prob.draw }}% ·
+              客 {{ match.prediction.prob.away }}%
+            </span>
+          </div>
+        </div>
       </section>
 
       <section class="block">
@@ -479,6 +526,61 @@ onMounted(() => {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.intel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.intel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.intel-label {
+  color: var(--text-dim);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.intel-value {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.intel-compare {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.intel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.intel-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.intel-date {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.intel-list strong {
+  color: var(--text);
 }
 
 .reasons {
