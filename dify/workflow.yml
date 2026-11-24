@@ -1411,13 +1411,16 @@ workflow:
               direct = COORDS.get(f"{league}:{tla}")
               if direct:
                   return direct
+              # 仅欧冠允许跨联赛回退（同一支球队在国内联赛与欧冠共用 TLA）
+              if league != "CL":
+                  return None
               found = [value for key, value in COORDS.items() if key.split(":")[-1] == tla]
               return found[0] if len(found) == 1 else None
 
 
           def main(matches: list) -> dict:
               spots = []
-              seen = {}
+              seen = set()
               for match in matches or []:
                   key = f"{match.get('league')}:{_tla(match)}"
                   if key in seen:
@@ -1425,15 +1428,14 @@ workflow:
                   point = _coords(match.get("league") or "", _tla(match))
                   if not point:
                       continue
-                  seen[key] = len(spots)
-                  spots.append({"key": key, "index": len(spots)})
+                  seen.add(key)
+                  spots.append({"key": key, "index": len(spots), "lat": point[0], "lon": point[1]})
                   if len(spots) >= MAX_SPOTS:
                       break
               if not spots:
                   return {"url": BASE + "&latitude=51.55&longitude=-0.11", "spots": []}
-              points = [COORDS[spot["key"]] for spot in spots]
-              lats = ",".join(f"{lat:.2f}" for lat, _ in points)
-              lons = ",".join(f"{lon:.2f}" for _, lon in points)
+              lats = ",".join(f"{spot['lat']:.2f}" for spot in spots)
+              lons = ",".join(f"{spot['lon']:.2f}" for spot in spots)
               return {"url": f"{BASE}&latitude={lats}&longitude={lons}", "spots": spots}
         code_language: python3
         desc: ''
