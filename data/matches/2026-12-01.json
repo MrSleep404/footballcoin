@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-24T10:23:52+08:00",
+  "generatedAt": "2026-11-24T11:11:52+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 3,
@@ -18,6 +18,7 @@
       "home": {
         "name": "Lecce",
         "nameEn": "US Lecce",
+        "crest": "https://crests.football-data.org/5890.png",
         "rank": 15,
         "form": [
           "L",
@@ -32,6 +33,7 @@
       "away": {
         "name": "亚特兰大",
         "nameEn": "Atalanta BC",
+        "crest": "https://crests.football-data.org/102.png",
         "rank": 12,
         "form": [
           "D",
@@ -45,30 +47,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 24,
-          "draw": 28,
-          "away": 48
+          "home": 27,
+          "draw": 31,
+          "away": 42
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 62,
+        "confidence": 60,
         "pick": "away",
         "reasons": [
-          "主队近5场仅1平4负，状态低迷",
-          "主队赛季失25球，防守漏洞明显",
-          "客队排名第12高于主队第15",
-          "客队赛季进21球，进攻优于主队"
+          "主队近5场1平4负，状态明显低迷",
+          "主队赛季失25球，防守端压力较大",
+          "客队近5场1胜3平1负，表现相对更稳",
+          "客队排名第12高于主队第15，进攻数据也更好"
         ],
         "factors": [
-          "客队排名占优",
-          "主队状态低迷",
-          "主队防守差",
-          "客队进攻较强",
-          "主场因素"
+          "客队状态更稳",
+          "主队防守漏洞",
+          "客队平局偏多",
+          "排名较为接近"
         ],
-        "risk": "亚特兰大近期平局偏多且防守不稳，客胜存在被逼平风险。"
+        "risk": "客队近期平局偏多且未提供伤停与场地信息，平局是最大不确定性。"
       },
       "degraded": false,
       "result": null
@@ -84,6 +85,7 @@
       "home": {
         "name": "卡利亚里",
         "nameEn": "Cagliari Calcio",
+        "crest": "https://crests.football-data.org/104.png",
         "rank": 11,
         "form": [
           "L",
@@ -98,6 +100,7 @@
       "away": {
         "name": "AC米兰",
         "nameEn": "AC Milan",
+        "crest": "https://crests.football-data.org/98.png",
         "rank": 4,
         "form": [
           "W",
@@ -111,29 +114,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 14,
-          "draw": 21,
-          "away": 65
+          "home": 18,
+          "draw": 25,
+          "away": 57
         },
         "score": {
-          "home": 0,
+          "home": 1,
           "away": 2
         },
         "confidence": 72,
         "pick": "away",
         "reasons": [
-          "AC米兰排名第4，卡利亚里仅第11",
-          "近5场AC米兰4胜1负，卡利亚里1胜4负",
-          "赛季进球AC米兰28球，卡利亚里仅10球",
-          "卡利亚里失17球，防守端明显承压"
+          "AC米兰排名第4，卡利亚里第11，积分位置差距明显",
+          "AC米兰近5场4胜1负，卡利亚里近5场1胜4负",
+          "AC米兰赛季进28球失14球，卡利亚里仅进10球失17球",
+          "主队攻防两端数据均处下风，难以抵挡客队进攻"
         ],
         "factors": [
           "排名差距",
-          "近期状态",
-          "攻防效率",
-          "客队优势"
+          "近期状态反差",
+          "攻防数据优势",
+          "客场作战"
         ],
-        "risk": "未提供伤停与场地信息，卡利亚里主场因素存在不确定性。"
+        "risk": "场地与伤停信息未提供，AC米兰客场发挥存在波动，卡利亚里主场或有抵抗。"
       },
       "degraded": false,
       "result": null
@@ -149,6 +152,7 @@
       "home": {
         "name": "西班牙人",
         "nameEn": "RCD Espanyol de Barcelona",
+        "crest": "https://crests.football-data.org/80.png",
         "rank": 11,
         "form": [
           "W",
@@ -163,6 +167,7 @@
       "away": {
         "name": "赫塔菲",
         "nameEn": "Getafe CF",
+        "crest": "https://crests.football-data.org/82.png",
         "rank": 18,
         "form": [
           "L",
@@ -176,30 +181,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 48,
+          "home": 47,
           "draw": 29,
-          "away": 23
+          "away": 24
         },
         "score": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         },
         "confidence": 62,
         "pick": "home",
         "reasons": [
-          "主队排名第11高于客队第18，占据积分优势",
-          "客队赛季进8球失21球，攻防两端均为联赛下游水准",
-          "主队近5场2胜1平2负，状态起伏小于客队近5场1胜1平3负",
-          "主队赛季进失球14/14，攻守平衡优于客队净胜球-13"
+          "主队排名第11，客队第18，排名明显占优",
+          "赫塔菲赛季进8失21，攻防两端均为联赛下游",
+          "赫塔菲近5场仅1胜1平3负，客场取分能力差",
+          "西班牙人近5场取得2胜1平，主场作战占优"
         ],
         "factors": [
           "排名优势",
           "客队防守薄弱",
-          "客队进攻乏力",
-          "主场作战",
-          "状态略优"
+          "客队进球乏力",
+          "主队状态起伏"
         ],
-        "risk": "主场场地与伤停信息未提供，主队近两场连败存在状态下滑风险。"
+        "risk": "西班牙人近5场有2负、攻防14/14并不突出，场地与伤停未提供，平局风险不可忽视。"
       },
       "degraded": false,
       "result": null
