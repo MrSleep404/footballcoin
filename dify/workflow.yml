@@ -91,6 +91,14 @@ workflow:
     - API_FOOTBALL_KEY
     value: ''
     value_type: secret
+  - description: The Odds API 的 apiKey，用于拉取赛前胜平负赔率；留空则无市场概率
+    id: 7c1d4a90-2f63-4e8b-9b57-9d0e6a3c2f13
+    name: ODDS_API_KEY
+    selector:
+    - env
+    - ODDS_API_KEY
+    value: ''
+    value_type: secret
   features:
     file_upload:
       allowed_file_extensions: []
@@ -211,14 +219,69 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: iteration
-      id: code_weather_merge-source-iter_standings_sync-target
+        targetType: code
+      id: code_weather_merge-source-code_odds_plan-target
       source: code_weather_merge
+      sourceHandle: source
+      target: code_odds_plan
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_odds_plan-source-iter_odds-target
+      source: code_odds_plan
+      sourceHandle: source
+      target: iter_odds
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_odds-source-code_odds_merge-target
+      source: iter_odds
+      sourceHandle: source
+      target: code_odds_merge
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_odds_merge-source-iter_standings_sync-target
+      source: code_odds_merge
       sourceHandle: source
       target: iter_standings_sync
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_odds
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_odds_start-source-http_odds-target
+      source: iter_odds_start
+      sourceHandle: source
+      target: http_odds
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: true
+        iteration_id: iter_odds
+        sourceType: http-request
+        targetType: code
+      id: http_odds-source-code_odds_pack-target
+      source: http_odds
+      sourceHandle: source
+      target: code_odds_pack
+      targetHandle: target
+      type: custom
     - data:
         isInLoop: false
         sourceType: iteration
@@ -1607,6 +1670,386 @@ workflow:
       type: custom
       width: 244
     - data:
+        code: |
+          SPORT_BY_LEAGUE = {
+              "PL": "soccer_epl",
+              "PD": "soccer_spain_la_liga",
+              "SA": "soccer_italy_serie_a",
+              "BL1": "soccer_germany_bundesliga",
+              "FL1": "soccer_france_ligue_one",
+              "CL": "soccer_uefa_champs_league",
+          }
+          ORDER = ("PL", "PD", "SA", "BL1", "FL1", "CL")
+          BASE = (
+              "https://api.the-odds-api.com/v4/sports/{sport}/odds"
+              "?regions=eu&markets=h2h&oddsFormat=decimal&dateFormat=iso"
+          )
+
+
+          def main(matches: list, mode: str, api_key: str) -> dict:
+              value = (mode or "both").strip().lower()
+              if value == "results" or not str(api_key or "").strip():
+                  return {"items": [], "leagues": []}
+              found = {match.get("league") for match in matches or []}
+              leagues = [code for code in ORDER if code in found]
+              items = [
+                  {
+                      "league": code,
+                      "sport": SPORT_BY_LEAGUE[code],
+                      "index": index,
+                      "url": BASE.format(sport=SPORT_BY_LEAGUE[code]),
+                  }
+                  for index, code in enumerate(leagues)
+              ]
+              return {"items": items, "leagues": leagues}
+        code_language: python3
+        desc: ''
+        outputs:
+          items:
+            children: null
+            type: array[object]
+          leagues:
+            children: null
+            type: array[string]
+        selected: false
+        title: 赔率计划
+        type: code
+        variables:
+        - value_selector:
+          - code_weather_merge
+          - matches
+          variable: matches
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
+        - value_selector:
+          - env
+          - ODDS_API_KEY
+          variable: api_key
+      height: 90
+      id: code_odds_plan
+      position:
+        x: 1680
+        y: 700
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_odds_plan
+        - items
+        output_selector:
+        - code_odds_pack
+        - pack
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_odds_start
+        title: 赔率拉取迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_odds
+      position:
+        x: 1960
+        y: 700
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_odds_start
+      parentId: iter_odds
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Accept: application/json
+          User-Agent: footballcoin-dify
+          x-api-key: {{#env.ODDS_API_KEY#}}
+        isInIteration: true
+        iteration_id: iter_odds
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 20
+          read: 45
+          write: 30
+        title: 拉取赔率
+        type: http-request
+        url: '{{#iter_odds.item.url#}}'
+        variables: []
+      height: 113
+      id: http_odds
+      parentId: iter_odds
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          def _price(value):
+              try:
+                  return float(value)
+              except (TypeError, ValueError):
+                  return None
+
+
+          def _events(body):
+              if isinstance(body, list):
+                  return body
+              if isinstance(body, dict):
+                  data = body.get("data")
+                  if isinstance(data, list):
+                      return data
+              return []
+
+
+          def main(item: dict, body) -> dict:
+              league = (item or {}).get("league") or ""
+              events = []
+              for event in _events(body):
+                  if not isinstance(event, dict):
+                      continue
+                  home = str(event.get("home_team") or "")
+                  away = str(event.get("away_team") or "")
+                  if not home or not away:
+                      continue
+                  triples = []
+                  latest = ""
+                  for book in event.get("bookmakers") or []:
+                      for market in book.get("markets") or []:
+                          if market.get("key") != "h2h":
+                              continue
+                          prices = {
+                              str(outcome.get("name") or ""): _price(outcome.get("price"))
+                              for outcome in market.get("outcomes") or []
+                          }
+                          home_price = prices.get(home)
+                          draw_price = prices.get("Draw")
+                          away_price = prices.get(away)
+                          if home_price and draw_price and away_price:
+                              triples.append((home_price, draw_price, away_price))
+                              stamp = str(market.get("last_update") or book.get("last_update") or "")
+                              if stamp > latest:
+                                  latest = stamp
+                  if not triples:
+                      continue
+                  shares = [0.0, 0.0, 0.0]
+                  for triple in triples:
+                      inverse = [1.0 / value for value in triple]
+                      overround = sum(inverse)
+                      for index in range(3):
+                          shares[index] += inverse[index] / overround
+                  prob = [value / len(triples) * 100 for value in shares]
+                  rounded = [int(round(value)) for value in prob]
+                  rounded[max(range(3), key=lambda index: prob[index])] += 100 - sum(rounded)
+                  events.append(
+                      {
+                          "home": home,
+                          "away": away,
+                          "commence": str(event.get("commence_time") or ""),
+                          "books": len(triples),
+                          "prob": {"home": rounded[0], "draw": rounded[1], "away": rounded[2]},
+                          "capturedAt": latest,
+                      }
+                  )
+              return {"pack": {"league": league, "events": events}}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_odds
+        outputs:
+          pack:
+            children: null
+            type: object
+        selected: false
+        title: 解析赔率
+        type: code
+        variables:
+        - value_selector:
+          - iter_odds
+          - item
+          variable: item
+        - value_selector:
+          - http_odds
+          - body
+          variable: body
+      height: 90
+      id: code_odds_pack
+      parentId: iter_odds
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import unicodedata
+          from datetime import datetime, timezone
+
+          STOPWORDS = {
+              "fc", "cf", "afc", "sc", "ac", "as", "us", "ss", "ssc", "sv", "vfl", "vfb",
+              "tsg", "bsc", "kv", "rb", "club", "de", "do", "calcio", "cd", "ud", "rcd",
+              "rc", "sd", "ca", "cs", "fk", "sk", "bk", "04", "05", "07", "1899",
+          }
+          ALIASES = {
+              "munchen": "munich",
+              "moenchengladbach": "gladbach",
+              "monchengladbach": "gladbach",
+              "internazionale": "inter",
+              "milano": "milan",
+              "atletico": "atleti",
+          }
+
+
+          def _tokens(name):
+              text = unicodedata.normalize("NFKD", str(name or ""))
+              text = "".join(ch for ch in text if not unicodedata.combining(ch)).lower()
+              for src, dst in (("ø", "o"), ("ß", "ss"), ("æ", "ae"), ("ł", "l"), ("đ", "d"), ("ı", "i")):
+                  text = text.replace(src, dst)
+              for sep in "-'’. &/":
+                  text = text.replace(sep, " ")
+              return [ALIASES.get(token, token) for token in text.split() if token and token not in STOPWORDS]
+
+
+          def _similar(left, right):
+              first, second = set(_tokens(left)), set(_tokens(right))
+              if not first or not second:
+                  return 0.0
+              shared = len(first & second)
+              containment = shared / min(len(first), len(second))
+              union = len(first | second)
+              return max(containment, shared / union if union else 0.0)
+
+
+          def _moment(text):
+              try:
+                  value = datetime.fromisoformat(str(text).replace("Z", "+00:00"))
+              except (TypeError, ValueError):
+                  return None
+              if value.tzinfo is None:
+                  value = value.replace(tzinfo=timezone.utc)
+              return value.astimezone(timezone.utc)
+
+
+          def main(matches: list, packs: list) -> dict:
+              by_league = {}
+              for pack in packs or []:
+                  if not isinstance(pack, dict):
+                      continue
+                  league = pack.get("league")
+                  if league:
+                      by_league.setdefault(league, []).extend(pack.get("events") or [])
+
+              count = 0
+              for match in matches or []:
+                  events = by_league.get(match.get("league")) or []
+                  if not events:
+                      continue
+                  kickoff = _moment(match.get("kickoff"))
+                  home = (match.get("home") or {}).get("nameEn") or ""
+                  away = (match.get("away") or {}).get("nameEn") or ""
+                  candidates = []
+                  for event in events:
+                      moment = _moment(event.get("commence"))
+                      if kickoff and moment is None:
+                          continue
+                      gap = abs((moment - kickoff).total_seconds()) if kickoff and moment else 0.0
+                      # 开球时间相差超过 90 分钟视为不同场次
+                      if kickoff and gap > 5400:
+                          continue
+                      score = min(_similar(home, event.get("home")), _similar(away, event.get("away")))
+                      candidates.append((score, -gap, event))
+                  if not candidates:
+                      continue
+                  if len(candidates) == 1:
+                      chosen = candidates[0][2]
+                  else:
+                      candidates.sort(key=lambda item: (item[0], item[1]), reverse=True)
+                      if candidates[0][0] < 0.45:
+                          continue
+                      chosen = candidates[0][2]
+                  match["market"] = {
+                      "bookmaker": f"市场均值（{chosen.get('books')} 家）",
+                      "capturedAt": chosen.get("capturedAt") or "",
+                      "prob": chosen.get("prob") or {"home": 0, "draw": 0, "away": 0},
+                  }
+                  count += 1
+              return {"matches": matches, "marketCount": count}
+        code_language: python3
+        desc: ''
+        outputs:
+          matches:
+            children: null
+            type: array[object]
+          marketCount:
+            children: null
+            type: number
+        selected: false
+        title: 合并赔率
+        type: code
+        variables:
+        - value_selector:
+          - code_weather_merge
+          - matches
+          variable: matches
+        - value_selector:
+          - iter_odds
+          - output
+          variable: packs
+      height: 90
+      id: code_odds_merge
+      position:
+        x: 3000
+        y: 700
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
         desc: ''
         error_handle_mode: continue-on-error
         height: 201
@@ -1865,7 +2308,7 @@ workflow:
         is_parallel: true
         iterator_input_type: array[object]
         iterator_selector:
-        - code_weather_merge
+        - code_odds_merge
         - matches
         output_selector:
         - code_validate
@@ -2004,6 +2447,17 @@ workflow:
               else:
                   weather_text = "天气：未提供"
 
+              market = match.get("market") or {}
+              market_prob = market.get("prob") or {}
+              if all(market_prob.get(key) is not None for key in ("home", "draw", "away")):
+                  market_text = (
+                      f"市场赔率（{market.get('bookmaker') or '博彩公司'}，已去水）："
+                      f"主胜 {market_prob.get('home')}% / 平局 {market_prob.get('draw')}% / "
+                      f"客胜 {market_prob.get('away')}%"
+                  )
+              else:
+                  market_text = "市场赔率：未提供"
+
               teams = (injuries or {}).get("teams") or {}
               if injury_date and teams and day == injury_date:
                   injury_text = (
@@ -2025,6 +2479,7 @@ workflow:
                   f"赛季进失球：主队 {home.get('goalsFor')}/{home.get('goalsAgainst')}，客队 {away.get('goalsFor')}/{away.get('goalsAgainst')}\n"
                   f"{h2h_text}\n"
                   f"{weather_text}\n"
+                  f"{market_text}\n"
                   f"{injury_text}\n"
                   f"其他信息：未提供"
               )
@@ -2099,6 +2554,7 @@ workflow:
             7. risk 用一句话说明最大不确定性，不超过 60 字。
             8. 如果关键数据缺失（例如排名缺失、近期比赛不足 3 场），必须在 risk 中说明，并把 confidence 控制在 55 以下。
             9. 使用简体中文，球队名必须与输入完全一致，不要改写或翻译。
+            10. 若输入提供了市场赔率，只能引用其中的数值，不得编造；当市场概率与你的判断相差超过 10 个百分点时，降低 confidence 并在 risk 中说明分歧原因。
 
             输出结构（严格按此键名）：
             {

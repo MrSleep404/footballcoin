@@ -78,12 +78,14 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 5,
+          "draw": 7,
+          "away": 88
+        }
       }
     },
     {
@@ -157,12 +159,14 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 31,
+          "draw": 25,
+          "away": 44
+        }
       }
     },
     {
@@ -236,17 +240,19 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
-      },
       "weather": {
         "temp": 8.3,
         "precip": 85,
         "wind": 7.9
+      },
+      "market": {
+        "bookmaker": "市场均值（22 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 68,
+          "draw": 17,
+          "away": 15
+        }
       }
     },
     {
@@ -321,17 +327,19 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
-      },
       "weather": {
         "temp": 6.8,
         "precip": 0,
         "wind": 8.5
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 87,
+          "draw": 9,
+          "away": 4
+        }
       }
     },
     {
@@ -404,17 +412,19 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
-      },
       "weather": {
         "temp": 6.8,
         "precip": 28,
         "wind": 7.9
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 68,
+          "draw": 18,
+          "away": 14
+        }
       }
     },
     {
@@ -488,12 +498,14 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 21,
+          "draw": 21,
+          "away": 58
+        }
       }
     },
     {
@@ -567,17 +579,19 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
-      },
       "weather": {
         "temp": 1.2,
         "precip": 7,
         "wind": 15.1
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 19,
+          "draw": 22,
+          "away": 59
+        }
       }
     },
     {
@@ -651,12 +665,14 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:09Z",
+        "prob": {
+          "home": 38,
+          "draw": 26,
+          "away": 36
+        }
       }
     },
     {
@@ -731,12 +747,14 @@
       },
       "degraded": false,
       "result": null,
-      "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 36,
+          "draw": 27,
+          "away": 37
+        }
       }
     }
   ]
