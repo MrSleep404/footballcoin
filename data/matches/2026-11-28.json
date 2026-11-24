@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28",
+  "generatedAt": "2026-11-24T10:23:44+08:00",
+  "source": "football-data.org",
+  "model": "gpt-4o-mini",
+  "matchCount": 14,
+  "degradedCount": 0,
+  "matches": [
+    {
+      "id": "BL1-2026-11-28-SVW-BMG",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-27T19:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "云达不莱梅",
+        "nameEn": "SV Werder Bremen",
+        "rank": 6,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "D"
+        ],
+        "goalsFor": 21,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "门兴格拉德巴赫",
+        "nameEn": "Borussia Mönchengladbach",
+        "rank": 18,
+        "form": [
+          "L",
+          "L",
+          "D",
+          "W",
+          "L"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 26
+      },
+      "prediction": {
+        "prob": {
+          "home": 58,
+          "draw": 24,
+          "away": 18
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 72,
+        "pick": "home",
+        "reasons": [
+          "主队排名第6，客队第18，积分榜差距明显。",
+          "主队近5场3胜1平1负，状态优于客队。",
+          "主队赛季进21失15，攻防数据均好于客队12/26。"
+        ],
+        "factors": [
+          "排名优势",
+          "近期状态",
+          "攻防效率",
+          "主场作战"
+        ],
+        "risk": "门兴格拉德巴赫虽排名第18，但近5场有1胜，德甲存在冷门风险。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-28-VEN-BOL",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-27T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "威尼斯",
+        "nameEn": "Venezia FC",
+        "rank": 20,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 8,
+        "goalsAgainst": 25
+      },
+      "away": {
+        "name": "博洛尼亚",
+        "nameEn": "Bologna FC 1909",
+        "rank": 9,
+        "form": [
+          "D",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 15
+      },
+      "prediction": {
+        "prob": {
+          "home": 14,
+          "draw": 22,
+          "away": 64
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 76,
+        "pick": "away",
+        "reasons": [
+          "博洛尼亚排名第9，威尼斯排名第20，积分差距明显",
+          "博洛尼亚近5场4胜1平，状态明显占优",
+          "威尼斯赛季进8球失25球，防守端失球偏多",
+          "客队赛季进17球，攻击力强于主队"
+        ],
+        "factors": [
+          "排名差距",
+          "状态反差",
+          "攻防失衡",
+          "客队占优"
+        ],
+        "risk": "威尼斯主场可能收缩防守，博洛尼亚客场攻坚效率存在不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-28-BRE-PFC",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-27T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "布伦特福德",
+        "nameEn": "Stade Brestois 29",
+        "rank": 6,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "D"
+        ],
+        "goalsFor": 19,
+        "goalsAgainst": 12
+      },
+      "away": {
+        "name": "Paris FC",
+        "nameEn": "Paris FC",
+        "rank": 2,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 21,
+        "goalsAgainst": 10
+      },
+      "prediction": {
+        "prob": {
+          "home": 36,
+          "draw": 30,
+          "away": 34
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 60,
+        "pick": "home",
+        "reasons": [
+          "主队排名第6，客队第2，客队积分榜占优",
+          "近5场主队3胜1平1负，客队4胜1负",
+          "赛季进失球主队19/12，客队21/10，客队防守更稳",
+          "布伦特福德主场作战，可部分抵消排名差距"
+        ],
+        "factors": [
+          "客队排名占优",
+          "主队主场优势",
+          "双方状态火热",
+          "客队防守更稳",
+          "进球能力接近"
+        ],
+        "risk": "双方实力接近且场地信息未提供，主场优势的估算存在不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-28-NOT-CHE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-27T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "Nottingham",
+        "nameEn": "Nottingham Forest FC",
+        "rank": 17,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 9,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "切尔西",
+        "nameEn": "Chelsea FC",
+        "rank": 8,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 20
+      },
+      "prediction": {
+        "prob": {
+          "home": 27,
+          "draw": 28,
+          "away": 45
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 60,
+        "pick": "away",
+        "reasons": [
+          "切尔西排名第8，高于第17的Nottingham",
+          "主队近5场仅1胜1平3负，状态低迷",
+          "主队赛季进9失15，净胜球为负，防守不稳",
+          "客队赛季进20球，进攻产出明显更强"
+        ],
+        "factors": [
+          "排名差距",
+          "主队防守漏洞",
+          "客队攻强",
+          "主队状态起伏"
+        ],
+        "risk": "切尔西近5场胜负交替、客场发挥不稳，且场地等关键信息未提供，平局风险不可忽视。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-28-LEV-SAN",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-27T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "Levante",
+        "nameEn": "Levante UD",
+        "rank": 15,
+        "form": [
+          "D",
+          "D",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 22
+      },
+      "away": {
+        "name": "Santander",
+        "nameEn": "Real Racing Club de Santander",
+        "rank": 7,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 32
+      },
+      "prediction": {
+        "prob": {
+          "home": 32,
+          "draw": 29,
+          "away": 39
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 55,
+        "pick": "away",
+        "reasons": [
+          "客队 Santander 排名第 7，高于 Levante 的第 15",
+          "客队近 5 场 3 胜，状态优于主队的 1 胜",
+          "客队赛季进球 20，多于主队的 17",
+          "客队失球 32 偏多，主队有进球机会"
+        ],
+        "factors": [
+          "排名差 8 位",
+          "客队状态更好",
+          "双方防守均不稳",
+          "主队主场作战"
+        ],
+        "risk": "客队失球多达 32 个，防守漏洞可能抵消排名与状态优势，主队主场存在爆冷可能。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-28-BET-RAY",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-28T13:00:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "皇家贝蒂斯",
+        "nameEn": "Real Betis Balompié",
+        "rank": 4,
+        "form": [
+          "D",
+          "W",
+          "W",
+          "D",
+          "L"
+        ],
+        "goalsFor": 21,
+        "goalsAgainst": 16
+      },
+      "away": {
+        "name": "巴列卡诺",
+        "nameEn": "Rayo Vallecano de Madrid",
+        "rank": 16,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "D"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 22
+      },
+      "prediction": {
+        "prob": {
+          "home": 52,
+          "draw": 26,
+          "away": 22
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 66,
+        "pick": "home",
+        "reasons": [
+          "主队排名第4，客队第16，积分榜差距明显",
+          "主队近5场2胜2平1负，客队1胜1平3负",
+          "主队赛季进21失16，客队进15失22，攻防均占优",
+          "主队坐镇主场，客队近5场仅取1胜"
+        ],
+        "factors": [
+          "排名差距明显",
+          "主队状态更稳",
+          "客队防守偏弱",
+          "主场优势"
+        ],
+        "risk": "未提供场地与伤停信息，客队近5场有1平且曾取胜，需防平局。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-28-FRO-PAR",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-28T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "Frosinone",
+        "nameEn": "Frosinone Calcio",
+        "rank": 7,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "W",
+          "D"
+        ],
+        "goalsFor": 25,
+        "goalsAgainst": 20
+      },
+      "away": {
+        "name": "帕尔马",
+        "nameEn": "Parma Calcio 1913",
+        "rank": 17,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "D",
+          "L"
+        ],
+        "goalsFor": 10,
+        "goalsAgainst": 22
+      },
+      "prediction": {
+        "prob": {
+          "home": 54,
+          "draw": 26,
+          "away": 20
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 64,
+        "pick": "home",
+        "reasons": [
+          "主队排名第7高于客队第17，积分榜位置占优",
+          "主队赛季进25球远多于客队10球，攻击力更强",
+          "客队赛季失22球、近5场仅1胜，客场防守与状态偏弱",
+          "主队近5场2胜1平2负，主场拿分能力相对稳定"
+        ],
+        "factors": [
+          "排名优势",
+          "进攻火力差",
+          "客队防守漏洞",
+          "主队状态起伏",
+          "主场因素"
+        ],
+        "risk": "主队近5场出现两场失利、状态不稳，且场地与伤停信息未提供，存在被客队逼平的可能。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-28-KOE-ELV",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-28T14:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "1. FC Köln",
+        "nameEn": "1. FC Köln",
+        "rank": 14,
+        "form": [
+          "D",
+          "L",
+          "D",
+          "D",
+          "L"
+        ],
+        "goalsFor": 11,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "Elversberg",
+        "nameEn": "SV 07 Elversberg",
+        "rank": 9,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 19
+      },
+      "prediction": {
+        "prob": {
+          "home": 36,
+          "draw": 32,
+          "away": 32
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 47,
+        "pick": "home",
+        "reasons": [
+          "主队近5场3平2负未尝胜绩，状态低迷",
+          "客队排名第9高于主队第14，进17球攻击力略强",
+          "主队失15球、客队失19球，两队防守均不稳",
+          "主队坐镇主场，主场因素可部分抵消状态劣势"
+        ],
+        "factors": [
+          "主队状态低迷",
+          "客队排名占优",
+          "双方防守不稳",
+          "主场因素"
+        ],
+        "risk": "双方实力接近，主队近5场不胜，平局风险高；场地、伤停等信息未提供，判断不确定性较大。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-28-M05-UNB",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-28T14:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "美因茨",
+        "nameEn": "1. FSV Mainz 05",
+        "rank": 13,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 19,
+        "goalsAgainst": 22
+      },
+      "away": {
+        "name": "Union Berlin",
+        "nameEn": "1. FC Union Berlin",
+        "rank": 17,
+        "form": [
+          "L",
+          "L",
+          "D",
+          "D",
+          "D"
+        ],
+        "goalsFor": 8,
+        "goalsAgainst": 26
+      },
+      "prediction": {
+        "prob": {
+          "home": 46,
+          "draw": 29,
+          "away": 25
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 56,
+        "pick": "home",
+        "reasons": [
+          "主队排名第13，高于排名第17的Union Berlin",
+          "客队赛季进8球、失26球，攻防两端均为联赛最差水平",
+          "主队赛季攻入19球，进球效率明显强于客队的8球",
+          "双方近5场都只赢了1场，状态都比较低迷"
+        ],
+        "factors": [
+          "排名相差4位",
+          "客队防守漏洞明显",
+          "主队进攻效率占优",
+          "双方状态低迷"
+        ],
+        "risk": "双方近5场都只有1场胜利且状态低迷，主场优势有限，平局可能性不低；场地信息未提供。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-28-SCP-S04",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-28T14:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "SC Paderborn",
+        "nameEn": "SC Paderborn 07",
+        "rank": 15,
+        "form": [
+          "L",
+          "D",
+          "D",
+          "W",
+          "D"
+        ],
+        "goalsFor": 8,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "Schalke",
+        "nameEn": "FC Schalke 04",
+        "rank": 16,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 5,
+        "goalsAgainst": 11
+      },
+      "prediction": {
+        "prob": {
+          "home": 42,
+          "draw": 31,
+          "away": 27
+        },
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "confidence": 50,
+        "pick": "home",
+        "reasons": [
+          "SC Paderborn 排名第15，略高于第16的 Schalke",
+          "SC Paderborn 近5场1胜3平1负，仅1负",
+          "Schalke 近5场2平3负，状态偏低迷",
+          "双方赛季进失球均偏少，主队进攻略优"
+        ],
+        "factors": [
+          "主场优势",
+          "排名接近",
+          "客队状态低迷",
+          "低比分倾向"
+        ],
+        "risk": "双方排名接近且场地信息缺失，平局风险较高，主胜优势不明显。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-28-HSV-FCB",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-28T14:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "HSV",
+        "nameEn": "Hamburger SV",
+        "rank": 12,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 10,
+        "goalsAgainst": 24
+      },
+      "away": {
+        "name": "Bayern",
+        "nameEn": "FC Bayern München",
+        "rank": 2,
+        "form": [
+          "D",
+          "W",
+          "D",
+          "W",
+          "W"
+        ],
+        "goalsFor": 30,
+        "goalsAgainst": 10
+      },
+      "prediction": {
+        "prob": {
+          "home": 12,
+          "draw": 18,
+          "away": 70
+        },
+        "score": {
+          "home": 1,
+          "away": 3
+        },
+        "confidence": 78,
+        "pick": "away",
+        "reasons": [
+          "客队排名第2，主队第12，实力差距明显",
+          "Bayern近5场3胜2平保持不败",
+          "HSV赛季进10失24，防守端失球偏多",
+          "Bayern赛季进30失10，攻防数据全面占优"
+        ],
+        "factors": [
+          "排名差距",
+          "Bayern不败",
+          "攻防悬殊",
+          "主队防守隐患"
+        ],
+        "risk": "HSV主场状态起伏，若Bayern轮换或久攻不下，平局风险上升。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-28-LEE-COV",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-28T15:00:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "利兹联",
+        "nameEn": "Leeds United FC",
+        "rank": 7,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "D",
+          "D"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 9
+      },
+      "away": {
+        "name": "Coventry City",
+        "nameEn": "Coventry City FC",
+        "rank": 14,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 21
+      },
+      "prediction": {
+        "prob": {
+          "home": 52,
+          "draw": 27,
+          "away": 21
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 68,
+        "pick": "home",
+        "reasons": [
+          "利兹联排名第7，高于第14的Coventry City",
+          "利兹联近5场2胜2平1负，走势较稳",
+          "Coventry City近5场2胜3负，稳定性不足",
+          "主队赛季进14失9，客队进13失21"
+        ],
+        "factors": [
+          "排名优势",
+          "主场作战",
+          "防守更稳",
+          "客队失球偏多"
+        ],
+        "risk": "Coventry City近期有胜场，利兹联近两场平局，主场优势并非稳胜；场地信息缺失。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-28-MUN-BRE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-28T15:00:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "曼联",
+        "nameEn": "Manchester United FC",
+        "rank": 19,
+        "form": [
+          "L",
+          "D",
+          "L",
+          "L",
+          "D"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 23
+      },
+      "away": {
+        "name": "布伦特福德",
+        "nameEn": "Brentford FC",
+        "rank": 6,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "D",
+          "L"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 11
+      },
+      "prediction": {
+        "prob": {
+          "home": 25,
+          "draw": 27,
+          "away": 48
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 70,
+        "pick": "away",
+        "reasons": [
+          "曼联排名第19，近5场仅2平3负",
+          "布伦特福德排名第6，近5场2胜1平2负",
+          "曼联赛季失23球，防守明显弱于客队11球",
+          "客队排名与攻防数据均占优"
+        ],
+        "factors": [
+          "排名差距明显",
+          "客队状态占优",
+          "主队防守不佳",
+          "客队攻守更稳"
+        ],
+        "risk": "曼联主场作战且近5场有2平，主场反弹可能带来不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-28-MAL-ATH",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-28T15:15:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "Málaga",
+        "nameEn": "Málaga CF",
+        "rank": 20,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 9,
+        "goalsAgainst": 24
+      },
+      "away": {
+        "name": "毕尔巴鄂竞技",
+        "nameEn": "Athletic Club",
+        "rank": 8,
+        "form": [
+          "L",
+          "D",
+          "W",
+          "W",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 12
+      },
+      "prediction": {
+        "prob": {
+          "home": 15,
+          "draw": 25,
+          "away": 60
+        },
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "confidence": 74,
+        "pick": "away",
+        "reasons": [
+          "主队排名第20，客队排名第8，积分榜差距明显",
+          "主队近5场L L L D L，状态持续低迷",
+          "主队赛季进9失24，攻防数据明显弱于客队",
+          "客队近5场L D W W L，且赛季进15失12更均衡"
+        ],
+        "factors": [
+          "排名差距",
+          "主队状态低迷",
+          "主队防守失球多",
+          "客队攻防更均衡"
+        ],
+        "risk": "场地信息未提供，且单场足球偶然性较大，客队近5场也有失利。"
+      },
+      "degraded": false,
+      "result": null
+    }
+  ]
+}

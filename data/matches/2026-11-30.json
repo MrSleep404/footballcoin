@@ -1,0 +1,601 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-30",
+  "generatedAt": "2026-11-24T10:23:49+08:00",
+  "source": "football-data.org",
+  "model": "gpt-4o-mini",
+  "matchCount": 9,
+  "degradedCount": 0,
+  "matches": [
+    {
+      "id": "FL1-2026-11-30-TOU-REN",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-29T16:15:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "Toulouse",
+        "nameEn": "Toulouse FC",
+        "rank": 12,
+        "form": [
+          "D",
+          "W",
+          "L",
+          "D",
+          "W"
+        ],
+        "goalsFor": 16,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "Stade Rennais",
+        "nameEn": "Stade Rennais FC 1901",
+        "rank": 9,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 22,
+        "goalsAgainst": 22
+      },
+      "prediction": {
+        "prob": {
+          "home": 40,
+          "draw": 31,
+          "away": 29
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 54,
+        "pick": "home",
+        "reasons": [
+          "主队近5场2胜2平1负，客队仅1胜1平3负",
+          "积分榜Toulouse第12、Stade Rennais第9，排名接近",
+          "Toulouse赛季进16失15，攻守较客队22/22更均衡",
+          "主队近期状态与主场因素略占优势"
+        ],
+        "factors": [
+          "主队状态较好",
+          "客队防守不稳",
+          "排名接近",
+          "主场因素"
+        ],
+        "risk": "场地信息未提供，双方排名接近且客队进攻数据更强，主场优势存在不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-30-ARS-MCI",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-29T16:30:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "阿森纳",
+        "nameEn": "Arsenal FC",
+        "rank": 1,
+        "form": [
+          "D",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 7
+      },
+      "away": {
+        "name": "曼城",
+        "nameEn": "Manchester City FC",
+        "rank": 3,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 22,
+        "goalsAgainst": 14
+      },
+      "prediction": {
+        "prob": {
+          "home": 52,
+          "draw": 26,
+          "away": 22
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 78,
+        "pick": "home",
+        "reasons": [
+          "阿森纳排名第1，曼城排名第3",
+          "阿森纳近5场4胜1平，状态明显更好",
+          "曼城近5场仅1胜3负1平，走势低迷",
+          "阿森纳赛季失7球，防守优于曼城失14球"
+        ],
+        "factors": [
+          "主队排名第1",
+          "阿森纳状态火热",
+          "曼城近期低迷",
+          "主队防守更稳",
+          "争冠对话"
+        ],
+        "risk": "曼城赛季进球22个多于阿森纳，进攻端仍可能制造变数；场地等信息未提供。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-30-TSG-FCA",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-29T16:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "霍芬海姆",
+        "nameEn": "TSG 1899 Hoffenheim",
+        "rank": 11,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 16,
+        "goalsAgainst": 18
+      },
+      "away": {
+        "name": "奥格斯堡",
+        "nameEn": "FC Augsburg",
+        "rank": 10,
+        "form": [
+          "W",
+          "L",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 23,
+        "goalsAgainst": 21
+      },
+      "prediction": {
+        "prob": {
+          "home": 44,
+          "draw": 27,
+          "away": 29
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 57,
+        "pick": "home",
+        "reasons": [
+          "主队近5场3胜2负，状态好于客队的1胜1平3负",
+          "主队排第11、客队第10，两队积分接近，主队只有微弱主场优势",
+          "客队赛季进23球，多于主队的16球，客队进攻端不容忽视",
+          "两队失球都偏多（主队18、客队21），比赛可能出现较多进球"
+        ],
+        "factors": [
+          "排名接近",
+          "主队状态占优",
+          "客队进攻强",
+          "双方防守偏弱",
+          "主场加成"
+        ],
+        "risk": "未提供场地和伤停信息；两队排名和实力接近，客队进球数更多，平局或客胜风险不低。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-30-ROM-MON",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-29T17:00:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "罗马",
+        "nameEn": "AS Roma",
+        "rank": 2,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "D"
+        ],
+        "goalsFor": 36,
+        "goalsAgainst": 11
+      },
+      "away": {
+        "name": "蒙扎",
+        "nameEn": "AC Monza",
+        "rank": 14,
+        "form": [
+          "W",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 25
+      },
+      "prediction": {
+        "prob": {
+          "home": 78,
+          "draw": 14,
+          "away": 8
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "confidence": 82,
+        "pick": "home",
+        "reasons": [
+          "罗马排名第2，蒙扎仅列第14，积分排名差距明显。",
+          "罗马近5场4胜1平，蒙扎近5场1胜4负，状态落差大。",
+          "罗马赛季进36球失11球，攻防数据远优于蒙扎的20/25。",
+          "罗马主场作战，整体实力与近期表现均占优。"
+        ],
+        "factors": [
+          "排名差距大",
+          "近期状态悬殊",
+          "攻防数据占优",
+          "主场优势"
+        ],
+        "risk": "蒙扎近5场曾取胜，罗马近5场有1场平局，需防主队进攻效率波动。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-30-CEL-VIL",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-29T17:30:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "塞尔塔",
+        "nameEn": "RC Celta de Vigo",
+        "rank": 14,
+        "form": [
+          "L",
+          "D",
+          "L",
+          "D",
+          "W"
+        ],
+        "goalsFor": 11,
+        "goalsAgainst": 12
+      },
+      "away": {
+        "name": "比利亚雷亚尔",
+        "nameEn": "Villarreal CF",
+        "rank": 10,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "W",
+          "D"
+        ],
+        "goalsFor": 19,
+        "goalsAgainst": 18
+      },
+      "prediction": {
+        "prob": {
+          "home": 36,
+          "draw": 30,
+          "away": 34
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 52,
+        "pick": "home",
+        "reasons": [
+          "主队第14、客队第10，排名相邻且积分接近",
+          "塞尔塔近5场1胜2平2负，状态起伏明显",
+          "比利亚雷亚尔赛季进19球但失18球，攻强守弱",
+          "塞尔塔进11失12，主场作战略占微弱优势"
+        ],
+        "factors": [
+          "主场微弱优势",
+          "排名相邻",
+          "客队攻强守弱",
+          "双方状态起伏"
+        ],
+        "risk": "两队实力接近，塞尔塔主场优势不明显，平局可能性不低，且场地与伤停信息未提供。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-30-BVB-B04",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-29T18:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "多特蒙德",
+        "nameEn": "Borussia Dortmund",
+        "rank": 1,
+        "form": [
+          "W",
+          "W",
+          "D",
+          "W",
+          "D"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 7
+      },
+      "away": {
+        "name": "勒沃库森",
+        "nameEn": "Bayer 04 Leverkusen",
+        "rank": 5,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 24,
+        "goalsAgainst": 17
+      },
+      "prediction": {
+        "prob": {
+          "home": 44,
+          "draw": 27,
+          "away": 29
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 62,
+        "pick": "home",
+        "reasons": [
+          "主队排名第1高于客队第5，积分榜占优",
+          "主队近5场W W D W D保持不败，状态稳定",
+          "主队赛季进失球17/7，防守明显优于客队24/17",
+          "客队近5场出现两场失利，状态有起伏"
+        ],
+        "factors": [
+          "主场作战",
+          "防守更稳",
+          "客队攻击力强",
+          "排名差距",
+          "主队不败走势"
+        ],
+        "risk": "客队赛季进球24个为联赛火力突出，且场地信息未提供，主队防线存在被冲击的不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-30-COM-JUV",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-29T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "科莫",
+        "nameEn": "Como 1907",
+        "rank": 5,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 10
+      },
+      "away": {
+        "name": "尤文图斯",
+        "nameEn": "Juventus FC",
+        "rank": 6,
+        "form": [
+          "W",
+          "D",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 19,
+        "goalsAgainst": 12
+      },
+      "prediction": {
+        "prob": {
+          "home": 41,
+          "draw": 30,
+          "away": 29
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 60,
+        "pick": "home",
+        "reasons": [
+          "积分排名科莫第5，尤文图斯第6，主队略高",
+          "近5场科莫4胜1负，状态优于尤文图斯",
+          "科莫赛季进失球20/10，防守数据优于尤文图斯19/12",
+          "双方排名接近，科莫坐镇主场略占优势"
+        ],
+        "factors": [
+          "排名接近",
+          "科莫状态更佳",
+          "主队防守占优",
+          "主场因素",
+          "实力接近"
+        ],
+        "risk": "两队排名接近且实力差距小，平局概率不低；场地信息缺失。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-30-LYO-ASM",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-29T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "Olympique Lyon",
+        "nameEn": "Olympique Lyonnais",
+        "rank": 4,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 16,
+        "goalsAgainst": 9
+      },
+      "away": {
+        "name": "摩纳哥",
+        "nameEn": "AS Monaco FC",
+        "rank": 8,
+        "form": [
+          "D",
+          "D",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 12
+      },
+      "prediction": {
+        "prob": {
+          "home": 48,
+          "draw": 28,
+          "away": 24
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 67,
+        "pick": "home",
+        "reasons": [
+          "Olympique Lyon 排名第4，高于摩纳哥第8",
+          "主队近5场3胜2负，客队近5场3平2负",
+          "主队赛季进16失9，攻防数据优于客队14/12",
+          "Olympique Lyon 坐镇主场，排名与状态均占优"
+        ],
+        "factors": [
+          "主队排名占优",
+          "客队近5场不胜",
+          "主队攻防更稳",
+          "主场因素"
+        ],
+        "risk": "摩纳哥近5场虽不胜但3场战平，平局风险不可忽视。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-30-RSO-SEV",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-29T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "皇家社会",
+        "nameEn": "Real Sociedad de Fútbol",
+        "rank": 5,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 23,
+        "goalsAgainst": 23
+      },
+      "away": {
+        "name": "塞维利亚",
+        "nameEn": "Sevilla FC",
+        "rank": 6,
+        "form": [
+          "D",
+          "D",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 20
+      },
+      "prediction": {
+        "prob": {
+          "home": 46,
+          "draw": 28,
+          "away": 26
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 58,
+        "pick": "home",
+        "reasons": [
+          "主队排名第5、客队第6，积分接近但主队略占优。",
+          "主队近5场3胜2负，客队近5场仅1胜且2平。",
+          "主队赛季进23球失23球，进攻强于客队18球。",
+          "主队坐镇主场，排名与近况都支持主队小胜。"
+        ],
+        "factors": [
+          "排名接近",
+          "主队近况更佳",
+          "主队进攻更强",
+          "客队近5场仅1胜",
+          "主场小幅优势"
+        ],
+        "risk": "双方排名接近、防守数据都不突出，胜负难料；场地与伤停未提供，增加不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    }
+  ]
+}
