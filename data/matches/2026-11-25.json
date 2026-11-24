@@ -1,328 +1,593 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-25",
-  "generatedAt": "2026-11-23T09:12:31+08:00",
+  "generatedAt": "2026-11-24T14:06:33+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
-  "matchCount": 5,
+  "matchCount": 9,
   "degradedCount": 0,
   "matches": [
     {
-      "id": "PL-2026-11-25-MCI-LIV",
-      "league": "PL",
-      "leagueName": "英超",
-      "kickoff": "2026-11-25T12:00:00Z",
+      "id": "CL-2026-11-25-GAL-AVL",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T17:45:00Z",
       "status": "scheduled",
-      "matchday": 13,
-      "venue": "Etihad Stadium",
+      "matchday": 5,
+      "venue": "",
       "home": {
-        "name": "曼城",
-        "nameEn": "Manchester City FC",
-        "rank": 2,
+        "name": "Galatasaray",
+        "nameEn": "Galatasaray SK",
+        "crest": "https://crests.football-data.org/610.png",
+        "rank": 18,
         "form": [
           "W",
-          "D",
-          "W",
-          "W",
-          "L"
-        ],
-        "goalsFor": 27,
-        "goalsAgainst": 13,
-        "crest": "https://crests.football-data.org/65.png"
-      },
-      "away": {
-        "name": "利物浦",
-        "nameEn": "Liverpool FC",
-        "rank": 3,
-        "form": [
-          "W",
-          "W",
-          "D",
-          "W",
-          "W"
-        ],
-        "goalsFor": 26,
-        "goalsAgainst": 14,
-        "crest": "https://crests.football-data.org/64.png"
-      },
-      "prediction": {
-        "prob": {
-          "home": 41,
-          "draw": 29,
-          "away": 30
-        },
-        "score": {
-          "home": 2,
-          "away": 1
-        },
-        "confidence": 58,
-        "pick": "home",
-        "reasons": [
-          "主队主场近 5 场 4 胜",
-          "两队进攻数据接近",
-          "客队近 3 个客场均有失球"
-        ],
-        "factors": [
-          "主场优势",
-          "强强对话"
-        ],
-        "risk": "双方实力接近，一次失误即可改变结果"
-      },
-      "degraded": false,
-      "result": null
-    },
-    {
-      "id": "PD-2026-11-25-BAR-ATM",
-      "league": "PD",
-      "leagueName": "西甲",
-      "kickoff": "2026-11-25T13:00:00Z",
-      "status": "scheduled",
-      "matchday": 13,
-      "venue": "Spotify Camp Nou",
-      "home": {
-        "name": "巴塞罗那",
-        "nameEn": "FC Barcelona",
-        "rank": 1,
-        "form": [
-          "W",
-          "W",
-          "D",
-          "W",
-          "W"
-        ],
-        "goalsFor": 33,
-        "goalsAgainst": 14,
-        "crest": "https://crests.football-data.org/81.png"
-      },
-      "away": {
-        "name": "马德里竞技",
-        "nameEn": "Club Atlético de Madrid",
-        "rank": 4,
-        "form": [
-          "W",
-          "D",
-          "W",
-          "D",
-          "W"
-        ],
-        "goalsFor": 22,
-        "goalsAgainst": 12,
-        "crest": "https://crests.football-data.org/78.png"
-      },
-      "prediction": {
-        "prob": {
-          "home": 49,
-          "draw": 27,
-          "away": 24
-        },
-        "score": {
-          "home": 2,
-          "away": 1
-        },
-        "confidence": 64,
-        "pick": "home",
-        "reasons": [
-          "主队进攻数据联赛第一",
-          "客队防守稳固但客场进球少",
-          "主队主场保持不败"
-        ],
-        "factors": [
-          "主场火力",
-          "客队防守"
-        ],
-        "risk": "客队擅长低位防守，主队可能久攻不下"
-      },
-      "degraded": false,
-      "result": null
-    },
-    {
-      "id": "SA-2026-11-25-MIL-JUV",
-      "league": "SA",
-      "leagueName": "意甲",
-      "kickoff": "2026-11-25T14:45:00Z",
-      "status": "scheduled",
-      "matchday": 12,
-      "venue": "Stadio Giuseppe Meazza",
-      "home": {
-        "name": "AC米兰",
-        "nameEn": "AC Milan",
-        "rank": 5,
-        "form": [
-          "D",
           "W",
           "L",
-          "W",
-          "D"
-        ],
-        "goalsFor": 20,
-        "goalsAgainst": 15,
-        "crest": "https://crests.football-data.org/98.png"
-      },
-      "away": {
-        "name": "尤文图斯",
-        "nameEn": "Juventus FC",
-        "rank": 4,
-        "form": [
-          "W",
-          "D",
-          "D",
-          "W",
           "L"
         ],
-        "goalsFor": 19,
-        "goalsAgainst": 13,
-        "crest": "https://crests.football-data.org/109.png"
+        "goalsFor": 8,
+        "goalsAgainst": 9
+      },
+      "away": {
+        "name": "阿斯顿维拉",
+        "nameEn": "Aston Villa FC",
+        "crest": "https://crests.football-data.org/58.png",
+        "rank": 6,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 6
       },
       "prediction": {
         "prob": {
-          "home": 35,
-          "draw": 32,
-          "away": 33
+          "home": 30,
+          "draw": 27,
+          "away": 43
         },
         "score": {
           "home": 1,
-          "away": 0
+          "away": 2
         },
-        "confidence": 52,
-        "pick": "home",
+        "confidence": 62,
+        "pick": "away",
         "reasons": [
-          "两队积分接近",
-          "双方防守数据接近",
-          "主队主场对强队拿分率更高"
+          "客队排名第6，明显高于排名第18的主队",
+          "客队近4场3胜1负，状态优于主队近4场2胜2负",
+          "客队赛季进12球失6球，攻防数据均优于主队8球、失9球",
+          "主队近4场出现两连败，防线稳定性存疑"
         ],
         "factors": [
-          "主场",
-          "防守对抗"
+          "排名差距明显",
+          "客队状态更佳",
+          "客队防守稳固",
+          "主队走势起伏"
         ],
-        "risk": "比赛可能偏保守，平局概率与主胜接近"
+        "risk": "近5场仅提供4场结果，样本略不足；加拉塔萨雷主场氛围可能缩小实力差距。"
       },
       "degraded": false,
       "result": null
     },
     {
-      "id": "BL1-2026-11-25-BVB-RBL",
-      "league": "BL1",
-      "leagueName": "德甲",
-      "kickoff": "2026-11-25T14:30:00Z",
+      "id": "CL-2026-11-25-FK-LIN",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T17:45:00Z",
       "status": "scheduled",
-      "matchday": 11,
-      "venue": "Signal Iduna Park",
+      "matchday": 5,
+      "venue": "",
       "home": {
-        "name": "多特蒙德",
-        "nameEn": "Borussia Dortmund",
-        "rank": 4,
+        "name": "Bodø/Glimt",
+        "nameEn": "FK Bodø/Glimt",
+        "crest": "https://crests.football-data.org/5721.png",
+        "rank": 25,
         "form": [
-          "W",
-          "W",
           "D",
           "L",
-          "W"
+          "W",
+          "L"
         ],
-        "goalsFor": 25,
-        "goalsAgainst": 16,
-        "crest": "https://crests.football-data.org/4.png"
+        "goalsFor": 4,
+        "goalsAgainst": 9
       },
       "away": {
-        "name": "莱比锡红牛",
-        "nameEn": "RB Leipzig",
-        "rank": 5,
+        "name": "LASK",
+        "nameEn": "LASK Linz",
+        "crest": "https://crests.football-data.org/2016.png",
+        "rank": 16,
         "form": [
           "W",
+          "W",
           "L",
-          "W",
-          "W",
-          "D"
+          "L"
         ],
-        "goalsFor": 24,
-        "goalsAgainst": 17,
-        "crest": "https://crests.football-data.org/721.png"
+        "goalsFor": 10,
+        "goalsAgainst": 9
       },
       "prediction": {
         "prob": {
-          "home": 44,
-          "draw": 27,
-          "away": 29
+          "home": 34,
+          "draw": 29,
+          "away": 37
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 54,
+        "pick": "away",
+        "reasons": [
+          "客队排名第16高于主队第25",
+          "客队赛季进球10比主队4更多",
+          "主队近4场仅1胜且失球9个",
+          "双方近期状态均不稳定"
+        ],
+        "factors": [
+          "客队排名更高",
+          "客队进攻更强",
+          "主队防守不佳",
+          "双方状态不稳",
+          "数据不完整"
+        ],
+        "risk": "近5场仅列出4场且场地未提供，主队主场优势难以量化，判断不确定性较大。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "CL-2026-11-25-RMA-PSV",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "venue": "",
+      "home": {
+        "name": "皇家马德里",
+        "nameEn": "Real Madrid CF",
+        "crest": "https://crests.football-data.org/86.png",
+        "rank": 2,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 7
+      },
+      "away": {
+        "name": "PSV",
+        "nameEn": "PSV",
+        "crest": "https://crests.football-data.org/674.png",
+        "rank": 24,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "D"
+        ],
+        "goalsFor": 3,
+        "goalsAgainst": 4
+      },
+      "prediction": {
+        "prob": {
+          "home": 78,
+          "draw": 14,
+          "away": 8
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "confidence": 80,
+        "pick": "home",
+        "reasons": [
+          "皇家马德里排名第2，PSV排名第24，排名差距明显",
+          "皇家马德里近期 W W W W，状态稳定",
+          "赛季进失球皇家马德里13/7，PSV仅3/4，攻防占优"
+        ],
+        "factors": [
+          "排名差距",
+          "主队状态稳定",
+          "进攻火力",
+          "防守对比",
+          "客队状态起伏"
+        ],
+        "risk": "PSV近期有胜有平且主队近期结果仅列出4场，数据略有不全，需防客队爆冷。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "CL-2026-11-25-MCI-NAP",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "venue": "",
+      "home": {
+        "name": "曼城",
+        "nameEn": "Manchester City FC",
+        "crest": "https://crests.football-data.org/65.png",
+        "rank": 7,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 7
+      },
+      "away": {
+        "name": "那不勒斯",
+        "nameEn": "SSC Napoli",
+        "crest": "https://crests.football-data.org/113.png",
+        "rank": 27,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 6,
+        "goalsAgainst": 11
+      },
+      "prediction": {
+        "prob": {
+          "home": 58,
+          "draw": 24,
+          "away": 18
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 57,
+        "confidence": 72,
         "pick": "home",
         "reasons": [
-          "主队主场氛围与战绩占优",
-          "两队进攻数据接近",
-          "客队近 3 个客场丢 5 球"
+          "曼城积分排名第7，明显高于那不勒斯第27",
+          "曼城赛季进球12失球7，攻防数据优于那不勒斯6/11",
+          "近4场曼城3胜1负，那不勒斯1胜3负，状态占优",
+          "欧冠第5轮曼城主场作战，整体实力与稳定性更强"
         ],
         "factors": [
-          "主场优势",
-          "进攻效率"
+          "排名优势",
+          "攻防效率",
+          "主队状态",
+          "客队低迷",
+          "主场作战"
         ],
-        "risk": "双方都擅长快速反击，比赛节奏可能失控"
+        "risk": "近5场双方均只列4场，样本有限，那不勒斯反击效率仍有不确定性"
       },
       "degraded": false,
       "result": null
     },
     {
-      "id": "FL1-2026-11-25-OM-MON",
-      "league": "FL1",
-      "leagueName": "法甲",
-      "kickoff": "2026-11-25T15:00:00Z",
+      "id": "CL-2026-11-25-ARS-BVB",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
       "status": "scheduled",
-      "matchday": 12,
-      "venue": "Orange Vélodrome",
+      "matchday": 5,
+      "venue": "",
       "home": {
-        "name": "马赛",
-        "nameEn": "Olympique de Marseille",
+        "name": "阿森纳",
+        "nameEn": "Arsenal FC",
+        "crest": "https://crests.football-data.org/57.png",
         "rank": 3,
         "form": [
           "W",
           "D",
           "W",
-          "L",
           "W"
         ],
-        "goalsFor": 23,
-        "goalsAgainst": 14,
-        "crest": "https://crests.football-data.org/516.png"
+        "goalsFor": 8,
+        "goalsAgainst": 3
       },
       "away": {
-        "name": "摩纳哥",
-        "nameEn": "AS Monaco FC",
-        "rank": 2,
+        "name": "多特蒙德",
+        "nameEn": "Borussia Dortmund",
+        "crest": "https://crests.football-data.org/4.png",
+        "rank": 12,
         "form": [
           "W",
           "W",
-          "D",
-          "W",
-          "L"
+          "L",
+          "W"
         ],
-        "goalsFor": 25,
-        "goalsAgainst": 15,
-        "crest": "https://crests.football-data.org/548.png"
+        "goalsFor": 7,
+        "goalsAgainst": 5
       },
       "prediction": {
         "prob": {
-          "home": 46,
-          "draw": 28,
-          "away": 26
+          "home": 52,
+          "draw": 26,
+          "away": 22
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 60,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "主队主场近 5 场 4 胜",
-          "两队积分接近",
-          "客队客场防守不如主场稳定"
+          "阿森纳排名第3，明显高于多特蒙德第12",
+          "阿森纳近4场3胜1平保持不败，状态稳定",
+          "阿森纳赛季进8失3，防守端比多特蒙德更稳",
+          "多特蒙德近4场3胜1负，但客场挑战榜首区球队"
         ],
         "factors": [
-          "主场氛围",
-          "进攻火力"
+          "主场优势",
+          "排名差距",
+          "防守更稳",
+          "多特状态起伏"
         ],
-        "risk": "客队反击效率高，主队压上后身后空档大"
+        "risk": "未提供场地、伤停信息，近期仅列出4场，多特蒙德进攻仍有威胁，比分存在变数。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "CL-2026-11-25-FEY-FCP",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "venue": "",
+      "home": {
+        "name": "Feyenoord",
+        "nameEn": "Feyenoord Rotterdam",
+        "crest": "https://crests.football-data.org/675.png",
+        "rank": 32,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 4,
+        "goalsAgainst": 11
+      },
+      "away": {
+        "name": "Porto",
+        "nameEn": "FC Porto",
+        "crest": "https://crests.football-data.org/503.png",
+        "rank": 26,
+        "form": [
+          "W",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 6,
+        "goalsAgainst": 7
+      },
+      "prediction": {
+        "prob": {
+          "home": 31,
+          "draw": 28,
+          "away": 41
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 60,
+        "pick": "away",
+        "reasons": [
+          "Porto排名第26高于Feyenoord第32，积分位置略优。",
+          "Feyenoord赛季进4失11，防守端失球偏多。",
+          "Porto赛季进6失7，攻守平衡优于主队。",
+          "双方近况均低迷，但Porto近4场有1胜。"
+        ],
+        "factors": [
+          "客队排名略高",
+          "主队防守失11球",
+          "双方近况低迷",
+          "欧冠第5轮"
+        ],
+        "risk": "近5场数据仅列4场且场地未提供，状态与主客场因素存在不确定性。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "CL-2026-11-25-SBA-BET",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "venue": "",
+      "home": {
+        "name": "Sl. Bratislava",
+        "nameEn": "ŠK Slovan Bratislava",
+        "crest": "https://crests.football-data.org/7509.png",
+        "rank": 36,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 1,
+        "goalsAgainst": 17
+      },
+      "away": {
+        "name": "皇家贝蒂斯",
+        "nameEn": "Real Betis Balompié",
+        "crest": "https://crests.football-data.org/90.png",
+        "rank": 11,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 8,
+        "goalsAgainst": 6
+      },
+      "prediction": {
+        "prob": {
+          "home": 10,
+          "draw": 18,
+          "away": 72
+        },
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "confidence": 76,
+        "pick": "away",
+        "reasons": [
+          "客队排名第11，主队第36，排名差距明显",
+          "主队赛季进1失17，客队进8失6，攻防差距大",
+          "主队所列近期场次全败，客队3胜1负状态更好"
+        ],
+        "factors": [
+          "排名差距大",
+          "主队攻防低迷",
+          "客队状态占优",
+          "客队实力更强"
+        ],
+        "risk": "主队近期只列出4场且场地未提供，欧冠客场变数仍可能影响客队发挥。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "CL-2026-11-25-RBL-RCL",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "venue": "",
+      "home": {
+        "name": "莱比锡红牛",
+        "nameEn": "RB Leipzig",
+        "crest": "https://crests.football-data.org/721.png",
+        "rank": 29,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 5,
+        "goalsAgainst": 11
+      },
+      "away": {
+        "name": "朗斯",
+        "nameEn": "Racing Club de Lens",
+        "crest": "https://crests.football-data.org/546.png",
+        "rank": 33,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 4,
+        "goalsAgainst": 16
+      },
+      "prediction": {
+        "prob": {
+          "home": 42,
+          "draw": 30,
+          "away": 28
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 54,
+        "pick": "home",
+        "reasons": [
+          "主队排名第29，略高于客队第33",
+          "主队赛季进5失11，客队进4失16，客队防守更差",
+          "客队近4场1胜3负，状态低迷",
+          "主队近4场1胜3负，但主场略占优势"
+        ],
+        "factors": [
+          "排名略占优",
+          "主队进攻稍好",
+          "客队失球偏多",
+          "双方状态低迷"
+        ],
+        "risk": "近5场仅提供4场结果，场地信息缺失，双方实力接近，不确定性较高。"
+      },
+      "degraded": false,
+      "result": null
+    },
+    {
+      "id": "CL-2026-11-25-COM-AEK",
+      "league": "CL",
+      "leagueName": "欧冠",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 5,
+      "venue": "",
+      "home": {
+        "name": "科莫",
+        "nameEn": "Como 1907",
+        "crest": "https://crests.football-data.org/7397.png",
+        "rank": 4,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 19,
+        "goalsAgainst": 6
+      },
+      "away": {
+        "name": "PAE AEK",
+        "nameEn": "PAE AEK",
+        "crest": "https://crests.football-data.org/1899.png",
+        "rank": 29,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 5,
+        "goalsAgainst": 11
+      },
+      "prediction": {
+        "prob": {
+          "home": 74,
+          "draw": 16,
+          "away": 10
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "confidence": 82,
+        "pick": "home",
+        "reasons": [
+          "科莫欧冠排名第4，PAE AEK仅第29，排名差距明显",
+          "科莫近4场3胜1负，PAE AEK近4场1胜3负",
+          "科莫赛季进19失6，攻防数据远优于PAE AEK的5/11"
+        ],
+        "factors": [
+          "排名差距明显",
+          "攻防数据占优",
+          "主场状态较好",
+          "客队近期低迷"
+        ],
+        "risk": "近5场仅列出4场结果，样本略少；PAE AEK仍有爆冷可能。"
       },
       "degraded": false,
       "result": null
