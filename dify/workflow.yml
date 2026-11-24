@@ -559,9 +559,33 @@ workflow:
         iteration_id: iter_dates
         sourceType: if-else
         targetType: http-request
-      id: if_sha-true-http_put_update-target
+      id: if_sha-true-http_get_day-target
       source: if_sha
       sourceHandle: 'true'
+      target: http_get_day
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: http-request
+        targetType: code
+      id: http_get_day-source-code_merge_day-target
+      source: http_get_day
+      sourceHandle: source
+      target: code_merge_day
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_dates
+        sourceType: code
+        targetType: http-request
+      id: code_merge_day-source-http_put_update-target
+      source: code_merge_day
+      sourceHandle: source
       target: http_put_update
       targetHandle: target
       type: custom
@@ -2061,10 +2085,153 @@ workflow:
           config: null
           type: no-auth
         body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_dates
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 读取当天文件
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches/{{#code_build.date#}}.json?ref={{#env.GH_BRANCH#}}'
+        variables: []
+      height: 113
+      id: http_get_day
+      parentId: iter_dates
+      position:
+        x: 1280
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import base64
+          import json
+
+
+          def _as_dict(raw):
+              if isinstance(raw, dict):
+                  return raw
+              try:
+                  value = json.loads(raw or "{}")
+              except (TypeError, ValueError):
+                  return {}
+              return value if isinstance(value, dict) else {}
+
+
+          def _decode(value):
+              text = str(value or "").strip()
+              if not text:
+                  return {}
+              try:
+                  raw = base64.b64decode(text.encode("ascii")).decode("utf-8")
+                  data = json.loads(raw)
+              except (TypeError, ValueError):
+                  return {}
+              return data if isinstance(data, dict) else {}
+
+
+          def main(body, content: str, date: str) -> dict:
+              payload = _as_dict(body)
+              sha = str(payload.get("sha") or "")
+              old = _decode(payload.get("content"))
+              incoming = _decode(content)
+
+              merged = {}
+              for match in old.get("matches") or []:
+                  if isinstance(match, dict) and match.get("id"):
+                      merged[match["id"]] = match
+              for match in incoming.get("matches") or []:
+                  if isinstance(match, dict) and match.get("id"):
+                      merged[match["id"]] = match
+
+              matches = sorted(merged.values(), key=lambda item: str(item.get("kickoff") or ""))
+              data = {
+                  "schemaVersion": incoming.get("schemaVersion") or old.get("schemaVersion") or 1,
+                  "date": date,
+                  "generatedAt": incoming.get("generatedAt") or old.get("generatedAt") or "",
+                  "source": incoming.get("source") or old.get("source") or "football-data.org",
+                  "model": incoming.get("model") or old.get("model") or "",
+                  "matchCount": len(matches),
+                  "degradedCount": sum(1 for item in matches if item.get("degraded")),
+                  "matches": matches,
+              }
+              text = json.dumps(data, ensure_ascii=False, indent=2)
+              return {
+                  "sha": sha,
+                  "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                  "added": len(incoming.get("matches") or []),
+                  "total": len(matches),
+              }
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_dates
+        outputs:
+          sha:
+            children: null
+            type: string
+          contentBase64:
+            children: null
+            type: string
+          added:
+            children: null
+            type: number
+          total:
+            children: null
+            type: number
+        selected: false
+        title: 合并当天比赛
+        type: code
+        variables:
+        - value_selector:
+          - http_get_day
+          - body
+          variable: body
+        - value_selector:
+          - code_build
+          - contentBase64
+          variable: content
+        - value_selector:
+          - code_build
+          - date
+          variable: date
+      height: 90
+      id: code_merge_day
+      parentId: iter_dates
+      position:
+        x: 1520
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
           data:
           - key: ''
             type: text
-            value: '{"message": "{{#code_build.commitMessage#}}", "content": "{{#code_build.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}", "sha": "{{#code_sha.sha#}}"}'
+            value: '{"message": "{{#code_build.commitMessage#}}", "content": "{{#code_merge_day.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}", "sha": "{{#code_merge_day.sha#}}"}'
           type: json
         desc: ''
         headers: |-
