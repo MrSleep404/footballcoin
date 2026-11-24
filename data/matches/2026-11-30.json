@@ -92,7 +92,21 @@
         "risk": "场地、天气、伤病、市场赔率均未提供，雷恩攻击力可能改变走势。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 11.1,
+        "precip": 30,
+        "wind": 3.6
+      },
+      "market": {
+        "bookmaker": "市场均值（22 家）",
+        "capturedAt": "2026-11-24T09:30:04Z",
+        "prob": {
+          "home": 37,
+          "draw": 26,
+          "away": 37
+        }
+      }
     },
     {
       "id": "PL-2026-11-30-ARS-MCI",
@@ -180,7 +194,21 @@
         "risk": "伤病、天气与市场赔率未提供，曼城进攻火力仍是最大变数。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 9.1,
+        "precip": 22,
+        "wind": 9.4
+      },
+      "market": {
+        "bookmaker": "市场均值（25 家）",
+        "capturedAt": "2026-11-24T09:30:03Z",
+        "prob": {
+          "home": 48,
+          "draw": 26,
+          "away": 26
+        }
+      }
     },
     {
       "id": "BL1-2026-11-30-TSG-FCA",
@@ -267,7 +295,21 @@
         "risk": "伤病、天气与市场赔率未提供，阵容和外部条件存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 1.2,
+        "precip": 13,
+        "wind": 1.8
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 55,
+          "draw": 21,
+          "away": 24
+        }
+      }
     },
     {
       "id": "SA-2026-11-30-ROM-MON",
@@ -340,7 +382,21 @@
         "risk": "伤病、天气、场地与市场赔率均未提供，且双方无历史交锋数据可参考。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 10.5,
+        "precip": 0,
+        "wind": 9.7
+      },
+      "market": {
+        "bookmaker": "市场均值（24 家）",
+        "capturedAt": "2026-11-24T09:30:05Z",
+        "prob": {
+          "home": 79,
+          "draw": 13,
+          "away": 8
+        }
+      }
     },
     {
       "id": "PD-2026-11-30-CEL-VIL",
@@ -427,7 +483,21 @@
         "risk": "场地、天气、伤病与市场赔率均未提供，且两队排名接近、状态不稳，判断存在较大不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 15.8,
+        "precip": 28,
+        "wind": 3.1
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-24T09:30:11Z",
+        "prob": {
+          "home": 35,
+          "draw": 27,
+          "away": 38
+        }
+      }
     },
     {
       "id": "BL1-2026-11-30-BVB-B04",
@@ -515,7 +585,21 @@
         "risk": "场地、天气与伤病信息未提供，临场阵容和环境影响存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 2.7,
+        "precip": 14,
+        "wind": 11.2
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 45,
+          "draw": 24,
+          "away": 31
+        }
+      }
     },
     {
       "id": "SA-2026-11-30-COM-JUV",
@@ -602,7 +686,21 @@
         "risk": "伤病、天气、场地和市场赔率均未提供，赛前判断仍有不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 5.2,
+        "precip": 2,
+        "wind": 4.4
+      },
+      "market": {
+        "bookmaker": "市场均值（24 家）",
+        "capturedAt": "2026-11-24T09:30:05Z",
+        "prob": {
+          "home": 45,
+          "draw": 27,
+          "away": 28
+        }
+      }
     },
     {
       "id": "FL1-2026-11-30-LYO-ASM",
@@ -689,7 +787,21 @@
         "risk": "场地、天气、伤病及市场赔率均未提供，且交手记录仅2场样本偏小，客队近5场3平具备韧性，存在被逼平的不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 4.2,
+        "precip": 32,
+        "wind": 1.3
+      },
+      "market": {
+        "bookmaker": "市场均值（22 家）",
+        "capturedAt": "2026-11-24T09:30:04Z",
+        "prob": {
+          "home": 40,
+          "draw": 28,
+          "away": 32
+        }
+      }
     },
     {
       "id": "PD-2026-11-30-RSO-SEV",
@@ -776,7 +888,21 @@
         "risk": "伤病、场地与天气信息均未提供，且对手近期交手曾取胜，不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 13.7,
+        "precip": 54,
+        "wind": 1.5
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-24T09:30:11Z",
+        "prob": {
+          "home": 45,
+          "draw": 26,
+          "away": 29
+        }
+      }
     }
   ]
 }

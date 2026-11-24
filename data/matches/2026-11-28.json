@@ -92,7 +92,21 @@
         "risk": "伤病、天气和场地未提供，且客队近期有胜绩，平局是最大不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": -3.4,
+        "precip": 0,
+        "wind": 8.1
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 54,
+          "draw": 23,
+          "away": 23
+        }
+      }
     },
     {
       "id": "SA-2026-11-28-VEN-BOL",
@@ -166,7 +180,21 @@
         "risk": "交手记录、伤病、天气与场地均未提供，博洛尼亚客场表现无从判断，主队主场加成不明。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 6.6,
+        "precip": 18,
+        "wind": 10.6
+      },
+      "market": {
+        "bookmaker": "市场均值（24 家）",
+        "capturedAt": "2026-11-24T09:30:05Z",
+        "prob": {
+          "home": 28,
+          "draw": 29,
+          "away": 43
+        }
+      }
     },
     {
       "id": "FL1-2026-11-28-BRE-PFC",
@@ -253,7 +281,16 @@
         "risk": "天气、伤病与场地未提供，临场变数可能影响客队优势判断。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（22 家）",
+        "capturedAt": "2026-11-24T09:30:04Z",
+        "prob": {
+          "home": 29,
+          "draw": 27,
+          "away": 44
+        }
+      }
     },
     {
       "id": "PL-2026-11-28-NOT-CHE",
@@ -341,7 +378,21 @@
         "risk": "场地与天气未提供，伤病情况缺失，主队近期状态低迷但主场曾3-1击败切尔西，结果不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 3.3,
+        "precip": 32,
+        "wind": 8.3
+      },
+      "market": {
+        "bookmaker": "市场均值（25 家）",
+        "capturedAt": "2026-11-24T09:30:04Z",
+        "prob": {
+          "home": 36,
+          "draw": 28,
+          "away": 36
+        }
+      }
     },
     {
       "id": "PD-2026-11-28-LEV-SAN",
@@ -414,7 +465,21 @@
         "risk": "伤病、天气、市场赔率与历史交锋均未提供，判断不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 10.6,
+        "precip": 0,
+        "wind": 2.5
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-24T09:30:10Z",
+        "prob": {
+          "home": 45,
+          "draw": 25,
+          "away": 30
+        }
+      }
     },
     {
       "id": "PD-2026-11-28-BET-RAY",
@@ -501,7 +566,21 @@
         "risk": "伤病、天气、场地与市场赔率未提供，影响对阵容和外部条件的判断。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 17.1,
+        "precip": 0,
+        "wind": 9.8
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-24T09:30:10Z",
+        "prob": {
+          "home": 60,
+          "draw": 22,
+          "away": 18
+        }
+      }
     },
     {
       "id": "SA-2026-11-28-FRO-PAR",
@@ -575,7 +654,21 @@
         "risk": "场地、天气、伤病与市场赔率均未提供，客队近期有回升迹象，主队防线失球偏多。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 15.0,
+        "precip": 0,
+        "wind": 3.4
+      },
+      "market": {
+        "bookmaker": "市场均值（24 家）",
+        "capturedAt": "2026-11-24T09:30:05Z",
+        "prob": {
+          "home": 62,
+          "draw": 20,
+          "away": 18
+        }
+      }
     },
     {
       "id": "BL1-2026-11-28-KOE-ELV",
@@ -649,7 +742,21 @@
         "risk": "交手记录、伤病、天气与市场赔率均未提供，判断不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 2.4,
+        "precip": 5,
+        "wind": 10.2
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 47,
+          "draw": 25,
+          "away": 28
+        }
+      }
     },
     {
       "id": "BL1-2026-11-28-M05-UNB",
@@ -737,7 +844,21 @@
         "risk": "场地、天气、伤病与市场赔率均未提供；两队近5场状态低迷，平局风险较大，判断不确定性高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 1.0,
+        "precip": 0,
+        "wind": 7.9
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 64,
+          "draw": 20,
+          "away": 16
+        }
+      }
     },
     {
       "id": "BL1-2026-11-28-SCP-S04",
@@ -811,7 +932,21 @@
         "risk": "交手记录、天气、伤病、市场赔率均未提供，场地亦缺失，信息不足令判断不确定性偏高"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 0.8,
+        "precip": 1,
+        "wind": 11.1
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 39,
+          "draw": 27,
+          "away": 34
+        }
+      }
     },
     {
       "id": "BL1-2026-11-28-HSV-FCB",
@@ -898,7 +1033,21 @@
         "risk": "天气、场地、伤病与市场赔率未提供，增加不确定性"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": -1.4,
+        "precip": 1,
+        "wind": 14.3
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:02Z",
+        "prob": {
+          "home": 10,
+          "draw": 14,
+          "away": 76
+        }
+      }
     },
     {
       "id": "PL-2026-11-28-LEE-COV",
@@ -972,7 +1121,21 @@
         "risk": "双方历史交锋数据与场地、天气、伤病、赔率均未提供，考文垂近期两胜显示一定爆冷能力。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 4.9,
+        "precip": 43,
+        "wind": 10.1
+      },
+      "market": {
+        "bookmaker": "市场均值（25 家）",
+        "capturedAt": "2026-11-24T09:30:04Z",
+        "prob": {
+          "home": 64,
+          "draw": 21,
+          "away": 15
+        }
+      }
     },
     {
       "id": "PL-2026-11-28-MUN-BRE",
@@ -1059,7 +1222,21 @@
         "risk": "天气、伤病和市场赔率未提供，且曼联主场交手不处明显劣势，客胜判断存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 6.2,
+        "precip": 47,
+        "wind": 5.4
+      },
+      "market": {
+        "bookmaker": "市场均值（25 家）",
+        "capturedAt": "2026-11-24T09:30:04Z",
+        "prob": {
+          "home": 46,
+          "draw": 25,
+          "away": 29
+        }
+      }
     },
     {
       "id": "PD-2026-11-28-MAL-ATH",
@@ -1132,7 +1309,21 @@
         "risk": "伤病和天气未提供，历史交锋暂无，场地未知，客队优势存在变数。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 17.4,
+        "precip": 0,
+        "wind": 5.6
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-24T09:30:10Z",
+        "prob": {
+          "home": 20,
+          "draw": 26,
+          "away": 54
+        }
+      }
     }
   ]
 }

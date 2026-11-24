@@ -92,7 +92,21 @@
         "risk": "场地与天气信息未提供，莱切主场保级战意的强度难以量化，可能影响比赛节奏。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 10.5,
+        "precip": 2,
+        "wind": 7.2
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:05Z",
+        "prob": {
+          "home": 25,
+          "draw": 25,
+          "away": 50
+        }
+      }
     },
     {
       "id": "SA-2026-12-01-CAG-MIL",
@@ -179,7 +193,21 @@
         "risk": "场地、天气、伤病与市场赔率均未提供；交手各胜一场，卡利亚里主场爆冷风险不可忽视。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 12.3,
+        "precip": 10,
+        "wind": 5.6
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:05Z",
+        "prob": {
+          "home": 20,
+          "draw": 25,
+          "away": 55
+        }
+      }
     },
     {
       "id": "PD-2026-12-01-ESP-GET",
@@ -267,7 +295,21 @@
         "risk": "场地、天气、伤病与市场赔率未提供，临场信息不足。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 10.2,
+        "precip": 7,
+        "wind": 3.8
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-24T09:30:11Z",
+        "prob": {
+          "home": 46,
+          "draw": 30,
+          "away": 24
+        }
+      }
     }
   ]
 }

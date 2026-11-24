@@ -76,7 +76,42 @@
         "risk": "伤病、天气、市场赔率均未提供，历史交锋暂无数据，判断不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 5,
+          "draw": 7,
+          "away": 88
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "R. Bardghji",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Christensen",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "X. Espart",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "Rodri",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -148,7 +183,98 @@
         "risk": "场地、天气、伤病与市场赔率均未提供，近5场仅列4场，预测不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 31,
+          "draw": 25,
+          "away": 44
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "S. Chaloupek",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Chory",
+            "type": "Missing Fixture",
+            "reason": "Coach's decision"
+          },
+          {
+            "player": "H. Kante",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "player": "O. Kolar",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "D. Moses",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "player": "I. Ogbu",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "player": "A. Ouanda",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "player": "E. Pitak",
+            "type": "Missing Fixture",
+            "reason": "Health problems"
+          },
+          {
+            "player": "T. Diakite",
+            "type": "Questionable",
+            "reason": "Health problems"
+          },
+          {
+            "player": "L. Provod",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "player": "D. Sturm",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "I. Akhomach",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "A. Diatta",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "J. Foyth",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "G. Moreno",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-INT-VFB",
@@ -220,7 +346,52 @@
         "risk": "天气、场地、伤病、交手记录与市场赔率均未提供，近5场实际仅列出4场，判断不确定性偏高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 8.3,
+        "precip": 85,
+        "wind": 7.9
+      },
+      "market": {
+        "bookmaker": "市场均值（22 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 68,
+          "draw": 17,
+          "away": 15
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "S. Drljaca",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "L. Jaquez",
+            "type": "Missing Fixture",
+            "reason": "Ribs Injury"
+          },
+          {
+            "player": "L. Stergiou",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "A. Stiller",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "player": "L. Sauer",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -291,7 +462,42 @@
         "risk": "历史交锋、天气、伤病与市场赔率均未提供，增加不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 6.8,
+        "precip": 0,
+        "wind": 8.5
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 87,
+          "draw": 9,
+          "away": 4
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "A. Lookman",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "M. Pubill",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "C. Romero",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "away": []
+      }
     },
     {
       "id": "CL-2026-11-26-PSG-ROM",
@@ -358,7 +564,63 @@
         "risk": "该场为兜底结果，仅供参考"
       },
       "degraded": true,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 6.8,
+        "precip": 28,
+        "wind": 7.9
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 68,
+          "draw": 18,
+          "away": 14
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "D. Doue",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "K. Kvaratskhelia",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Longoni",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "L. Pellegrini",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "player": "D. Rensch",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "D. S. Vasquez Llach",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "player": "L. Balerdi",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -430,7 +692,73 @@
         "risk": "近5场双方均只列出4场，且场地、天气、伤病、市场赔率均未提供，阵容与临场信息不确定。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 21,
+          "draw": 21,
+          "away": 58
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "J. Ordonez",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "J. Virgili",
+            "type": "Questionable",
+            "reason": "Groin Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "C. Bradley",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "F. Chiesa",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "H. Ekitike",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "player": "W. Endo",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "C. Gakpo",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          },
+          {
+            "player": "R. Gravenberch",
+            "type": "Missing Fixture",
+            "reason": "Heel Injury"
+          },
+          {
+            "player": "G. Leoni",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Nallo",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -503,7 +831,57 @@
         "risk": "伤病、场地、天气、市场赔率均未提供，且近5场仅列出4场，拜仁客场稳定性存疑。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "weather": {
+        "temp": 1.2,
+        "precip": 7,
+        "wind": 15.1
+      },
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 19,
+          "draw": 22,
+          "away": 59
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "A. Davies",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "player": "S. Gnabry",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "H. Kane",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "M. Neuer",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "I. Saibari",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "M. Olise",
+            "type": "Questionable",
+            "reason": "Leg Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-SPO-MUN",
@@ -575,7 +953,57 @@
         "risk": "场地、天气、伤病与市场赔率未提供，且近期战绩仅列4场。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:09Z",
+        "prob": {
+          "home": 38,
+          "draw": 26,
+          "away": 36
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "C. Baleba",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "player": "M. Cunha",
+            "type": "Missing Fixture",
+            "reason": "Red Card"
+          },
+          {
+            "player": "K. Darlow",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "B. Sesko",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          },
+          {
+            "player": "M. Ugarte",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "M. Rashford",
+            "type": "Questionable",
+            "reason": "Hip Injury"
+          },
+          {
+            "player": "L. Shaw",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -647,7 +1075,62 @@
         "risk": "近5场双方均不足完整稳定样本，场地与天气、伤病未提供，判断不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（23 家）",
+        "capturedAt": "2026-11-24T09:30:08Z",
+        "prob": {
+          "home": 36,
+          "draw": 27,
+          "away": 37
+        }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "Eguinaldo",
+            "type": "Missing Fixture",
+            "reason": "Shoulder Injury"
+          },
+          {
+            "player": "Kaua Elias",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "V. Korniyenko",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "Pedrinho",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Puzankov",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "M. Shved",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "D. Tvardovskyi",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "Marlon",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "away": []
+      }
     }
   ]
 }
