@@ -19,9 +19,34 @@ const current = computed(
   () => leagues.value.find((item) => item.code === active.value) ?? leagues.value[0] ?? null,
 );
 
-function zone(index: number, total: number): string {
-  if (index < 4) return "europe";
-  if (index >= total - 3) return "relegation";
+interface ZoneRule {
+  ucl: number;
+  uel: number;
+  uecl: number;
+  relegation: number;
+}
+
+// 按各联赛常规名额划分（杯赛冠军占用的欧联/欧协联名额未单独扣除）
+const ZONE_RULES: Record<LeagueCode, ZoneRule> = {
+  PL: { ucl: 4, uel: 5, uecl: 6, relegation: 3 },
+  PD: { ucl: 4, uel: 5, uecl: 6, relegation: 3 },
+  SA: { ucl: 4, uel: 5, uecl: 6, relegation: 3 },
+  BL1: { ucl: 4, uel: 5, uecl: 6, relegation: 2 },
+  FL1: { ucl: 3, uel: 4, uecl: 5, relegation: 2 },
+  CL: { ucl: 8, uel: 24, uecl: 0, relegation: 0 },
+};
+
+function zone(league: LeagueCode, rank: number, total: number): string {
+  if (league === "CL") {
+    if (rank <= 8) return "ucl";
+    if (rank <= 24) return "playoff";
+    return "out";
+  }
+  const rule = ZONE_RULES[league];
+  if (rank <= rule.ucl) return "ucl";
+  if (rank <= rule.uel) return "uel";
+  if (rank <= rule.uecl) return "uecl";
+  if (rule.relegation > 0 && rank > total - rule.relegation) return "relegation";
   return "";
 }
 
@@ -114,9 +139,13 @@ onMounted(() => {
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(row, index) in current.table" :key="row.rank">
+            <tr v-for="row in current.table" :key="row.rank">
               <td class="rank-col">
-                <span class="zone" :class="zone(index, current.table.length)" aria-hidden="true"></span>
+                <span
+                  class="zone"
+                  :class="zone(current.code, row.rank, current.table.length)"
+                  aria-hidden="true"
+                ></span>
                 <span class="numeric rank">{{ row.rank }}</span>
               </td>
               <td>
@@ -143,8 +172,17 @@ onMounted(() => {
         </table>
 
         <p class="legend">
-          <span><i class="zone europe" aria-hidden="true"></i> 欧战区</span>
-          <span><i class="zone relegation" aria-hidden="true"></i> 降级区</span>
+          <template v-if="current.code === 'CL'">
+            <span><i class="zone ucl" aria-hidden="true"></i> 直接晋级 16 强</span>
+            <span><i class="zone playoff" aria-hidden="true"></i> 附加赛</span>
+            <span><i class="zone out" aria-hidden="true"></i> 淘汰</span>
+          </template>
+          <template v-else>
+            <span><i class="zone ucl" aria-hidden="true"></i> 欧冠</span>
+            <span><i class="zone uel" aria-hidden="true"></i> 欧联</span>
+            <span><i class="zone uecl" aria-hidden="true"></i> 欧协联</span>
+            <span><i class="zone relegation" aria-hidden="true"></i> 降级区</span>
+          </template>
           <span class="src">数据来源：football-data.org</span>
         </p>
       </section>
@@ -344,8 +382,24 @@ tbody td:last-child .form {
   margin-top: -7px;
 }
 
-.zone.europe {
+.zone.ucl {
   background: #3fa9ff;
+}
+
+.zone.uel {
+  background: #ff9f43;
+}
+
+.zone.uecl {
+  background: #2dd4bf;
+}
+
+.zone.playoff {
+  background: #8b6cff;
+}
+
+.zone.out {
+  background: var(--surface-3);
 }
 
 .zone.relegation {
