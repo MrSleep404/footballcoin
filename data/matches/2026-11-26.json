@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-26",
-  "generatedAt": "2026-11-24T17:48:44+08:00",
+  "generatedAt": "2026-11-24T18:44:15+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 9,
@@ -52,67 +52,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 10,
+          "home": 12,
           "draw": 18,
-          "away": 72
+          "away": 70
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 76,
+        "confidence": 72,
         "pick": "away",
         "reasons": [
-          "巴塞罗那欧冠排名第5，萨巴巴库仅第31，实力差距明显",
-          "客队赛季进14失6，攻防数据全面优于主队4/10",
-          "主队近4场2负1胜1负且刚经历连败，状态不稳",
-          "双方无历史交锋数据，仅能依据排名与近期表现判断"
+          "客队积分排名第5，远高于主队第31，实力层级差距明显",
+          "客队赛季进14失6，攻防效率显著优于主队进4失10",
+          "主队近4场1胜3负，客队近4场3胜1负，状态对比悬殊",
+          "主队场均失球偏高，面对客队多点进攻难以零封"
         ],
         "factors": [
           "排名差距悬殊",
-          "客队攻防更均衡",
-          "主队状态低迷",
-          "无交锋参考"
+          "客队攻防均衡",
+          "主队防线薄弱",
+          "状态对比明显"
         ],
-        "risk": "交锋未提供，天气未提供，主队主场因素存在不确定性。"
+        "risk": "场地、天气、伤病及市场赔率均未提供，主队主场氛围影响未知；客队近期样本仅4场，比分判断存在偏差。"
       },
       "degraded": false,
-      "result": null,
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 5,
-          "draw": 7,
-          "away": 88
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "R. Bardghji",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "A. Christensen",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "X. Espart",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "Rodri",
-            "type": "Missing Fixture",
-            "reason": "Calf Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -159,123 +124,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 40,
-          "draw": 29,
-          "away": 31
+          "home": 31,
+          "draw": 30,
+          "away": 39
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 45,
-        "pick": "home",
+        "confidence": 48,
+        "pick": "away",
         "reasons": [
-          "主队排名第34、客队第28，双方接近，主队有主场优势",
-          "主队近4场L D L L，客队近4场L L W L，双方状态都差",
-          "客队赛季失球14个，防守漏洞明显，主队进5球有得分可能",
-          "交手记录暂无数据，无法判断双方历史交锋的偏向"
+          "客队排名第28高于主队第34",
+          "主队近4场L D L L，一胜难求",
+          "客队近4场L L W L，状态同样不稳",
+          "客队赛季进失球8/14，防守漏洞明显"
         ],
         "factors": [
-          "双方同处低位",
-          "客队防守漏洞",
-          "主场微弱优势",
-          "状态均低迷"
+          "客队排名略高",
+          "主队近况低迷",
+          "客队防守不稳",
+          "无历史交锋"
         ],
-        "risk": "天气、交手未提供，双方近期战绩都差，比赛走向很不确定，信心有限。"
+        "risk": "场地、天气、伤病与市场赔率均未提供，且双方近5场仅列4场，判断不确定性较高。"
       },
       "degraded": false,
-      "result": null,
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 31,
-          "draw": 25,
-          "away": 44
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "S. Chaloupek",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "T. Chory",
-            "type": "Missing Fixture",
-            "reason": "Coach's decision"
-          },
-          {
-            "player": "H. Kante",
-            "type": "Missing Fixture",
-            "reason": "Injury"
-          },
-          {
-            "player": "O. Kolar",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "D. Moses",
-            "type": "Missing Fixture",
-            "reason": "Hamstring Injury"
-          },
-          {
-            "player": "I. Ogbu",
-            "type": "Missing Fixture",
-            "reason": "Achilles Tendon Injury"
-          },
-          {
-            "player": "A. Ouanda",
-            "type": "Missing Fixture",
-            "reason": "Injury"
-          },
-          {
-            "player": "E. Pitak",
-            "type": "Missing Fixture",
-            "reason": "Health problems"
-          },
-          {
-            "player": "T. Diakite",
-            "type": "Questionable",
-            "reason": "Health problems"
-          },
-          {
-            "player": "L. Provod",
-            "type": "Questionable",
-            "reason": "Injury"
-          },
-          {
-            "player": "D. Sturm",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ],
-        "away": [
-          {
-            "player": "I. Akhomach",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "A. Diatta",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "J. Foyth",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "G. Moreno",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-INT-VFB",
@@ -322,77 +196,33 @@
       },
       "prediction": {
         "prob": {
-          "home": 40,
-          "draw": 32,
+          "home": 41,
+          "draw": 31,
           "away": 28
         },
         "score": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         },
-        "confidence": 54,
+        "confidence": 53,
         "pick": "home",
         "reasons": [
-          "国际米兰排名第15，斯图加特第14，双方实力接近",
-          "主队近4场2胜2负，客队近4场2胜1平1负，状态相近",
-          "赛季进失球主队8/6、客队7/4，客队防守略好",
-          "双方无历史交锋，伤病、天气与赔率未提供"
+          "积分排名接近：国际米兰第15，斯图加特第14",
+          "近5场：主队W W L L，客队L D W W",
+          "赛季进失球：主队8/6，客队7/4，攻防接近",
+          "国际米兰主场作战，排名与对手接近"
         ],
         "factors": [
-          "主场优势",
           "排名接近",
-          "客队防守稳",
-          "数据不完整"
+          "主场因素",
+          "状态相当",
+          "攻防接近",
+          "信息不完整"
         ],
-        "risk": "双方近期仅4场数据，判断不确定性较高。"
+        "risk": "场地、天气、伤病、市场赔率未提供，近5场仅列4场，交手记录为空。"
       },
       "degraded": false,
-      "result": null,
-      "weather": {
-        "temp": 8.3,
-        "precip": 85,
-        "wind": 7.9
-      },
-      "market": {
-        "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 68,
-          "draw": 17,
-          "away": 15
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "S. Drljaca",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "L. Jaquez",
-            "type": "Missing Fixture",
-            "reason": "Ribs Injury"
-          },
-          {
-            "player": "L. Stergiou",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "A. Stiller",
-            "type": "Missing Fixture",
-            "reason": "Groin Injury"
-          },
-          {
-            "player": "L. Sauer",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -439,9 +269,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 47,
-          "draw": 28,
-          "away": 25
+          "home": 50,
+          "draw": 26,
+          "away": 24
         },
         "score": {
           "home": 2,
@@ -450,57 +280,21 @@
         "confidence": 58,
         "pick": "home",
         "reasons": [
-          "马德里竞技第23、维京第22，积分排名接近。",
-          "马德里竞技坐镇主场，主场因素略占优。",
-          "马德里竞技赛季进失球4/5，防守数据优于维京9/10。",
-          "维京近期W L D L，状态存在起伏。"
+          "马竞坐镇主场，欧冠排名第23，客队第22，排名接近",
+          "马竞近5场仅1胜1平2负，近期状态偏低迷",
+          "维京赛季进9失10，进攻效率高于马竞的4进球5失球",
+          "双方实力接近，主场因素成为主要优势"
         ],
         "factors": [
           "主场优势",
-          "防守更稳",
-          "积分接近",
+          "排名接近",
           "状态起伏",
-          "数据有限"
+          "防守一般"
         ],
-        "risk": "交锋未提供，主队进攻数据偏弱，判断不确定性较高。"
+        "risk": "场地、天气、伤病与交手记录均未提供，维京进球数更多，客队爆冷可能带来较大不确定性。"
       },
       "degraded": false,
-      "result": null,
-      "weather": {
-        "temp": 6.8,
-        "precip": 0,
-        "wind": 8.5
-      },
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 87,
-          "draw": 9,
-          "away": 4
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "A. Lookman",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "M. Pubill",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "C. Romero",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          }
-        ],
-        "away": []
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-PSG-ROM",
@@ -547,87 +341,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 74,
-          "draw": 16,
+          "home": 72,
+          "draw": 18,
           "away": 10
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 75,
+        "confidence": 82,
         "pick": "home",
         "reasons": [
-          "巴黎圣日耳曼排名第1，罗马第20，实力差距明显",
-          "巴黎圣日耳曼近5场 W W W W，罗马 L W L D",
-          "巴黎圣日耳曼赛季进失球20/5，优于罗马10/8"
+          "主队积分榜第1，客队第20，排名差距明显。",
+          "主队近期四场全胜，状态明显优于客队。",
+          "赛季进失球主队20/5，攻防数据优于客队10/8。",
+          "客队近期L W L D，表现起伏且排名靠后。"
         ],
         "factors": [
           "排名差距",
           "主队状态火热",
           "攻防优势",
-          "欧冠第5轮"
+          "客队状态起伏"
         ],
-        "risk": "交手未提供，近5场双方各仅列4场，信息不完整。"
+        "risk": "天气、场地、伤病及市场赔率信息未提供，临场变数难以评估。"
       },
       "degraded": false,
-      "result": null,
-      "weather": {
-        "temp": 6.8,
-        "precip": 28,
-        "wind": 7.9
-      },
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 68,
-          "draw": 18,
-          "away": 14
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "D. Doue",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "K. Kvaratskhelia",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "A. Longoni",
-            "type": "Missing Fixture",
-            "reason": "Thigh Injury"
-          }
-        ],
-        "away": [
-          {
-            "player": "L. Pellegrini",
-            "type": "Missing Fixture",
-            "reason": "Thigh Injury"
-          },
-          {
-            "player": "D. Rensch",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "D. S. Vasquez Llach",
-            "type": "Missing Fixture",
-            "reason": "Inactive"
-          },
-          {
-            "player": "L. Balerdi",
-            "type": "Questionable",
-            "reason": "Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -674,98 +413,33 @@
       },
       "prediction": {
         "prob": {
-          "home": 31,
-          "draw": 31,
-          "away": 38
+          "home": 30,
+          "draw": 27,
+          "away": 43
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 57,
+        "confidence": 58,
         "pick": "away",
         "reasons": [
-          "排名接近：主队第9、客队第8，差距有限。",
-          "近期布鲁日3胜1负，利物浦3胜1负，状态相近。",
-          "赛季进失球主队11/7、客队14/10，攻防接近。",
-          "交手、天气、伤病均未提供，信息不完整。"
+          "积分排名接近，主队第9、客队第8，实力差距不明显",
+          "近5场主队W W W L、客队L W W W，状态基本相当",
+          "赛季进失球主队11比7、客队14比10，客队攻防略占优",
+          "布鲁日主场作战，具备一定主场加成，可能缩小差距"
         ],
         "factors": [
           "排名接近",
-          "状态相近",
-          "攻防接近",
-          "伤病未知"
+          "状态相当",
+          "客队攻防略优",
+          "主场加成",
+          "无赔率参考"
         ],
-        "risk": "天气、交锋未提供，"
+        "risk": "伤病、天气与市场赔率均未提供，双方数据接近，客队优势并不稳固，判断存在较大不确定。"
       },
       "degraded": false,
-      "result": null,
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 21,
-          "draw": 21,
-          "away": 58
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "J. Ordonez",
-            "type": "Missing Fixture",
-            "reason": "Foot Injury"
-          },
-          {
-            "player": "J. Virgili",
-            "type": "Questionable",
-            "reason": "Groin Injury"
-          }
-        ],
-        "away": [
-          {
-            "player": "C. Bradley",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "F. Chiesa",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "H. Ekitike",
-            "type": "Missing Fixture",
-            "reason": "Achilles Tendon Injury"
-          },
-          {
-            "player": "W. Endo",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "C. Gakpo",
-            "type": "Missing Fixture",
-            "reason": "Calf Injury"
-          },
-          {
-            "player": "R. Gravenberch",
-            "type": "Missing Fixture",
-            "reason": "Heel Injury"
-          },
-          {
-            "player": "G. Leoni",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "A. Nallo",
-            "type": "Missing Fixture",
-            "reason": "Leg Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -820,73 +494,25 @@
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "拜仁排名第13，里尔第35，排名差距明显",
-          "里尔近4场1平3负，拜仁近4场2胜2平",
-          "里尔赛季进4失10，拜仁进12失5，攻防更优"
+          "拜仁排名第13高于里尔第35，赛季进12失5攻防更均衡",
+          "里尔近4场1平3负状态低迷，赛季仅进4球失10球",
+          "拜仁近4场2胜2平保持不败，客场仍具威胁",
+          "双方暂无历史交锋数据，里尔主场优势难以量化"
         ],
         "factors": [
           "排名差距",
           "攻防失衡",
-          "客队状态佳",
-          "主队低迷"
+          "主队状态低迷",
+          "客队不败",
+          "主场变量"
         ],
-        "risk": "双方近5场仅提供4场，判断不确定性较高。"
+        "risk": "里尔近5场仅提供4场结果，天气、伤病与市场赔率均未提供，主场因素难以评估。"
       },
       "degraded": false,
-      "result": null,
-      "weather": {
-        "temp": 1.2,
-        "precip": 7,
-        "wind": 15.1
-      },
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 19,
-          "draw": 22,
-          "away": 59
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "A. Davies",
-            "type": "Missing Fixture",
-            "reason": "Hamstring Injury"
-          },
-          {
-            "player": "S. Gnabry",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "H. Kane",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "M. Neuer",
-            "type": "Missing Fixture",
-            "reason": "Foot Injury"
-          },
-          {
-            "player": "I. Saibari",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "M. Olise",
-            "type": "Questionable",
-            "reason": "Leg Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-SPO-MUN",
@@ -933,82 +559,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 52,
-          "draw": 26,
-          "away": 22
+          "home": 46,
+          "draw": 28,
+          "away": 26
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 63,
+        "confidence": 58,
         "pick": "home",
         "reasons": [
-          "主队排名第10高于曼联第17，主场有优势",
-          "葡萄牙体育赛季进8失4，防守优于曼联8/8",
-          "葡萄牙体育近4场3胜1负，曼联近4场2胜2负"
+          "主队排名第10高于客队第17，主场作战占据优势",
+          "主队赛季进8失4，防守端明显优于客队进8失8",
+          "主队近4场3胜1负，客队近4场2胜2负，状态略优",
+          "欧冠第5轮积分争夺关键，主队抢分动机强"
         ],
         "factors": [
           "排名占优",
-          "防守更稳",
           "主场优势",
-          "曼联防守不稳",
+          "防守更稳",
           "状态略好"
         ],
-        "risk": "交手未提供，曼联进攻有爆冷能力。"
+        "risk": "场地、天气、伤病与市场赔率均未提供，客队欧战经验未知，比分存在波动。"
       },
       "degraded": false,
-      "result": null,
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:09Z",
-        "prob": {
-          "home": 38,
-          "draw": 26,
-          "away": 36
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "C. Baleba",
-            "type": "Missing Fixture",
-            "reason": "Thigh Injury"
-          },
-          {
-            "player": "M. Cunha",
-            "type": "Missing Fixture",
-            "reason": "Red Card"
-          },
-          {
-            "player": "K. Darlow",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "B. Sesko",
-            "type": "Missing Fixture",
-            "reason": "Leg Injury"
-          },
-          {
-            "player": "M. Ugarte",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "M. Rashford",
-            "type": "Questionable",
-            "reason": "Hip Injury"
-          },
-          {
-            "player": "L. Shaw",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ]
-      }
+      "result": null
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -1055,87 +631,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 42,
-          "draw": 29,
-          "away": 29
+          "home": 38,
+          "draw": 30,
+          "away": 32
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 47,
+        "confidence": 50,
         "pick": "home",
         "reasons": [
-          "积分排名接近，主队第21、客队第19，双方实力差距不明显",
-          "客队赛季进6失11，防守漏洞明显，主队4/4攻守更均衡",
-          "主队近4场L L W D状态低迷，客队W D L D同样不稳",
-          "主队占据主场优势，进攻端略占上风，小胜概率偏高"
+          "双方排名接近，主队第21、客队第19，差距不大",
+          "主队近4场L L W D，主场作战略占主动",
+          "客队赛季进6失11，防守漏洞明显，主队有望破门",
+          "暂无双方历史交锋数据，参考价值有限"
         ],
         "factors": [
           "排名接近",
-          "客队防守不稳",
-          "主场微弱优势",
-          "状态均低迷"
+          "客队防守差",
+          "主场之利",
+          "状态起伏"
         ],
-        "risk": "交手未提供，双方近期状态都不稳，判断不确定性较大。"
+        "risk": "场地、伤病、天气与市场赔率均未提供，近5场仅列出4场，判断不确定性较大。"
       },
       "degraded": false,
-      "result": null,
-      "market": {
-        "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T09:30:08Z",
-        "prob": {
-          "home": 36,
-          "draw": 27,
-          "away": 37
-        }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "Eguinaldo",
-            "type": "Missing Fixture",
-            "reason": "Shoulder Injury"
-          },
-          {
-            "player": "Kaua Elias",
-            "type": "Missing Fixture",
-            "reason": "Foot Injury"
-          },
-          {
-            "player": "V. Korniyenko",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "Pedrinho",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "T. Puzankov",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "M. Shved",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "D. Tvardovskyi",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "Marlon",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ],
-        "away": []
-      }
+      "result": null
     }
   ]
 }
