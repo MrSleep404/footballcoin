@@ -14,7 +14,7 @@ import { RouterLink } from "vue-router";
         本站预测由 AI 模型基于公开数据生成，仅供足球爱好者参考与娱乐，不构成任何投注建议。足球比赛存在高度不确定性，请理性看待预测结果。
       </p>
       <div class="meta">
-        <span>数据来源：football-data.org</span>
+        <span>数据来源：football-data.org、API-Football、The Odds API、Open-Meteo</span>
         <span aria-hidden="true">/</span>
         <RouterLink to="/about">方法与免责声明</RouterLink>
       </div>
