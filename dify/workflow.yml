@@ -2323,7 +2323,7 @@ workflow:
           variable: spots
         - value_selector:
           - iter_geo
-          - geo
+          - output
           variable: geos
       height: 90
       id: code_weather_plan2
