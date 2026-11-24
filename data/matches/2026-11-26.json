@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-26",
-  "generatedAt": "2026-11-24T20:13:02+08:00",
+  "generatedAt": "2026-11-24T22:00:35+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 9,
@@ -52,29 +52,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 8,
-          "draw": 12,
-          "away": 80
+          "home": 7,
+          "draw": 11,
+          "away": 82
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 77,
+        "confidence": 78,
         "pick": "away",
         "reasons": [
-          "客队排名第5，主队第31，实力差距明显",
-          "客队赛季进14失6，攻防数据优于主队4/10",
-          "市场均值去水客胜88%，与判断方向一致",
-          "巴塞罗那4人伤停，可能影响阵容轮换与防守稳定"
+          "巴塞罗那排名第5，萨巴巴库排名第31，实力差距明显。",
+          "赛季进失球：巴塞罗那14/6，萨巴巴库4/10，攻防数据客队占优。",
+          "近期战绩客队3胜1负、主队1胜3负，客队状态更佳。",
+          "市场均值客胜89%，与排名和攻防数据一致指向客胜。"
         ],
         "factors": [
-          "排名差距大",
-          "客队攻防占优",
-          "市场客胜88%",
-          "客队伤停4人"
+          "排名差距明显",
+          "攻防数据占优",
+          "客队状态更佳",
+          "市场客胜89%"
         ],
-        "risk": "场地和其他信息未提供，且近5场仅列出4场，增加判断不确定性。"
+        "risk": "场地与其他信息未提供，双方无历史交锋数据，赛前参考维度有限。"
       },
       "degraded": false,
       "result": null,
@@ -85,13 +85,22 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
-          "home": 5,
+          "home": 4,
           "draw": 7,
-          "away": 88
+          "away": 89
         }
       },
+      "news": [
+        {
+          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
+          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
+          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [],
@@ -117,16 +126,7 @@
             "reason": "Calf Injury"
           }
         ]
-      },
-      "news": [
-        {
-          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
-          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
-          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -174,40 +174,40 @@
       "prediction": {
         "prob": {
           "home": 30,
-          "draw": 26,
-          "away": 44
+          "draw": 27,
+          "away": 43
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 57,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "市场均值主胜31%、客胜44%，赔率倾向比利亚雷亚尔",
-          "布拉格斯拉维亚近4场L/D/L/L，未尝胜绩",
-          "比利亚雷亚尔排名28高于主队34，进球8多于5",
-          "双方伤停较多：主队5人、客队4人，阵容不整"
+          "客队排名第28略高于主队第34，市场客胜44%占优",
+          "主队近期L D L L，赛季进5失9，状态低迷",
+          "布拉格斯拉维亚5人伤停，比利亚雷亚尔4人伤停，阵容均不整",
+          "双方暂无历史交锋数据，低温1.3℃且无降水影响有限"
         ],
         "factors": [
-          "客队赔率占优",
-          "主队近况低迷",
+          "客队排名稍高",
+          "市场倾向客胜",
           "双方伤停较多",
           "低温无降水",
-          "排名客队稍高"
+          "主队近期低迷"
         ],
-        "risk": "场地未提供，且近5场仅列出4场结果，信息完整度有限。"
+        "risk": "场地未提供，近期战绩仅列4场，数据完整性不足增加不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.9,
+        "temp": 1.3,
         "precip": 0,
-        "wind": 6.6
+        "wind": 7.0
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 31,
           "draw": 25,
@@ -350,39 +350,62 @@
           "home": 2,
           "away": 1
         },
-        "confidence": 63,
+        "confidence": 70,
         "pick": "home",
         "reasons": [
-          "积分榜国际米兰第15、斯图加特第14，双方排名紧邻。",
-          "斯图加特伤停名单达5人，A. Stiller等缺阵影响阵容。",
-          "市场均值主胜68%，明显倾向国际米兰主场取胜。",
-          "开赛降水概率88%，雨战可能压低双方进球数。"
+          "市场均值主胜68%、平17%、客15%，明显看好国际米兰。",
+          "斯图加特伤停5人，包括Stiller等，阵容完整性受损。",
+          "国际米兰无官方伤停，主场作战且赛季进球8个略优于客队7个。",
+          "积分排名主队第15、客队第14相近，比赛仍有较强不确定性。"
         ],
         "factors": [
           "主场优势",
           "客队伤病多",
-          "雨战小球",
-          "市场偏主胜",
-          "排名接近"
+          "市场看主胜",
+          "排名接近",
+          "雨天影响"
         ],
-        "risk": "场地未提供，雨战下场地适应不明；近5场仅列4场，状态判断不完整。"
+        "risk": "双方近5场均只列出4场，完整状态未知；且无历史交锋可参考，增加判断难度。"
       },
       "degraded": false,
       "result": null,
       "weather": {
         "temp": 8.4,
         "precip": 88,
-        "wind": 8.3
+        "wind": 4.7
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 68,
           "draw": 17,
           "away": 15
         }
       },
+      "news": [
+        {
+          "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
+          "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
+          "link": "https://football-italia.net/zielinski-at-risk-of-missing-inter-stuttgart/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Report: Juventus, Inter, Napoli and five Premier League clubs want Monza’s Varela",
+          "summary": "Gustavo Varela has caught the eye of some of Europe’s biggest clubs with his performances...",
+          "link": "https://football-italia.net/juve-inter-five-prem-clubs-interested-varela/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Football Italia Show: Malen on fire, Inter’s old problem & Amorim learns from Man Utd mistakes",
+          "summary": "Lorenzo Bettoni and Giancarlo Rinaldi are back with the first weekly episode of the Football...",
+          "link": "https://football-italia.net/football-italia-malen-fire-inter-problem-milan/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [],
@@ -413,23 +436,7 @@
             "reason": "Muscle Injury"
           }
         ]
-      },
-      "news": [
-        {
-          "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
-          "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
-          "link": "https://football-italia.net/zielinski-at-risk-of-missing-inter-stuttgart/",
-          "published": "2026-11-24",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Football Italia Show: Malen on fire, Inter’s old problem & Amorim learns from Man Utd mistakes",
-          "summary": "Lorenzo Bettoni and Giancarlo Rinaldi are back with the first weekly episode of the Football...",
-          "link": "https://football-italia.net/football-italia-malen-fire-inter-problem-milan/",
-          "published": "2026-11-23",
-          "source": "Football Italia"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -477,28 +484,29 @@
       "prediction": {
         "prob": {
           "home": 80,
-          "draw": 12,
-          "away": 8
+          "draw": 13,
+          "away": 7
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 72,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "市场均值主胜87%，主队获明显看好。",
-          "客队赛季失球10个，防守端漏洞较明显。",
-          "主队有3人伤停，阵容完整性受影响。",
-          "双方近4场均仅1胜，状态都不稳定。"
+          "市场均值主胜87%、平9%、客胜4%，主队受强支持",
+          "积分排名主队第23、客队第22，双方接近但赔率差距悬殊",
+          "主队近5场L D W L起伏，赛季进4失5攻守平平",
+          "马德里竞技伤停三人：A. Lookman、M. Pubill、C. Romero"
         ],
         "factors": [
-          "市场主胜87%",
-          "客队防守漏洞",
-          "马竞三人伤停",
-          "双方状态不稳"
+          "市场强压主胜",
+          "主队状态起伏",
+          "客队防线漏球",
+          "主队三人伤停",
+          "实力差距明显"
         ],
-        "risk": "近5场仅列出4场、场地未提供，市场主胜87%与排名接近存在分歧，需防平局。"
+        "risk": "场地未提供；主队近况低迷且三人伤停，与市场高预期存在分歧，需防平局。"
       },
       "degraded": false,
       "result": null,
@@ -509,7 +517,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 87,
           "draw": 9,
@@ -583,47 +591,63 @@
       },
       "prediction": {
         "prob": {
-          "home": 68,
-          "draw": 18,
-          "away": 14
+          "home": 64,
+          "draw": 21,
+          "away": 15
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 78,
+        "confidence": 76,
         "pick": "home",
         "reasons": [
-          "主队排名第1，赛季进失球20/5，攻防明显优于客队10/8。",
-          "巴黎近5场W W W W，罗马近5场L W L D，状态差距明显。",
-          "市场均值主胜68%、平18%、客胜14%，与主队优势方向一致。",
-          "巴黎三名伤停、罗马四名伤停，均影响排兵布阵。"
+          "主队排名第1，客队第20，实力差距明显。",
+          "主队近5场列出W W W W，客队L W L D。",
+          "主队赛季进20失5，攻防优于罗马的10/8。",
+          "市场均值主胜68%，与主胜判断方向一致。"
         ],
         "factors": [
-          "排名差距",
-          "攻防优势",
-          "近期全胜",
-          "市场主胜",
-          "伤停影响"
+          "排名第1对第20",
+          "主队攻防强势",
+          "市场主胜68%",
+          "双方均有伤停",
+          "天气影响有限"
         ],
-        "risk": "场地未提供，且无双方历史交锋数据，临场与场地适应性信息有限。"
+        "risk": "历史交锋数据暂无且场地未提供，预测主要依据排名与近期状态。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 6.1,
+        "temp": 6.0,
         "precip": 10,
-        "wind": 7.7
+        "wind": 8.1
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 68,
           "draw": 18,
           "away": 14
         }
       },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "UCL-champs PSG drop one of this season's best kits in latest Jordan collab",
+          "summary": "PSG finally unveiled their 2026-27 third kit in collaboration with the Jordan brand. It was worth the wait.",
+          "link": "https://www.espn.com/soccer/story/_/id/50581189/psg-kit-nike-jordan-champions-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [
@@ -665,23 +689,7 @@
             "reason": "Injury"
           }
         ]
-      },
-      "news": [
-        {
-          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "UCL-champs PSG drop one of this season's best kits in latest Jordan collab",
-          "summary": "PSG finally unveiled their 2026-27 third kit in collaboration with the Jordan brand. It was worth the wait.",
-          "link": "https://www.espn.com/soccer/story/_/id/50581189/psg-kit-nike-jordan-champions-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -729,46 +737,68 @@
       "prediction": {
         "prob": {
           "home": 24,
-          "draw": 25,
-          "away": 51
+          "draw": 24,
+          "away": 52
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 63,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "市场均值客胜58%，利物浦排名第8略高于布鲁日第9。",
-          "利物浦近期LWWW且赛季进14球，进攻端占优。",
-          "布鲁日近期WWWL，赛季进11球，主场具备一定抗衡力。",
-          "利物浦伤停5人、布鲁日伤停2人，阵容完整性影响客胜力度。"
+          "市场均值客胜58%，利物浦被明显看好",
+          "布鲁日近4场3胜，主场状态不俗",
+          "利物浦伤停5人，含C. Gakpo等攻击手",
+          "利物浦赛季进球14多于布鲁日11，失球10对7"
         ],
         "factors": [
           "客胜倾向",
-          "利物浦进攻占优",
-          "布鲁日主场韧性",
-          "利物浦伤停较多",
-          "市场均值倾向客队"
+          "伤病影响",
+          "主场状态",
+          "低温大风"
         ],
-        "risk": "场地未提供，双方暂无历史交锋数据，客场环境与对赛风格判断受限。"
+        "risk": "交手记录与场地未提供，双方近5场实际仅列4场，利物浦5人伤停影响难以量化。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.6,
+        "temp": 1.4,
         "precip": 4,
         "wind": 16.9
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 21,
           "draw": 21,
           "away": 58
         }
       },
+      "news": [
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "🟥VAR review: Explaining Yoro's early red card vs. Liverpool",
+          "summary": "VAR often causes controversy, but how are decisions made? Our resident ref, Andy Davies, explains all.",
+          "link": "https://www.espn.com/soccer/story/_/id/49703019/premier-league-var-review-red-card-penalty-handball-goal-line-technology",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
+          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
+          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [
@@ -825,30 +855,7 @@
             "reason": "Leg Injury"
           }
         ]
-      },
-      "news": [
-        {
-          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
-          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "🟥VAR review: Explaining Yoro's early red card vs. Liverpool",
-          "summary": "VAR often causes controversy, but how are decisions made? Our resident ref, Andy Davies, explains all.",
-          "link": "https://www.espn.com/soccer/story/_/id/49703019/premier-league-var-review-red-card-penalty-handball-goal-line-technology",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
-          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
-          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -903,39 +910,62 @@
           "home": 1,
           "away": 2
         },
-        "confidence": 74,
+        "confidence": 64,
         "pick": "away",
         "reasons": [
-          "里尔近期DLLL，赛季进4失10，攻防状态低迷。",
-          "拜仁慕尼黑近期WDDW，赛季进12失5，排名第13高于里尔第35。",
-          "市场均值客胜59%、主胜19%、平局22%，明显倾向客队。",
-          "拜仁慕尼黑伤缺H. Kane、M. Neuer、A. Davies等多人。"
+          "欧冠排名：里尔第35，拜仁慕尼黑第13，客队排名优势明显。",
+          "赛季进失球：里尔4/10，拜仁慕尼黑12/5，攻防差距清晰。",
+          "近5场：里尔D L L L，拜仁慕尼黑W D D W，主队状态低迷。",
+          "拜仁慕尼黑有Kane、Neuer、Davies等5人伤停，客胜不宜高估。"
         ],
         "factors": [
-          "拜仁慕尼黑状态占优",
-          "里尔攻防低迷",
-          "拜仁慕尼黑多人伤缺",
-          "市场客胜59%",
+          "排名差距",
+          "拜仁慕尼黑伤停",
+          "里尔近况低迷",
+          "市场倾向客胜",
           "低温大风"
         ],
-        "risk": "场地与其他信息未提供；拜仁慕尼黑多人伤缺的实际影响难以量化，构成主要变数。"
+        "risk": "场地与其他信息未提供，且里尔近5场仅列4场，状态样本略不足。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.6,
+        "temp": 1.2,
         "precip": 6,
         "wind": 15.5
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 19,
           "draw": 22,
           "away": 59
         }
       },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Sven Ulreich yet to decide on Bayern Munich future",
+          "summary": "Bayern Munich goalkeeper Sven Ulreich stated that he is yet to make a decision about his future. “I will be speaking with Bayern in the near future about what happens…",
+          "link": "https://www.getfootballnewsgermany.com/2026/sven-ulreich-yet-to-decide-on-bayern-munich-future/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "Jonathan Tah names Florian Wirtz as the player he’d bring to Bayern Munich",
+          "summary": "Jonathan Tah has stated he would like to see Liverpool’s Florian Wirtz at Bayern Munich. The duo, of course, have history having played together at Bayer Leverkusen, where they did…",
+          "link": "https://www.getfootballnewsgermany.com/2026/jonathan-tah-names-florian-wirtz-as-the-player-hed-bring-to-bayern-munich/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        }
+      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [],
@@ -971,30 +1001,7 @@
             "reason": "Leg Injury"
           }
         ]
-      },
-      "news": [
-        {
-          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Sven Ulreich yet to decide on Bayern Munich future",
-          "summary": "Bayern Munich goalkeeper Sven Ulreich stated that he is yet to make a decision about his future. “I will be speaking with Bayern in the near future about what happens…",
-          "link": "https://www.getfootballnewsgermany.com/2026/sven-ulreich-yet-to-decide-on-bayern-munich-future/",
-          "published": "2026-11-23",
-          "source": "Get German Football News"
-        },
-        {
-          "title": "Jonathan Tah names Florian Wirtz as the player he’d bring to Bayern Munich",
-          "summary": "Jonathan Tah has stated he would like to see Liverpool’s Florian Wirtz at Bayern Munich. The duo, of course, have history having played together at Bayer Leverkusen, where they did…",
-          "link": "https://www.getfootballnewsgermany.com/2026/jonathan-tah-names-florian-wirtz-as-the-player-hed-bring-to-bayern-munich/",
-          "published": "2026-11-23",
-          "source": "Get German Football News"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-SPO-MUN",
@@ -1041,29 +1048,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 45,
+          "home": 46,
           "draw": 27,
-          "away": 28
+          "away": 27
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 64,
+        "confidence": 66,
         "pick": "home",
         "reasons": [
-          "主队排名第10高于曼联第17，主场略占优",
-          "葡萄牙体育赛季进8失4，防守优于曼联的8/8",
-          "曼联伤停5人，含C. Baleba、M. Cunha等",
-          "市场均值主胜38%略偏主队，但客胜36%接近"
+          "葡萄牙体育排名第10，高于曼联第17，主场作战占优。",
+          "主队赛季进8失4，防守好于曼联的进8失8。",
+          "曼联伤停包括B. Sesko、M. Ugarte等多人，阵容受损。",
+          "市场均值主胜38%、客胜36%，主队仅小幅占优。"
         ],
         "factors": [
-          "主队排名占优",
-          "曼联伤停严重",
-          "主队防守更稳",
-          "市场略偏主胜"
+          "主场优势",
+          "曼联伤停多",
+          "防守更稳",
+          "市场略倾主"
         ],
-        "risk": "场地信息未提供，双方无历史交锋参考，且近5场仅列4场，增加判断难度。"
+        "risk": "场地信息未提供；市场客胜36%仍接近，曼联残阵临场表现是最大变数。"
       },
       "degraded": false,
       "result": null,
@@ -1074,13 +1081,36 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 38,
           "draw": 26,
           "away": 36
         }
       },
+      "news": [
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Which USMNT players could follow Pochettino to Manchester United?",
+          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
+          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Man United will need big January transfer spending to avoid relegation",
+          "summary": "Manchester United have a choice: Spend £150 million on new players in January or lose £300 million if they get relegated at the end of the Premier League season.",
+          "link": "https://www.espn.com/soccer/story/_/id/50571270/man-united-january-transfers-premier-league-relegation",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [],
@@ -1121,30 +1151,7 @@
             "reason": "Muscle Injury"
           }
         ]
-      },
-      "news": [
-        {
-          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
-          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Which USMNT players could follow Pochettino to Manchester United?",
-          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
-          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Man United will need big January transfer spending to avoid relegation",
-          "summary": "Manchester United have a choice: Spend £150 million on new players in January or lose £300 million if they get relegated at the end of the Premier League season.",
-          "link": "https://www.espn.com/soccer/story/_/id/50571270/man-united-january-transfers-premier-league-relegation",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -1191,30 +1198,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 33,
+          "home": 35,
           "draw": 29,
-          "away": 38
+          "away": 36
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 58,
+        "confidence": 55,
         "pick": "away",
         "reasons": [
-          "积分排名接近，主队第21对客队第19，双方实力差距不明显",
-          "费内巴切赛季进6球失11球，虽然防守漏洞明显，但进攻端略强于4/4的主队",
-          "顿涅茨克矿工有5人伤停，包括Eguinaldo、Pedrinho，阵容完整性受影",
-          "市场均值主胜36%、平局27%、客胜37%，市场略偏客队"
+          "双方排名接近（主队第21、客队第19），市场均值主胜36%平27%客胜37%，呈",
+          "费内巴切赛季进6球失11球，防守不稳但进攻略优于4球的顿涅茨克矿工",
+          "顿涅茨克矿工有5人伤停，阵容深度受影响",
+          "开赛气温-1.0℃、风速15.2km/h，可能压低比赛节奏"
         ],
         "factors": [
-          "排名接近",
+          "排名仅差两位",
           "客队失球偏多",
-          "主队伤停较多",
-          "低温大风",
-          "市场分歧极小"
+          "主队伤停五人",
+          "低温影响节奏",
+          "市场呈三分"
         ],
-        "risk": "场地信息未提供，双方状态接近且市场分歧极小，平局可能性不容忽视。"
+        "risk": "场地与其他信息未提供，主队近5场仅列出4场，状态样本有限，判断不确定性较大。"
       },
       "degraded": false,
       "result": null,
@@ -1225,7 +1232,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:11:39Z",
+        "capturedAt": "2026-11-24T13:59:08Z",
         "prob": {
           "home": 36,
           "draw": 27,
