@@ -219,14 +219,60 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: http-request
-      id: code_weather_plan-source-http_weather-target
+        targetType: iteration
+      id: code_weather_plan-source-iter_geo-target
       source: code_weather_plan
+      sourceHandle: source
+      target: iter_geo
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_geo-source-code_weather_plan2-target
+      source: iter_geo
+      sourceHandle: source
+      target: code_weather_plan2
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: code_weather_plan2-source-http_weather-target
+      source: code_weather_plan2
       sourceHandle: source
       target: http_weather
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_geo
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_geo_start-source-http_geocode-target
+      source: iter_geo_start
+      sourceHandle: source
+      target: http_geocode
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_geo
+        sourceType: http-request
+        targetType: code
+      id: http_geocode-source-code_geo_item-target
+      source: http_geocode
+      sourceHandle: source
+      target: code_geo_item
+      targetHandle: target
+      type: custom
+      zIndex: 1002
     - data:
         isInLoop: false
         sourceType: http-request
@@ -1867,6 +1913,9 @@ workflow:
       width: 244
     - data:
         code: |
+          import re
+          from urllib.parse import quote
+
           # 主场城市坐标（近似值，用于天气），键为 联赛:TLA
           COORDS = {
               "PL:ARS": (51.55, -0.11), "PL:AVL": (52.51, -1.89), "PL:BOU": (50.72, -1.88),
@@ -1921,6 +1970,21 @@ workflow:
           BASE = ("http://api.open-meteo.com/v1/forecast"
                   "?hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8")
           MAX_SPOTS = 40
+          # 队名关键词 -> 城市，用于坐标表缺失时的地理编码
+          HINTS = (
+              ("brugge", "Bruges"),
+              ("slavia", "Prague"),
+              ("sporting", "Lisbon"),
+              ("shakhtar", "Donetsk"),
+              ("bodø", "Bodø"),
+              ("bodo", "Bodo"),
+              ("sabah", "Baku"),
+              ("brest", "Brest"),
+          )
+          DROP = {
+              "fc", "cf", "afc", "sc", "ac", "sv", "fk", "sk", "kv", "club",
+              "calcio", "stade", "cp", "clube", "de", "do", "da", "the",
+          }
 
 
           def _tla(match):
@@ -1939,25 +2003,48 @@ workflow:
               return found[0] if len(found) == 1 else None
 
 
+          def _query(match):
+              home = match.get("home") or {}
+              raw = str(home.get("nameEn") or home.get("name") or "").strip().lower()
+              for hint, city in HINTS:
+                  if hint in raw:
+                      return quote(city)
+              tokens = [
+                  token
+                  for token in re.split(r"[^0-9a-zà-ÿ]+", raw)
+                  if len(token) > 2 and not token.isdigit() and token not in DROP
+              ]
+              return quote(" ".join(tokens[:2]).title()) if tokens else ""
+
+
           def main(matches: list) -> dict:
               spots = []
+              missing = []
               seen = set()
+              index = 0
               for match in matches or []:
-                  key = f"{match.get('league')}:{_tla(match)}"
+                  league = match.get("league") or ""
+                  key = f"{league}:{_tla(match)}"
                   if key in seen:
                       continue
-                  point = _coords(match.get("league") or "", _tla(match))
-                  if not point:
-                      continue
-                  seen.add(key)
-                  spots.append({"key": key, "index": len(spots), "lat": point[0], "lon": point[1]})
-                  if len(spots) >= MAX_SPOTS:
+                  if len(spots) + len(missing) >= MAX_SPOTS:
                       break
+                  seen.add(key)
+                  point = _coords(league, _tla(match))
+                  if point:
+                      spots.append({"key": key, "index": index, "lat": point[0], "lon": point[1]})
+                  else:
+                      query = _query(match)
+                      if query:
+                          missing.append({"key": key, "index": index, "query": query})
+                  index += 1
               if not spots:
-                  return {"url": BASE + "&latitude=51.55&longitude=-0.11", "spots": []}
-              lats = ",".join(f"{spot['lat']:.2f}" for spot in spots)
-              lons = ",".join(f"{spot['lon']:.2f}" for spot in spots)
-              return {"url": f"{BASE}&latitude={lats}&longitude={lons}", "spots": spots}
+                  url = BASE + "&latitude=51.55&longitude=-0.11"
+              else:
+                  lats = ",".join(f"{spot['lat']:.2f}" for spot in spots)
+                  lons = ",".join(f"{spot['lon']:.2f}" for spot in spots)
+                  url = f"{BASE}&latitude={lats}&longitude={lons}"
+              return {"url": url, "spots": spots, "missing": missing}
         code_language: python3
         desc: ''
         outputs:
@@ -1965,6 +2052,9 @@ workflow:
             children: null
             type: string
           spots:
+            children: null
+            type: array[object]
+          missing:
             children: null
             type: array[object]
         selected: false
@@ -2005,13 +2095,241 @@ workflow:
           write: 30
         title: 拉取天气
         type: http-request
-        url: '{{#code_weather_plan.url#}}'
+        url: '{{#code_weather_plan2.url#}}'
         variables: []
       height: 113
       id: http_weather
       position:
         x: 1960
         y: 470
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_weather_plan
+        - missing
+        output_selector:
+        - code_geo_item
+        - geo
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_geo_start
+        title: 坐标补全迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_geo
+      position:
+        x: 1680
+        y: 620
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_geo_start
+      parentId: iter_geo
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Accept: application/json
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_geo
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 20
+          write: 15
+        title: 查询坐标
+        type: http-request
+        url: 'https://geocoding-api.open-meteo.com/v1/search?count=1&language=en&format=json&name={{#iter_geo.item.query#}}'
+        variables: []
+      height: 113
+      id: http_geocode
+      parentId: iter_geo
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+
+          def main(item: dict, body) -> dict:
+              key = str((item or {}).get("key") or "")
+              index = int((item or {}).get("index") or 0)
+              if isinstance(body, str):
+                  try:
+                      body = json.loads(body)
+                  except ValueError:
+                      body = {}
+              results = body.get("results") if isinstance(body, dict) else None
+              if not results:
+                  return {"geo": {"key": key, "index": index, "found": False}}
+              first = results[0] or {}
+              lat = first.get("latitude")
+              lon = first.get("longitude")
+              if lat is None or lon is None:
+                  return {"geo": {"key": key, "index": index, "found": False}}
+              return {
+                  "geo": {
+                      "key": key,
+                      "index": index,
+                      "found": True,
+                      "lat": float(lat),
+                      "lon": float(lon),
+                      "name": first.get("name"),
+                  }
+              }
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_geo
+        outputs:
+          geo:
+            children: null
+            type: object
+        selected: false
+        title: 解析坐标
+        type: code
+        variables:
+        - value_selector:
+          - iter_geo
+          - item
+          variable: item
+        - value_selector:
+          - http_geocode
+          - body
+          variable: body
+      height: 90
+      id: code_geo_item
+      parentId: iter_geo
+      position:
+        x: 420
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+          BASE = ("http://api.open-meteo.com/v1/forecast"
+                  "?hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8")
+
+
+          def _items(value):
+              if isinstance(value, str):
+                  try:
+                      value = json.loads(value)
+                  except ValueError:
+                      return []
+              return value if isinstance(value, list) else []
+
+
+          def main(spots: list, geos) -> dict:
+              merged = []
+              for spot in _items(spots):
+                  if isinstance(spot, dict) and spot.get("key"):
+                      merged.append({
+                          "key": str(spot["key"]),
+                          "index": int(spot.get("index") or 0),
+                          "lat": float(spot["lat"]),
+                          "lon": float(spot["lon"]),
+                      })
+              for geo in _items(geos):
+                  if not isinstance(geo, dict) or not geo.get("found") or not geo.get("key"):
+                      continue
+                  merged.append({
+                      "key": str(geo["key"]),
+                      "index": int(geo.get("index") or 0),
+                      "lat": float(geo["lat"]),
+                      "lon": float(geo["lon"]),
+                  })
+              merged.sort(key=lambda item: item["index"])
+              spots = []
+              seen = set()
+              for item in merged:
+                  if item["key"] in seen:
+                      continue
+                  seen.add(item["key"])
+                  spots.append({"key": item["key"], "index": len(spots), "lat": item["lat"], "lon": item["lon"]})
+              if not spots:
+                  return {"url": BASE + "&latitude=51.55&longitude=-0.11", "spots": []}
+              lats = ",".join(f"{spot['lat']:.2f}" for spot in spots)
+              lons = ",".join(f"{spot['lon']:.2f}" for spot in spots)
+              return {"url": f"{BASE}&latitude={lats}&longitude={lons}", "spots": spots}
+        code_language: python3
+        desc: ''
+        outputs:
+          url:
+            children: null
+            type: string
+          spots:
+            children: null
+            type: array[object]
+        selected: false
+        title: 合并天气坐标
+        type: code
+        variables:
+        - value_selector:
+          - code_weather_plan
+          - spots
+          variable: spots
+        - value_selector:
+          - iter_geo
+          - geo
+          variable: geos
+      height: 90
+      id: code_weather_plan2
+      position:
+        x: 1680
+        y: 860
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -2091,7 +2409,7 @@ workflow:
           - matches
           variable: matches
         - value_selector:
-          - code_weather_plan
+          - code_weather_plan2
           - spots
           variable: spots
         - value_selector:

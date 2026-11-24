@@ -172,6 +172,11 @@
           "draw": 17,
           "away": 15
         }
+      },
+      "weather": {
+        "temp": -5.1,
+        "precip": 0,
+        "wind": 10.8
       }
     },
     {

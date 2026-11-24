@@ -113,6 +113,11 @@
             "reason": "Calf Injury"
           }
         ]
+      },
+      "weather": {
+        "temp": 8.2,
+        "precip": 55,
+        "wind": 25.4
       }
     },
     {
@@ -276,6 +281,11 @@
             "reason": "Muscle Injury"
           }
         ]
+      },
+      "weather": {
+        "temp": 0.9,
+        "precip": 0,
+        "wind": 6.6
       }
     },
     {
@@ -767,6 +777,11 @@
             "reason": "Leg Injury"
           }
         ]
+      },
+      "weather": {
+        "temp": 1.6,
+        "precip": 4,
+        "wind": 16.9
       }
     },
     {
@@ -1012,6 +1027,11 @@
             "reason": "Muscle Injury"
           }
         ]
+      },
+      "weather": {
+        "temp": 11.8,
+        "precip": 0,
+        "wind": 3.1
       }
     },
     {
@@ -1140,6 +1160,11 @@
           }
         ],
         "away": []
+      },
+      "weather": {
+        "temp": -1.0,
+        "precip": 3,
+        "wind": 15.2
       }
     }
   ]

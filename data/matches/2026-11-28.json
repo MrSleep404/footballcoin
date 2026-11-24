@@ -290,6 +290,11 @@
           "draw": 27,
           "away": 44
         }
+      },
+      "weather": {
+        "temp": -4.9,
+        "precip": 0,
+        "wind": 9.8
       }
     },
     {
