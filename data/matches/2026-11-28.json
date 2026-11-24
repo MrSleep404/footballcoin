@@ -296,7 +296,16 @@
           "draw": 27,
           "away": 44
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "PL-2026-11-28-NOT-CHE",
@@ -398,7 +407,30 @@
           "draw": 28,
           "away": 36
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Carra: Chelsea must sign centre-back or achieve nothing",
+          "summary": "Jamie Carragher believes Chelsea must sign a dominant centre-back or they will have \"no chance of achieving anything\".",
+          "link": "https://www.skysports.com/football/news/11095/13615767/chelsea-must-sign-centre-back-or-will-achieve-nothing-with-levi-colwill-and-wesley-fofana-says-jamie-carragher",
+          "published": "2026-11-23",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Merson: My worry is that Liverpool thought Alonso wasn't good enough",
+          "summary": "In his latest Sky Sports column, Paul Merson has raised doubts about whether Xabi Alonso is good enough as Chelsea manager - after another disappointing defeat in the Premier League.",
+          "link": "https://www.skysports.com/football/news/11095/13615585/paul-merson-believes-liverpool-knew-xabi-alonso-wasnt-good-enough-and-were-seeing-it-play-out-as-chelsea-manager",
+          "published": "2026-11-23",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "PD-2026-11-28-LEV-SAN",
@@ -588,7 +620,16 @@
           "draw": 22,
           "away": 18
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer Centre LIVE! 'Real Madrid close to agreeing new contract with Bellingham'",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "SA-2026-11-28-FRO-PAR",
@@ -867,7 +908,16 @@
           "draw": 20,
           "away": 16
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Philadelphia's Cavan Sullivan wins MLS Young Player of the Year award",
+          "summary": "Philadelphia Union midfielder Cavan Sullivan has been selected as the MLS Young Player of the Year for his breakthrough performance as a 17-year-old.",
+          "link": "https://www.espn.com/soccer/story/_/id/50573882/philadelphia-cavan-sullivan-mls-young-player-year",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "BL1-2026-11-28-SCP-S04",
@@ -1056,7 +1106,16 @@
           "draw": 14,
           "away": 76
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "PL-2026-11-28-LEE-COV",
@@ -1144,7 +1203,16 @@
           "draw": 21,
           "away": 15
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Leeds latest: Tanaka close to signing new contract",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13353569/leeds-united-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "PL-2026-11-28-MUN-BRE",
@@ -1246,7 +1314,30 @@
           "draw": 25,
           "away": 29
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Which USMNT players could follow Pochettino to Manchester United?",
+          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
+          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Man United will need big January transfer spending to avoid relegation",
+          "summary": "Manchester United have a choice: Spend £150 million on new players in January or lose £300 million if they get relegated at the end of the Premier League season.",
+          "link": "https://www.espn.com/soccer/story/_/id/50571270/man-united-january-transfers-premier-league-relegation",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "PD-2026-11-28-MAL-ATH",

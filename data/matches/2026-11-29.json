@@ -107,7 +107,16 @@
           "draw": 23,
           "away": 56
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Rangers' McInnes wary of Frick's Aberdeen ahead of clash, live on Sky",
+          "summary": "Derek McInnes wants to strike the \"fine balance\" between consistency and using his squad during a hectic spell.",
+          "link": "https://www.skysports.com/football/news/11095/13615718/rangers-vs-aberdeen-derek-mcinnes-ready-for-different-dons-challenge-under-mario-frick-live-on-sky",
+          "published": "2026-11-23",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "SA-2026-11-29-TOR-LAZ",
@@ -209,7 +218,16 @@
           "draw": 27,
           "away": 46
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Lazio are top of Serie A despite their fans boycotting the team's owner",
+          "summary": "Lazio's success this season has been one of the big stories in Serie A, made more remarkable by the fact that their fans won't attend home games until the club is sold.",
+          "link": "https://www.espn.com/soccer/story/_/id/50575536/lazio-serie-fan-protests-claudio-lotito",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "PL-2026-11-29-IPS-AVL",
@@ -398,7 +416,16 @@
           "draw": 21,
           "away": 63
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer Centre LIVE! 'Real Madrid close to agreeing new contract with Bellingham'",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "BL1-2026-11-29-VFB-SGE",
@@ -982,7 +1009,16 @@
           "draw": 14,
           "away": 8
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "FL1-2026-11-29-HAC-RC",
@@ -1186,7 +1222,16 @@
           "draw": 11,
           "away": 6
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer Centre LIVE! 'Real Madrid close to agreeing new contract with Bellingham'",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "SA-2026-11-29-UDI-FIO",
@@ -1389,7 +1434,30 @@
           "draw": 26,
           "away": 50
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Everton latest: Moyes unsure over Tarkowski appeal with Liverpool up next",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13279303/everton-transfers-latest-news-rumours-and-gossip-live-updates-goals-and-highlights",
+          "published": "2026-11-23",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "🟥VAR review: Explaining Yoro's early red card vs. Liverpool",
+          "summary": "VAR often causes controversy, but how are decisions made? Our resident ref, Andy Davies, explains all.",
+          "link": "https://www.espn.com/soccer/story/_/id/49703019/premier-league-var-review-red-card-penalty-handball-goal-line-technology",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "PD-2026-11-29-VAL-OSA",
@@ -2088,7 +2156,16 @@
           "draw": 25,
           "away": 24
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Crystal Palace Women deducted three points for use of subs",
+          "summary": "Crystal Palace Women have been deducted three points in the WSL with immediate effect.",
+          "link": "https://www.skysports.com/football/news/11095/13615948/crystal-palace-women-deducted-three-points-in-wsl-for-making-substitutions-at-four-windows-in-everton-win",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "BL1-2026-11-29-SCF-RBL",

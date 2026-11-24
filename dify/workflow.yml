@@ -353,14 +353,71 @@ workflow:
     - data:
         isInLoop: false
         sourceType: iteration
-        targetType: iteration
-      id: iter_standings_sync-source-iter_matches-target
+        targetType: code
+      id: iter_standings_sync-source-code_news_plan-target
       source: iter_standings_sync
+      sourceHandle: source
+      target: code_news_plan
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_news_plan-source-iter_news-target
+      source: code_news_plan
+      sourceHandle: source
+      target: iter_news
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_news-source-code_news_merge-target
+      source: iter_news
+      sourceHandle: source
+      target: code_news_merge
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_news_merge-source-iter_matches-target
+      source: code_news_merge
       sourceHandle: source
       target: iter_matches
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_news
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_news_start-source-http_news-target
+      source: iter_news_start
+      sourceHandle: source
+      target: http_news
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_news
+        sourceType: http-request
+        targetType: code
+      id: http_news-source-code_news_parse-target
+      source: http_news
+      sourceHandle: source
+      target: code_news_parse
+      targetHandle: target
+      type: custom
+      zIndex: 1002
     - data:
         isInIteration: true
         iteration_id: iter_standings_sync
@@ -2815,6 +2872,304 @@ workflow:
       type: custom
       width: 244
     - data:
+        code: |
+          FEEDS = [
+              {"key": "espn", "name": "ESPN", "url": "https://www.espn.com/espn/rss/soccer/news"},
+              {"key": "sky", "name": "Sky Sports", "url": "https://www.skysports.com/rss/11095"},
+          ]
+
+
+          def main() -> dict:
+              return {"feeds": FEEDS}
+        code_language: python3
+        desc: ''
+        outputs:
+          feeds:
+            children: null
+            type: array[object]
+        selected: false
+        title: 资讯源
+        type: code
+        variables: []
+      height: 90
+      id: code_news_plan
+      position:
+        x: 1980
+        y: 780
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_news_plan
+        - feeds
+        output_selector:
+        - code_news_parse
+        - feed
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_news_start
+        title: 资讯抓取迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_news
+      position:
+        x: 2280
+        y: 780
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_news_start
+      parentId: iter_news
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Accept: application/rss+xml, application/xml
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_news
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 25
+          write: 15
+        title: 拉取资讯
+        type: http-request
+        url: '{{#iter_news.item.url#}}'
+        variables: []
+      height: 113
+      id: http_news
+      parentId: iter_news
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import html
+          import re
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+
+
+          def _text(node, *names):
+              for name in names:
+                  found = node.find(name)
+                  if found is not None and found.text:
+                      return found.text.strip()
+              for child in node:
+                  if child.tag.split("}")[-1] in names and child.text:
+                      return child.text.strip()
+              return ""
+
+
+          def _clean(text):
+              text = re.sub(r"<[^>]+>", " ", text or "")
+              return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+          def main(feed: dict, body) -> dict:
+              key = str((feed or {}).get("key") or "")
+              name = str((feed or {}).get("name") or key)
+              items = []
+              if not body:
+                  return {"feed": {"key": key, "items": items}}
+              try:
+                  root = ET.fromstring(body)
+              except ET.ParseError:
+                  return {"feed": {"key": key, "items": items}}
+              for node in root.iter():
+                  if node.tag.split("}")[-1] not in ("item", "entry"):
+                      continue
+                  title = _clean(_text(node, "title"))
+                  link = _text(node, "link")
+                  if not link:
+                      for child in node:
+                          if child.tag.split("}")[-1] == "link":
+                              link = child.get("href") or ""
+                  summary = _clean(_text(node, "description", "summary", "content"))
+                  raw_date = _text(node, "pubDate", "published", "updated")
+                  published = ""
+                  try:
+                      published = parsedate_to_datetime(raw_date).astimezone(timezone.utc).strftime("%Y-%m-%d")
+                  except (TypeError, ValueError):
+                      try:
+                          published = datetime.fromisoformat(raw_date.replace("Z", "+00:00")).strftime("%Y-%m-%d")
+                      except ValueError:
+                          published = ""
+                  if not title or not link:
+                      continue
+                  items.append({
+                      "title": title[:160],
+                      "summary": summary[:240],
+                      "link": link,
+                      "published": published,
+                      "source": name,
+                  })
+              return {"feed": {"key": key, "items": items}}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_news
+        outputs:
+          feed:
+            children: null
+            type: object
+        selected: false
+        title: 解析资讯
+        type: code
+        variables:
+        - value_selector:
+          - iter_news
+          - item
+          variable: feed
+        - value_selector:
+          - http_news
+          - body
+          variable: body
+      height: 90
+      id: code_news_parse
+      parentId: iter_news
+      position:
+        x: 420
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import re
+
+
+          STOP = {
+              "football", "soccer", "news", "league", "champions", "match", "report",
+              "preview", "review", "video", "watch", "world", "cup", "club", "sport",
+              "sports", "transfer", "transfers", "united", "city", "real", "town",
+          }
+
+
+          def _tokens(name):
+              return {
+                  token
+                  for token in re.split(r"[^a-z]+", str(name or "").lower())
+                  if len(token) >= 4 and token not in STOP
+              }
+
+
+          def main(matches: list, feeds) -> dict:
+              items = []
+              for feed in feeds if isinstance(feeds, list) else []:
+                  for item in (feed or {}).get("items") or []:
+                      if isinstance(item, dict) and item.get("link"):
+                          items.append(item)
+              result = []
+              for match in matches or []:
+                  tokens = _tokens((match.get("home") or {}).get("nameEn")) | _tokens(
+                      (match.get("away") or {}).get("nameEn")
+                  )
+                  if not tokens:
+                      result.append(match)
+                      continue
+                  scored = []
+                  for item in items:
+                      text = f"{item.get('title') or ''} {item.get('summary') or ''}".lower()
+                      score = sum(1 for token in tokens if token in text)
+                      if score:
+                          scored.append((score, item.get("published") or "", item))
+                  scored.sort(key=lambda row: (row[0], row[1]), reverse=True)
+                  picked = []
+                  seen = set()
+                  for _, _, item in scored:
+                      if item["link"] in seen:
+                          continue
+                      seen.add(item["link"])
+                      picked.append(item)
+                      if len(picked) >= 3:
+                          break
+                  if picked:
+                      match["news"] = picked
+                  else:
+                      match.pop("news", None)
+                  result.append(match)
+              return {"matches": result, "newsMatches": sum(1 for item in result if item.get("news"))}
+        code_language: python3
+        desc: ''
+        outputs:
+          matches:
+            children: null
+            type: array[object]
+          newsMatches:
+            children: null
+            type: number
+        selected: false
+        title: 合并资讯
+        type: code
+        variables:
+        - value_selector:
+          - code_odds_merge
+          - matches
+          variable: matches
+        - value_selector:
+          - iter_news
+          - output
+          variable: feeds
+      height: 90
+      id: code_news_merge
+      position:
+        x: 3000
+        y: 780
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
         desc: ''
         error_handle_mode: continue-on-error
         height: 201
@@ -3073,7 +3428,7 @@ workflow:
         is_parallel: true
         iterator_input_type: array[object]
         iterator_selector:
-        - code_odds_merge
+        - code_news_merge
         - matches
         output_selector:
         - code_validate

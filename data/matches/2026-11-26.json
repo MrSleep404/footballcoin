@@ -511,7 +511,16 @@
           }
         ],
         "away": []
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer Centre LIVE! 'Real Madrid close to agreeing new contract with Bellingham'",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-PSG-ROM",
@@ -640,7 +649,16 @@
             "reason": "Injury"
           }
         ]
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -784,7 +802,30 @@
             "reason": "Leg Injury"
           }
         ]
-      }
+      },
+      "news": [
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "🟥VAR review: Explaining Yoro's early red card vs. Liverpool",
+          "summary": "VAR often causes controversy, but how are decisions made? Our resident ref, Andy Davies, explains all.",
+          "link": "https://www.espn.com/soccer/story/_/id/49703019/premier-league-var-review-red-card-penalty-handball-goal-line-technology",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
+          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
+          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -907,7 +948,16 @@
             "reason": "Leg Injury"
           }
         ]
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-SPO-MUN",
@@ -1034,7 +1084,30 @@
             "reason": "Muscle Injury"
           }
         ]
-      }
+      },
+      "news": [
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Which USMNT players could follow Pochettino to Manchester United?",
+          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
+          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Man United will need big January transfer spending to avoid relegation",
+          "summary": "Manchester United have a choice: Spend £150 million on new players in January or lose £300 million if they get relegated at the end of the Premier League season.",
+          "link": "https://www.espn.com/soccer/story/_/id/50571270/man-united-january-transfers-premier-league-relegation",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",

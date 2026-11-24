@@ -68,6 +68,14 @@ export interface MarketInfo {
   prob: Record<Outcome, number>;
 }
 
+export interface NewsItem {
+  title: string;
+  summary: string;
+  link: string;
+  published: string;
+  source: string;
+}
+
 export interface Match {
   id: string;
   league: LeagueCode;
@@ -85,6 +93,7 @@ export interface Match {
   weather?: WeatherInfo;
   injuries?: InjuryInfo;
   market?: MarketInfo;
+  news?: NewsItem[];
 }
 
 export interface MatchDayFile {

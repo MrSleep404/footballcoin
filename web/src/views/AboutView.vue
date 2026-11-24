@@ -107,6 +107,10 @@
           <dt>Open-Meteo</dt>
           <dd>开赛时的气温、降水概率与风速，按主队主场坐标查询。</dd>
         </div>
+        <div>
+          <dt>ESPN / Sky Sports（RSS）</dt>
+          <dd>与参赛球队相关的足球资讯标题与摘要，仅做聚合展示，点击跳转原文。</dd>
+        </div>
       </dl>
     </section>
 
@@ -117,7 +121,7 @@
         足球比赛存在高度不确定性，模型可能出错；请勿将预测结果作为任何财务决策的依据。
       </p>
       <p class="text">
-        数据来源：football-data.org、API-Football、The Odds API、Open-Meteo。
+        数据来源：football-data.org、API-Football、The Odds API、Open-Meteo、ESPN / Sky Sports。
         本站不提供赛事直播、赔率交易或任何形式的投注服务。
       </p>
     </section>

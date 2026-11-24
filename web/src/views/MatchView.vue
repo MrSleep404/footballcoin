@@ -54,8 +54,9 @@ const h2h = computed(() => {
 const weather = computed(() => match.value?.weather ?? null);
 const market = computed(() => match.value?.market ?? null);
 const injuries = computed(() => match.value?.injuries ?? null);
+const news = computed(() => match.value?.news ?? []);
 const hasIntel = computed(() =>
-  Boolean(h2h.value || weather.value || market.value || injuries.value),
+  Boolean(h2h.value || weather.value || market.value || injuries.value || news.value.length),
 );
 
 async function init() {
@@ -266,6 +267,19 @@ onMounted(() => {
         </div>
       </section>
 
+      <section v-if="news.length" class="block">
+        <h2>相关资讯</h2>
+        <ul class="news">
+          <li v-for="item in news" :key="item.link" class="news-item">
+            <a :href="item.link" target="_blank" rel="noopener noreferrer">
+              <span class="news-title">{{ item.title }}</span>
+              <span class="news-meta numeric">{{ item.source }} · {{ item.published }}</span>
+              <span v-if="item.summary" class="news-summary">{{ item.summary }}</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <section class="block">
         <h2>预测理由</h2>
         <ol class="reasons">
@@ -333,7 +347,7 @@ onMounted(() => {
       </section>
 
       <p class="note">
-        预测由 AI 模型生成，仅供娱乐参考，不构成投注建议。数据来源：football-data.org、API-Football、The Odds API、Open-Meteo。
+        预测由 AI 模型生成，仅供娱乐参考，不构成投注建议。数据来源：football-data.org、API-Football、The Odds API、Open-Meteo、ESPN / Sky Sports。
       </p>
     </template>
   </div>
@@ -634,6 +648,45 @@ onMounted(() => {
 
 .intel-list strong {
   color: var(--text);
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-item a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface-2);
+  transition: border-color 0.18s ease;
+}
+
+.news-item a:hover {
+  border-color: var(--brand);
+}
+
+.news-title {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.news-meta {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.news-summary {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .reasons {

@@ -209,7 +209,30 @@
           "draw": 26,
           "away": 26
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Which USMNT players could follow Pochettino to Manchester United?",
+          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
+          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "Why the Premier League's set-piece goals dried up -- and why Arsenal are still No. 1 anyway",
+          "summary": "Arsenal won the Premier League in controversial fashion last season, but the set-piece goals they counted on have disappeared. Why?",
+          "link": "https://www.espn.com/soccer/story/_/id/50576776/premier-league-set-piece-goal-arsenal-standings-table",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "BL1-2026-11-30-TSG-FCA",
@@ -602,7 +625,16 @@
         "temp": 1.2,
         "precip": 25,
         "wind": 10.2
-      }
+      },
+      "news": [
+        {
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "SA-2026-11-30-COM-JUV",
