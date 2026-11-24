@@ -47,7 +47,10 @@ const scoreHit = computed(() => {
   return score.home === result.homeGoals && score.away === result.awayGoals;
 });
 
-const h2h = computed(() => match.value?.h2h ?? null);
+const h2h = computed(() => {
+  const value = match.value?.h2h;
+  return value && value.played > 0 ? value : null;
+});
 const weather = computed(() => match.value?.weather ?? null);
 const market = computed(() => match.value?.market ?? null);
 const hasIntel = computed(() => Boolean(h2h.value || weather.value || market.value));

@@ -72,7 +72,19 @@
         "risk": "主队主场因素与保级压力可能带来反弹，场地信息未提供增加不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 8.7,
+        "precip": 12,
+        "wind": 7.2
+      }
     },
     {
       "id": "SA-2026-11-29-TOR-LAZ",
@@ -139,7 +151,19 @@
         "risk": "都灵主场偶有顽强表现，且拉齐奥客场作战存在变数，平局不可完全排除。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 7.6,
+        "precip": 0,
+        "wind": 0.8
+      }
     },
     {
       "id": "PL-2026-11-29-IPS-AVL",
@@ -206,7 +230,19 @@
         "risk": "客队近5场有3场平局，且场地信息未提供，平局风险需防。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.5,
+        "precip": 34,
+        "wind": 19.8
+      }
     },
     {
       "id": "PD-2026-11-29-ELC-ATL",
@@ -272,7 +308,19 @@
         "risk": "主队主场作战且近期有平局，需防客队小胜或平局；未提供场地与伤停信息。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 14.3,
+        "precip": 0,
+        "wind": 2.9
+      }
     },
     {
       "id": "BL1-2026-11-29-VFB-SGE",
@@ -339,7 +387,19 @@
         "risk": "场地与伤停等关键信息缺失，双方排名接近且主队近5场有2负，比赛走向不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 0.9,
+        "precip": 0,
+        "wind": 5.2
+      }
     },
     {
       "id": "SA-2026-11-29-INT-GEN",
@@ -406,7 +466,19 @@
         "risk": "客队近5场4胜状态正佳，存在爆冷可能；场地未提供，信息略不完整。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 5.4,
+        "precip": 0,
+        "wind": 2.2
+      }
     },
     {
       "id": "FL1-2026-11-29-LMF-LIL",
@@ -471,7 +543,19 @@
         "risk": "里尔近5场有1负2平，客场稳定性不足，主队主场表现未提供。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.0,
+        "precip": 10,
+        "wind": 5.3
+      }
     },
     {
       "id": "FL1-2026-11-29-NIC-ETR",
@@ -538,7 +622,19 @@
         "risk": "尼斯近5场胜负交替、状态起伏，主场能否稳定取分是最大不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.4,
+        "precip": 0,
+        "wind": 9.4
+      }
     },
     {
       "id": "FL1-2026-11-29-HAC-RC ",
@@ -605,7 +701,19 @@
         "risk": "场地未提供，双方状态低迷且实力接近，客队优势有限，结果不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 7.7,
+        "precip": 44,
+        "wind": 12.7
+      }
     },
     {
       "id": "FL1-2026-11-29-PSG-FCL",
@@ -672,7 +780,19 @@
         "risk": "场地与伤停信息未提供；主队赛季失球12个偏多，客队反击仍有破门可能。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 2.1,
+        "precip": 20,
+        "wind": 8.6
+      }
     },
     {
       "id": "PD-2026-11-29-RMA-ALA",
@@ -739,7 +859,19 @@
         "risk": "主队大胜幅度存在不确定性，客队近5场有2场平局显示一定韧性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.1,
+        "precip": 1,
+        "wind": 1.9
+      }
     },
     {
       "id": "SA-2026-11-29-UDI-FIO",
@@ -805,7 +937,19 @@
         "risk": "未提供场地等细节，双方实力接近且防守均差，赛果不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 11.0,
+        "precip": 0,
+        "wind": 8.0
+      }
     },
     {
       "id": "PL-2026-11-29-EVE-LIV",
@@ -872,7 +1016,19 @@
         "risk": "默西塞德德比情绪因素大，且场地与伤停信息未提供，冷门风险不可忽视。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 5.5,
+        "precip": 47,
+        "wind": 13.3
+      }
     },
     {
       "id": "PD-2026-11-29-VAL-OSA",
@@ -940,7 +1096,19 @@
         "risk": "两队排名接近、实力差距小，防守均差使比分波动大，平局可能性不低。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 17.9,
+        "precip": 3,
+        "wind": 5.7
+      }
     },
     {
       "id": "SA-2026-11-29-SAS-NAP",
@@ -1007,7 +1175,19 @@
         "risk": "那不勒斯近5场仅2胜、平局偏多，且场地与伤停信息未提供，平局不可排除。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.9,
+        "precip": 0,
+        "wind": 5.4
+      }
     },
     {
       "id": "FL1-2026-11-29-AJA-MAR",
@@ -1074,7 +1254,19 @@
         "risk": "主队有主场因素且客队近5场有1负，需防平局冷门。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 5.0,
+        "precip": 37,
+        "wind": 5.2
+      }
     },
     {
       "id": "PL-2026-11-29-FUL-BOU",
@@ -1142,7 +1334,19 @@
         "risk": "富勒姆主场韧性可能拖入平局，伯恩茅斯连胜存在回落风险。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.3,
+        "precip": 24,
+        "wind": 8.6
+      }
     },
     {
       "id": "PL-2026-11-29-BHA-NEW",
@@ -1208,7 +1412,19 @@
         "risk": "纽卡斯尔联近5场有两场平局，且双方近期均不稳定，平局风险不可忽视。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.8,
+        "precip": 31,
+        "wind": 13.3
+      }
     },
     {
       "id": "PL-2026-11-29-SUN-TOT",
@@ -1275,7 +1491,19 @@
         "risk": "桑德兰近 5 场有 2 场平局，主场存在逼平可能；热刺客场稳定性未提供数据。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.5,
+        "precip": 38,
+        "wind": 19.1
+      }
     },
     {
       "id": "PL-2026-11-29-CRY-HUL",
@@ -1342,7 +1570,19 @@
         "risk": "水晶宫有主场之利且两队积分接近，Hull City近5场仅1胜，胜负不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.0,
+        "precip": 22,
+        "wind": 9.7
+      }
     },
     {
       "id": "BL1-2026-11-29-SCF-RBL",
@@ -1410,7 +1650,19 @@
         "risk": "双方排名接近且状态都不错，主场优势与莱比锡火力的对冲使结果存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 3.8,
+        "precip": 14,
+        "wind": 1.5
+      }
     },
     {
       "id": "PD-2026-11-29-DEP-FCB",
@@ -1477,7 +1729,19 @@
         "risk": "西甲存在冷门可能，且场地与伤停信息未提供，客队大胜并非确定。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 16.0,
+        "precip": 48,
+        "wind": 5.9
+      }
     }
   ]
 }

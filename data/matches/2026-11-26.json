@@ -69,7 +69,14 @@
         "risk": "主队近期仅给出4场且场地未提供，客场环境与轮换存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -134,7 +141,14 @@
         "risk": "未提供场地与伤停信息，近5场实际仅给出4场，数据不完整，双方实力接近故信心偏低。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     },
     {
       "id": "CL-2026-11-26-INT-VFB",
@@ -199,7 +213,19 @@
         "risk": "双方排名与近期战绩高度接近，近5场实际只列出4场，数据样本偏少，平局可能性不容忽视。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 8.3,
+        "precip": 85,
+        "wind": 7.9
+      }
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -265,7 +291,19 @@
         "risk": "场地未提供，且近5场仅列4场，数据完整度有限。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.8,
+        "precip": 0,
+        "wind": 8.5
+      }
     },
     {
       "id": "CL-2026-11-26-PSG-ROM",
@@ -330,7 +368,19 @@
         "risk": "近5场只提供了4场战绩，罗马在欧冠偶尔爆冷；如果它收缩防守，比分可能更接近。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.8,
+        "precip": 28,
+        "wind": 7.9
+      }
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -395,7 +445,14 @@
         "risk": "近5场仅列出4场，场地等信息缺失，客队客战表现仍不确定。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -459,7 +516,19 @@
         "risk": "里尔主场表现缺少细分数据，Bayern客场稳定性未知，存在冷门可能。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 1.2,
+        "precip": 7,
+        "wind": 15.1
+      }
     },
     {
       "id": "CL-2026-11-26-SPO-MUN",
@@ -525,7 +594,14 @@
         "risk": "场地未提供且近5场仅列4场，信息不完整，曼联爆冷可能仍存。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -590,7 +666,14 @@
         "risk": "双方近5场仅各提供4场数据，场地未提供，信息不完整，客队进攻略强，结果存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     }
   ]
 }

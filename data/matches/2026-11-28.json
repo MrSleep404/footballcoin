@@ -72,7 +72,19 @@
         "risk": "场地与伤停信息未提供，客队上一场取胜显示状态有回升可能，存在爆冷不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": -3.4,
+        "precip": 0,
+        "wind": 8.1
+      }
     },
     {
       "id": "SA-2026-11-28-VEN-BOL",
@@ -139,7 +151,19 @@
         "risk": "场地信息未提供，且博洛尼亚赛季失15球防线不算稳固，主队主场或有反弹可能。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.6,
+        "precip": 18,
+        "wind": 10.6
+      }
     },
     {
       "id": "FL1-2026-11-28-BRE-PFC",
@@ -206,7 +230,14 @@
         "risk": "场地与伤停等信息未提供，主队主场加成幅度不明，判断存在偏差风险。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     },
     {
       "id": "PL-2026-11-28-NOT-CHE",
@@ -273,7 +304,19 @@
         "risk": "双方近5场都起伏较大，且场地与伤停信息未提供，切尔西客战稳定性存疑。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 3.3,
+        "precip": 32,
+        "wind": 8.3
+      }
     },
     {
       "id": "PD-2026-11-28-LEV-SAN",
@@ -341,7 +384,19 @@
         "risk": "Santander失球偏多且Levante有主场因素，双方差距不大，赛果存在较大不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 10.6,
+        "precip": 0,
+        "wind": 2.5
+      }
     },
     {
       "id": "PD-2026-11-28-BET-RAY",
@@ -408,7 +463,19 @@
         "risk": "场地与伤停信息未提供，客队近期有平局韧性，存在被逼平的可能。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 17.1,
+        "precip": 0,
+        "wind": 9.8
+      }
     },
     {
       "id": "SA-2026-11-28-FRO-PAR",
@@ -475,7 +542,19 @@
         "risk": "帕尔马近期有胜绩且足球偶然性大，主队失20球存在被反击风险。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 15.0,
+        "precip": 0,
+        "wind": 3.4
+      }
     },
     {
       "id": "BL1-2026-11-28-KOE-ELV",
@@ -543,7 +622,19 @@
         "risk": "未提供场地与伤停信息，双方实力接近，平局以外的结果不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 2.4,
+        "precip": 5,
+        "wind": 10.2
+      }
     },
     {
       "id": "BL1-2026-11-28-M05-UNB",
@@ -610,7 +701,19 @@
         "risk": "两队近期状态均不佳且场地未提供，美因茨主场优势可能有限。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 1.0,
+        "precip": 0,
+        "wind": 7.9
+      }
     },
     {
       "id": "BL1-2026-11-28-SCP-S04",
@@ -677,7 +780,19 @@
         "risk": "两队排名接近且场地等信息缺失，防守均不稳，比分波动较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 0.8,
+        "precip": 1,
+        "wind": 11.1
+      }
     },
     {
       "id": "BL1-2026-11-28-HSV-FCB",
@@ -743,7 +858,19 @@
         "risk": "拜仁近5场有2场平局，若轮换或久攻不下可能失分。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": -1.4,
+        "precip": 1,
+        "wind": 14.3
+      }
     },
     {
       "id": "PL-2026-11-28-LEE-COV",
@@ -810,7 +937,19 @@
         "risk": "利兹联近5场有2场平局，进攻稳定性一般，客队仍有抢分可能。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 4.9,
+        "precip": 43,
+        "wind": 10.1
+      }
     },
     {
       "id": "PL-2026-11-28-MUN-BRE",
@@ -877,7 +1016,19 @@
         "risk": "未提供场地与伤停信息，曼联主场存在反弹可能，排名差距未必等同实战结果。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.2,
+        "precip": 47,
+        "wind": 5.4
+      }
     },
     {
       "id": "PD-2026-11-28-MAL-ATH",
@@ -943,7 +1094,19 @@
         "risk": "场地和伤停未提供，客队近5场也有2负，需防平局。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 17.4,
+        "precip": 0,
+        "wind": 5.6
+      }
     }
   ]
 }

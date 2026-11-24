@@ -73,7 +73,19 @@
         "risk": "双方排名与攻防接近，且场地和伤停信息未提供，主胜存在被逼平风险。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 11.1,
+        "precip": 30,
+        "wind": 3.6
+      }
     },
     {
       "id": "PL-2026-11-30-ARS-MCI",
@@ -141,7 +153,19 @@
         "risk": "曼城赛季进球22个为联赛强火力，若进攻端回暖可能改变走势，且未提供历史交锋数据。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 9.1,
+        "precip": 22,
+        "wind": 9.4
+      }
     },
     {
       "id": "BL1-2026-11-30-TSG-FCA",
@@ -209,7 +233,19 @@
         "risk": "双方排名接近且奥格斯堡攻击力更强，主场优势可能不足以决定胜负。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 1.2,
+        "precip": 13,
+        "wind": 1.8
+      }
     },
     {
       "id": "SA-2026-11-30-ROM-MON",
@@ -275,7 +311,19 @@
         "risk": "场地与伤停信息未提供，客队唯一胜场显示其具备一定爆冷能力。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 10.5,
+        "precip": 0,
+        "wind": 9.7
+      }
     },
     {
       "id": "PD-2026-11-30-CEL-VIL",
@@ -342,7 +390,19 @@
         "risk": "双方实力接近，场地信息未提供，平局可能性不低，结果不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 15.8,
+        "precip": 28,
+        "wind": 3.1
+      }
     },
     {
       "id": "BL1-2026-11-30-BVB-B04",
@@ -410,7 +470,19 @@
         "risk": "双方实力接近且缺少伤停与场地信息，勒沃库森进攻火力可能改变走势。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 2.7,
+        "precip": 14,
+        "wind": 11.2
+      }
     },
     {
       "id": "SA-2026-11-30-COM-JUV",
@@ -477,7 +549,19 @@
         "risk": "两队排名与实力接近，尤文图斯客战韧性强，胜负可能由临场细节决定。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 5.2,
+        "precip": 2,
+        "wind": 4.4
+      }
     },
     {
       "id": "FL1-2026-11-30-LYO-ASM",
@@ -544,7 +628,19 @@
         "risk": "摩纳哥近 5 场有 4 场平局，客场容易把比赛拖成平局；场地与伤停信息未提供。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 4.2,
+        "precip": 32,
+        "wind": 1.3
+      }
     },
     {
       "id": "PD-2026-11-30-RSO-SEV",
@@ -612,7 +708,19 @@
         "risk": "两队排名与实力接近，场地未提供，主胜存在被逼平风险。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 13.7,
+        "precip": 54,
+        "wind": 1.5
+      }
     }
   ]
 }

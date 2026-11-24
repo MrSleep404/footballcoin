@@ -72,7 +72,19 @@
         "risk": "客队近期平局偏多且未提供伤停与场地信息，平局是最大不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 10.5,
+        "precip": 2,
+        "wind": 7.2
+      }
     },
     {
       "id": "SA-2026-12-01-CAG-MIL",
@@ -139,7 +151,19 @@
         "risk": "场地与伤停信息未提供，AC米兰客场发挥存在波动，卡利亚里主场或有抵抗。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 12.3,
+        "precip": 10,
+        "wind": 5.6
+      }
     },
     {
       "id": "PD-2026-12-01-ESP-GET",
@@ -206,7 +230,19 @@
         "risk": "西班牙人近5场有2负、攻防14/14并不突出，场地与伤停未提供，平局风险不可忽视。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 10.2,
+        "precip": 7,
+        "wind": 3.8
+      }
     }
   ]
 }

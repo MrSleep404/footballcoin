@@ -70,7 +70,19 @@
         "risk": "近5场仅提供4场结果，样本略不足；加拉塔萨雷主场氛围可能缩小实力差距。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 6.1,
+        "precip": 0,
+        "wind": 0.7
+      }
     },
     {
       "id": "CL-2026-11-25-FK-LIN",
@@ -136,7 +148,14 @@
         "risk": "近5场仅列出4场且场地未提供，主队主场优势难以量化，判断不确定性较大。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      }
     },
     {
       "id": "CL-2026-11-25-RMA-PSV",
@@ -201,7 +220,19 @@
         "risk": "PSV近期有胜有平且主队近期结果仅列出4场，数据略有不全，需防客队爆冷。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 7.5,
+        "precip": 0,
+        "wind": 9.2
+      }
     },
     {
       "id": "CL-2026-11-25-MCI-NAP",
@@ -267,7 +298,19 @@
         "risk": "近5场双方均只列4场，样本有限，那不勒斯反击效率仍有不确定性"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 4.7,
+        "precip": 17,
+        "wind": 13.3
+      }
     },
     {
       "id": "CL-2026-11-25-ARS-BVB",
@@ -332,7 +375,19 @@
         "risk": "未提供场地、伤停信息，近期仅列出4场，多特蒙德进攻仍有威胁，比分存在变数。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 4.7,
+        "precip": 0,
+        "wind": 14.0
+      }
     },
     {
       "id": "CL-2026-11-25-FEY-FCP",
@@ -397,7 +452,19 @@
         "risk": "近5场数据仅列4场且场地未提供，状态与主客场因素存在不确定性。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 0.5,
+        "precip": 0,
+        "wind": 17.3
+      }
     },
     {
       "id": "CL-2026-11-25-SBA-BET",
@@ -461,7 +528,19 @@
         "risk": "主队近期只列出4场且场地未提供，欧冠客场变数仍可能影响客队发挥。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": -0.1,
+        "precip": 0,
+        "wind": 6.0
+      }
     },
     {
       "id": "CL-2026-11-25-RBL-RCL",
@@ -526,7 +605,19 @@
         "risk": "近5场仅提供4场结果，场地信息缺失，双方实力接近，不确定性较高。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": -0.2,
+        "precip": 0,
+        "wind": 3.6
+      }
     },
     {
       "id": "CL-2026-11-25-COM-AEK",
@@ -590,7 +681,19 @@
         "risk": "近5场仅列出4场结果，样本略少；PAE AEK仍有爆冷可能。"
       },
       "degraded": false,
-      "result": null
+      "result": null,
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "weather": {
+        "temp": 8.4,
+        "precip": 33,
+        "wind": 0.7
+      }
     }
   ]
 }
