@@ -1397,7 +1397,7 @@ workflow:
               "CL:LASK": (48.29, 14.29), "CL:SBA": (48.17, 17.14), "CL:AEK": (38.04, 23.79),
               "CL:VIK": (58.97, 5.73), "CL:SAL": (47.80, 13.03), "CL:CRV": (44.82, 20.46),
           }
-          BASE = ("https://api.open-meteo.com/v1/forecast"
+          BASE = ("http://api.open-meteo.com/v1/forecast"
                   "?hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8")
           MAX_SPOTS = 40
 
@@ -1479,8 +1479,8 @@ workflow:
         params: ''
         selected: false
         timeout:
-          connect: 10
-          read: 30
+          connect: 20
+          read: 45
           write: 30
         title: 拉取天气
         type: http-request

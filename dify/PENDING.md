@@ -102,7 +102,9 @@
 
 - 新增「天气计划」→「拉取天气」→「合并天气」三节点，插在「清洗与筛选」和「积分榜同步迭代」之间
 - 天气计划：按 `联赛:TLA` 查内置球场城市坐标表（五大联赛 + 常见欧战球队），多坐标一次批量请求，最多 40 个点
-- 请求：`https://api.open-meteo.com/v1/forecast?latitude=..&longitude=..&hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8`
+- 请求：`http://api.open-meteo.com/v1/forecast?latitude=..&longitude=..&hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8`
+  - 用 HTTP 而非 HTTPS：Dify 侧走 squid 代理时，到该站点的 TLS 握手会偶发 `The handshake operation timed out`（实测代理日志为 10s 只传 39 字节）。HTTP 端点实测 40 坐标仅 0.6s / 246KB
+  - 节点超时放宽为 connect 20s / read 45s
 - 合并：按开赛 UTC 小时匹配 `hourly.time`，给每场比赛写入 `weather: {temp, precip, wind}`
 - 未覆盖的球队（无坐标）不写入 `weather`，提示词显示「未提供」
 - 提示词新增「交手记录」「天气」两行；system prompt 要求只使用输入字段
