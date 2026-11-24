@@ -367,8 +367,19 @@ workflow:
         isInLoop: false
         sourceType: iteration
         targetType: code
-      id: iter_matches-source-code_h2h_changed-target
+      id: iter_matches-source-http_h2h_latest-target
       source: iter_matches
+      sourceHandle: source
+      target: http_h2h_latest
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: http_h2h_latest-source-code_h2h_changed-target
+      source: http_h2h_latest
       sourceHandle: source
       target: code_h2h_changed
       targetHandle: target
@@ -1177,6 +1188,40 @@ workflow:
       type: custom
       width: 244
     - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          User-Agent: footballcoin-dify
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 读取最新交锋缓存
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/h2h.json?ref={{#env.GH_BRANCH#}}'
+        variables: []
+      height: 113
+      id: http_h2h_latest
+      position:
+        x: 1150
+        y: 760
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
         code: |
           import base64
           import json
@@ -1185,10 +1230,20 @@ workflow:
           BJ = timezone(timedelta(hours=8))
 
 
-          def _decode(payload):
-              if not isinstance(payload, dict):
-                  return {}
-              text = payload.get("content") or ""
+          def _as_dict(payload):
+              if isinstance(payload, dict):
+                  return payload
+              if isinstance(payload, str):
+                  try:
+                      parsed = json.loads(payload)
+                      return parsed if isinstance(parsed, dict) else {}
+                  except ValueError:
+                      return {}
+              return {}
+
+
+          def _decode(body):
+              text = body.get("content") or ""
               if not text:
                   return {}
               try:
@@ -1206,9 +1261,10 @@ workflow:
 
 
           def main(additions, cache, enabled) -> dict:
-              body = cache if isinstance(cache, dict) else {}
-              if str(enabled or "").strip().lower() != "true":
-                  return {"changed": False, "contentBase64": "", "sha": body.get("sha") or "", "updated": 0}
+              body = _as_dict(cache)
+              sha = str(body.get("sha") or "")
+              if str(enabled or "").strip().lower() != "true" or not sha:
+                  return {"changed": False, "contentBase64": "", "sha": sha, "updated": 0}
               data = _decode(body)
               leagues = data.get("leagues") or {}
               updated = 0
@@ -1255,13 +1311,13 @@ workflow:
                           entry["last"] = sorted(last, key=lambda item: item.get("date") or "", reverse=True)[:5]
                       target[key] = entry
               if not updated:
-                  return {"changed": False, "contentBase64": "", "sha": body.get("sha") or "", "updated": 0}
+                  return {"changed": False, "contentBase64": "", "sha": sha, "updated": 0}
               data["updatedAt"] = datetime.now(BJ).isoformat(timespec="seconds")
               text = json.dumps(data, ensure_ascii=False, indent=2)
               return {
                   "changed": True,
                   "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
-                  "sha": body.get("sha") or "",
+                  "sha": sha,
                   "updated": updated,
               }
         code_language: python3
@@ -1288,7 +1344,7 @@ workflow:
           - h2hAdditions
           variable: additions
         - value_selector:
-          - http_h2h_cache
+          - http_h2h_latest
           - body
           variable: cache
         - value_selector:
