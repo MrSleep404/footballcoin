@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-24T14:06:40+08:00",
+  "source": "football-data.org",
+  "count": 18,
+  "results": [
+    {
+      "id": "BL1-2026-11-21-B04-SCP",
+      "league": "BL1",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "BL1-2026-11-21-BMG-BVB",
+      "league": "BL1",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "BL1-2026-11-21-ELV-SCF",
+      "league": "BL1",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "BL1-2026-11-21-FCB-KOE",
+      "league": "BL1",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "BL1-2026-11-21-SGE-TSG",
+      "league": "BL1",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "BL1-2026-11-21-UNB-RBL",
+      "league": "BL1",
+      "homeGoals": 1,
+      "awayGoals": 5,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "FL1-2026-11-21-ETR-HAC",
+      "league": "FL1",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PD-2026-11-21-ALA-DEP",
+      "league": "PD",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PD-2026-11-21-ATH-ESP",
+      "league": "PD",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PD-2026-11-21-RAY-VAL",
+      "league": "PD",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-21-AVL-SUN",
+      "league": "PL",
+      "homeGoals": 0,
+      "awayGoals": 0,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-21-BOU-NOT",
+      "league": "PL",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-21-CHE-LEE",
+      "league": "PL",
+      "homeGoals": 1,
+      "awayGoals": 4,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-21-COV-CRY",
+      "league": "PL",
+      "homeGoals": 3,
+      "awayGoals": 2,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-21-MCI-FUL",
+      "league": "PL",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-21-TOT-IPS",
+      "league": "PL",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "SA-2026-11-21-COM-CAG",
+      "league": "SA",
+      "homeGoals": 2,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "SA-2026-11-21-LAZ-USL",
+      "league": "SA",
+      "homeGoals": 3,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    }
+  ]
+}
