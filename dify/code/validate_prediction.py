@@ -1,4 +1,5 @@
 import json
+import re
 
 KEYS = ("home", "draw", "away")
 
@@ -8,6 +9,46 @@ def _clamp(value, lo, hi, default):
         return max(lo, min(hi, int(round(float(value)))))
     except (TypeError, ValueError):
         return default
+
+
+def _extract_json(text):
+    if not isinstance(text, str):
+        return None
+    raw = re.sub(r"<think\b[^>]*>.*?</think\s*>", "", text, flags=re.S | re.I).strip()
+    fence = re.search(r"```(?:json)?\s*(.*?)```", raw, flags=re.S | re.I)
+    if fence:
+        raw = fence.group(1).strip()
+    try:
+        return json.loads(raw)
+    except (TypeError, ValueError):
+        pass
+    start = raw.find("{")
+    while start != -1:
+        depth = 0
+        in_string = False
+        escaped = False
+        for index in range(start, len(raw)):
+            char = raw[index]
+            if in_string:
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == '"':
+                    in_string = False
+            elif char == '"':
+                in_string = True
+            elif char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        return json.loads(raw[start : index + 1])
+                    except (TypeError, ValueError):
+                        break
+        start = raw.find("{", start + 1)
+    return None
 
 
 def _parse_match(match):
@@ -59,18 +100,17 @@ def main(raw_text: str, match) -> dict:
     item = _parse_match(match)
     merged = dict(item)
 
-    try:
-        data = json.loads(raw_text)
-    except (TypeError, ValueError):
+    data = _extract_json(raw_text)
+    if not isinstance(data, dict):
         merged["prediction"] = _fallback(item)
         merged["degraded"] = True
-        return {"match": merged, "degraded": True, "error": "invalid_json"}
+        return {"match": merged}
 
     prob = _normalize_prob(data.get("prob"))
     if prob is None:
         merged["prediction"] = _fallback(item)
         merged["degraded"] = True
-        return {"match": merged, "degraded": True, "error": "invalid_prob"}
+        return {"match": merged}
 
     score = data.get("score") or {}
     reasons = [str(text)[:40] for text in (data.get("reasons") or []) if str(text).strip()][:4]
@@ -91,4 +131,4 @@ def main(raw_text: str, match) -> dict:
         "risk": str(data.get("risk") or "")[:60],
     }
     merged["degraded"] = False
-    return {"match": merged, "degraded": False, "error": ""}
+    return {"match": merged}

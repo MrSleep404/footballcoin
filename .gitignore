@@ -7,6 +7,8 @@ data/stats.json
 __pycache__/
 *.pyc
 .screenshots/
+*.ifpkg
+GH_token.txt
 .DS_Store
 Thumbs.db
 *.log

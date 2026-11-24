@@ -3,6 +3,7 @@ import { computed } from "vue";
 import type { Match } from "../types";
 import { LEAGUE_COLOR, formatKickoffTime, outcomeFromScore } from "../utils/format";
 import OddsRow from "./OddsRow.vue";
+import TeamCrest from "./TeamCrest.vue";
 
 const props = defineProps<{
   match: Match;
@@ -43,7 +44,10 @@ const scoreText = computed(() => {
 
     <div class="matchup">
       <div class="team">
-        <span class="name">{{ match.home.name }}</span>
+        <span class="name">
+          <TeamCrest :name="match.home.name" :crest="match.home.crest" />
+          <span class="name-text">{{ match.home.name }}</span>
+        </span>
         <span class="sub numeric">#{{ match.home.rank }} <span class="sep">/</span> 主</span>
       </div>
 
@@ -53,7 +57,10 @@ const scoreText = computed(() => {
       </div>
 
       <div class="team away">
-        <span class="name">{{ match.away.name }}</span>
+        <span class="name">
+          <TeamCrest :name="match.away.name" :crest="match.away.crest" />
+          <span class="name-text">{{ match.away.name }}</span>
+        </span>
         <span class="sub numeric">#{{ match.away.rank }} <span class="sep">/</span> 客</span>
       </div>
     </div>
@@ -184,9 +191,20 @@ const scoreText = computed(() => {
 }
 
 .name {
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
   font-size: 15px;
   font-weight: 700;
+}
+
+.team.away .name {
+  flex-direction: row-reverse;
+}
+
+.name-text {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

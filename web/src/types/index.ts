@@ -6,6 +6,7 @@ export type MatchStatus = "scheduled" | "finished";
 export interface TeamInfo {
   name: string;
   nameEn: string;
+  crest?: string;
   rank: number;
   form: FormResult[];
   goalsFor?: number;

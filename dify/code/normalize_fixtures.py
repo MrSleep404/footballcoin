@@ -124,6 +124,7 @@ def _team_entry(team, row, form):
     return {
         "name": _team_name(team),
         "nameEn": team.get("name") or "Unknown",
+        "crest": team.get("crest") or "",
         "rank": int(row.get("position") or 20),
         "form": form,
         "goalsFor": int(row.get("goalsFor") or 0),

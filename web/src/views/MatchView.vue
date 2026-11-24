@@ -14,6 +14,7 @@ import FormDots from "../components/FormDots.vue";
 import OddsRow from "../components/OddsRow.vue";
 import StateEmpty from "../components/StateEmpty.vue";
 import StateError from "../components/StateError.vue";
+import TeamCrest from "../components/TeamCrest.vue";
 
 const route = useRoute();
 const match = ref<Match | null>(null);
@@ -123,7 +124,10 @@ onMounted(() => {
         <div class="teams">
           <div class="team">
             <span class="role">主队</span>
-            <span class="name">{{ match.home.name }}</span>
+            <span class="name">
+              <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="24" />
+              <span class="name-text">{{ match.home.name }}</span>
+            </span>
             <span class="rank numeric">联赛第 {{ match.home.rank }}</span>
             <FormDots :form="match.home.form" label="近况" />
           </div>
@@ -138,7 +142,10 @@ onMounted(() => {
 
           <div class="team right">
             <span class="role">客队</span>
-            <span class="name">{{ match.away.name }}</span>
+            <span class="name">
+              <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="24" />
+              <span class="name-text">{{ match.away.name }}</span>
+            </span>
             <span class="rank numeric">联赛第 {{ match.away.rank }}</span>
             <FormDots :form="match.away.form" label="近况" />
           </div>
@@ -357,10 +364,22 @@ onMounted(() => {
 }
 
 .name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
   font-size: clamp(19px, 3vw, 26px);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.3px;
+}
+
+.team.right .name {
+  flex-direction: row-reverse;
+}
+
+.name-text {
+  overflow-wrap: anywhere;
 }
 
 .rank {
