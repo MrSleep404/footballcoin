@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-21",
-  "generatedAt": "2026-11-24T20:13:08+08:00",
+  "generatedAt": "2026-11-24T20:31:04+08:00",
   "source": "football-data.org",
   "count": 18,
   "results": [
@@ -12,7 +12,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "BL1-2026-11-21-BMG-BVB",
@@ -21,7 +21,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "BL1-2026-11-21-ELV-SCF",
@@ -30,7 +30,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "BL1-2026-11-21-FCB-KOE",
@@ -39,7 +39,7 @@
       "awayGoals": 1,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "BL1-2026-11-21-SGE-TSG",
@@ -48,7 +48,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "BL1-2026-11-21-UNB-RBL",
@@ -57,7 +57,7 @@
       "awayGoals": 5,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "FL1-2026-11-21-ETR-HAC",
@@ -66,7 +66,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PD-2026-11-21-ALA-DEP",
@@ -75,7 +75,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PD-2026-11-21-ATH-ESP",
@@ -84,7 +84,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PD-2026-11-21-RAY-VAL",
@@ -93,7 +93,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PL-2026-11-21-AVL-SUN",
@@ -102,7 +102,7 @@
       "awayGoals": 0,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PL-2026-11-21-BOU-NOT",
@@ -111,7 +111,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PL-2026-11-21-CHE-LEE",
@@ -120,7 +120,7 @@
       "awayGoals": 4,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PL-2026-11-21-COV-CRY",
@@ -129,7 +129,7 @@
       "awayGoals": 2,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PL-2026-11-21-MCI-FUL",
@@ -138,7 +138,7 @@
       "awayGoals": 1,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "PL-2026-11-21-TOT-IPS",
@@ -147,7 +147,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "SA-2026-11-21-COM-CAG",
@@ -156,7 +156,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     },
     {
       "id": "SA-2026-11-21-LAZ-USL",
@@ -165,7 +165,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-24T20:13:08+08:00"
+      "updatedAt": "2026-11-24T20:31:04+08:00"
     }
   ]
 }
