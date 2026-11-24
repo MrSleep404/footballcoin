@@ -906,6 +906,7 @@ workflow:
       width: 244
     - data:
         code: |
+          import json
           import unicodedata
 
           STOPWORDS = {
@@ -931,6 +932,11 @@ workflow:
 
 
           def main(body) -> dict:
+              if isinstance(body, str):
+                  try:
+                      body = json.loads(body)
+                  except ValueError:
+                      body = {}
               payload = body if isinstance(body, dict) else {}
               items = payload.get("response") or []
               teams = {}
@@ -2013,6 +2019,7 @@ workflow:
       width: 244
     - data:
         code: |
+          import json
           from datetime import datetime, timezone
 
 
@@ -2022,6 +2029,11 @@ workflow:
 
 
           def main(matches: list, spots: list, body) -> dict:
+              if isinstance(body, str):
+                  try:
+                      body = json.loads(body)
+                  except ValueError:
+                      body = []
               if isinstance(body, list):
                   payload = body
               elif isinstance(body, dict):
@@ -2252,6 +2264,9 @@ workflow:
       zIndex: 1002
     - data:
         code: |
+          import json
+
+
           def _price(value):
               try:
                   return float(value)
@@ -2260,6 +2275,11 @@ workflow:
 
 
           def _events(body):
+              if isinstance(body, str):
+                  try:
+                      body = json.loads(body)
+                  except ValueError:
+                      return []
               if isinstance(body, list):
                   return body
               if isinstance(body, dict):
