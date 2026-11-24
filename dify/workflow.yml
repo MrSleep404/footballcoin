@@ -83,6 +83,14 @@ workflow:
     - COMPETITION_SET
     value: domestic
     value_type: string
+  - description: API-Football 的 x-apisports-key，用于拉取次日伤停；留空则无伤病数据
+    id: 7c1d4a90-2f63-4e8b-9b57-9d0e6a3c2f12
+    name: API_FOOTBALL_KEY
+    selector:
+    - env
+    - API_FOOTBALL_KEY
+    value: ''
+    value_type: secret
   features:
     file_upload:
       allowed_file_extensions: []
@@ -126,9 +134,31 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: iteration
-      id: code_leagues-source-iter_leagues-target
+        targetType: http-request
+      id: code_leagues-source-http_injuries-target
       source: code_leagues
+      sourceHandle: source
+      target: http_injuries
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: http_injuries-source-code_injuries-target
+      source: http_injuries
+      sourceHandle: source
+      target: code_injuries
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_injuries-source-iter_leagues-target
+      source: code_injuries
       sourceHandle: source
       target: iter_leagues
       targetHandle: target
@@ -148,9 +178,42 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: iteration
-      id: code_normalize-source-iter_standings_sync-target
+        targetType: code
+      id: code_normalize-source-code_weather_plan-target
       source: code_normalize
+      sourceHandle: source
+      target: code_weather_plan
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: code_weather_plan-source-http_weather-target
+      source: code_weather_plan
+      sourceHandle: source
+      target: http_weather
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: code
+      id: http_weather-source-code_weather_merge-target
+      source: http_weather
+      sourceHandle: source
+      target: code_weather_merge
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_weather_merge-source-iter_standings_sync-target
+      source: code_weather_merge
       sourceHandle: source
       target: iter_standings_sync
       targetHandle: target
@@ -621,22 +684,31 @@ workflow:
       width: 244
     - data:
         code: |
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+
+
           def main(mode: str, competition_set: str) -> dict:
               value = (mode or "both").strip().lower()
+              tomorrow = (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%d")
               if value == "results":
-                  return {"result": []}
+                  return {"result": [], "injuryDate": tomorrow}
               group = (competition_set or "domestic").strip().lower()
               if group in ("europe", "euro", "cl"):
-                  return {"result": ["CL"]}
+                  return {"result": ["CL"], "injuryDate": tomorrow}
               if group in ("all", "both"):
-                  return {"result": ["PL", "PD", "SA", "BL1", "FL1", "CL"]}
-              return {"result": ["PL", "PD", "SA", "BL1", "FL1"]}
+                  return {"result": ["PL", "PD", "SA", "BL1", "FL1", "CL"], "injuryDate": tomorrow}
+              return {"result": ["PL", "PD", "SA", "BL1", "FL1"], "injuryDate": tomorrow}
         code_language: python3
         desc: ''
         outputs:
           result:
             children: null
             type: array[string]
+          injuryDate:
+            children: null
+            type: string
         selected: false
         title: 联赛列表
         type: code
@@ -654,6 +726,112 @@ workflow:
       position:
         x: 340
         y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          x-apisports-key: {{#env.API_FOOTBALL_KEY#}}
+          Accept: application/json
+          User-Agent: footballcoin-dify
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 拉取伤病
+        type: http-request
+        url: 'https://v3.football.api-sports.io/injuries?date={{#code_leagues.injuryDate#}}'
+        variables: []
+      height: 113
+      id: http_injuries
+      position:
+        x: 340
+        y: 140
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: |
+          import unicodedata
+
+          STOPWORDS = {
+              "fc", "cf", "afc", "sc", "ac", "as", "us", "ss", "ssc", "sv",
+              "vfl", "vfb", "tsg", "bsc", "kv", "rb", "club", "de", "do", "calcio",
+          }
+          ALIASES = {
+              "munchen": "munich",
+              "moenchengladbach": "gladbach",
+              "monchengladbach": "gladbach",
+              "inter": "internazionale",
+          }
+
+
+          def _tokens(name):
+              text = unicodedata.normalize("NFKD", str(name or ""))
+              text = "".join(ch for ch in text if not unicodedata.combining(ch)).lower()
+              for src, dst in (("ø", "o"), ("ß", "ss"), ("æ", "ae"), ("ł", "l"), ("đ", "d"), ("ı", "i")):
+                  text = text.replace(src, dst)
+              for sep in "-'’.&/":
+                  text = text.replace(sep, " ")
+              return [ALIASES.get(token, token) for token in text.split() if token and token not in STOPWORDS]
+
+
+          def main(body) -> dict:
+              payload = body if isinstance(body, dict) else {}
+              items = payload.get("response") or []
+              teams = {}
+              for item in items:
+                  tokens = _tokens((item.get("team") or {}).get("name"))
+                  if not tokens:
+                      continue
+                  player = item.get("player") or {}
+                  teams.setdefault(" ".join(sorted(tokens)), []).append(
+                      {
+                          "player": player.get("name") or "",
+                          "type": player.get("type") or "",
+                          "reason": player.get("reason") or "",
+                      }
+                  )
+              return {"injuries": {"teams": teams}, "teamCount": len(teams), "recordCount": len(items)}
+        code_language: python3
+        desc: ''
+        outputs:
+          injuries:
+            children: null
+            type: object
+          teamCount:
+            children: null
+            type: number
+          recordCount:
+            children: null
+            type: number
+        selected: false
+        title: 整理伤病
+        type: code
+        variables:
+        - value_selector:
+          - http_injuries
+          - body
+          variable: body
+      height: 90
+      id: code_injuries
+      position:
+        x: 620
+        y: 140
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -968,6 +1146,45 @@ workflow:
               return {key: value[:5] for key, value in forms.items()}
 
 
+          def _h2h(matches, home_id, away_id):
+              empty = {"played": 0, "homeWins": 0, "draws": 0, "awayWins": 0, "last": []}
+              if home_id is None or away_id is None:
+                  return empty
+              ordered = sorted(matches, key=lambda item: item.get("utcDate") or "", reverse=True)
+              entries = []
+              home_wins = draws = away_wins = 0
+              for match in ordered:
+                  home = match.get("homeTeam") or {}
+                  away = match.get("awayTeam") or {}
+                  if {home.get("id"), away.get("id")} != {home_id, away_id}:
+                      continue
+                  full = ((match.get("score") or {}).get("fullTime") or {})
+                  home_goals, away_goals = full.get("home"), full.get("away")
+                  if home_goals is None or away_goals is None:
+                      continue
+                  same_side = home.get("id") == home_id
+                  if home_goals == away_goals:
+                      draws += 1
+                  elif (home_goals > away_goals) == same_side:
+                      home_wins += 1
+                  else:
+                      away_wins += 1
+                  if len(entries) < 5:
+                      entries.append({
+                          "date": str(match.get("utcDate") or "")[:10],
+                          "home": home.get("shortName") or home.get("name") or "",
+                          "away": away.get("shortName") or away.get("name") or "",
+                          "score": f"{home_goals}-{away_goals}",
+                      })
+              return {
+                  "played": home_wins + draws + away_wins,
+                  "homeWins": home_wins,
+                  "draws": draws,
+                  "awayWins": away_wins,
+                  "last": entries,
+              }
+
+
           def _team_entry(team, row, form, league):
               return {
                   "name": _team_name(team, league),
@@ -1074,6 +1291,7 @@ workflow:
                           "venue": match.get("venue") or "",
                           "home": _team_entry(home, rank_map.get(home.get("id")) or {}, forms.get(home.get("id"), []), code),
                           "away": _team_entry(away, rank_map.get(away.get("id")) or {}, forms.get(away.get("id"), []), code),
+                          "h2h": _h2h(finished, home.get("id"), away.get("id")),
                           "prediction": None,
                           "degraded": False,
                           "result": None,
@@ -1121,6 +1339,241 @@ workflow:
       position:
         x: 1680
         y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: |
+          # 主场城市坐标（近似值，用于天气），键为 联赛:TLA
+          COORDS = {
+              "PL:ARS": (51.55, -0.11), "PL:AVL": (52.51, -1.89), "PL:BOU": (50.72, -1.88),
+              "PL:BRE": (51.49, -0.31), "PL:BHA": (50.86, -0.08), "PL:CHE": (51.48, -0.19),
+              "PL:CRY": (51.40, -0.09), "PL:EVE": (53.44, -2.97), "PL:FUL": (51.47, -0.22),
+              "PL:LEE": (53.80, -1.55), "PL:LIV": (53.43, -2.96), "PL:MCI": (53.48, -2.20),
+              "PL:MUN": (53.46, -2.29), "PL:NEW": (54.98, -1.62), "PL:NFO": (52.94, -1.13),
+              "PL:NOT": (52.94, -1.13), "PL:SUN": (54.91, -1.39), "PL:TOT": (51.60, -0.07),
+              "PL:WHU": (51.54, -0.02), "PL:WOL": (52.59, -2.13), "PL:BUR": (53.79, -2.23),
+              "PL:HUL": (53.74, -0.34), "PL:COV": (52.41, -1.51), "PL:IPS": (52.06, 1.16),
+              "PD:ALA": (42.84, -2.67), "PD:ATH": (43.26, -2.95), "PD:ATM": (40.44, -3.63),
+              "PD:ATL": (40.44, -3.63), "PD:BAR": (41.39, 2.17), "PD:BET": (37.36, -5.98),
+              "PD:CEL": (42.21, -8.74), "PD:ESP": (41.35, 2.08), "PD:GET": (40.33, -3.71),
+              "PD:GIR": (41.96, 2.83), "PD:LEG": (40.34, -3.76), "PD:MLL": (39.59, 2.63),
+              "PD:OSA": (42.81, -1.64), "PD:RAY": (40.39, -3.66), "PD:RMA": (40.42, -3.70),
+              "PD:RSO": (43.30, -1.97), "PD:SEV": (37.39, -5.98), "PD:VAL": (39.47, -0.38),
+              "PD:VIL": (39.94, -0.15), "PD:VLL": (41.64, -4.76), "PD:LPA": (28.10, -15.46),
+              "PD:ELC": (38.27, -0.66), "PD:MAL": (36.72, -4.42), "PD:LEV": (39.49, -0.36),
+              "PD:DEP": (43.37, -8.40), "PD:SAN": (43.46, -3.81),
+              "SA:ATA": (45.71, 9.68), "SA:BOL": (44.49, 11.31), "SA:CAG": (39.20, 9.14),
+              "SA:COM": (45.81, 9.09), "SA:EMP": (43.73, 10.53), "SA:FIO": (43.78, 11.28),
+              "SA:GEN": (44.42, 8.95), "SA:VER": (45.44, 10.97), "SA:INT": (45.48, 9.12),
+              "SA:MIL": (45.48, 9.12), "SA:JUV": (45.11, 7.64), "SA:LAZ": (41.93, 12.45),
+              "SA:ROM": (41.93, 12.45), "SA:LEC": (40.35, 18.17), "SA:USL": (40.35, 18.17),
+              "SA:MON": (45.58, 9.27), "SA:NAP": (40.83, 14.19), "SA:PAR": (44.79, 10.34),
+              "SA:TOR": (45.04, 7.65), "SA:UDI": (46.08, 13.20), "SA:VEN": (45.43, 12.28),
+              "SA:FRO": (41.64, 13.34), "SA:SAS": (44.73, 10.75),
+              "BL1:B04": (51.04, 7.00), "BL1:BAY": (48.22, 11.62), "BL1:BOC": (51.49, 7.25),
+              "BL1:BMG": (51.17, 6.39), "BL1:BVB": (51.49, 7.45), "BL1:FCA": (48.32, 10.89),
+              "BL1:FCU": (52.46, 13.57), "BL1:UNB": (52.46, 13.57), "BL1:M05": (49.98, 8.22),
+              "BL1:HDH": (48.68, 10.14), "BL1:KIE": (54.35, 10.12), "BL1:RBL": (51.35, 12.35),
+              "BL1:SCF": (47.99, 7.85), "BL1:SGE": (50.07, 8.65), "BL1:STP": (53.55, 9.97),
+              "BL1:SVW": (53.07, 8.84), "BL1:TSG": (49.24, 8.89), "BL1:VFB": (48.79, 9.23),
+              "BL1:WOB": (52.43, 10.80), "BL1:KOE": (50.93, 6.88), "BL1:HSV": (53.59, 9.90),
+              "BL1:ELV": (49.20, 6.85), "BL1:SCP": (51.73, 8.71), "BL1:S04": (51.55, 7.07),
+              "FL1:AJA": (47.79, 3.59), "FL1:SCO": (47.46, -0.55), "FL1:ANG": (47.46, -0.55),
+              "FL1:ASM": (43.73, 7.42), "FL1:ASSE": (45.46, 4.39), "FL1:FCN": (47.26, -1.53),
+              "FL1:HAC": (49.50, 0.17), "FL1:LIL": (50.61, 3.05), "FL1:MHSC": (43.62, 3.81),
+              "FL1:NIC": (43.70, 7.19), "FL1:OL": (45.77, 4.98), "FL1:LYO": (45.77, 4.98),
+              "FL1:OM": (43.27, 5.40), "FL1:MAR": (43.27, 5.40), "FL1:PSG": (48.84, 2.25),
+              "FL1:PFC": (48.84, 2.25), "FL1:RCL": (50.43, 2.81), "FL1:RCSA": (48.56, 7.76),
+              "FL1:RC": (48.56, 7.76), "FL1:SDR": (49.25, 4.03), "FL1:SB29": (48.39, -4.46),
+              "FL1:SRFC": (48.11, -1.71), "FL1:REN": (48.11, -1.71), "FL1:TFC": (43.58, 1.43),
+              "FL1:TOU": (43.58, 1.43), "FL1:LMF": (47.98, 0.21), "FL1:ETR": (48.30, 4.07),
+              "FL1:FCL": (47.75, -3.37),
+              "CL:GAL": (41.10, 29.01), "CL:FEN": (40.99, 29.04), "CL:PSV": (51.44, 5.47),
+              "CL:FEY": (51.89, 4.52), "CL:FCP": (41.16, -8.58), "CL:SLB": (38.75, -9.18),
+              "CL:SCP": (38.71, -9.14), "CL:CLB": (51.19, 3.18), "CL:BOD": (67.28, 14.40),
+              "CL:LASK": (48.29, 14.29), "CL:SBA": (48.17, 17.14), "CL:AEK": (38.04, 23.79),
+              "CL:VIK": (58.97, 5.73), "CL:SAL": (47.80, 13.03), "CL:CRV": (44.82, 20.46),
+          }
+          BASE = ("https://api.open-meteo.com/v1/forecast"
+                  "?hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8")
+          MAX_SPOTS = 40
+
+
+          def _tla(match):
+              parts = str(match.get("id") or "").split("-")
+              return parts[-2] if len(parts) >= 2 else ""
+
+
+          def _coords(league, tla):
+              direct = COORDS.get(f"{league}:{tla}")
+              if direct:
+                  return direct
+              found = [value for key, value in COORDS.items() if key.split(":")[-1] == tla]
+              return found[0] if len(found) == 1 else None
+
+
+          def main(matches: list) -> dict:
+              spots = []
+              seen = {}
+              for match in matches or []:
+                  key = f"{match.get('league')}:{_tla(match)}"
+                  if key in seen:
+                      continue
+                  point = _coords(match.get("league") or "", _tla(match))
+                  if not point:
+                      continue
+                  seen[key] = len(spots)
+                  spots.append({"key": key, "index": len(spots)})
+                  if len(spots) >= MAX_SPOTS:
+                      break
+              if not spots:
+                  return {"url": BASE + "&latitude=51.55&longitude=-0.11", "spots": []}
+              points = [COORDS[spot["key"]] for spot in spots]
+              lats = ",".join(f"{lat:.2f}" for lat, _ in points)
+              lons = ",".join(f"{lon:.2f}" for _, lon in points)
+              return {"url": f"{BASE}&latitude={lats}&longitude={lons}", "spots": spots}
+        code_language: python3
+        desc: ''
+        outputs:
+          url:
+            children: null
+            type: string
+          spots:
+            children: null
+            type: array[object]
+        selected: false
+        title: 天气计划
+        type: code
+        variables:
+        - value_selector:
+          - code_normalize
+          - matches
+          variable: matches
+      height: 90
+      id: code_weather_plan
+      position:
+        x: 1680
+        y: 470
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Accept: application/json
+          User-Agent: footballcoin-dify
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 拉取天气
+        type: http-request
+        url: '{{#code_weather_plan.url#}}'
+        variables: []
+      height: 113
+      id: http_weather
+      position:
+        x: 1960
+        y: 470
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        code: |
+          from datetime import datetime, timezone
+
+
+          def _tla(match):
+              parts = str(match.get("id") or "").split("-")
+              return parts[-2] if len(parts) >= 2 else ""
+
+
+          def main(matches: list, spots: list, body) -> dict:
+              if isinstance(body, list):
+                  payload = body
+              elif isinstance(body, dict):
+                  payload = body.get("list") if isinstance(body.get("list"), list) else [body]
+              else:
+                  payload = []
+
+              index_by_key = {}
+              for spot in spots or []:
+                  if isinstance(spot, dict) and spot.get("key"):
+                      index_by_key[str(spot["key"])] = int(spot.get("index") or 0)
+
+              count = 0
+              for match in matches or []:
+                  idx = index_by_key.get(f"{match.get('league')}:{_tla(match)}")
+                  if idx is None or idx >= len(payload):
+                      continue
+                  hourly = (payload[idx] or {}).get("hourly") or {}
+                  times = hourly.get("time") or []
+                  try:
+                      moment = datetime.fromisoformat(str(match.get("kickoff")).replace("Z", "+00:00"))
+                  except (TypeError, ValueError):
+                      continue
+                  prefix = moment.astimezone(timezone.utc).strftime("%Y-%m-%dT%H")
+                  pos = next((i for i, value in enumerate(times) if str(value).startswith(prefix)), None)
+                  if pos is None:
+                      continue
+                  temp = hourly.get("temperature_2m") or []
+                  precip = hourly.get("precipitation_probability") or []
+                  wind = hourly.get("wind_speed_10m") or []
+                  if pos >= len(temp):
+                      continue
+                  match["weather"] = {
+                      "temp": temp[pos],
+                      "precip": precip[pos] if pos < len(precip) else None,
+                      "wind": wind[pos] if pos < len(wind) else None,
+                  }
+                  count += 1
+              return {"matches": matches, "weatherCount": count}
+        code_language: python3
+        desc: ''
+        outputs:
+          matches:
+            children: null
+            type: array[object]
+          weatherCount:
+            children: null
+            type: number
+        selected: false
+        title: 合并天气
+        type: code
+        variables:
+        - value_selector:
+          - code_normalize
+          - matches
+          variable: matches
+        - value_selector:
+          - code_weather_plan
+          - spots
+          variable: spots
+        - value_selector:
+          - http_weather
+          - body
+          variable: body
+      height: 90
+      id: code_weather_merge
+      position:
+        x: 2240
+        y: 470
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -1385,7 +1838,7 @@ workflow:
         is_parallel: true
         iterator_input_type: array[object]
         iterator_selector:
-        - code_normalize
+        - code_weather_merge
         - matches
         output_selector:
         - code_validate
@@ -1430,21 +1883,111 @@ workflow:
     - data:
         code: |
           from datetime import datetime, timedelta, timezone
+          import unicodedata
 
           BJ = timezone(timedelta(hours=8))
+          STOPWORDS = {
+              "fc", "cf", "afc", "sc", "ac", "as", "us", "ss", "ssc", "sv",
+              "vfl", "vfb", "tsg", "bsc", "kv", "rb", "club", "de", "do", "calcio",
+          }
+          ALIASES = {
+              "munchen": "munich",
+              "moenchengladbach": "gladbach",
+              "monchengladbach": "gladbach",
+              "inter": "internazionale",
+          }
 
 
-          def main(match: dict) -> dict:
+          def _tokens(name):
+              text = unicodedata.normalize("NFKD", str(name or ""))
+              text = "".join(ch for ch in text if not unicodedata.combining(ch)).lower()
+              for src, dst in (("ø", "o"), ("ß", "ss"), ("æ", "ae"), ("ł", "l"), ("đ", "d"), ("ı", "i")):
+                  text = text.replace(src, dst)
+              for sep in "-'’.&/":
+                  text = text.replace(sep, " ")
+              return [ALIASES.get(token, token) for token in text.split() if token and token not in STOPWORDS]
+
+
+          def _find(teams, name):
+              tokens = _tokens(name)
+              if not tokens:
+                  return []
+              key = " ".join(sorted(tokens))
+              if key in teams:
+                  return teams[key]
+              current = set(tokens)
+              for other, items in teams.items():
+                  candidate = set(other.split())
+                  if len(current) >= 2 and current <= candidate:
+                      return items
+                  if len(candidate) >= 2 and candidate <= current:
+                      return items
+              return []
+
+
+          def _line(label, items):
+              if not items:
+                  return f"{label}：暂无官方伤停记录"
+              parts = []
+              for item in items[:5]:
+                  reason = item.get("reason") or item.get("type") or "伤缺"
+                  parts.append(f"{item.get('player')}（{reason}）")
+              return f"{label}：" + "、".join(parts)
+
+
+          def main(match: dict, injuries: dict, injury_date: str) -> dict:
               home = match.get("home") or {}
               away = match.get("away") or {}
               kickoff = match.get("kickoff")
               try:
-                  bj = datetime.fromisoformat(str(kickoff).replace("Z", "+00:00")).astimezone(BJ).strftime("%Y-%m-%d %H:%M")
+                  moment = datetime.fromisoformat(str(kickoff).replace("Z", "+00:00"))
+                  bj = moment.astimezone(BJ).strftime("%Y-%m-%d %H:%M")
+                  # API-Football 的 date 参数按 UTC 日期划分赛程
+                  day = moment.astimezone(timezone.utc).strftime("%Y-%m-%d")
               except (TypeError, ValueError):
                   bj = str(kickoff)
+                  day = ""
 
               form_home = " ".join(home.get("form") or []) or "暂无"
               form_away = " ".join(away.get("form") or []) or "暂无"
+
+              h2h = match.get("h2h") or {}
+              played = int(h2h.get("played") or 0)
+              if played:
+                  h2h_text = (
+                      f"交手记录（近 {played} 次）：主队 {h2h.get('homeWins', 0)} 胜 / "
+                      f"{h2h.get('draws', 0)} 平 / 客队 {h2h.get('awayWins', 0)} 胜"
+                  )
+                  last = h2h.get("last") or []
+                  if last:
+                      pieces = [
+                          f"{item.get('date')} {item.get('home')} {item.get('score')} {item.get('away')}"
+                          for item in last[:3]
+                      ]
+                      h2h_text += "；最近：" + "、".join(pieces)
+              else:
+                  h2h_text = "交手记录：暂无双方历史交锋数据"
+
+              weather = match.get("weather") or {}
+              if weather:
+                  weather_text = (
+                      f"天气（开赛时）：气温 {weather.get('temp')}℃，降水概率 {weather.get('precip')}%，"
+                      f"风速 {weather.get('wind')} km/h"
+                  )
+              else:
+                  weather_text = "天气：未提供"
+
+              teams = (injuries or {}).get("teams") or {}
+              if injury_date and teams and day == injury_date:
+                  injury_text = (
+                      f"伤病情况（API-Football，{injury_date} 名单）：\n"
+                      f"{_line(home.get('name', '') + '伤停', _find(teams, home.get('nameEn')))}\n"
+                      f"{_line(away.get('name', '') + '伤停', _find(teams, away.get('nameEn')))}"
+                  )
+              elif injury_date and teams:
+                  injury_text = f"伤病情况：仅提供 {injury_date} 的名单，本场日期不同，未提供。"
+              else:
+                  injury_text = "伤病情况：未提供。"
 
               text = (
                   f"比赛：{home.get('name')}（主） vs {away.get('name')}（客）\n"
@@ -1453,6 +1996,9 @@ workflow:
                   f"积分排名：主队第 {home.get('rank')}，客队第 {away.get('rank')}\n"
                   f"近 5 场：主队 {form_home}，客队 {form_away}\n"
                   f"赛季进失球：主队 {home.get('goalsFor')}/{home.get('goalsAgainst')}，客队 {away.get('goalsFor')}/{away.get('goalsAgainst')}\n"
+                  f"{h2h_text}\n"
+                  f"{weather_text}\n"
+                  f"{injury_text}\n"
                   f"其他信息：未提供"
               )
               return {"result": text}
@@ -1472,6 +2018,14 @@ workflow:
           - iter_matches
           - item
           variable: match
+        - value_selector:
+          - code_injuries
+          - injuries
+          variable: injuries
+        - value_selector:
+          - code_leagues
+          - injuryDate
+          variable: injury_date
       height: 90
       id: code_prompt
       parentId: iter_matches
@@ -1513,7 +2067,7 @@ workflow:
             2. prob 的 home/draw/away 必须是 1 到 98 的整数，三者之和必须等于 100。
             3. score 的主客进球数必须是 0 到 9 的整数，且要与 prob 的倾向一致。
             4. confidence 是 0 到 100 的整数；只有在数据充分、双方实力差距明显时才高于 80。
-            5. reasons 输出 2 到 4 条，每条不超过 40 字，必须引用给定事实，不得编造未提供的伤停、转会、天气、裁判信息。
+            5. reasons 输出 2 到 4 条，每条不超过 40 字，必须引用给定事实；伤病、交手记录、天气只能使用输入中对应字段，标注未提供时不得编造。
             6. factors 输出 1 到 5 条关键词短语，每条不超过 12 字。
             7. risk 用一句话说明最大不确定性，不超过 60 字。
             8. 如果关键数据缺失（例如排名缺失、近期比赛不足 3 场），必须在 risk 中说明，并把 confidence 控制在 55 以下。

@@ -61,50 +61,51 @@
 - 「一次拉五个联赛整赛季」不可行（10 天上限 + `season` 无效），不要改现有结构
 - 免费套餐限流：10 次/分钟；token 目前有效
 
-## 3. 搁置：伤病数据
+## 3. 伤病数据：已接入（免费版按日期，覆盖次日）
 
-**原因**：football-data 没有伤病接口；API-Football（api-sports.io）暂时访问不了。
+**实测结论（2026-11-24，Free 套餐，100 次/天、10 次/分钟）**
 
-| 用途 | 地址 |
+| 请求 | 结果 |
 | --- | --- |
-| 官网 | https://www.api-football.com/ |
-| 控制台（注册/拿 key/看额度） | https://dashboard.api-football.com/ |
-| 文档 v3 | https://www.api-football.com/documentation-v3 |
+| `injuries?league=39&season=2026` | ❌ `Free plans do not have access to this season, try from 2022 to 2024` |
+| `injuries?date=2026-11-25` | ✅ 141 条、30 支球队，**一次覆盖当天全部联赛（含欧冠）** |
+| `injuries?date=2026-11-26` | ❌ `try from 2026-11-23 to 2026-11-25`（免费版只有今天 ±1 天） |
 
-**待验证**（拿到 key 后第一件事）
+- `season` 参数在免费版完全不可用，只能按 `date` 查
+- 窗口是滚动的前后各 1 天，所以只能给「明天」的场次提供伤病
+- 需要环境变量 `API_FOOTBALL_KEY`（secret），来自 dashboard.api-football.com
 
-```
-GET https://v3.football.api-sports.io/injuries?league=39&season=2026
-Header: x-apisports-key: <key>
-```
+**工作流实现**
 
-- 联赛 id：英超 39、西甲 140、意甲 135、德甲 78、法甲 61
-- 免费版通常 100 次/天、10 次/分钟，但**可查赛季有限制**，2026 赛季可能取不到
-- 若返回空/套餐错误 → 需要付费或放弃该项
+- `联赛列表` 新增输出 `injuryDate`（UTC 明天）
+- 新增 `拉取伤病`（GET `https://v3.football.api-sports.io/injuries?date={{injuryDate}}`，Header `x-apisports-key`）
+- 新增 `整理伤病`：把 141 条记录按球队聚合成 `{teams: {规范化队名: [{player, type, reason}]}}`，队名做去重音/去后缀/别名归一（`Bayern München → bayern munich`、`Club Brugge KV → brugge`）
+- `生成比赛提示词` 新增 `injuries`、`injury_date` 两个输入：只有**开赛 UTC 日期 == injuryDate** 才注入伤病，其余场次输出「仅提供 X 名单，本场日期不同，未提供」
+- 单场提示词加入「伤病情况」两行；system prompt 同步改为「伤病只使用输入中的伤病情况，未提供时不得编造」
 
-**落地方式**（验证通过后）
+**注意**
 
-- 位置：预测链路**前置**（伤病是 LLM 输入，不能放在预测之后）
-- 频次：每联赛 1 次，共 5 次/天；走 API-Football 独立配额，不占 football-data 的 10 次/分钟
-- 输出：`[{player, position, status}]`，缺失给空数组，prompt 中标注「未提供」
+- 覆盖范围只有次日，7 天预测里只有临近 1 天的场次带伤病，属于预期
+- `RUN_MODE=results` 时仍会多发 1 次伤病请求（用于获取 injuryDate），可忽略
+- 若 `API_FOOTBALL_KEY` 留空，HTTP 节点会收到 401，需先填 key 再运行
 
-## 4. 待做（零成本、不需要新账号）
+## 4. 已接入（零成本）
 
 ### 4.1 交手记录
 
 - 零新增请求：`/v4/competitions/{code}/matches` 已返回整赛季，含已结束比分
-- 在「清洗与筛选」节点里加 `h2h: {played, homeWins, draws, awayWins, last:[{date, score}]}`，取最近 3~5 次
+- 在「清洗与筛选」里新增 `_h2h()`，每场比赛输出 `h2h: {played, homeWins, draws, awayWins, last:[{date, home, away, score}]}`，最近 5 次
+- 口径：`homeWins` 指本场主队获胜次数
 - 不要用 `/v4/matches/{id}/head2head`：每场 1 次请求，必撞 10 次/分钟
 
 ### 4.2 天气（Open-Meteo，免 key）
 
-```
-https://api.open-meteo.com/v1/forecast?latitude=..&longitude=..&hourly=temperature_2m,precipitation_probability,wind_speed_10m&start_date=&end_date=&timezone=UTC
-```
-
-- 需要静态「场地 → 经纬度」表（五大联赛约 100 个球场，未知场地回退城市坐标）
-- 只取开赛前 3 天内场次，按「城市 + 日期」去重；支持多坐标批量参数
-- 权重放低：只影响体感/传控节奏
+- 新增「天气计划」→「拉取天气」→「合并天气」三节点，插在「清洗与筛选」和「积分榜同步迭代」之间
+- 天气计划：按 `联赛:TLA` 查内置球场城市坐标表（五大联赛 + 常见欧战球队），多坐标一次批量请求，最多 40 个点
+- 请求：`https://api.open-meteo.com/v1/forecast?latitude=..&longitude=..&hourly=temperature_2m,precipitation_probability,wind_speed_10m&timezone=UTC&forecast_days=8`
+- 合并：按开赛 UTC 小时匹配 `hourly.time`，给每场比赛写入 `weather: {temp, precip, wind}`
+- 未覆盖的球队（无坐标）不写入 `weather`，提示词显示「未提供」
+- 提示词新增「交手记录」「天气」两行；system prompt 要求只使用输入字段
 
 ### 4.3 博彩公司赔率（The Odds API，免费 500 次/月）
 
@@ -152,10 +153,10 @@ GET https://api.the-odds-api.com/v4/sports/{sport_key}/odds/?apiKey=xxx&regions=
 
 ### 4.5 分析要素优先级
 
-1. 交手记录（零成本，4.1）
-2. 天气（零成本，4.2）
+1. 交手记录（已接入，4.1）
+2. 天气（已接入，4.2）
 3. 赔率（免费额度，4.3）
-4. 伤病（需 API-Football key，第 3 节，搁置）
+4. 伤病（已接入，免费版仅覆盖次日，见第 3 节）
 5. 新闻（暂不做，4.4）
 
 ## 5. 虚构数据：已清理（2026-11-24）
