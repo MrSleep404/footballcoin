@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-24T09:25:24+08:00",
+  "generatedAt": "2026-11-24T10:23:52+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 3,
-  "degradedCount": 3,
+  "degradedCount": 0,
   "matches": [
     {
       "id": "SA-2026-12-01-USL-ATA",
@@ -45,26 +45,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 41,
-          "draw": 27,
-          "away": 32
+          "home": 24,
+          "draw": 28,
+          "away": 48
         },
         "score": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
-        "confidence": 30,
-        "pick": "home",
+        "confidence": 62,
+        "pick": "away",
         "reasons": [
-          "模型未返回有效结果，使用排名先验估计",
-          "该结果仅基于积分榜排名差，参考价值有限"
+          "主队近5场仅1平4负，状态低迷",
+          "主队赛季失25球，防守漏洞明显",
+          "客队排名第12高于主队第15",
+          "客队赛季进21球，进攻优于主队"
         ],
         "factors": [
-          "排名差"
+          "客队排名占优",
+          "主队状态低迷",
+          "主队防守差",
+          "客队进攻较强",
+          "主场因素"
         ],
-        "risk": "该场为兜底结果，仅供参考"
+        "risk": "亚特兰大近期平局偏多且防守不稳，客胜存在被逼平风险。"
       },
-      "degraded": true,
+      "degraded": false,
       "result": null
     },
     {
@@ -105,26 +111,31 @@
       },
       "prediction": {
         "prob": {
-          "home": 37,
-          "draw": 27,
-          "away": 36
+          "home": 14,
+          "draw": 21,
+          "away": 65
         },
         "score": {
-          "home": 1,
-          "away": 1
+          "home": 0,
+          "away": 2
         },
-        "confidence": 30,
-        "pick": "home",
+        "confidence": 72,
+        "pick": "away",
         "reasons": [
-          "模型未返回有效结果，使用排名先验估计",
-          "该结果仅基于积分榜排名差，参考价值有限"
+          "AC米兰排名第4，卡利亚里仅第11",
+          "近5场AC米兰4胜1负，卡利亚里1胜4负",
+          "赛季进球AC米兰28球，卡利亚里仅10球",
+          "卡利亚里失17球，防守端明显承压"
         ],
         "factors": [
-          "排名差"
+          "排名差距",
+          "近期状态",
+          "攻防效率",
+          "客队优势"
         ],
-        "risk": "该场为兜底结果，仅供参考"
+        "risk": "未提供伤停与场地信息，卡利亚里主场因素存在不确定性。"
       },
-      "degraded": true,
+      "degraded": false,
       "result": null
     },
     {
@@ -165,26 +176,32 @@
       },
       "prediction": {
         "prob": {
-          "home": 53,
-          "draw": 27,
-          "away": 20
+          "home": 48,
+          "draw": 29,
+          "away": 23
         },
         "score": {
           "home": 1,
-          "away": 1
+          "away": 0
         },
-        "confidence": 30,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "模型未返回有效结果，使用排名先验估计",
-          "该结果仅基于积分榜排名差，参考价值有限"
+          "主队排名第11高于客队第18，占据积分优势",
+          "客队赛季进8球失21球，攻防两端均为联赛下游水准",
+          "主队近5场2胜1平2负，状态起伏小于客队近5场1胜1平3负",
+          "主队赛季进失球14/14，攻守平衡优于客队净胜球-13"
         ],
         "factors": [
-          "排名差"
+          "排名优势",
+          "客队防守薄弱",
+          "客队进攻乏力",
+          "主场作战",
+          "状态略优"
         ],
-        "risk": "该场为兜底结果，仅供参考"
+        "risk": "主场场地与伤停信息未提供，主队近两场连败存在状态下滑风险。"
       },
-      "degraded": true,
+      "degraded": false,
       "result": null
     }
   ]
