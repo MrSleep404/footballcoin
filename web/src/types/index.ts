@@ -1,4 +1,4 @@
-export type LeagueCode = "PL" | "PD" | "SA" | "BL1" | "FL1";
+export type LeagueCode = "PL" | "PD" | "SA" | "BL1" | "FL1" | "CL";
 export type Outcome = "home" | "draw" | "away";
 export type FormResult = "W" | "D" | "L";
 export type MatchStatus = "scheduled" | "finished";
@@ -84,6 +84,35 @@ export interface ResultFile {
   date: string;
   generatedAt: string;
   results: ResultItem[];
+}
+
+export interface StandingsRow {
+  rank: number;
+  name: string;
+  tla: string;
+  crest?: string;
+  played: number;
+  won: number;
+  draw: number;
+  lost: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDiff: number;
+  points: number;
+  form: FormResult[];
+}
+
+export interface StandingsLeague {
+  code: LeagueCode;
+  name: string;
+  matchday?: number | null;
+  table: StandingsRow[];
+}
+
+export interface StandingsFile {
+  schemaVersion: number;
+  updatedAt: string;
+  leagues: StandingsLeague[];
 }
 
 export interface LeagueStats {

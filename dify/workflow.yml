@@ -67,6 +67,22 @@ workflow:
     - SYNC_TO_GITHUB
     value: 'true'
     value_type: string
+  - description: 运行模式：predict 只更新预测、results 只更新赛果、both 两者都更新
+    id: 0b6a0f2e-51a7-4b0a-9f6e-3a5d1c8e7f08
+    name: RUN_MODE
+    selector:
+    - env
+    - RUN_MODE
+    value: both
+    value_type: string
+  - description: 赛事范围：domestic 五大联赛、europe 欧冠、all 全部
+    id: 7c1d4a90-2f63-4e8b-9b57-9d0e6a3c2f11
+    name: COMPETITION_SET
+    selector:
+    - env
+    - COMPETITION_SET
+    value: domestic
+    value_type: string
   features:
     file_upload:
       allowed_file_extensions: []
@@ -133,13 +149,72 @@ workflow:
         isInLoop: false
         sourceType: code
         targetType: iteration
-      id: code_normalize-source-iter_matches-target
+      id: code_normalize-source-iter_standings_sync-target
       source: code_normalize
+      sourceHandle: source
+      target: iter_standings_sync
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: iteration
+      id: iter_standings_sync-source-iter_matches-target
+      source: iter_standings_sync
       sourceHandle: source
       target: iter_matches
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_standings_sync_start-source-http_standings_get-target
+      source: iter_standings_sync_start
+      sourceHandle: source
+      target: http_standings_get
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        sourceType: http-request
+        targetType: code
+      id: http_standings_get-source-code_standings_sha-target
+      source: http_standings_get
+      sourceHandle: source
+      target: code_standings_sha
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        sourceType: code
+        targetType: http-request
+      id: code_standings_sha-source-http_standings_put-target
+      source: code_standings_sha
+      sourceHandle: source
+      target: http_standings_put
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        sourceType: http-request
+        targetType: code
+      id: http_standings_put-source-code_standings_done-target
+      source: http_standings_put
+      sourceHandle: source
+      target: code_standings_done
+      targetHandle: target
+      type: custom
+      zIndex: 1002
     - data:
         isInLoop: false
         sourceType: iteration
@@ -176,14 +251,165 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: end
-      id: code_summary-source-end-target
+        targetType: code
+      id: code_summary-source-code_results_plan-target
       source: code_summary
+      sourceHandle: source
+      target: code_results_plan
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_results_plan-source-iter_results_fetch-target
+      source: code_results_plan
+      sourceHandle: source
+      target: iter_results_fetch
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_results_fetch-source-code_results_build-target
+      source: iter_results_fetch
+      sourceHandle: source
+      target: code_results_build
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_results_build-source-iter_results_dates-target
+      source: code_results_build
+      sourceHandle: source
+      target: iter_results_dates
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_results_dates-source-code_results_summary-target
+      source: iter_results_dates
+      sourceHandle: source
+      target: code_results_summary
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: end
+      id: code_results_summary-source-end-target
+      source: code_results_summary
       sourceHandle: source
       target: end
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_fetch
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_results_fetch_start-source-http_results-target
+      source: iter_results_fetch_start
+      sourceHandle: source
+      target: http_results
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_fetch
+        sourceType: http-request
+        targetType: code
+      id: http_results-source-code_results_raw-target
+      source: http_results
+      sourceHandle: source
+      target: code_results_raw
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_dates
+        sourceType: iteration-start
+        targetType: code
+      id: iter_results_dates_start-source-code_results_item-target
+      source: iter_results_dates_start
+      sourceHandle: source
+      target: code_results_item
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_dates
+        sourceType: code
+        targetType: http-request
+      id: code_results_item-source-http_results_list-target
+      source: code_results_item
+      sourceHandle: source
+      target: http_results_list
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_dates
+        sourceType: http-request
+        targetType: code
+      id: http_results_list-source-code_results_sha-target
+      source: http_results_list
+      sourceHandle: source
+      target: code_results_sha
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_dates
+        sourceType: code
+        targetType: if-else
+      id: code_results_sha-source-if_results_sha-target
+      source: code_results_sha
+      sourceHandle: source
+      target: if_results_sha
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_dates
+        sourceType: if-else
+        targetType: http-request
+      id: if_results_sha-true-http_results_put_update-target
+      source: if_results_sha
+      sourceHandle: 'true'
+      target: http_results_put_update
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_results_dates
+        sourceType: if-else
+        targetType: http-request
+      id: if_results_sha-false-http_results_put_create-target
+      source: if_results_sha
+      sourceHandle: 'false'
+      target: http_results_put_create
+      targetHandle: target
+      type: custom
+      zIndex: 1002
     - data:
         isInIteration: true
         iteration_id: iter_leagues
@@ -371,7 +597,15 @@ workflow:
       width: 244
     - data:
         code: |
-          def main() -> dict:
+          def main(mode: str, competition_set: str) -> dict:
+              value = (mode or "both").strip().lower()
+              if value == "results":
+                  return {"result": []}
+              group = (competition_set or "domestic").strip().lower()
+              if group in ("europe", "euro", "cl"):
+                  return {"result": ["CL"]}
+              if group in ("all", "both"):
+                  return {"result": ["PL", "PD", "SA", "BL1", "FL1", "CL"]}
               return {"result": ["PL", "PD", "SA", "BL1", "FL1"]}
         code_language: python3
         desc: ''
@@ -382,7 +616,15 @@ workflow:
         selected: false
         title: 联赛列表
         type: code
-        variables: []
+        variables:
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
+        - value_selector:
+          - env
+          - COMPETITION_SET
+          variable: competition_set
       height: 90
       id: code_leagues
       position:
@@ -571,6 +813,7 @@ workflow:
       zIndex: 1002
     - data:
         code: |
+          import base64
           import json
           from datetime import datetime, timedelta, timezone
 
@@ -582,6 +825,7 @@ workflow:
               "SA": "意甲",
               "BL1": "德甲",
               "FL1": "法甲",
+              "CL": "欧冠",
           }
 
           TEAM_TLA = {
@@ -612,6 +856,28 @@ workflow:
               "SRFC": "雷恩", "TFC": "图卢兹",
           }
 
+          # 2026-27 赛季的 tla 与历史赛季不同（个别 tla 跨联赛重名），按联赛覆盖
+          TEAM_TLA_BY_LEAGUE = {
+              "PL": {
+                  "HUL": "赫尔城", "COV": "考文垂", "IPS": "伊普斯维奇", "NOT": "诺丁汉森林",
+              },
+              "PD": {
+                  "FCB": "巴塞罗那", "ATL": "马德里竞技", "SAN": "桑坦德竞技", "DEP": "拉科鲁尼亚",
+                  "LEV": "莱万特", "ELC": "埃尔切", "MAL": "马拉加",
+              },
+              "SA": {
+                  "FRO": "弗罗西诺内", "USL": "莱切", "SAS": "萨索洛",
+              },
+              "BL1": {
+                  "FCB": "拜仁慕尼黑", "KOE": "科隆", "ELV": "埃尔弗斯贝格", "HSV": "汉堡",
+                  "SCP": "帕德博恩", "S04": "沙尔克04", "UNB": "柏林联合",
+              },
+              "FL1": {
+                  "PFC": "巴黎FC", "LYO": "里昂", "MAR": "马赛", "REN": "雷恩", "FCL": "洛里昂",
+                  "TOU": "图卢兹", "LMF": "勒芒", "ETR": "特鲁瓦", "RC": "斯特拉斯堡", "ANG": "昂热",
+              },
+          }
+
 
           def _parse(raw):
               if isinstance(raw, (dict, list)):
@@ -624,9 +890,12 @@ workflow:
                   return {}
 
 
-          def _team_name(team):
+          def _team_name(team, league=None):
               team = team or {}
-              tla = team.get("tla")
+              tla = str(team.get("tla") or "").strip().upper()
+              names = TEAM_TLA_BY_LEAGUE.get(league or "", {})
+              if tla and tla in names:
+                  return names[tla]
               if tla and tla in TEAM_TLA:
                   return TEAM_TLA[tla]
               return team.get("shortName") or team.get("name") or "未知球队"
@@ -634,9 +903,9 @@ workflow:
 
           def _code(team):
               team = team or {}
-              tla = team.get("tla")
+              tla = str(team.get("tla") or "").strip()
               if tla:
-                  return str(tla).upper()
+                  return tla.upper()
               name = team.get("shortName") or team.get("name") or "XXX"
               letters = "".join(ch for ch in name if ch.isalnum()).upper()
               return letters[:3] or "XXX"
@@ -675,9 +944,9 @@ workflow:
               return {key: value[:5] for key, value in forms.items()}
 
 
-          def _team_entry(team, row, form):
+          def _team_entry(team, row, form, league):
               return {
-                  "name": _team_name(team),
+                  "name": _team_name(team, league),
                   "nameEn": team.get("name") or "Unknown",
                   "crest": team.get("crest") or "",
                   "rank": int(row.get("position") or 20),
@@ -687,10 +956,48 @@ workflow:
               }
 
 
-          def main(league_results: list) -> dict:
+          def _form(value):
+              items = [str(part).strip().upper() for part in str(value or "").split(",")]
+              return [part for part in items if part in ("W", "D", "L")][:5]
+
+
+          def _table(league_code, league_name, standings, matchday, forms=None):
+              forms = forms or {}
+              rows = sorted(
+                  _table_map(standings).values(),
+                  key=lambda row: int(row.get("position") or 99),
+              )
+              table = []
+              for row in rows:
+                  team = row.get("team") or {}
+                  table.append({
+                      "rank": int(row.get("position") or 0),
+                      "name": _team_name(team, league_code),
+                      "tla": _code(team),
+                      "crest": team.get("crest") or "",
+                      "played": int(row.get("playedGames") or 0),
+                      "won": int(row.get("won") or 0),
+                      "draw": int(row.get("draw") or 0),
+                      "lost": int(row.get("lost") or 0),
+                      "goalsFor": int(row.get("goalsFor") or 0),
+                      "goalsAgainst": int(row.get("goalsAgainst") or 0),
+                      "goalDiff": int(row.get("goalDifference") or 0),
+                      "points": int(row.get("points") or 0),
+                      "form": _form(row.get("form")) or forms.get(team.get("id")) or [],
+                  })
+              return {
+                  "code": league_code,
+                  "name": league_name,
+                  "matchday": matchday,
+                  "table": table,
+              }
+
+
+          def main(league_results: list, mode: str) -> dict:
               current = datetime.now(timezone.utc)
               deadline = current + timedelta(days=7)
               flat = []
+              tables = []
 
               for item in league_results or []:
                   if not isinstance(item, dict):
@@ -699,13 +1006,23 @@ workflow:
                   league_name = LEAGUE_NAMES.get(code, code or "未知联赛")
                   fixtures = _parse(item.get("fixtures"))
                   standings = _parse(item.get("standings"))
+                  rank_map = _table_map(standings)
                   raw_matches = fixtures.get("matches") or []
-                  if not raw_matches:
-                      continue
-
-                  table = _table_map(standings)
+                  matchday = (fixtures.get("season") or {}).get("currentMatchday")
+                  if not matchday:
+                      upcoming = [
+                          m.get("matchday")
+                          for m in raw_matches
+                          if m.get("status") in ("SCHEDULED", "TIMED") and m.get("matchday")
+                      ]
+                      matchday = min(upcoming) if upcoming else None
                   finished = [m for m in raw_matches if m.get("status") == "FINISHED"]
                   forms = _forms(finished)
+                  table = _table(code, league_name, standings, matchday, forms)
+                  if table["table"]:
+                      tables.append(table)
+                  if not raw_matches:
+                      continue
 
                   for match in raw_matches:
                       if match.get("status") not in ("SCHEDULED", "TIMED"):
@@ -731,19 +1048,36 @@ workflow:
                           "status": "scheduled",
                           "matchday": match.get("matchday"),
                           "venue": match.get("venue") or "",
-                          "home": _team_entry(home, table.get(home.get("id")) or {}, forms.get(home.get("id"), [])),
-                          "away": _team_entry(away, table.get(away.get("id")) or {}, forms.get(away.get("id"), [])),
+                          "home": _team_entry(home, rank_map.get(home.get("id")) or {}, forms.get(home.get("id"), []), code),
+                          "away": _team_entry(away, rank_map.get(away.get("id")) or {}, forms.get(away.get("id"), []), code),
                           "prediction": None,
                           "degraded": False,
                           "result": None,
                       })
 
               flat.sort(key=lambda item: item["kickoff"])
-              return {"matches": flat}
+
+              tasks = []
+              value = (mode or "both").strip().lower()
+              if value != "results" and tables:
+                  payload = {
+                      "schemaVersion": 1,
+                      "updatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
+                      "leagues": tables,
+                  }
+                  text = json.dumps(payload, ensure_ascii=False, indent=2)
+                  tasks.append({
+                      "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                      "commitMessage": f"data: 五大联赛积分榜（{len(tables)} 个联赛）",
+                  })
+              return {"matches": flat, "syncTasks": tasks}
         code_language: python3
         desc: ''
         outputs:
           matches:
+            children: null
+            type: array[object]
+          syncTasks:
             children: null
             type: array[object]
         selected: false
@@ -754,6 +1088,10 @@ workflow:
           - iter_leagues
           - output
           variable: league_results
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
       height: 90
       id: code_normalize
       position:
@@ -764,6 +1102,258 @@ workflow:
       targetPosition: left
       type: custom
       width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_normalize
+        - syncTasks
+        output_selector:
+        - code_standings_done
+        - result
+        output_type: array[string]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_standings_sync_start
+        title: 积分榜同步迭代
+        type: iteration
+        width: 1400
+      height: 201
+      id: iter_standings_sync
+      position:
+        x: 1980
+        y: 560
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1400
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_standings_sync_start
+      parentId: iter_standings_sync
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 读取积分榜文件
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/standings.json?ref={{#env.GH_BRANCH#}}'
+        variables: []
+      height: 113
+      id: http_standings_get
+      parentId: iter_standings_sync
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import base64
+          import json
+
+          ORDER = ("PL", "PD", "SA", "BL1", "FL1", "CL")
+
+
+          def _as_dict(raw):
+              if isinstance(raw, dict):
+                  return raw
+              try:
+                  value = json.loads(raw or "{}")
+              except (TypeError, ValueError):
+                  return {}
+              return value if isinstance(value, dict) else {}
+
+
+          def _existing(payload):
+              text = payload.get("content") or ""
+              if not text:
+                  return {}
+              try:
+                  raw = base64.b64decode(text.encode("ascii")).decode("utf-8")
+                  value = json.loads(raw)
+              except (TypeError, ValueError):
+                  return {}
+              return value if isinstance(value, dict) else {}
+
+
+          def main(body, content: str) -> dict:
+              payload = _as_dict(body)
+              sha = str(payload.get("sha") or "")
+              old = _existing(payload)
+              try:
+                  incoming = json.loads(base64.b64decode(content.encode("ascii")).decode("utf-8"))
+              except (TypeError, ValueError):
+                  incoming = {}
+
+              merged = {}
+              for league in old.get("leagues") or []:
+                  if isinstance(league, dict) and league.get("code"):
+                      merged[league["code"]] = league
+              for league in incoming.get("leagues") or []:
+                  if isinstance(league, dict) and league.get("code"):
+                      merged[league["code"]] = league
+
+              leagues = [merged[code] for code in ORDER if code in merged]
+              leagues += [value for key, value in merged.items() if key not in ORDER]
+              data = {
+                  "schemaVersion": 1,
+                  "updatedAt": incoming.get("updatedAt") or old.get("updatedAt") or "",
+                  "leagues": leagues,
+              }
+              text = json.dumps(data, ensure_ascii=False, indent=2)
+              return {
+                  "sha": sha,
+                  "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+              }
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        outputs:
+          sha:
+            children: null
+            type: string
+          contentBase64:
+            children: null
+            type: string
+        selected: false
+        title: 合并积分榜
+        type: code
+        variables:
+        - value_selector:
+          - http_standings_get
+          - body
+          variable: body
+        - value_selector:
+          - iter_standings_sync
+          - item
+          - contentBase64
+          variable: content
+      height: 90
+      id: code_standings_sha
+      parentId: iter_standings_sync
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: '{"message": "{{#iter_standings_sync.item.commitMessage#}}", "content": "{{#code_standings_sha.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}", "sha": "{{#code_standings_sha.sha#}}"}'
+          type: json
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          Content-Type: application/json
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        method: put
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 写入积分榜
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/standings.json'
+        variables: []
+      height: 113
+      id: http_standings_put
+      parentId: iter_standings_sync
+      position:
+        x: 736
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          def main() -> dict:
+              return {"result": "ok"}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_standings_sync
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 积分榜写入完成
+        type: code
+        variables: []
+      height: 90
+      id: code_standings_done
+      parentId: iter_standings_sync
+      position:
+        x: 1040
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
     - data:
         desc: ''
         error_handle_mode: continue-on-error
@@ -1552,13 +2142,16 @@ workflow:
       zIndex: 1002
     - data:
         code: |
-          def main(files: list, sync: str) -> dict:
+          def main(files: list, sync: str, mode: str) -> dict:
               items = files or []
               count = len(items)
-              if str(sync) == "true":
-                  summary = f"已同步 {count} 个日期文件到 GitHub"
+              value = (mode or "both").strip().lower()
+              if value == "results":
+                  summary = "已跳过预测（RUN_MODE=results）"
+              elif str(sync).lower() == "true":
+                  summary = f"已同步 {count} 个预测日期文件到 GitHub"
               else:
-                  summary = f"已生成 {count} 个日期文件，未同步 GitHub，可从 files 复制"
+                  summary = f"已生成 {count} 个预测日期文件，未同步 GitHub，可从 files 复制"
               return {"result": summary, "files": items}
         code_language: python3
         desc: ''
@@ -1581,6 +2174,10 @@ workflow:
           - env
           - SYNC_TO_GITHUB
           variable: sync
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
       height: 90
       id: code_summary
       position:
@@ -1592,10 +2189,662 @@ workflow:
       type: custom
       width: 244
     - data:
+        code: |
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+          LOOKBACK_DAYS = 5
+
+
+          def main(mode: str) -> dict:
+              value = (mode or "both").strip().lower()
+              if value == "predict":
+                  return {"tasks": []}
+              today = datetime.now(BJ).date()
+              start = today - timedelta(days=LOOKBACK_DAYS - 1)
+              return {"tasks": [{"from": start.isoformat(), "to": today.isoformat()}]}
+        code_language: python3
+        desc: ''
+        outputs:
+          tasks:
+            children: null
+            type: array[object]
+        selected: false
+        title: 赛果回填计划
+        type: code
+        variables:
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
+      height: 90
+      id: code_results_plan
+      position:
+        x: 5260
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_results_plan
+        - tasks
+        output_selector:
+        - code_results_raw
+        - result
+        output_type: array[string]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_results_fetch_start
+        title: 赛果拉取迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_results_fetch
+      position:
+        x: 5560
+        y: 250
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_results_fetch_start
+      parentId: iter_results_fetch
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          X-Auth-Token: {{#env.FD_TOKEN#}}
+          Accept: application/json
+        isInIteration: true
+        iteration_id: iter_results_fetch
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 60
+          write: 30
+        title: 拉取已结束比赛
+        type: http-request
+        url: 'https://api.football-data.org/v4/matches?status=FINISHED&dateFrom={{#iter_results_fetch.item.from#}}&dateTo={{#iter_results_fetch.item.to#}}'
+        variables: []
+      height: 113
+      id: http_results
+      parentId: iter_results_fetch
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+
+          def main(body) -> dict:
+              if isinstance(body, str):
+                  return {"result": body}
+              return {"result": json.dumps(body or {}, ensure_ascii=False)}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_results_fetch
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 转存原始响应
+        type: code
+        variables:
+        - value_selector:
+          - http_results
+          - body
+          variable: body
+      height: 90
+      id: code_results_raw
+      parentId: iter_results_fetch
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import base64
+          import json
+          from datetime import datetime, timedelta, timezone
+
+          BJ = timezone(timedelta(hours=8))
+          LEAGUES = ("PL", "PD", "SA", "BL1", "FL1", "CL")
+
+
+          def _parse(raw):
+              if isinstance(raw, dict):
+                  return raw
+              if isinstance(raw, str) and raw:
+                  try:
+                      value = json.loads(raw)
+                  except (TypeError, ValueError):
+                      return {}
+                  return value if isinstance(value, dict) else {}
+              return {}
+
+
+          def _code(team):
+              team = team or {}
+              tla = str(team.get("tla") or "").strip()
+              if tla:
+                  return tla.upper()
+              name = team.get("shortName") or team.get("name") or "XXX"
+              letters = "".join(ch for ch in name if ch.isalnum()).upper()
+              return letters[:3] or "XXX"
+
+
+          def _goals(match):
+              score = match.get("score") or {}
+              for key in ("fullTime", "regularTime"):
+                  part = score.get(key) or {}
+                  home, away = part.get("home"), part.get("away")
+                  if isinstance(home, int) and isinstance(away, int):
+                      return home, away
+              return None
+
+
+          def _date(value):
+              try:
+                  kickoff = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+              except (TypeError, ValueError):
+                  return ""
+              if kickoff.tzinfo is None:
+                  kickoff = kickoff.replace(tzinfo=timezone.utc)
+              return kickoff.astimezone(BJ).strftime("%Y-%m-%d")
+
+
+          def main(responses: list) -> dict:
+              now = datetime.now(BJ).isoformat(timespec="seconds")
+              grouped = {}
+              for raw in responses or []:
+                  for match in _parse(raw).get("matches") or []:
+                      if match.get("status") != "FINISHED":
+                          continue
+                      league = str((match.get("competition") or {}).get("code") or "").upper()
+                      if league not in LEAGUES:
+                          continue
+                      goals = _goals(match)
+                      date = _date(match.get("utcDate"))
+                      if goals is None or not date:
+                          continue
+                      home_goals, away_goals = goals
+                      home = match.get("homeTeam") or {}
+                      away = match.get("awayTeam") or {}
+                      match_id = f"{league}-{date}-{_code(home)}-{_code(away)}"
+                      if home_goals > away_goals:
+                          outcome = "home"
+                      elif home_goals < away_goals:
+                          outcome = "away"
+                      else:
+                          outcome = "draw"
+                      grouped.setdefault(date, {})[match_id] = {
+                          "id": match_id,
+                          "league": league,
+                          "homeGoals": home_goals,
+                          "awayGoals": away_goals,
+                          "outcome": outcome,
+                          "status": "FT",
+                          "updatedAt": now,
+                      }
+
+              days = []
+              for date in sorted(grouped):
+                  results = [grouped[date][key] for key in sorted(grouped[date])]
+                  payload = {
+                      "schemaVersion": 1,
+                      "date": date,
+                      "generatedAt": now,
+                      "source": "football-data.org",
+                      "count": len(results),
+                      "results": results,
+                  }
+                  text = json.dumps(payload, ensure_ascii=False, indent=2)
+                  days.append({
+                      "date": date,
+                      "count": len(results),
+                      "content": text,
+                      "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                      "byteSize": len(text.encode("utf-8")),
+                      "commitMessage": f"data: {date} 赛果（{len(results)} 场）",
+                  })
+              return {"days": days}
+        code_language: python3
+        desc: ''
+        outputs:
+          days:
+            children: null
+            type: array[object]
+        selected: false
+        title: 组装赛果文件
+        type: code
+        variables:
+        - value_selector:
+          - iter_results_fetch
+          - output
+          variable: responses
+      height: 90
+      id: code_results_build
+      position:
+        x: 6860
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 300
+        is_parallel: false
+        iterator_input_type: array[object]
+        iterator_selector:
+        - code_results_build
+        - days
+        output_selector:
+        - code_results_item
+        - file
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_results_dates_start
+        title: 赛果日期迭代
+        type: iteration
+        width: 1600
+      height: 300
+      id: iter_results_dates
+      position:
+        x: 7160
+        y: 200
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 1600
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_results_dates_start
+      parentId: iter_results_dates
+      position:
+        x: 24
+        y: 120
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        code: |
+          def main(item: dict) -> dict:
+              date = item.get("date") or ""
+              return {
+                  "date": date,
+                  "file": {
+                      "date": date,
+                      "content": item.get("content") or "",
+                      "byteSize": item.get("byteSize") or 0,
+                      "count": item.get("count") or 0,
+                  },
+                  "contentBase64": item.get("contentBase64") or "",
+                  "commitMessage": item.get("commitMessage") or f"data: {date} 赛果",
+              }
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_results_dates
+        outputs:
+          date:
+            children: null
+            type: string
+          file:
+            children: null
+            type: object
+          contentBase64:
+            children: null
+            type: string
+          commitMessage:
+            children: null
+            type: string
+        selected: false
+        title: 准备赛果文件
+        type: code
+        variables:
+        - value_selector:
+          - iter_results_dates
+          - item
+          variable: item
+      height: 90
+      id: code_results_item
+      parentId: iter_results_dates
+      position:
+        x: 128
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_results_dates
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 读取赛果目录
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/results?ref={{#env.GH_BRANCH#}}'
+        variables: []
+      height: 113
+      id: http_results_list
+      parentId: iter_results_dates
+      position:
+        x: 432
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+
+
+          def main(body, date: str) -> dict:
+              if isinstance(body, list):
+                  data = body
+              else:
+                  try:
+                      data = json.loads(body or "[]")
+                  except (TypeError, ValueError):
+                      data = []
+              if not isinstance(data, list):
+                  data = []
+              target = f"{date}.json"
+              for item in data:
+                  if isinstance(item, dict) and item.get("name") == target:
+                      return {"sha": str(item.get("sha") or "")}
+              return {"sha": ""}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_results_dates
+        outputs:
+          sha:
+            children: null
+            type: string
+        selected: false
+        title: 解析赛果文件 sha
+        type: code
+        variables:
+        - value_selector:
+          - http_results_list
+          - body
+          variable: body
+        - value_selector:
+          - code_results_item
+          - date
+          variable: date
+      height: 90
+      id: code_results_sha
+      parentId: iter_results_dates
+      position:
+        x: 736
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 7c3a1e5d-9b24-4f86-a1d7-2e5c8b9f4a03
+            value: ''
+            varType: string
+            variable_selector:
+            - code_results_sha
+            - sha
+          id: 'true'
+          logical_operator: and
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_results_dates
+        selected: false
+        title: 赛果文件是否已存在
+        type: if-else
+      height: 90
+      id: if_results_sha
+      parentId: iter_results_dates
+      position:
+        x: 1040
+        y: 120
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: '{"message": "{{#code_results_item.commitMessage#}}", "content": "{{#code_results_item.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}", "sha": "{{#code_results_sha.sha#}}"}'
+          type: json
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          Content-Type: application/json
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_results_dates
+        method: put
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 覆盖写入赛果
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/results/{{#code_results_item.date#}}.json'
+        variables: []
+      height: 113
+      id: http_results_put_update
+      parentId: iter_results_dates
+      position:
+        x: 1344
+        y: 40
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: '{"message": "{{#code_results_item.commitMessage#}}", "content": "{{#code_results_item.contentBase64#}}", "branch": "{{#env.GH_BRANCH#}}"}'
+          type: json
+        desc: ''
+        headers: |-
+          Authorization: Bearer {{#env.GH_TOKEN#}}
+          Accept: application/vnd.github+json
+          X-GitHub-Api-Version: 2022-11-28
+          Content-Type: application/json
+          User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_results_dates
+        method: put
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 新建写入赛果
+        type: http-request
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/results/{{#code_results_item.date#}}.json'
+        variables: []
+      height: 113
+      id: http_results_put_create
+      parentId: iter_results_dates
+      position:
+        x: 1344
+        y: 200
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          def main(predict_summary: str, files: list, sync: str, mode: str) -> dict:
+              value = (mode or "both").strip().lower()
+              items = files or []
+              count = len(items)
+              if value == "predict":
+                  results_text = "赛果回填已跳过（RUN_MODE=predict）"
+              elif str(sync).lower() == "true":
+                  results_text = f"赛果回填 {count} 个日期文件已同步到 GitHub"
+              else:
+                  results_text = f"赛果回填 {count} 个日期文件已生成，未同步 GitHub"
+              predict_text = str(predict_summary or "").strip()
+              summary = f"{predict_text}；{results_text}" if predict_text else results_text
+              return {"result": summary, "files": items}
+        code_language: python3
+        desc: ''
+        outputs:
+          result:
+            children: null
+            type: string
+          files:
+            children: null
+            type: array[object]
+        selected: false
+        title: 赛果汇总
+        type: code
+        variables:
+        - value_selector:
+          - code_summary
+          - result
+          variable: predict_summary
+        - value_selector:
+          - iter_results_dates
+          - output
+          variable: files
+        - value_selector:
+          - env
+          - SYNC_TO_GITHUB
+          variable: sync
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
+      height: 90
+      id: code_results_summary
+      position:
+        x: 8820
+        y: 300
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
         desc: ''
         outputs:
         - value_selector:
-          - code_summary
+          - code_results_summary
           - result
           value_type: string
           variable: summary
@@ -1604,13 +2853,18 @@ workflow:
           - files
           value_type: array[object]
           variable: files
+        - value_selector:
+          - code_results_summary
+          - files
+          value_type: array[object]
+          variable: resultFiles
         selected: false
         title: 结束
         type: end
       height: 90
       id: end
       position:
-        x: 5260
+        x: 9120
         y: 300
       selected: false
       sourcePosition: right

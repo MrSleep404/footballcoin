@@ -14,6 +14,7 @@ export const LEAGUE_NAME: Record<LeagueCode, string> = {
   SA: "意甲",
   BL1: "德甲",
   FL1: "法甲",
+  CL: "欧冠",
 };
 
 export const LEAGUE_COLOR: Record<LeagueCode, string> = {
@@ -22,6 +23,7 @@ export const LEAGUE_COLOR: Record<LeagueCode, string> = {
   SA: "#3fa9ff",
   BL1: "#ff5c5c",
   FL1: "#2dd4bf",
+  CL: "#f5c451",
 };
 
 export const OUTCOME_LABEL: Record<Outcome, string> = {

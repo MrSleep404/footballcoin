@@ -13,6 +13,7 @@ const LEAGUES = [
   { code: "SA", name: "意甲" },
   { code: "BL1", name: "德甲" },
   { code: "FL1", name: "法甲" },
+  { code: "CL", name: "欧冠" },
 ];
 
 function beijingNow() {

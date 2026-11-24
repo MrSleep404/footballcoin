@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const DATA = join(ROOT, "data");
-const LEAGUES = new Set(["PL", "PD", "SA", "BL1", "FL1"]);
+const LEAGUES = new Set(["PL", "PD", "SA", "BL1", "FL1", "CL"]);
 const OUTCOMES = new Set(["home", "draw", "away"]);
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 

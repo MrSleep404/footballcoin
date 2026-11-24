@@ -1,4 +1,4 @@
-import type { IndexFile, MatchDayFile, ResultFile, StatsFile } from "../types";
+import type { IndexFile, MatchDayFile, ResultFile, StandingsFile, StatsFile } from "../types";
 
 const BASE = `${import.meta.env.BASE_URL}data`;
 
@@ -36,6 +36,10 @@ export async function loadMatchDay(date: string): Promise<MatchDayFile> {
 
 export function loadStats(): Promise<StatsFile> {
   return fetchJson<StatsFile>("/stats.json");
+}
+
+export function loadStandings(): Promise<StandingsFile> {
+  return fetchJson<StandingsFile>("/standings.json");
 }
 
 /** 拉取指定日期的预测，并在存在赛果时合并进 result 字段 */

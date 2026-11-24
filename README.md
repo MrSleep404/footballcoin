@@ -4,6 +4,7 @@
 
 - 站点：Vite + Vue 3 + TypeScript，hash 路由，无后端
 - 数据：`data/matches/{YYYY-MM-DD}.json`（Dify 直接写入）
+- 积分榜：`data/standings.json`（随预测任务更新，页面入口 `/standings`）
 - 发布：push 到 `main` → 校验 → 生成索引 → 构建 → 部署
 - 详细设计：[docs/技术方案.md](docs/技术方案.md)
 - Dify 工作流文件：[dify/workflow.yml](dify/workflow.yml)（可直接导入）
@@ -15,7 +16,8 @@
 ├─ .github/workflows/deploy.yml    # 校验、构建、部署
 ├─ data/
 │  ├─ matches/YYYY-MM-DD.json      # 预测数据（Dify 写入）
-│  └─ results/YYYY-MM-DD.json      # 赛果回填
+│  ├─ results/YYYY-MM-DD.json      # 赛果回填
+│  └─ standings.json               # 五大联赛积分榜（Dify 写入）
 ├─ dify/                           # 工作流提示词、代码节点、配置手册
 ├─ docs/技术方案.md
 ├─ scripts/

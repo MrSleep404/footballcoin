@@ -41,6 +41,8 @@
 | `GH_TOKEN` | `github_pat_xxx` | GitHub PAT |
 | `MODEL_NAME` | `gpt-4o-mini` | 写入数据文件 `model` 字段的模型名 |
 | `SYNC_TO_GITHUB` | `true` | 同步开关：`true` 推送到 GitHub；`false` 只在运行结果中输出文件内容，供本地测试 |
+| `RUN_MODE` | `both` | 运行模式：`predict` 只更新预测、`results` 只更新赛果、`both` 两者都更新（留空按 `both`） |
+| `COMPETITION_SET` | `domestic` | 赛事范围：`domestic` 五大联赛、`europe` 欧冠、`all` 全部（留空按 `domestic`） |
 
 如果当前 Dify 版本不支持工作流环境变量，请升级，或改用「开始节点输入变量」并在每次运行前手动/通过 API 传入（注意输入值会出现在运行日志中）。
 
@@ -189,6 +191,32 @@ Content-Type: application/json
 }
 ```
 
+### 4.12 赛果回填（与预测共用同一条工作流）
+
+- 由 `RUN_MODE` 控制：`predict` 时赛果链路整段跳过；`results` 时预测链路不拉赛程/积分榜、不调 LLM；`both` 依次执行。
+- 拉取：`GET https://api.football-data.org/v4/matches?status=FINISHED&dateFrom=<今天-4>&dateTo=<今天>`，一次请求覆盖 5 个联赛，按 `status=FINISHED` 与 `competition.code` 过滤。
+- 组装：按开赛时间的北京日期分组，id 规则与预测完全一致（`{league}-{BJdate}-{homeTLA}-{awayTLA}`），只写 `data/results/{date}.json`。
+- 写回：与预测一致，先读 `contents/data/results` 取 sha，再 PUT 覆盖/新建；默认回看 5 天，漏跑一次也能补齐。
+- 文件结构：`{schemaVersion, date, generatedAt, source, count, results:[{id, league, homeGoals, awayGoals, outcome, status, updatedAt}]}`。
+- 结束节点新增 `resultFiles`，`summary` 会同时给出预测与赛果两段结果。
+
+### 4.13 积分榜（随预测任务更新）
+
+- 「清洗与筛选」在生成比赛时顺带产出 `syncTasks`：本次赛事范围的完整排名表 + 提交信息。
+- 「积分榜同步迭代」遍历 `syncTasks`，内部三步：读取 `contents/data/standings.json` → **合并**（只替换本次赛事，保留其他赛事）→ PUT 覆盖。
+- `RUN_MODE=results` 时 `syncTasks` 为空，迭代 0 次，不会用空表覆盖线上积分榜。
+- 站点入口：顶部导航「积分榜」（`/standings`），欧战区（前 4）与降级区（末 3）带色条；欧冠单独归入「欧战」分组。
+- 首次使用需保证仓库内已存在 `data/standings.json`（PUT 覆盖需要 sha）；工作流首次写入也依赖该文件存在。
+
+### 4.14 欧冠（两个定时任务）
+
+- 免费套餐限流 10 次/分钟：五大联赛需 10 次，欧冠需 2 次，**不能在同一次运行里跑完**。
+- 定时 1：`0 9 * * *`，`RUN_MODE=both`，`COMPETITION_SET=domestic`
+- 定时 2：`1 9 * * *`，`RUN_MODE=predict`，`COMPETITION_SET=europe`
+- 欧冠赛程 `season.currentMatchday` 为空，轮次由未赛比赛的最小 matchday 推导。
+- 欧冠一个联赛阶段比赛日约 18 场，会带来 18 次模型调用，注意成本。
+- 欧联（EL）当前 token 返回 403（套餐不含），欧协联 football-data 不提供（404）；如需接入要换数据源。
+
 ## 5. 首次联调
 
 1. 单独运行「联赛列表 → 联赛迭代 → 拉赛程」三个节点，确认能拿到 5 个联赛的数据。
@@ -200,6 +228,7 @@ Content-Type: application/json
 ## 6. 定时触发
 
 - Dify 1.x：定时能力已独立为触发器节点。添加「触发器 → 定时触发」（Schedule Trigger），cron `0 9 * * *`、时区 `Asia/Shanghai`，连到「联赛列表」；原有「开始」节点保留作手动运行入口。
+- 若同时需要赛果回填，建议建两条定时任务并错开 1 分钟：预测 `0 9 * * *`（`RUN_MODE=predict`）、赛果 `1 9 * * *`（`RUN_MODE=results`），避免同分钟内触发 football-data 的 10 次/分钟限流；只跑一条 `0 9 * * *` 且 `RUN_MODE=both` 也可以，但整轮耗时更长。
 - Dify 0.x：可在开始节点直接选择定时触发。
 - 两种方式都不支持时：用 GitHub Actions 的 `schedule` 调 Dify 的 `POST /v1/workflows/run`（需要 Dify API Key，存 GitHub Secrets），或使用任意外部 cron 服务。注意这条链路只是触发工作流，数据仍然由 Dify 直接推送到 GitHub。
 

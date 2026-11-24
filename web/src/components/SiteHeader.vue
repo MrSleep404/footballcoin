@@ -20,6 +20,7 @@ import { RouterLink } from "vue-router";
 
       <nav class="nav" aria-label="主导航">
         <RouterLink to="/" exact-active-class="active">预测</RouterLink>
+        <RouterLink to="/standings" active-class="active">积分榜</RouterLink>
         <RouterLink to="/stats" active-class="active">命中率</RouterLink>
         <RouterLink to="/about" active-class="active">关于</RouterLink>
       </nav>
@@ -38,6 +39,12 @@ import { RouterLink } from "vue-router";
         <path d="M3 9h18M9 9v11" fill="none" stroke="currentColor" stroke-width="1.7" />
       </svg>
       <span>预测</span>
+    </RouterLink>
+    <RouterLink to="/standings" active-class="active">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path d="M4 6h10M4 12h16M4 18h7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+      </svg>
+      <span>积分榜</span>
     </RouterLink>
     <RouterLink to="/stats" active-class="active">
       <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
@@ -183,7 +190,7 @@ import { RouterLink } from "vue-router";
     left: 0;
     z-index: 30;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
     border-top: 1px solid var(--border);
     background: rgba(9, 14, 12, 0.96);
