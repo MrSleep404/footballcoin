@@ -46,11 +46,24 @@
         "goalsAgainst": 26
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-01-31",
+            "home": "Bremen",
+            "away": "M'gladbach",
+            "score": "1-1"
+          },
+          {
+            "date": "2025-09-14",
+            "home": "Bremen",
+            "away": "M'gladbach",
+            "score": "4-0"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -76,7 +89,7 @@
           "客队防守漏洞",
           "主场优势"
         ],
-        "risk": "双方历史交锋、伤病与天气数据均未提供，客队近况虽差但存在反弹可能。"
+        "risk": "伤病未提供，客队近况虽差但存在反弹可能。"
       },
       "degraded": false,
       "result": null,
@@ -164,7 +177,7 @@
           "主队防守薄弱",
           "客队攻守均衡"
         ],
-        "risk": "历史交锋与伤病、场地信息均未提供，主队主场保级搏杀可能带来意外，是最大不确定性。"
+        "risk": "伤病、交锋未提供，主队主场保级搏杀可能带来意外，是最大不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -222,11 +235,24 @@
         "goalsAgainst": 10
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 2,
+        "last": [
+          {
+            "date": "2026-05-03",
+            "home": "Brest",
+            "away": "Paris FC",
+            "score": "0-4"
+          },
+          {
+            "date": "2025-09-14",
+            "home": "Brest",
+            "away": "Paris FC",
+            "score": "1-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -252,7 +278,7 @@
           "主队主场加成",
           "双方状态接近"
         ],
-        "risk": "双方实力接近且无历史交锋与伤病信息，主队主场加成可能抹平客队优势，胜负不确定性较大。"
+        "risk": "伤病未提供，主队主场加成可能抹平客队优势，胜负不确定性较大。"
       },
       "degraded": false,
       "result": null,
@@ -305,11 +331,24 @@
         "goalsAgainst": 20
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-05-04",
+            "home": "Nottingham",
+            "away": "Chelsea",
+            "score": "3-1"
+          },
+          {
+            "date": "2025-10-18",
+            "home": "Nottingham",
+            "away": "Chelsea",
+            "score": "0-3"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -336,7 +375,7 @@
           "近期状态不稳",
           "伤停未提供"
         ],
-        "risk": "双方状态均不稳定，且伤病、天气与交锋数据未提供，切尔西客胜存在波动。"
+        "risk": "双方状态均不稳定，伤病未提供，切尔西客胜存在波动。"
       },
       "degraded": false,
       "result": null,
@@ -425,7 +464,7 @@
           "近期状态接近",
           "关键数据缺失"
         ],
-        "risk": "双方防守均不稳且无交锋、伤病数据，平局与客胜概率接近。"
+        "risk": "伤病、交锋未提供，平局与客胜概率接近。"
       },
       "degraded": false,
       "result": null,
@@ -483,11 +522,24 @@
         "goalsAgainst": 22
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
-        "draws": 0,
+        "draws": 2,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-02-21",
+            "home": "Real Betis",
+            "away": "Rayo Vallecano",
+            "score": "1-1"
+          },
+          {
+            "date": "2025-12-15",
+            "home": "Real Betis",
+            "away": "Rayo Vallecano",
+            "score": "0-0"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -512,7 +564,7 @@
           "客队防守偏弱",
           "主场因素"
         ],
-        "risk": "交手记录、伤病和场地天气均未提供，巴列卡诺仍有反弹可能。"
+        "risk": "伤病未提供，巴列卡诺仍有反弹可能。"
       },
       "degraded": false,
       "result": null,
@@ -600,7 +652,7 @@
           "主场作战",
           "客队防守薄弱"
         ],
-        "risk": "双方历史交锋、伤病与场地天气数据缺失，且两队近期状态均有起伏，主队优势并非绝对。"
+        "risk": "伤病、交锋未提供，且两队近期状态均有起伏，主队优势并非绝对。"
       },
       "degraded": false,
       "result": null,
@@ -688,7 +740,7 @@
           "客队攻强守弱",
           "缺乏交锋参考"
         ],
-        "risk": "伤病、天气、场地均未提供，交手记录缺失，主队状态差但客队防守失球多，平局风险较高。"
+        "risk": "伤病未提供，交手未提供，主队状态差但客队防守失球多，平局风险较高。"
       },
       "degraded": false,
       "result": null,
@@ -746,11 +798,24 @@
         "goalsAgainst": 26
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-05-10",
+            "home": "Mainz",
+            "away": "Union Berlin",
+            "score": "1-3"
+          },
+          {
+            "date": "2026-01-10",
+            "home": "Mainz",
+            "away": "Union Berlin",
+            "score": "2-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -777,7 +842,7 @@
           "双方状态低迷",
           "伤病未提供"
         ],
-        "risk": "伤病、天气和交手记录未提供，且美因茨近5场4负，主胜稳定性不足。"
+        "risk": "伤病未提供，且美因茨近5场4负，主胜稳定性不足。"
       },
       "degraded": false,
       "result": null,
@@ -865,7 +930,7 @@
           "客队近5场不胜",
           "双方防守均不稳"
         ],
-        "risk": "两队实力接近且交手记录、伤病、天气均未提供，平局可能性大，预测不确定性较高。"
+        "risk": "伤病、交手未提供，平局可能性大，预测不确定性较高。"
       },
       "degraded": false,
       "result": null,
@@ -923,11 +988,24 @@
         "goalsAgainst": 10
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-01-31",
+            "home": "HSV",
+            "away": "Bayern",
+            "score": "2-2"
+          },
+          {
+            "date": "2025-09-13",
+            "home": "HSV",
+            "away": "Bayern",
+            "score": "0-5"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -953,7 +1031,7 @@
           "拜仁不败状态",
           "主队防守薄弱"
         ],
-        "risk": "伤病与场地信息未提供，汉堡主场或凭士气抵抗，拜仁大胜存在不确定性。"
+        "risk": "伤病未提供，汉堡主场或凭士气抵抗，拜仁大胜存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1041,7 +1119,7 @@
           "客队防线漏",
           "主场加成"
         ],
-        "risk": "交手记录、伤病与天气均未提供，客队失球多但进攻有威胁，存在爆冷可能。"
+        "risk": "伤病、交手未提供，客队失球多但进攻有威胁，存在爆冷可能。"
       },
       "degraded": false,
       "result": null,
@@ -1099,11 +1177,24 @@
         "goalsAgainst": 11
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-04-27",
+            "home": "Man United",
+            "away": "Brentford",
+            "score": "2-1"
+          },
+          {
+            "date": "2025-09-27",
+            "home": "Man United",
+            "away": "Brentford",
+            "score": "1-3"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1129,7 +1220,7 @@
           "客队攻守均衡",
           "主队状态低迷"
         ],
-        "risk": "双方实力差距明显但交手记录、伤病和天气均未提供，主队主场或有机会，不确定性较高。"
+        "risk": "伤病未提供，主队主场或有机会，不确定性较高。"
       },
       "degraded": false,
       "result": null,
@@ -1217,7 +1308,7 @@
           "客队实力占优",
           "主队状态低迷"
         ],
-        "risk": "伤病与天气未提供，历史交锋缺失，客队近5场也有起伏，存在不确定性。"
+        "risk": "伤病未提供，交锋未提供，客队近5场也有起伏，存在不确定性。"
       },
       "degraded": false,
       "result": null,

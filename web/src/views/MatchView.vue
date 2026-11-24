@@ -53,7 +53,10 @@ const h2h = computed(() => {
 });
 const weather = computed(() => match.value?.weather ?? null);
 const market = computed(() => match.value?.market ?? null);
-const hasIntel = computed(() => Boolean(h2h.value || weather.value || market.value));
+const injuries = computed(() => match.value?.injuries ?? null);
+const hasIntel = computed(() =>
+  Boolean(h2h.value || weather.value || market.value || injuries.value),
+);
 
 async function init() {
   loading.value = true;
@@ -222,6 +225,29 @@ onMounted(() => {
               <template v-if="weather.temp !== null">{{ weather.temp }}℃</template>
               <template v-if="weather.precip !== null"> · 降水 {{ weather.precip }}%</template>
               <template v-if="weather.wind !== null"> · 风速 {{ weather.wind }} km/h</template>
+            </span>
+          </div>
+
+          <div v-if="injuries" class="intel-item">
+            <span class="intel-label">
+              伤停名单{{ injuries.date ? `（${injuries.date}）` : "" }}
+            </span>
+            <div v-if="injuries.home.length" class="injury-group">
+              <span class="injury-team">{{ match.home.name }}</span>
+              <span v-for="item in injuries.home" :key="`h-${item.player}`" class="injury-line">
+                <strong>{{ item.player }}</strong>
+                <span class="injury-meta">{{ item.type }}{{ item.reason ? ` · ${item.reason}` : "" }}</span>
+              </span>
+            </div>
+            <div v-if="injuries.away.length" class="injury-group">
+              <span class="injury-team">{{ match.away.name }}</span>
+              <span v-for="item in injuries.away" :key="`a-${item.player}`" class="injury-line">
+                <strong>{{ item.player }}</strong>
+                <span class="injury-meta">{{ item.type }}{{ item.reason ? ` · ${item.reason}` : "" }}</span>
+              </span>
+            </div>
+            <span v-if="!injuries.home.length && !injuries.away.length" class="intel-value">
+              暂无官方伤停记录
             </span>
           </div>
 
@@ -578,6 +604,30 @@ onMounted(() => {
 }
 
 .intel-date {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.injury-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.injury-team {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.injury-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.injury-meta {
   color: var(--text-dim);
   font-size: 11px;
 }

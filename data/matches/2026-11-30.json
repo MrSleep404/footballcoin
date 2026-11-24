@@ -46,11 +46,24 @@
         "goalsAgainst": 22
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-02-28",
+            "home": "Toulouse",
+            "away": "Stade Rennais",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-10-29",
+            "home": "Toulouse",
+            "away": "Stade Rennais",
+            "score": "2-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -133,11 +146,24 @@
         "goalsAgainst": 14
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-04-19",
+            "home": "Arsenal",
+            "away": "Man City",
+            "score": "1-2"
+          },
+          {
+            "date": "2025-09-21",
+            "home": "Arsenal",
+            "away": "Man City",
+            "score": "1-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -164,7 +190,7 @@
           "曼城火力",
           "排名领先"
         ],
-        "risk": "伤病、天气与交手记录均未提供，曼城进攻火力仍可能扭转局势。"
+        "risk": "伤病未提供，曼城进攻火力仍可能扭转局势。"
       },
       "degraded": false,
       "result": null,
@@ -222,11 +248,24 @@
         "goalsAgainst": 21
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-04-10",
+            "home": "Hoffenheim",
+            "away": "Augsburg",
+            "score": "2-2"
+          },
+          {
+            "date": "2025-11-29",
+            "home": "Hoffenheim",
+            "away": "Augsburg",
+            "score": "3-0"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -252,7 +291,7 @@
           "客队进球效率高",
           "排名接近"
         ],
-        "risk": "交手记录、伤病与天气均未提供，且两队排名接近，客队进球能力更强，胜负存在较大不确定性。"
+        "risk": "伤病未提供，且两队排名接近，客队进球能力更强，胜负存在较大不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -340,7 +379,7 @@
           "攻防数据占优",
           "客队连败低迷"
         ],
-        "risk": "历史交锋与伤病、场地天气均未提供，若罗马轮换或轻敌可能缩小比分差距。"
+        "risk": "伤病、交锋未提供，若罗马轮换或轻敌可能缩小比分差距。"
       },
       "degraded": false,
       "result": null,
@@ -398,11 +437,24 @@
         "goalsAgainst": 18
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-04-26",
+            "home": "Celta",
+            "away": "Villarreal",
+            "score": "1-2"
+          },
+          {
+            "date": "2025-08-31",
+            "home": "Celta",
+            "away": "Villarreal",
+            "score": "1-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -428,7 +480,7 @@
           "客队进攻更强",
           "状态起伏"
         ],
-        "risk": "交手记录与伤病情况均未提供，双方实力接近，平局与客胜可能同样存在。"
+        "risk": "伤病未提供，双方实力接近，平局与客胜可能同样存在。"
       },
       "degraded": false,
       "result": null,
@@ -486,11 +538,24 @@
         "goalsAgainst": 17
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-04-11",
+            "home": "Dortmund",
+            "away": "Leverkusen",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-11-29",
+            "home": "Dortmund",
+            "away": "Leverkusen",
+            "score": "2-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -516,7 +581,7 @@
           "客队失球偏多",
           "主场之利"
         ],
-        "risk": "交手记录、伤病与天气均未提供，勒沃库森赛季进球更多，客队爆冷可能性不可忽视。"
+        "risk": "伤病未提供，勒沃库森赛季进球更多，客队爆冷可能性不可忽视。"
       },
       "degraded": false,
       "result": null,
@@ -574,11 +639,24 @@
         "goalsAgainst": 12
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 2,
         "draws": 0,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-02-21",
+            "home": "Como 1907",
+            "away": "Juventus",
+            "score": "2-0"
+          },
+          {
+            "date": "2025-10-19",
+            "home": "Como 1907",
+            "away": "Juventus",
+            "score": "2-0"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -605,7 +683,7 @@
           "排名接近",
           "尤文有竞争力"
         ],
-        "risk": "交手记录、伤病和天气均未提供，且双方排名接近，主胜判断存在不确定性。"
+        "risk": "伤病未提供，且双方排名接近，主胜判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -663,11 +741,24 @@
         "goalsAgainst": 12
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-03-22",
+            "home": "Olympique Lyon",
+            "away": "Monaco",
+            "score": "1-2"
+          },
+          {
+            "date": "2026-01-03",
+            "home": "Olympique Lyon",
+            "away": "Monaco",
+            "score": "3-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -693,7 +784,7 @@
           "客队近况低迷",
           "攻防更稳"
         ],
-        "risk": "双方历史交锋数据未提供，摩纳哥近5场4平韧性足，平局风险不可忽视。"
+        "risk": "摩纳哥近5场4平韧性足，平局风险不可忽视。"
       },
       "degraded": false,
       "result": null,
@@ -751,11 +842,24 @@
         "goalsAgainst": 20
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-05-04",
+            "home": "Real Sociedad",
+            "away": "Sevilla FC",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-10-24",
+            "home": "Real Sociedad",
+            "away": "Sevilla FC",
+            "score": "2-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -780,7 +884,7 @@
           "近期状态更好",
           "客队状态不稳"
         ],
-        "risk": "交手记录、天气和伤病均未提供，且两队排名接近，冷门风险不可忽视。"
+        "risk": "伤病未提供，且两队排名接近，冷门风险不可忽视。"
       },
       "degraded": false,
       "result": null,

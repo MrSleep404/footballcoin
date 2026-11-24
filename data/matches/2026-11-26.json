@@ -74,7 +74,7 @@
           "近期状态",
           "客队占优"
         ],
-        "risk": "伤病和天气未提供，且无历史交锋数据，临场信息不足可能影响走势。"
+        "risk": "天气未提供，交锋未提供，临场信息不足可能影响走势。"
       },
       "degraded": false,
       "result": null,
@@ -86,6 +86,32 @@
           "draw": 7,
           "away": 88
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "R. Bardghji",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Christensen",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "X. Espart",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "Rodri",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          }
+        ]
       }
     },
     {
@@ -155,7 +181,7 @@
           "客队防守偏弱",
           "主场微利"
         ],
-        "risk": "交手记录、伤病与天气均未提供，双方近5场仅给出4场数据，信息不足故信心有限。"
+        "risk": "天气、交手未提供，双方近5场仅给出4场数据，信息不足故信心有限。"
       },
       "degraded": false,
       "result": null,
@@ -167,6 +193,88 @@
           "draw": 25,
           "away": 44
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "S. Chaloupek",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Chory",
+            "type": "Missing Fixture",
+            "reason": "Coach's decision"
+          },
+          {
+            "player": "H. Kante",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "player": "O. Kolar",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "D. Moses",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "player": "I. Ogbu",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "player": "A. Ouanda",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "player": "E. Pitak",
+            "type": "Missing Fixture",
+            "reason": "Health problems"
+          },
+          {
+            "player": "T. Diakite",
+            "type": "Questionable",
+            "reason": "Health problems"
+          },
+          {
+            "player": "L. Provod",
+            "type": "Questionable",
+            "reason": "Injury"
+          },
+          {
+            "player": "D. Sturm",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "I. Akhomach",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "A. Diatta",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "J. Foyth",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "G. Moreno",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          }
+        ]
       }
     },
     {
@@ -236,7 +344,7 @@
           "状态起伏",
           "进失球略优"
         ],
-        "risk": "伤病、天气与历史交锋均未提供，临场阵容和主场因素不确定性较大。"
+        "risk": "交锋未提供，临场阵容和主场因素不确定性较大。"
       },
       "degraded": false,
       "result": null,
@@ -253,6 +361,37 @@
           "draw": 17,
           "away": 15
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "S. Drljaca",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "L. Jaquez",
+            "type": "Missing Fixture",
+            "reason": "Ribs Injury"
+          },
+          {
+            "player": "L. Stergiou",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "A. Stiller",
+            "type": "Missing Fixture",
+            "reason": "Groin Injury"
+          },
+          {
+            "player": "L. Sauer",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ]
       }
     },
     {
@@ -323,7 +462,7 @@
           "状态不稳",
           "关键信息缺失"
         ],
-        "risk": "双方排名接近，且伤病、天气、场地未提供，近期仅4场、历史交锋缺失，不确定性较高。"
+        "risk": "双方排名接近，交锋未提供，不确定性较高。"
       },
       "degraded": false,
       "result": null,
@@ -340,6 +479,27 @@
           "draw": 9,
           "away": 4
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "A. Lookman",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "M. Pubill",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "C. Romero",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "away": []
       }
     },
     {
@@ -408,7 +568,7 @@
           "近期状态占优",
           "客队状态不稳"
         ],
-        "risk": "伤病、天气、场地及历史交锋未提供，临场阵容与比赛环境存在不确定性。"
+        "risk": "交锋未提供，临场阵容与比赛环境存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -425,6 +585,48 @@
           "draw": 18,
           "away": 14
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "D. Doue",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "K. Kvaratskhelia",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Longoni",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "L. Pellegrini",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "player": "D. Rensch",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "D. S. Vasquez Llach",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          },
+          {
+            "player": "L. Balerdi",
+            "type": "Questionable",
+            "reason": "Injury"
+          }
+        ]
       }
     },
     {
@@ -494,7 +696,7 @@
           "客战有不确定性",
           "无交锋数据"
         ],
-        "risk": "交手记录、伤病与天气均未提供，且双方排名接近，客胜并不稳。"
+        "risk": "天气、交手未提供，且双方排名接近，客胜并不稳。"
       },
       "degraded": false,
       "result": null,
@@ -506,6 +708,63 @@
           "draw": 21,
           "away": 58
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "J. Ordonez",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "J. Virgili",
+            "type": "Questionable",
+            "reason": "Groin Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "C. Bradley",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "F. Chiesa",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "H. Ekitike",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "player": "W. Endo",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "C. Gakpo",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          },
+          {
+            "player": "R. Gravenberch",
+            "type": "Missing Fixture",
+            "reason": "Heel Injury"
+          },
+          {
+            "player": "G. Leoni",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Nallo",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          }
+        ]
       }
     },
     {
@@ -575,7 +834,7 @@
           "主队状态低迷",
           "欧冠客战变数"
         ],
-        "risk": "伤病、场地与天气未提供，且无历史交锋数据，拜仁客战表现仍有不确定性。"
+        "risk": "交锋未提供，拜仁客战表现仍有不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -592,6 +851,42 @@
           "draw": 22,
           "away": 59
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "A. Davies",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "player": "S. Gnabry",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "H. Kane",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "M. Neuer",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "I. Saibari",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "M. Olise",
+            "type": "Questionable",
+            "reason": "Leg Injury"
+          }
+        ]
       }
     },
     {
@@ -661,7 +956,7 @@
           "主场优势",
           "状态略好"
         ],
-        "risk": "伤病、天气与场地信息未提供，且曼联进攻数据不俗，主胜存在变数。"
+        "risk": "天气未提供，且曼联进攻数据不俗，主胜存在变数。"
       },
       "degraded": false,
       "result": null,
@@ -673,6 +968,47 @@
           "draw": 26,
           "away": 36
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "C. Baleba",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "player": "M. Cunha",
+            "type": "Missing Fixture",
+            "reason": "Red Card"
+          },
+          {
+            "player": "K. Darlow",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "B. Sesko",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          },
+          {
+            "player": "M. Ugarte",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "M. Rashford",
+            "type": "Questionable",
+            "reason": "Hip Injury"
+          },
+          {
+            "player": "L. Shaw",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ]
       }
     },
     {
@@ -743,7 +1079,7 @@
           "状态一般",
           "信息不完整"
         ],
-        "risk": "交手记录、伤病与天气未提供，且近期仅4场，信息不完整。"
+        "risk": "天气、交手未提供，且近期仅4场，信息不完整。"
       },
       "degraded": false,
       "result": null,
@@ -755,6 +1091,52 @@
           "draw": 27,
           "away": 37
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "Eguinaldo",
+            "type": "Missing Fixture",
+            "reason": "Shoulder Injury"
+          },
+          {
+            "player": "Kaua Elias",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "V. Korniyenko",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "Pedrinho",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Puzankov",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "M. Shved",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "D. Tvardovskyi",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "Marlon",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ],
+        "away": []
       }
     }
   ]

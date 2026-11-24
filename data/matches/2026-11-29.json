@@ -46,11 +46,24 @@
         "goalsAgainst": 16
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 2,
+        "last": [
+          {
+            "date": "2026-03-20",
+            "home": "Angers SCO",
+            "away": "RC Lens",
+            "score": "1-5"
+          },
+          {
+            "date": "2025-11-30",
+            "home": "Angers SCO",
+            "away": "RC Lens",
+            "score": "1-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -76,7 +89,7 @@
           "主队防守漏洞",
           "客队近期连胜"
         ],
-        "risk": "双方历史交锋、伤病和天气数据均未提供，临场信息缺失可能影响判断。"
+        "risk": "伤病未提供。"
       },
       "degraded": false,
       "result": null,
@@ -134,11 +147,24 @@
         "goalsAgainst": 9
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-03-01",
+            "home": "Torino",
+            "away": "Lazio",
+            "score": "2-0"
+          },
+          {
+            "date": "2025-10-04",
+            "home": "Torino",
+            "away": "Lazio",
+            "score": "3-3"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -163,7 +189,7 @@
           "攻防占优",
           "主队低迷"
         ],
-        "risk": "伤病与天气未提供，且无历史交锋数据，拉齐奥客场发挥存在不确定性。"
+        "risk": "伤病未提供，拉齐奥客场发挥存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -251,7 +277,7 @@
           "主队防守偏弱",
           "平局风险仍高"
         ],
-        "risk": "双方历史交锋、伤病和天气均未提供，且阿斯顿维拉近5场平局偏多，客场取胜存在不确定性。"
+        "risk": "伤病、交锋未提供，且阿斯顿维拉近5场平局偏多，客场取胜存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -309,11 +335,24 @@
         "goalsAgainst": 10
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-04-22",
+            "home": "Elche",
+            "away": "Atleti",
+            "score": "3-2"
+          },
+          {
+            "date": "2025-08-23",
+            "home": "Elche",
+            "away": "Atleti",
+            "score": "1-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -339,7 +378,7 @@
           "主队防守薄弱",
           "客队攻守均衡"
         ],
-        "risk": "双方历史交锋与伤病信息均未提供，主队近期有回暖迹象，存在爆冷可能。"
+        "risk": "伤病未提供，主队近期有回暖迹象，存在爆冷可能。"
       },
       "degraded": false,
       "result": null,
@@ -397,11 +436,24 @@
         "goalsAgainst": 20
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-05-16",
+            "home": "Stuttgart",
+            "away": "Frankfurt",
+            "score": "2-2"
+          },
+          {
+            "date": "2026-01-13",
+            "home": "Stuttgart",
+            "away": "Frankfurt",
+            "score": "3-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -428,7 +480,7 @@
           "主队主场优势",
           "伤病信息缺失"
         ],
-        "risk": "伤病、历史交锋与天气未提供，且客队近况更好，主胜判断存在不确定性。"
+        "risk": "伤病未提供，且客队近况更好，主胜判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -486,11 +538,24 @@
         "goalsAgainst": 16
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 2,
         "draws": 0,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-02-28",
+            "home": "Inter",
+            "away": "Genoa",
+            "score": "2-0"
+          },
+          {
+            "date": "2025-12-14",
+            "home": "Inter",
+            "away": "Genoa",
+            "score": "2-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -515,7 +580,7 @@
           "主场优势",
           "客队状态"
         ],
-        "risk": "伤病与天气均未提供，且热那亚近5场4胜，客队爆冷是不确定性。"
+        "risk": "伤病未提供，且热那亚近5场4胜，客队爆冷是不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -603,7 +668,7 @@
           "近期状态",
           "客队占优"
         ],
-        "risk": "伤病与天气未提供，且无历史交锋数据，里尔客场稳定性存疑。"
+        "risk": "伤病未提供，交锋未提供，里尔客场稳定性存疑。"
       },
       "degraded": false,
       "result": null,
@@ -691,7 +756,7 @@
           "攻防更稳",
           "客队防守偏弱"
         ],
-        "risk": "伤病、天气和交锋数据未提供，主队状态有起伏，需防冷平。"
+        "risk": "伤病、交锋未提供，主队状态有起伏，需防冷平。"
       },
       "degraded": false,
       "result": null,
@@ -772,16 +837,29 @@
           "客队进攻略优",
           "双方状态低迷"
         ],
-        "risk": "场地未提供，双方状态低迷且实力接近，客队优势有限，结果不确定性较高。"
+        "risk": "双方状态低迷且实力接近，客队优势有限，结果不确定性较高。"
       },
       "degraded": false,
       "result": null,
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-02-08",
+            "home": "Le Havre",
+            "away": "Strasbourg",
+            "score": "2-1"
+          },
+          {
+            "date": "2025-09-14",
+            "home": "Le Havre",
+            "away": "Strasbourg",
+            "score": "0-1"
+          }
+        ]
       },
       "weather": {
         "temp": 7.7,
@@ -837,11 +915,30 @@
         "goalsAgainst": 9
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "played": 3,
+        "homeWins": 1,
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-10-10",
+            "home": "Paris FC",
+            "away": "Lorient",
+            "score": "0-1"
+          },
+          {
+            "date": "2026-04-05",
+            "home": "Paris FC",
+            "away": "Lorient",
+            "score": "1-1"
+          },
+          {
+            "date": "2025-10-03",
+            "home": "Paris FC",
+            "away": "Lorient",
+            "score": "2-0"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -867,7 +964,7 @@
           "进攻火力悬殊",
           "主场优势"
         ],
-        "risk": "交锋与伤病数据未提供，客队近期状态不俗，需防冷平。"
+        "risk": "伤病未提供，客队近期状态不俗，需防冷平。"
       },
       "degraded": false,
       "result": null,
@@ -920,11 +1017,24 @@
         "goalsAgainst": 23
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-02-08",
+            "home": "Le Havre",
+            "away": "Strasbourg",
+            "score": "2-1"
+          },
+          {
+            "date": "2025-09-14",
+            "home": "Le Havre",
+            "away": "Strasbourg",
+            "score": "0-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -950,7 +1060,7 @@
           "主队防守薄弱",
           "关键信息缺失"
         ],
-        "risk": "双方实力接近且伤病、天气、交手记录未提供，客胜稳定性有限。"
+        "risk": "伤病未提供，客胜稳定性有限。"
       },
       "degraded": false,
       "result": null,
@@ -1008,11 +1118,24 @@
         "goalsAgainst": 18
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 2,
         "draws": 0,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-04-21",
+            "home": "Real Madrid",
+            "away": "Alavés",
+            "score": "2-1"
+          },
+          {
+            "date": "2025-12-14",
+            "home": "Real Madrid",
+            "away": "Alavés",
+            "score": "2-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1038,7 +1161,7 @@
           "排名差距明显",
           "客队状态不稳"
         ],
-        "risk": "伤病与天气未提供，且无历史交锋数据，主队若轮换可能影响大胜幅度。"
+        "risk": "伤病未提供，主队若轮换可能影响大胜幅度。"
       },
       "degraded": false,
       "result": null,
@@ -1096,11 +1219,24 @@
         "goalsAgainst": 28
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-03-02",
+            "home": "Udinese",
+            "away": "Fiorentina",
+            "score": "3-0"
+          },
+          {
+            "date": "2025-12-21",
+            "home": "Udinese",
+            "away": "Fiorentina",
+            "score": "1-5"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1125,7 +1261,7 @@
           "防守不稳",
           "主场因素"
         ],
-        "risk": "历史交锋、伤病和天气均未提供，双方状态接近，预测不确定性较大。"
+        "risk": "伤病未提供，双方状态接近，预测不确定性较大。"
       },
       "degraded": false,
       "result": null,
@@ -1183,11 +1319,24 @@
         "goalsAgainst": 10
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 2,
+        "last": [
+          {
+            "date": "2026-04-19",
+            "home": "Everton",
+            "away": "Liverpool",
+            "score": "1-2"
+          },
+          {
+            "date": "2025-09-20",
+            "home": "Everton",
+            "away": "Liverpool",
+            "score": "1-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1213,7 +1362,7 @@
           "攻防数据",
           "德比变数"
         ],
-        "risk": "伤病与历史交锋数据未提供，德比战情绪和临场阵容变化可能放大冷门。"
+        "risk": "伤病未提供，德比战情绪和临场阵容变化可能放大冷门。"
       },
       "degraded": false,
       "result": null,
@@ -1271,11 +1420,24 @@
         "goalsAgainst": 23
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-03-01",
+            "home": "Valencia",
+            "away": "Osasuna",
+            "score": "1-0"
+          },
+          {
+            "date": "2025-08-24",
+            "home": "Valencia",
+            "away": "Osasuna",
+            "score": "0-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1302,7 +1464,7 @@
           "状态相当",
           "低比分倾向"
         ],
-        "risk": "交手记录、伤病和天气均未提供，双方实力接近，主场优势有限，平局可能性同样不低。"
+        "risk": "伤病未提供，双方实力接近，主场优势有限，平局可能性同样不低。"
       },
       "degraded": false,
       "result": null,
@@ -1360,11 +1522,24 @@
         "goalsAgainst": 14
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 2,
+        "last": [
+          {
+            "date": "2026-01-17",
+            "home": "Sassuolo",
+            "away": "Napoli",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-08-23",
+            "home": "Sassuolo",
+            "away": "Napoli",
+            "score": "0-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1390,7 +1565,7 @@
           "客队防守更稳",
           "客队状态占优"
         ],
-        "risk": "主队排名与状态均处劣势，但交手记录、伤病与天气均未提供，信息不完整。"
+        "risk": "主队排名与状态均处劣势，伤病未提供，信息不完整。"
       },
       "degraded": false,
       "result": null,
@@ -1448,11 +1623,24 @@
         "goalsAgainst": 17
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 2,
+        "last": [
+          {
+            "date": "2026-03-13",
+            "home": "Auxerre",
+            "away": "Marseille",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-11-01",
+            "home": "Auxerre",
+            "away": "Marseille",
+            "score": "0-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1478,7 +1666,7 @@
           "攻防数据悬殊",
           "主队防守隐患"
         ],
-        "risk": "双方历史交锋与伤病情况均未提供，欧塞尔主场变数可能压缩分差。"
+        "risk": "伤病未提供，欧塞尔主场变数可能压缩分差。"
       },
       "degraded": false,
       "result": null,
@@ -1536,11 +1724,24 @@
         "goalsAgainst": 14
       },
       "h2h": {
-        "played": 0,
+        "played": 2,
         "homeWins": 0,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 2,
+        "last": [
+          {
+            "date": "2026-05-09",
+            "home": "Fulham",
+            "away": "Bournemouth",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-10-03",
+            "home": "Fulham",
+            "away": "Bournemouth",
+            "score": "1-3"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1566,7 +1767,7 @@
           "主队平局偏多",
           "客队进攻更强"
         ],
-        "risk": "交手记录与伤病信息未提供，富勒姆主场韧性可能逼平对手。"
+        "risk": "伤病未提供，富勒姆主场韧性可能逼平对手。"
       },
       "degraded": false,
       "result": null,
@@ -1624,11 +1825,24 @@
         "goalsAgainst": 18
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-05-02",
+            "home": "Brighton Hove",
+            "away": "Newcastle",
+            "score": "1-3"
+          },
+          {
+            "date": "2025-10-18",
+            "home": "Brighton Hove",
+            "away": "Newcastle",
+            "score": "2-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1653,7 +1867,7 @@
           "主场作战",
           "客队状态一般"
         ],
-        "risk": "历史交锋、伤病与天气均未提供，纽卡斯尔联客战爆冷风险不可忽视。"
+        "risk": "伤病未提供，纽卡斯尔联客战爆冷风险不可忽视。"
       },
       "degraded": false,
       "result": null,
@@ -1711,11 +1925,24 @@
         "goalsAgainst": 11
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
-        "draws": 0,
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
         "awayWins": 0,
-        "last": []
+        "last": [
+          {
+            "date": "2026-04-12",
+            "home": "Sunderland",
+            "away": "Tottenham",
+            "score": "1-0"
+          },
+          {
+            "date": "2026-01-04",
+            "home": "Sunderland",
+            "away": "Tottenham",
+            "score": "1-1"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1741,7 +1968,7 @@
           "主队防线薄弱",
           "客队攻守均衡"
         ],
-        "risk": "双方历史交锋与伤病名单均未提供，桑德兰主场爆发力存在不确定性。"
+        "risk": "伤病未提供，桑德兰主场爆发力存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1829,7 +2056,7 @@
           "客队排名占优",
           "客队防守稳健"
         ],
-        "risk": "伤病与交手记录未提供，主队主场或有反弹，客队近5场仅1胜状态同样不稳。"
+        "risk": "伤病、交手未提供，主队主场或有反弹，客队近5场仅1胜状态同样不稳。"
       },
       "degraded": false,
       "result": null,
@@ -1887,11 +2114,24 @@
         "goalsAgainst": 14
       },
       "h2h": {
-        "played": 0,
-        "homeWins": 0,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
-        "last": []
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-05-16",
+            "home": "Freiburg",
+            "away": "RB Leipzig",
+            "score": "4-1"
+          },
+          {
+            "date": "2026-01-14",
+            "home": "Freiburg",
+            "away": "RB Leipzig",
+            "score": "0-2"
+          }
+        ]
       },
       "prediction": {
         "prob": {
@@ -1917,7 +2157,7 @@
           "客队火力强",
           "状态接近"
         ],
-        "risk": "双方无历史交锋、伤病和天气数据也未提供，莱比锡的进攻火力可能抵消主场优势。"
+        "risk": "伤病未提供，莱比锡的进攻火力可能抵消主场优势。"
       },
       "degraded": false,
       "result": null,
@@ -2004,7 +2244,7 @@
           "攻防差距明显",
           "客队状态稳定"
         ],
-        "risk": "拉科鲁尼亚近期多次平局具备一定韧性，且交锋与伤病数据未提供，存在爆冷可能。"
+        "risk": "拉科鲁尼亚近期多次平局具备一定韧性，伤病、交锋未提供，存在爆冷可能。"
       },
       "degraded": false,
       "result": null,

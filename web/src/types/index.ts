@@ -50,6 +50,18 @@ export interface WeatherInfo {
   wind: number | null;
 }
 
+export interface InjuryItem {
+  player: string;
+  type: string;
+  reason: string;
+}
+
+export interface InjuryInfo {
+  date?: string;
+  home: InjuryItem[];
+  away: InjuryItem[];
+}
+
 export interface MarketInfo {
   bookmaker?: string;
   capturedAt?: string;
@@ -71,6 +83,7 @@ export interface Match {
   result: MatchResult | null;
   h2h?: H2HInfo;
   weather?: WeatherInfo;
+  injuries?: InjuryInfo;
   market?: MarketInfo;
 }
 
