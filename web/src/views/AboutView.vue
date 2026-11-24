@@ -13,7 +13,10 @@
           <span class="idx numeric">01</span>
           <div>
             <strong>采集</strong>
-            <p>每天从 football-data.org 拉取五大联赛与欧冠的赛程、积分榜；欧联与欧协联免费套餐不开放，暂不覆盖。</p>
+            <p>
+              每天从 football-data.org 拉取五大联赛与欧冠的赛程、积分榜与赛果，并补充伤停名单（API-Football）、
+              赛前赔率（The Odds API）与开赛天气（Open-Meteo）；欧联与欧协联免费套餐不开放，暂不覆盖。
+            </p>
           </div>
         </li>
         <li>
@@ -67,6 +70,10 @@
           <dd>模型未返回有效结果时，使用联赛排名差估算概率，信心度会被压低，参考价值有限。</dd>
         </div>
         <div>
+          <dt>市场概率</dt>
+          <dd>来自 The Odds API 的多家博彩公司赛前赔率，去除抽水后归一化取均值，仅用于与模型判断对照。</dd>
+        </div>
+        <div>
           <dt>命中率</dt>
           <dd>比赛结束后按“概率最高项”判断胜负平是否命中，比分要求完全一致。</dd>
         </div>
@@ -82,12 +89,37 @@
     </section>
 
     <section class="block">
+      <h2>数据来源</h2>
+      <dl class="defs">
+        <div>
+          <dt>football-data.org</dt>
+          <dd>赛程、积分榜、赛果，以及由近两个赛季结果计算的历史交锋记录。</dd>
+        </div>
+        <div>
+          <dt>API-Football</dt>
+          <dd>伤停名单。免费套餐按日期查询、只覆盖次日，更远的场次显示“未提供”。</dd>
+        </div>
+        <div>
+          <dt>The Odds API</dt>
+          <dd>赛前胜平负赔率，取多家博彩公司均值并去除抽水，仅用于与模型概率对照。</dd>
+        </div>
+        <div>
+          <dt>Open-Meteo</dt>
+          <dd>开赛时的气温、降水概率与风速，按主队主场坐标查询。</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="block">
       <h2>免责声明</h2>
       <p class="text">
         本站预测由 AI 模型基于公开数据自动生成，仅供足球爱好者参考与娱乐，不构成任何投注建议。
         足球比赛存在高度不确定性，模型可能出错；请勿将预测结果作为任何财务决策的依据。
       </p>
-      <p class="text">数据来源：football-data.org。本站不提供赛事直播、赔率交易或任何形式的投注服务。</p>
+      <p class="text">
+        数据来源：football-data.org、API-Football、The Odds API、Open-Meteo。
+        本站不提供赛事直播、赔率交易或任何形式的投注服务。
+      </p>
     </section>
   </div>
 </template>

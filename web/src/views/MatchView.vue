@@ -333,7 +333,7 @@ onMounted(() => {
       </section>
 
       <p class="note">
-        预测由 AI 模型生成，仅供娱乐参考，不构成投注建议。数据来源：football-data.org。
+        预测由 AI 模型生成，仅供娱乐参考，不构成投注建议。数据来源：football-data.org、API-Football、The Odds API、Open-Meteo。
       </p>
     </template>
   </div>

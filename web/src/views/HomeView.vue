@@ -244,7 +244,7 @@ onUnmounted(() => {
         </section>
 
         <p class="board-note">
-          概率为模型给出的相对倾向，非确定结论。数据来源 football-data.org。
+          概率为模型给出的相对倾向，非确定结论。数据来源：football-data.org、API-Football、The Odds API、Open-Meteo。
         </p>
       </div>
     </template>
