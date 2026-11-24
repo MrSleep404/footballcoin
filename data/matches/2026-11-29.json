@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-29",
-  "generatedAt": "2026-11-24T10:23:46+08:00",
+  "generatedAt": "2026-11-24T11:11:47+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 22,
@@ -18,6 +18,7 @@
       "home": {
         "name": "Angers SCO",
         "nameEn": "Angers SCO",
+        "crest": "https://crests.football-data.org/532.png",
         "rank": 17,
         "form": [
           "L",
@@ -32,6 +33,7 @@
       "away": {
         "name": "朗斯",
         "nameEn": "Racing Club de Lens",
+        "crest": "https://crests.football-data.org/546.png",
         "rank": 11,
         "form": [
           "D",
@@ -45,29 +47,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 22,
+          "home": 23,
           "draw": 27,
-          "away": 51
+          "away": 50
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 62,
+        "confidence": 68,
         "pick": "away",
         "reasons": [
-          "昂热近5场仅1平4负，状态持续低迷",
-          "昂热赛季进9球失23球，攻防两端数据均处劣势",
-          "朗斯近2场连胜，赛季18球的进攻明显强于主队",
-          "排名上朗斯第11高于第17的昂热，实力占优"
+          "客队排名第11，明显高于主队第17",
+          "主队近5场1平4负，状态低迷",
+          "主队赛季进9球失23球，防守漏洞明显",
+          "客队近5场取得两胜，状态相对更好"
         ],
         "factors": [
+          "排名差距",
           "主队状态低迷",
-          "客队两连胜",
-          "攻防数据差距",
-          "排名差距"
+          "客队状态回暖",
+          "主队防守薄弱"
         ],
-        "risk": "未提供双方主客场分开战绩，昂热主场或有反弹，平局风险不可忽视。"
+        "risk": "主队主场因素与保级压力可能带来反弹，场地信息未提供增加不确定性。"
       },
       "degraded": false,
       "result": null
@@ -83,6 +85,7 @@
       "home": {
         "name": "都灵",
         "nameEn": "Torino FC",
+        "crest": "https://crests.football-data.org/586.png",
         "rank": 13,
         "form": [
           "L",
@@ -97,6 +100,7 @@
       "away": {
         "name": "拉齐奥",
         "nameEn": "SS Lazio",
+        "crest": "https://crests.football-data.org/110.png",
         "rank": 1,
         "form": [
           "W",
@@ -110,29 +114,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 13,
+          "home": 18,
           "draw": 24,
-          "away": 63
+          "away": 58
         },
         "score": {
-          "home": 0,
+          "home": 1,
           "away": 2
         },
-        "confidence": 74,
+        "confidence": 72,
         "pick": "away",
         "reasons": [
-          "客队拉齐奥排名第1，主队都灵仅第13，实力差距明显",
-          "拉齐奥近5场取得3胜1平且不败，状态明显好于都灵",
-          "拉齐奥赛季进28球、仅失9球，攻防数据全面优于都灵的15/18",
-          "都灵近5场有4场未胜，主场取胜的把握有限"
+          "拉齐奥排名第1，都灵仅第13，积分榜差距明显",
+          "拉齐奥近5场4胜1平保持不败，状态远胜都灵",
+          "拉齐奥赛季进28球失9球，攻防数据全面优于都灵15/18",
+          "都灵近5场仅1胜且输3场，主场取分能力存疑"
         ],
         "factors": [
-          "榜首对第13",
-          "攻防差距悬殊",
-          "客队近况不败",
-          "主队状态低迷"
+          "榜首对中下游",
+          "拉齐奥攻防俱佳",
+          "都灵近况低迷",
+          "客胜倾向"
         ],
-        "risk": "未提供场地与伤停信息，都灵主场仍可能靠顽强防守逼出平局。"
+        "risk": "都灵主场偶有顽强表现，且拉齐奥客场作战存在变数，平局不可完全排除。"
       },
       "degraded": false,
       "result": null
@@ -148,6 +152,7 @@
       "home": {
         "name": "Ipswich Town",
         "nameEn": "Ipswich Town FC",
+        "crest": "https://crests.football-data.org/349.png",
         "rank": 16,
         "form": [
           "L",
@@ -162,6 +167,7 @@
       "away": {
         "name": "阿斯顿维拉",
         "nameEn": "Aston Villa FC",
+        "crest": "https://crests.football-data.org/58.png",
         "rank": 12,
         "form": [
           "D",
@@ -175,29 +181,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
-          "draw": 27,
-          "away": 48
+          "home": 28,
+          "draw": 30,
+          "away": 42
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 62,
+        "confidence": 63,
         "pick": "away",
         "reasons": [
-          "客队近5场D D D W W保持不败，状态明显更好",
-          "主队近5场L L D D L未尝胜绩，走势低迷",
-          "主队赛季失22球，防守漏洞明显多于客队17球",
-          "排名客队第12高于主队第16，实力略占优"
+          "Ipswich Town 近5场无胜，状态低迷。",
+          "阿斯顿维拉近5场 D D D W W，保持不败。",
+          "排名主队第16、客队第12，客队略占优。",
+          "赛季进失球主队15/22，客队14/17，客队防守稍好。"
         ],
         "factors": [
-          "客队状态占优",
-          "主队防线不稳",
-          "平局概率偏高",
-          "排名接近"
+          "客队近5场不败",
+          "主队近5场无胜",
+          "积分差距有限",
+          "客队防守稍好"
         ],
-        "risk": "维拉近5场3平，平局风险不低；场地未提供，主队主场优势难以量化。"
+        "risk": "客队近5场有3场平局，且场地信息未提供，平局风险需防。"
       },
       "degraded": false,
       "result": null
@@ -213,6 +219,7 @@
       "home": {
         "name": "Elche",
         "nameEn": "Elche CF",
+        "crest": "https://crests.football-data.org/285.png",
         "rank": 19,
         "form": [
           "D",
@@ -227,6 +234,7 @@
       "away": {
         "name": "Atleti",
         "nameEn": "Club Atlético de Madrid",
+        "crest": "https://crests.football-data.org/78.png",
         "rank": 3,
         "form": [
           "W",
@@ -240,9 +248,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 15,
-          "draw": 25,
-          "away": 60
+          "home": 13,
+          "draw": 23,
+          "away": 64
         },
         "score": {
           "home": 0,
@@ -251,18 +259,17 @@
         "confidence": 78,
         "pick": "away",
         "reasons": [
-          "Atleti排名第3，Elche排名第19，排名差距明显",
-          "Atleti近5场4胜1负，近期状态优于Elche",
-          "Elche赛季失21球，防守端隐患较大",
-          "Atleti赛季进26失10，攻防数据均占优"
+          "客队排名第3，主队第19，积分排名差距明显。",
+          "客队近5场4胜1负，近期状态明显优于主队。",
+          "客队赛季进失球26/10，攻防数据优于主队15/21。"
         ],
         "factors": [
-          "排名差距大",
-          "客队状态佳",
-          "主队防守不稳",
-          "客队攻防占优"
+          "排名差距",
+          "客队状态",
+          "攻防占优",
+          "主场因素"
         ],
-        "risk": "足球单场偶然性较高，Elche主场抢分可能带来波动。"
+        "risk": "主队主场作战且近期有平局，需防客队小胜或平局；未提供场地与伤停信息。"
       },
       "degraded": false,
       "result": null
@@ -278,6 +285,7 @@
       "home": {
         "name": "斯图加特",
         "nameEn": "VfB Stuttgart",
+        "crest": "https://crests.football-data.org/10.png",
         "rank": 8,
         "form": [
           "D",
@@ -292,6 +300,7 @@
       "away": {
         "name": "法兰克福",
         "nameEn": "Eintracht Frankfurt",
+        "crest": "https://crests.football-data.org/19.png",
         "rank": 7,
         "form": [
           "W",
@@ -313,21 +322,21 @@
           "home": 2,
           "away": 1
         },
-        "confidence": 56,
+        "confidence": 58,
         "pick": "home",
         "reasons": [
-          "主队排名第8、客队第7，积分接近，主队有主场优势",
-          "法兰克福近5场取得3胜1平1负，近期状态略好于主队的2胜1平2负",
-          "法兰克福赛季失球高达20个，防守不稳，主队有望进球",
-          "斯图加特赛季进失球15/15，攻守均衡，主场更易发挥"
+          "主队第8、客队第7，排名接近主队略占主场优势",
+          "主队赛季进失球15/15，客队16/20防守更差",
+          "主队近5场D W W L L，客队W D W L W，客队略稳",
+          "客队失球20多于主队15，主场作战主队进攻更有机会"
         ],
         "factors": [
-          "排名相邻",
-          "客队防守不稳",
-          "主队主场优势",
-          "状态接近"
+          "排名接近",
+          "主队主场",
+          "客队防守偏弱",
+          "状态小幅波动"
         ],
-        "risk": "双方实力接近，并且场地与伤停信息缺失；法兰克福近期状态更好，主胜并不稳妥。"
+        "risk": "场地与伤停等关键信息缺失，双方排名接近且主队近5场有2负，比赛走向不确定性较大。"
       },
       "degraded": false,
       "result": null
@@ -343,6 +352,7 @@
       "home": {
         "name": "国际米兰",
         "nameEn": "FC Internazionale Milano",
+        "crest": "https://crests.football-data.org/108.png",
         "rank": 3,
         "form": [
           "D",
@@ -357,6 +367,7 @@
       "away": {
         "name": "热那亚",
         "nameEn": "Genoa CFC",
+        "crest": "https://crests.football-data.org/107.png",
         "rank": 10,
         "form": [
           "W",
@@ -370,29 +381,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 58,
-          "draw": 24,
-          "away": 18
+          "home": 63,
+          "draw": 22,
+          "away": 15
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 72,
+        "confidence": 71,
         "pick": "home",
         "reasons": [
-          "主队排名第3，客队第10，主队排名优势明显",
-          "主队赛季进32球失17球，进攻火力强于客队13球",
-          "热那亚近5场4胜1负，近期状态出色",
-          "国际米兰近5场3胜1平1负，整体表现稳定"
+          "主队排名第3，高于客队第10，积分榜占优。",
+          "主队赛季进32球、失17球，攻防数据优于客队13/16。",
+          "客队近5场4胜1负，状态不弱，需防平局。",
+          "主队近5场3胜1平1负，主场仍有较强拿分能力。"
         ],
         "factors": [
-          "排名优势",
-          "进攻火力",
-          "客队状态",
-          "主场因素"
+          "排名第3对第10",
+          "主队进攻32球",
+          "客队近5场4胜",
+          "主队攻防占优"
         ],
-        "risk": "热那亚近5场4胜1负状态正佳，且主队赛季失17球，存在被反击拿分的不确定性。"
+        "risk": "客队近5场4胜状态正佳，存在爆冷可能；场地未提供，信息略不完整。"
       },
       "degraded": false,
       "result": null
@@ -408,6 +419,7 @@
       "home": {
         "name": "Le Mans",
         "nameEn": "Le Mans FC",
+        "crest": "https://crests.football-data.org/535.png",
         "rank": 13,
         "form": [
           "W",
@@ -422,6 +434,7 @@
       "away": {
         "name": "里尔",
         "nameEn": "Lille OSC",
+        "crest": "https://crests.football-data.org/521.png",
         "rank": 3,
         "form": [
           "L",
@@ -435,29 +448,27 @@
       },
       "prediction": {
         "prob": {
-          "home": 22,
+          "home": 23,
           "draw": 27,
-          "away": 51
+          "away": 50
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 63,
+        "confidence": 67,
         "pick": "away",
         "reasons": [
-          "客队排名第3，主队仅第13，积分榜差距明显",
-          "主队赛季进15失21，防守漏洞较为突出",
-          "主队近5场仅1胜2平2负，状态偏低迷",
-          "客队近5场2胜2平1负，进失球14/8攻守更均衡"
+          "里尔排名第3，高于第13的Le Mans，积分榜优势明显。",
+          "里尔赛季仅失8球，防守明显优于失21球的Le Mans。",
+          "近5场里尔2胜2平1负，Le Mans为1胜2平2负，状态稍好。"
         ],
         "factors": [
           "排名差距",
-          "主队防守薄弱",
-          "客队攻守均衡",
-          "客队状态占优"
+          "防守更稳",
+          "客队状态稍好"
         ],
-        "risk": "法甲客场变数较大，主队主场或有抵抗，且场地信息未提供。"
+        "risk": "里尔近5场有1负2平，客场稳定性不足，主队主场表现未提供。"
       },
       "degraded": false,
       "result": null
@@ -473,6 +484,7 @@
       "home": {
         "name": "尼斯",
         "nameEn": "OGC Nice",
+        "crest": "https://crests.football-data.org/522.png",
         "rank": 7,
         "form": [
           "L",
@@ -487,6 +499,7 @@
       "away": {
         "name": "Troyes",
         "nameEn": "ES Troyes AC",
+        "crest": "https://crests.football-data.org/531.png",
         "rank": 14,
         "form": [
           "W",
@@ -500,30 +513,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 52,
-          "draw": 26,
-          "away": 22
+          "home": 56,
+          "draw": 24,
+          "away": 20
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 66,
         "pick": "home",
         "reasons": [
-          "尼斯排名第7高于Troyes第14，具备排名优势",
-          "近5场尼斯3胜2负，Troyes2胜1平2负，状态接近",
-          "尼斯赛季进球17多于Troyes10，进攻端更优",
-          "Troyes失球18多于尼斯15，防守略逊"
+          "尼斯排名第7，高于第14的Troyes",
+          "尼斯赛季进17球失15球，攻守均优于对手的10/18",
+          "近5场尼斯3胜2负，Troyes仅2胜1平2负",
+          "主队坐镇主场，整体实力占优"
         ],
         "factors": [
-          "排名优势",
+          "排名领先",
+          "进攻效率更高",
           "主场作战",
-          "进攻效率",
-          "防守隐患",
-          "状态接近"
+          "客队防守偏弱"
         ],
-        "risk": "Troyes近期有胜绩且尼斯状态有起伏，主场优势未必稳；场地与伤停信息未提供。"
+        "risk": "尼斯近5场胜负交替、状态起伏，主场能否稳定取分是最大不确定性。"
       },
       "degraded": false,
       "result": null
@@ -539,6 +551,7 @@
       "home": {
         "name": "勒阿弗尔",
         "nameEn": "Le Havre AC",
+        "crest": "https://crests.football-data.org/533.png",
         "rank": 18,
         "form": [
           "L",
@@ -553,6 +566,7 @@
       "away": {
         "name": "Strasbourg",
         "nameEn": "RC Strasbourg Alsace",
+        "crest": "https://crests.football-data.org/576.png",
         "rank": 16,
         "form": [
           "L",
@@ -566,9 +580,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 29,
-          "draw": 27,
-          "away": 44
+          "home": 27,
+          "draw": 30,
+          "away": 43
         },
         "score": {
           "home": 1,
@@ -577,17 +591,18 @@
         "confidence": 55,
         "pick": "away",
         "reasons": [
-          "勒阿弗尔排名第18且近5场全负，状态低迷。",
-          "Strasbourg排名第16，近5场1胜4负，同样不稳。",
-          "主队赛季失25球防守差，客队进18球攻击稍优。"
+          "勒阿弗尔排名第18，近5场全败，状态极差",
+          "勒阿弗尔赛季进10失25，防守问题突出",
+          "Strasbourg排名第16，赛季进18球，进攻略优",
+          "Strasbourg近5场1胜4负，同样不稳定"
         ],
         "factors": [
           "主队五连败",
-          "客队排名略高",
-          "主队防守漏洞",
-          "客队状态平平"
+          "主队防守差",
+          "客队进攻略优",
+          "双方状态低迷"
         ],
-        "risk": "场地与伤停信息未提供，双方状态均差，客胜判断不确定性较大。"
+        "risk": "场地未提供，双方状态低迷且实力接近，客队优势有限，结果不确定性较高。"
       },
       "degraded": false,
       "result": null
@@ -603,6 +618,7 @@
       "home": {
         "name": "巴黎圣日耳曼",
         "nameEn": "Paris Saint-Germain FC",
+        "crest": "https://crests.football-data.org/524.png",
         "rank": 1,
         "form": [
           "W",
@@ -617,6 +633,7 @@
       "away": {
         "name": "Lorient",
         "nameEn": "FC Lorient",
+        "crest": "https://crests.football-data.org/525.png",
         "rank": 10,
         "form": [
           "D",
@@ -630,29 +647,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 76,
-          "draw": 15,
-          "away": 9
+          "home": 74,
+          "draw": 16,
+          "away": 10
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 78,
+        "confidence": 82,
         "pick": "home",
         "reasons": [
-          "主队排名第1，近5场取得W W W W W全胜",
-          "主队赛季进25球失12球，进攻火力明显占优",
-          "客队排名第10，近5场仅2胜2平1负，状态起伏",
-          "客队赛季进10球失9球，进攻端威胁有限"
+          "主队排名第1且近5场全胜，状态正佳",
+          "主队赛季进球25个，远高于客队10个",
+          "客队近5场仅2胜，客场稳定性不足",
+          "排名第1对第10，实力差距明显"
         ],
         "factors": [
-          "榜首对中游",
           "主队五连胜",
-          "进攻火力差距",
-          "客队状态不稳"
+          "攻防数据占优",
+          "排名差距悬殊",
+          "客队状态起伏"
         ],
-        "risk": "场地等细节信息未提供；若主队轮换或轻敌，客队近期两胜具备一定搅局能力。"
+        "risk": "场地与伤停信息未提供；主队赛季失球12个偏多，客队反击仍有破门可能。"
       },
       "degraded": false,
       "result": null
@@ -668,6 +685,7 @@
       "home": {
         "name": "皇家马德里",
         "nameEn": "Real Madrid CF",
+        "crest": "https://crests.football-data.org/86.png",
         "rank": 2,
         "form": [
           "W",
@@ -682,6 +700,7 @@
       "away": {
         "name": "阿拉维斯",
         "nameEn": "Deportivo Alavés",
+        "crest": "https://crests.football-data.org/263.png",
         "rank": 9,
         "form": [
           "W",
@@ -695,28 +714,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 78,
-          "draw": 14,
-          "away": 8
+          "home": 80,
+          "draw": 13,
+          "away": 7
         },
         "score": {
-          "home": 2,
+          "home": 3,
           "away": 0
         },
         "confidence": 84,
         "pick": "home",
         "reasons": [
-          "皇家马德里排名第2，阿拉维斯第9，主队排名优势明显",
-          "皇家马德里近5场全胜，阿拉维斯近5场仅1胜",
-          "主队赛季进33失11，攻防数据全面优于客队18/18"
+          "主队排名第2，客队第9，积分榜差距明显",
+          "主队近5场全胜，状态明显优于客队",
+          "主队赛季进33失11，攻防数据大幅领先",
+          "客队近5场1胜2平2负，稳定性不足"
         ],
         "factors": [
-          "排名第2对第9",
-          "主队近5场全胜",
-          "攻防数据占优",
-          "主场作战"
+          "排名差距",
+          "主队五连胜",
+          "攻防优势",
+          "客队状态起伏"
         ],
-        "risk": "阿拉维斯仍有一定韧性，若皇家马德里久攻不下，需防冷平。"
+        "risk": "主队大胜幅度存在不确定性，客队近5场有2场平局显示一定韧性。"
       },
       "degraded": false,
       "result": null
@@ -732,6 +752,7 @@
       "home": {
         "name": "乌迪内斯",
         "nameEn": "Udinese Calcio",
+        "crest": "https://crests.football-data.org/115.png",
         "rank": 19,
         "form": [
           "D",
@@ -746,6 +767,7 @@
       "away": {
         "name": "佛罗伦萨",
         "nameEn": "ACF Fiorentina",
+        "crest": "https://crests.football-data.org/99.png",
         "rank": 16,
         "form": [
           "L",
@@ -760,28 +782,27 @@
       "prediction": {
         "prob": {
           "home": 30,
-          "draw": 30,
-          "away": 40
+          "draw": 32,
+          "away": 38
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 50,
         "pick": "away",
         "reasons": [
-          "乌迪内斯排名第19，近5场2平3负，状态低迷。",
-          "佛罗伦萨排名第16，近5场1胜2平2负，略占上风。",
-          "乌迪内斯进13失26，佛罗伦萨进17失28，双方防守均差。"
+          "主队第19，近5场2平3负未尝胜绩",
+          "客队第16，近5场1胜2平状态略优",
+          "主队进13失26，防守数据比客队更差"
         ],
         "factors": [
-          "主队排名第19",
-          "客队近况略优",
-          "双方防守不佳",
-          "主场因素",
-          "信心有限"
+          "排名接近",
+          "主队状态低迷",
+          "双方防守差",
+          "客队略占优"
         ],
-        "risk": "双方实力接近且防守均差，未提供场地和伤停信息，预测不确定性较高。"
+        "risk": "未提供场地等细节，双方实力接近且防守均差，赛果不确定性较高。"
       },
       "degraded": false,
       "result": null
@@ -797,6 +818,7 @@
       "home": {
         "name": "埃弗顿",
         "nameEn": "Everton FC",
+        "crest": "https://crests.football-data.org/62.png",
         "rank": 9,
         "form": [
           "L",
@@ -811,6 +833,7 @@
       "away": {
         "name": "利物浦",
         "nameEn": "Liverpool FC",
+        "crest": "https://crests.football-data.org/64.png",
         "rank": 4,
         "form": [
           "W",
@@ -824,29 +847,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 23,
+          "home": 25,
           "draw": 27,
-          "away": 50
+          "away": 48
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "客队第4，主队第9，积分排名客队领先",
-          "利物浦近5场4胜1负，埃弗顿近5场2胜3负",
-          "赛季进失球利物浦18/10，埃弗顿12/14，净胜球差距明显",
-          "埃弗顿主场作战，近5场两胜均在主场可争一分"
+          "利物浦排名第4高于埃弗顿第9，积分榜占优",
+          "利物浦近5场4胜1负，状态明显好于主队2胜3负",
+          "利物浦赛季进18失10，净胜球+8优于主队-2",
+          "埃弗顿近5场输3场且防守端失球偏多"
         ],
         "factors": [
-          "排名客队领先",
-          "近况利物浦更稳",
-          "净胜球+8对-2",
-          "德比主场因素"
+          "排名差距",
+          "近期状态",
+          "净胜球优势",
+          "德比战变量"
         ],
-        "risk": "默西塞德德比主场气氛强，埃弗顿近期状态起伏，存在逼平甚至爆冷的不确定性；场地信息未提供。"
+        "risk": "默西塞德德比情绪因素大，且场地与伤停信息未提供，冷门风险不可忽视。"
       },
       "degraded": false,
       "result": null
@@ -862,6 +885,7 @@
       "home": {
         "name": "瓦伦西亚",
         "nameEn": "Valencia CF",
+        "crest": "https://crests.football-data.org/95.png",
         "rank": 17,
         "form": [
           "W",
@@ -876,6 +900,7 @@
       "away": {
         "name": "奥萨苏纳",
         "nameEn": "CA Osasuna",
+        "crest": "https://crests.football-data.org/79.png",
         "rank": 13,
         "form": [
           "W",
@@ -889,30 +914,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 39,
-          "draw": 29,
+          "home": 37,
+          "draw": 31,
           "away": 32
         },
         "score": {
-          "home": 1,
-          "away": 0
+          "home": 2,
+          "away": 1
         },
-        "confidence": 56,
+        "confidence": 58,
         "pick": "home",
         "reasons": [
-          "主队排名第17、客队第13，双方积分差距不大",
-          "主队赛季进9失20，进攻效率偏低但失球较多",
-          "客队赛季进13失23，防守漏洞明显",
-          "近5场主队W L W L D，客队W D L L W，状态均不稳"
+          "瓦伦西亚排名第17，赛季失20球，防守薄弱但坐镇主场",
+          "奥萨苏纳排名第13，进13失23，防守同样不佳",
+          "近5场主队W L W L D、客队W D L L W，双方状态接近",
+          "双方赛季进球分别仅9球和13球，攻击力有限"
         ],
         "factors": [
-          "排名接近",
-          "双方防守偏弱",
-          "进攻效率低",
-          "状态起伏",
-          "主场微弱优势"
+          "主场优势",
+          "双方防守薄弱",
+          "排名相近",
+          "状态接近",
+          "进球效率低"
         ],
-        "risk": "两队实力接近且进攻乏力，易出现低比分平局；场地信息未提供，主场优势难以量化。"
+        "risk": "两队排名接近、实力差距小，防守均差使比分波动大，平局可能性不低。"
       },
       "degraded": false,
       "result": null
@@ -928,6 +953,7 @@
       "home": {
         "name": "Sassuolo",
         "nameEn": "US Sassuolo Calcio",
+        "crest": "https://crests.football-data.org/471.png",
         "rank": 18,
         "form": [
           "L",
@@ -942,6 +968,7 @@
       "away": {
         "name": "那不勒斯",
         "nameEn": "SSC Napoli",
+        "crest": "https://crests.football-data.org/113.png",
         "rank": 8,
         "form": [
           "W",
@@ -955,29 +982,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 14,
-          "draw": 24,
-          "away": 62
+          "home": 15,
+          "draw": 25,
+          "away": 60
         },
         "score": {
-          "home": 1,
+          "home": 0,
           "away": 2
         },
-        "confidence": 78,
+        "confidence": 63,
         "pick": "away",
         "reasons": [
-          "主队排名第18，近5场全败，状态极差",
-          "客队排名第8，近5场2胜2平1负更稳",
-          "主队赛季失球31个，防守漏洞明显",
-          "客队进失球19/14，攻守平衡优于主队"
+          "主队近5场全败，状态极度低迷",
+          "主队赛季失31球，防守漏洞明显",
+          "客队排名第8，近5场取得2胜2平1负",
+          "客队赛季19/14进失球，攻守更均衡"
         ],
         "factors": [
-          "排名差距",
           "主队五连败",
-          "防守漏洞",
-          "客队更稳"
+          "主队防守崩坏",
+          "排名差距明显",
+          "客队状态占优"
         ],
-        "risk": "那不勒斯近5场有2场平局，客场稳定性及未提供的伤停信息仍是变数。"
+        "risk": "那不勒斯近5场仅2胜、平局偏多，且场地与伤停信息未提供，平局不可排除。"
       },
       "degraded": false,
       "result": null
@@ -993,6 +1020,7 @@
       "home": {
         "name": "欧塞尔",
         "nameEn": "AJ Auxerre",
+        "crest": "https://crests.football-data.org/519.png",
         "rank": 15,
         "form": [
           "D",
@@ -1007,6 +1035,7 @@
       "away": {
         "name": "Marseille",
         "nameEn": "Olympique de Marseille",
+        "crest": "https://crests.football-data.org/516.png",
         "rank": 5,
         "form": [
           "L",
@@ -1020,29 +1049,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 23,
-          "draw": 25,
-          "away": 52
+          "home": 18,
+          "draw": 24,
+          "away": 58
         },
         "score": {
-          "home": 1,
+          "home": 0,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 74,
         "pick": "away",
         "reasons": [
-          "客队 Marseille 排名第 5，高于主队欧塞尔的第 15",
-          "Marseille 近 5 场取得 4 胜 1 负，近期状态明显更好",
-          "欧塞尔赛季进 14 球、失 25 球，净胜球为 -11，防守端丢球偏多",
-          "Marseille 赛季进 24 球、失 17 球，攻守两端均优于对手"
+          "客队排名第5，主队第15，排名差距明显",
+          "客队近5场4胜1负，状态明显优于主队",
+          "主队赛季失25球，防守端隐患较大",
+          "客队赛季进24球，进攻效率更高"
         ],
         "factors": [
-          "排名差距明显",
-          "近况客队占优",
-          "主队防守不稳",
-          "客队攻击力强"
+          "排名差距",
+          "客队状态佳",
+          "主队防守差",
+          "客队进攻强"
         ],
-        "risk": "欧塞尔近 5 场有 2 场平局，主场有守平能力；场地与伤停信息未提供，存在不确定性。"
+        "risk": "主队有主场因素且客队近5场有1负，需防平局冷门。"
       },
       "degraded": false,
       "result": null
@@ -1058,6 +1087,7 @@
       "home": {
         "name": "富勒姆",
         "nameEn": "Fulham FC",
+        "crest": "https://crests.football-data.org/63.png",
         "rank": 15,
         "form": [
           "D",
@@ -1072,6 +1102,7 @@
       "away": {
         "name": "伯恩茅斯",
         "nameEn": "AFC Bournemouth",
+        "crest": "https://crests.football-data.org/bournemouth.png",
         "rank": 5,
         "form": [
           "W",
@@ -1085,29 +1116,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 27,
-          "draw": 26,
-          "away": 47
+          "home": 30,
+          "draw": 27,
+          "away": 43
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "伯恩茅斯近5场全胜，状态明显占优",
-          "伯恩茅斯排名第5，高于富勒姆第15",
-          "富勒姆近5场有3场平局，取胜能力有限",
-          "富勒姆赛季进球11少于伯恩茅斯18"
+          "伯恩茅斯近5场全胜，状态明显占优。",
+          "富勒姆近5场3平2胜，主场具备一定韧性。",
+          "伯恩茅斯排名第5，高于富勒姆第15。",
+          "客队赛季进球18多于主队11，进攻更强。"
         ],
         "factors": [
           "客队五连胜",
-          "排名差距",
-          "主队三连平",
-          "客队进攻占优"
+          "排名优势",
+          "主队多平局",
+          "客队进攻更强",
+          "主场韧性"
         ],
-        "risk": "富勒姆近两场连胜且主场作战，伯恩茅斯客场稳定性未知。"
+        "risk": "富勒姆主场韧性可能拖入平局，伯恩茅斯连胜存在回落风险。"
       },
       "degraded": false,
       "result": null
@@ -1123,6 +1155,7 @@
       "home": {
         "name": "布莱顿",
         "nameEn": "Brighton & Hove Albion FC",
+        "crest": "https://crests.football-data.org/397.png",
         "rank": 2,
         "form": [
           "L",
@@ -1137,6 +1170,7 @@
       "away": {
         "name": "纽卡斯尔联",
         "nameEn": "Newcastle United FC",
+        "crest": "https://crests.football-data.org/67.png",
         "rank": 13,
         "form": [
           "D",
@@ -1150,29 +1184,28 @@
       },
       "prediction": {
         "prob": {
-          "home": 56,
-          "draw": 24,
-          "away": 20
+          "home": 60,
+          "draw": 22,
+          "away": 18
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 74,
         "pick": "home",
         "reasons": [
-          "布莱顿排名第2，纽卡斯尔联仅列第13，积分差距明显",
-          "布莱顿赛季进球26个、失球仅9个，攻防数据远优于客队15/18",
-          "近5场布莱顿取得3胜，纽卡斯尔联仅1胜且输掉2场",
-          "主场作战的布莱顿近期状态更稳定，客队近5场有2场平局"
+          "布莱顿排名第2，纽卡斯尔联排名第13，排名差距明显",
+          "布莱顿赛季进失球26/9，攻防数据优于纽卡斯尔联15/18",
+          "近5场布莱顿3胜2负，纽卡斯尔联仅1胜2平2负"
         ],
         "factors": [
-          "排名第2对第13",
+          "排名差距明显",
           "攻防数据占优",
-          "主场优势",
-          "客队状态低迷"
+          "近期胜率更高",
+          "主场优势"
         ],
-        "risk": "纽卡斯尔联近5场有2场平局，若其防守收缩，平局可能性不可忽视。"
+        "risk": "纽卡斯尔联近5场有两场平局，且双方近期均不稳定，平局风险不可忽视。"
       },
       "degraded": false,
       "result": null
@@ -1188,6 +1221,7 @@
       "home": {
         "name": "桑德兰",
         "nameEn": "Sunderland AFC",
+        "crest": "https://crests.football-data.org/71.png",
         "rank": 18,
         "form": [
           "D",
@@ -1202,6 +1236,7 @@
       "away": {
         "name": "热刺",
         "nameEn": "Tottenham Hotspur FC",
+        "crest": "https://crests.football-data.org/73.png",
         "rank": 10,
         "form": [
           "W",
@@ -1215,9 +1250,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 22,
+          "home": 23,
           "draw": 26,
-          "away": 52
+          "away": 51
         },
         "score": {
           "home": 1,
@@ -1226,18 +1261,18 @@
         "confidence": 68,
         "pick": "away",
         "reasons": [
-          "热刺近5场4胜1负，状态明显优于桑德兰的1胜2平2负",
-          "桑德兰排名第18，热刺第10，积分榜差距明显",
-          "桑德兰赛季失17球，防守端问题突出",
-          "热刺赛季进球12多于桑德兰8，进攻更稳"
+          "热刺近 5 场 4 胜 1 负，状态明显优于桑德兰的 1 胜 2 平 2 负",
+          "桑德兰赛季失 17 球，防守漏洞突出，排名第 18 位",
+          "热刺排名第 10，进球 12 失 11，攻守平衡好于主队 8/17",
+          "桑德兰近 5 场中 3 场未取胜，主场取分能力有限"
         ],
         "factors": [
-          "热刺状态火热",
-          "主队防守漏洞",
-          "排名差距",
-          "客战存变数"
+          "近况差距明显",
+          "主队防守薄弱",
+          "客队状态火热",
+          "排名相差 8 位"
         ],
-        "risk": "热刺客场表现与临场阵容未知，若主队收缩防守可能拖入平局。"
+        "risk": "桑德兰近 5 场有 2 场平局，主场存在逼平可能；热刺客场稳定性未提供数据。"
       },
       "degraded": false,
       "result": null
@@ -1253,6 +1288,7 @@
       "home": {
         "name": "水晶宫",
         "nameEn": "Crystal Palace FC",
+        "crest": "https://crests.football-data.org/354.png",
         "rank": 20,
         "form": [
           "L",
@@ -1267,6 +1303,7 @@
       "away": {
         "name": "Hull City",
         "nameEn": "Hull City AFC",
+        "crest": "https://crests.football-data.org/322.png",
         "rank": 11,
         "form": [
           "W",
@@ -1280,29 +1317,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 22,
+          "home": 31,
           "draw": 27,
-          "away": 51
+          "away": 42
         },
         "score": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 52,
+        "confidence": 58,
         "pick": "away",
         "reasons": [
-          "水晶宫排名第20，近5场全败，状态极差",
-          "水晶宫赛季失球27个，防守明显漏洞",
-          "Hull City排名第11，赛季进13失11，攻守较均衡",
-          "客队近5场有1胜2平，表现优于主队"
+          "水晶宫排名第20，近5场全负状态低迷",
+          "Hull City排名第11，近5场取得1胜2平",
+          "水晶宫赛季失27球，防守漏洞明显",
+          "Hull City进失球13/11，净胜球为正"
         ],
         "factors": [
           "主队五连败",
-          "主队防守崩盘",
           "客队排名占优",
-          "客队状态更稳"
+          "主队防守差",
+          "客队净胜球为正"
         ],
-        "risk": "双方排名与近期数据尚可，但主队五连败、状态指标偏低，且场地与伤停信息未提供，不确定性较大。"
+        "risk": "水晶宫有主场之利且两队积分接近，Hull City近5场仅1胜，胜负不确定性较大。"
       },
       "degraded": false,
       "result": null
@@ -1318,6 +1355,7 @@
       "home": {
         "name": "弗赖堡",
         "nameEn": "SC Freiburg",
+        "crest": "https://crests.football-data.org/17.png",
         "rank": 3,
         "form": [
           "W",
@@ -1332,6 +1370,7 @@
       "away": {
         "name": "莱比锡红牛",
         "nameEn": "RB Leipzig",
+        "crest": "https://crests.football-data.org/721.png",
         "rank": 4,
         "form": [
           "W",
@@ -1345,30 +1384,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 30,
+          "home": 33,
           "draw": 29,
-          "away": 41
+          "away": 38
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 60,
+        "confidence": 61,
         "pick": "away",
         "reasons": [
-          "主队排名第3、客队第4，双方排名接近。",
-          "客队近5场4胜1负，状态略优于主队3胜2负。",
-          "客队赛季进32球，攻击力明显强于主队21球。",
-          "主队失球10少于客队14，防守端相对更稳。"
+          "积分榜主队第3、客队第4，双方排名接近。",
+          "莱比锡红牛近5场4胜1负，近期状态略优于弗赖堡。",
+          "莱比锡红牛赛季进32球，进攻火力高于弗赖堡的21球。",
+          "弗赖堡坐镇主场，赛季失10球防守表现较稳。"
         ],
         "factors": [
           "排名接近",
-          "客队火力强",
-          "主队防守稳",
-          "客队状态略优",
-          "主场因素未知"
+          "客队状态佳",
+          "莱比锡火力强",
+          "主场优势",
+          "防守较稳"
         ],
-        "risk": "未提供场地与伤停信息，主场优势难以量化，双方排名接近使胜负不确定性较高。"
+        "risk": "双方排名接近且状态都不错，主场优势与莱比锡火力的对冲使结果存在不确定性。"
       },
       "degraded": false,
       "result": null
@@ -1384,6 +1423,7 @@
       "home": {
         "name": "Deportivo",
         "nameEn": "RC Deportivo La Coruña",
+        "crest": "https://crests.football-data.org/560.png",
         "rank": 12,
         "form": [
           "L",
@@ -1398,6 +1438,7 @@
       "away": {
         "name": "Barça",
         "nameEn": "FC Barcelona",
+        "crest": "https://crests.football-data.org/81.png",
         "rank": 1,
         "form": [
           "W",
@@ -1419,21 +1460,21 @@
           "home": 0,
           "away": 2
         },
-        "confidence": 72,
+        "confidence": 82,
         "pick": "away",
         "reasons": [
-          "客队排名第 1，主队仅第 12，两队排名差距明显",
-          "客队赛季进球 51 个，远高于主队 16 个，进攻优势突出",
-          "客队近 5 场 4 胜 1 负，主队近 5 场仅 1 胜",
-          "主队赛季失 17 球，防守端恐难限制客队火力"
+          "Barça 排名第 1，Deportivo 仅列第 12，积分差距明显",
+          "Barça 近 5 场 4 胜 1 负，整体状态优于主队",
+          "赛季进失球 Barça 51/15，攻防数据远超 Deportivo 16/17",
+          "Deportivo 近 5 场仅 1 胜，难以阻挡客队"
         ],
         "factors": [
-          "榜首对中游",
-          "攻防差距大",
-          "客队状态更佳",
-          "主队近况不稳"
+          "排名差距大",
+          "客队状态佳",
+          "攻防悬殊",
+          "客胜倾向"
         ],
-        "risk": "主队近 5 场有 3 场不败，且主场作战，可能拖成平局或小比分。"
+        "risk": "西甲存在冷门可能，且场地与伤停信息未提供，客队大胜并非确定。"
       },
       "degraded": false,
       "result": null
