@@ -76,6 +76,21 @@ function syncQuery() {
   void router.replace({ query });
 }
 
+function nearestDate(dates: string[], today: string): string {
+  if (!dates.length) return "";
+  const target = Date.parse(today);
+  let best = dates[0];
+  let bestDiff = Number.POSITIVE_INFINITY;
+  for (const item of dates) {
+    const diff = Math.abs(Date.parse(item) - target);
+    if (diff < bestDiff || (diff === bestDiff && item > best)) {
+      best = item;
+      bestDiff = diff;
+    }
+  }
+  return best;
+}
+
 async function init() {
   loading.value = true;
   error.value = "";
@@ -88,9 +103,7 @@ async function init() {
 
     date.value = data.dates.includes(queryDate)
       ? queryDate
-      : data.dates.includes(bjToday())
-        ? bjToday()
-        : data.latest;
+      : nearestDate(data.dates, bjToday()) || data.latest;
     league.value = data.leagues.some((item) => item.code === queryLeague)
       ? (queryLeague as LeagueCode)
       : "ALL";
