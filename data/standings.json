@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-24T14:05:48+08:00",
+  "updatedAt": "2026-11-24T16:50:51+08:00",
   "leagues": [
     {
       "code": "PL",
       "name": "英超",
-      "matchday": 11,
+      "matchday": 12,
       "table": [
         {
           "rank": 1,
@@ -432,7 +432,7 @@
     {
       "code": "PD",
       "name": "西甲",
-      "matchday": 13,
+      "matchday": 14,
       "table": [
         {
           "rank": 1,
@@ -859,7 +859,7 @@
     {
       "code": "SA",
       "name": "意甲",
-      "matchday": 12,
+      "matchday": 13,
       "table": [
         {
           "rank": 1,
@@ -1286,7 +1286,7 @@
     {
       "code": "BL1",
       "name": "德甲",
-      "matchday": 10,
+      "matchday": 11,
       "table": [
         {
           "rank": 1,
@@ -1671,7 +1671,7 @@
     {
       "code": "FL1",
       "name": "法甲",
-      "matchday": 11,
+      "matchday": 12,
       "table": [
         {
           "rank": 1,
@@ -1929,7 +1929,7 @@
           "rank": 13,
           "name": "勒芒",
           "tla": "LMF",
-          "crest": "https://upload.wikimedia.org/wikipedia/en/5/57/Le_Mans_FC_logo.svg",
+          "crest": "https://crests.football-data.org/535.png",
           "played": 11,
           "won": 2,
           "draw": 5,
