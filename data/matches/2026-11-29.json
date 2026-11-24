@@ -1,0 +1,1331 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-29",
+  "generatedAt": "2026-11-24T09:25:18+08:00",
+  "source": "football-data.org",
+  "model": "gpt-4o-mini",
+  "matchCount": 22,
+  "degradedCount": 22,
+  "matches": [
+    {
+      "id": "FL1-2026-11-29-ANG-RCL",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-28T16:15:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "Angers SCO",
+        "nameEn": "Angers SCO",
+        "rank": 17,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 9,
+        "goalsAgainst": 23
+      },
+      "away": {
+        "name": "朗斯",
+        "nameEn": "Racing Club de Lens",
+        "rank": 11,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 16
+      },
+      "prediction": {
+        "prob": {
+          "home": 38,
+          "draw": 27,
+          "away": 35
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-29-TOR-LAZ",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-28T17:00:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "都灵",
+        "nameEn": "Torino FC",
+        "rank": 13,
+        "form": [
+          "L",
+          "D",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 18
+      },
+      "away": {
+        "name": "拉齐奥",
+        "nameEn": "SS Lazio",
+        "rank": 1,
+        "form": [
+          "W",
+          "D",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 28,
+        "goalsAgainst": 9
+      },
+      "prediction": {
+        "prob": {
+          "home": 31,
+          "draw": 27,
+          "away": 42
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-29-IPS-AVL",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-28T17:30:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "Ipswich Town",
+        "nameEn": "Ipswich Town FC",
+        "rank": 16,
+        "form": [
+          "L",
+          "L",
+          "D",
+          "D",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 22
+      },
+      "away": {
+        "name": "阿斯顿维拉",
+        "nameEn": "Aston Villa FC",
+        "rank": 12,
+        "form": [
+          "D",
+          "D",
+          "D",
+          "W",
+          "W"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 17
+      },
+      "prediction": {
+        "prob": {
+          "home": 40,
+          "draw": 27,
+          "away": 33
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-29-ELC-ATL",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-28T17:30:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "Elche",
+        "nameEn": "Elche CF",
+        "rank": 19,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "W",
+          "D"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 21
+      },
+      "away": {
+        "name": "Atleti",
+        "nameEn": "Club Atlético de Madrid",
+        "rank": 3,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 26,
+        "goalsAgainst": 10
+      },
+      "prediction": {
+        "prob": {
+          "home": 26,
+          "draw": 27,
+          "away": 47
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-29-VFB-SGE",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-28T17:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "斯图加特",
+        "nameEn": "VfB Stuttgart",
+        "rank": 8,
+        "form": [
+          "D",
+          "W",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "法兰克福",
+        "nameEn": "Eintracht Frankfurt",
+        "rank": 7,
+        "form": [
+          "W",
+          "D",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 16,
+        "goalsAgainst": 20
+      },
+      "prediction": {
+        "prob": {
+          "home": 44,
+          "draw": 27,
+          "away": 29
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-29-INT-GEN",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-28T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "国际米兰",
+        "nameEn": "FC Internazionale Milano",
+        "rank": 3,
+        "form": [
+          "D",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 32,
+        "goalsAgainst": 17
+      },
+      "away": {
+        "name": "热那亚",
+        "nameEn": "Genoa CFC",
+        "rank": 10,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 16
+      },
+      "prediction": {
+        "prob": {
+          "home": 53,
+          "draw": 27,
+          "away": 20
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-29-LMF-LIL",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-28T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "Le Mans",
+        "nameEn": "Le Mans FC",
+        "rank": 13,
+        "form": [
+          "W",
+          "D",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 21
+      },
+      "away": {
+        "name": "里尔",
+        "nameEn": "Lille OSC",
+        "rank": 3,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "D",
+          "D"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 8
+      },
+      "prediction": {
+        "prob": {
+          "home": 33,
+          "draw": 27,
+          "away": 40
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-29-NIC-ETR",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-28T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "尼斯",
+        "nameEn": "OGC Nice",
+        "rank": 7,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "W",
+          "L"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "Troyes",
+        "nameEn": "ES Troyes AC",
+        "rank": 14,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "D",
+          "L"
+        ],
+        "goalsFor": 10,
+        "goalsAgainst": 18
+      },
+      "prediction": {
+        "prob": {
+          "home": 53,
+          "draw": 27,
+          "away": 20
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-29-HAC-RC ",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-28T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "勒阿弗尔",
+        "nameEn": "Le Havre AC",
+        "rank": 18,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 10,
+        "goalsAgainst": 25
+      },
+      "away": {
+        "name": "Strasbourg",
+        "nameEn": "RC Strasbourg Alsace",
+        "rank": 16,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 23
+      },
+      "prediction": {
+        "prob": {
+          "home": 43,
+          "draw": 27,
+          "away": 30
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-29-PSG-FCL",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-28T19:45:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "巴黎圣日耳曼",
+        "nameEn": "Paris Saint-Germain FC",
+        "rank": 1,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 25,
+        "goalsAgainst": 12
+      },
+      "away": {
+        "name": "Lorient",
+        "nameEn": "FC Lorient",
+        "rank": 10,
+        "form": [
+          "D",
+          "W",
+          "L",
+          "D",
+          "W"
+        ],
+        "goalsFor": 10,
+        "goalsAgainst": 9
+      },
+      "prediction": {
+        "prob": {
+          "home": 56,
+          "draw": 27,
+          "away": 17
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-29-RMA-ALA",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-28T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "皇家马德里",
+        "nameEn": "Real Madrid CF",
+        "rank": 2,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 33,
+        "goalsAgainst": 11
+      },
+      "away": {
+        "name": "阿拉维斯",
+        "nameEn": "Deportivo Alavés",
+        "rank": 9,
+        "form": [
+          "W",
+          "D",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 18
+      },
+      "prediction": {
+        "prob": {
+          "home": 53,
+          "draw": 27,
+          "away": 20
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-29-UDI-FIO",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-29T11:30:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "乌迪内斯",
+        "nameEn": "Udinese Calcio",
+        "rank": 19,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 26
+      },
+      "away": {
+        "name": "佛罗伦萨",
+        "nameEn": "ACF Fiorentina",
+        "rank": 16,
+        "form": [
+          "L",
+          "D",
+          "W",
+          "D",
+          "L"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 28
+      },
+      "prediction": {
+        "prob": {
+          "home": 41,
+          "draw": 27,
+          "away": 32
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-29-EVE-LIV",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-29T12:00:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "埃弗顿",
+        "nameEn": "Everton FC",
+        "rank": 9,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 14
+      },
+      "away": {
+        "name": "利物浦",
+        "nameEn": "Liverpool FC",
+        "rank": 4,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 10
+      },
+      "prediction": {
+        "prob": {
+          "home": 39,
+          "draw": 27,
+          "away": 34
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-29-VAL-OSA",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-29T13:00:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "瓦伦西亚",
+        "nameEn": "Valencia CF",
+        "rank": 17,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "L",
+          "D"
+        ],
+        "goalsFor": 9,
+        "goalsAgainst": 20
+      },
+      "away": {
+        "name": "奥萨苏纳",
+        "nameEn": "CA Osasuna",
+        "rank": 13,
+        "form": [
+          "W",
+          "D",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 23
+      },
+      "prediction": {
+        "prob": {
+          "home": 40,
+          "draw": 27,
+          "away": 33
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "SA-2026-11-29-SAS-NAP",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-11-29T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "Sassuolo",
+        "nameEn": "US Sassuolo Calcio",
+        "rank": 18,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 16,
+        "goalsAgainst": 31
+      },
+      "away": {
+        "name": "那不勒斯",
+        "nameEn": "SSC Napoli",
+        "rank": 8,
+        "form": [
+          "W",
+          "D",
+          "L",
+          "W",
+          "D"
+        ],
+        "goalsFor": 19,
+        "goalsAgainst": 14
+      },
+      "prediction": {
+        "prob": {
+          "home": 33,
+          "draw": 27,
+          "away": 40
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "FL1-2026-11-29-AJA-MAR",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-11-29T14:00:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "欧塞尔",
+        "nameEn": "AJ Auxerre",
+        "rank": 15,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "D",
+          "W"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 25
+      },
+      "away": {
+        "name": "Marseille",
+        "nameEn": "Olympique de Marseille",
+        "rank": 5,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 24,
+        "goalsAgainst": 17
+      },
+      "prediction": {
+        "prob": {
+          "home": 33,
+          "draw": 27,
+          "away": 40
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-29-FUL-BOU",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-29T14:05:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "富勒姆",
+        "nameEn": "Fulham FC",
+        "rank": 15,
+        "form": [
+          "D",
+          "D",
+          "D",
+          "W",
+          "W"
+        ],
+        "goalsFor": 11,
+        "goalsAgainst": 13
+      },
+      "away": {
+        "name": "伯恩茅斯",
+        "nameEn": "AFC Bournemouth",
+        "rank": 5,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 14
+      },
+      "prediction": {
+        "prob": {
+          "home": 33,
+          "draw": 27,
+          "away": 40
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-29-BHA-NEW",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-29T14:05:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "布莱顿",
+        "nameEn": "Brighton & Hove Albion FC",
+        "rank": 2,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 26,
+        "goalsAgainst": 9
+      },
+      "away": {
+        "name": "纽卡斯尔联",
+        "nameEn": "Newcastle United FC",
+        "rank": 13,
+        "form": [
+          "D",
+          "D",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 18
+      },
+      "prediction": {
+        "prob": {
+          "home": 58,
+          "draw": 27,
+          "away": 15
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-29-SUN-TOT",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-29T14:05:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "桑德兰",
+        "nameEn": "Sunderland AFC",
+        "rank": 18,
+        "form": [
+          "D",
+          "W",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 8,
+        "goalsAgainst": 17
+      },
+      "away": {
+        "name": "热刺",
+        "nameEn": "Tottenham Hotspur FC",
+        "rank": 10,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 11
+      },
+      "prediction": {
+        "prob": {
+          "home": 35,
+          "draw": 27,
+          "away": 38
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PL-2026-11-29-CRY-HUL",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-11-29T14:05:00Z",
+      "status": "scheduled",
+      "matchday": 12,
+      "venue": "",
+      "home": {
+        "name": "水晶宫",
+        "nameEn": "Crystal Palace FC",
+        "rank": 20,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 27
+      },
+      "away": {
+        "name": "Hull City",
+        "nameEn": "Hull City AFC",
+        "rank": 11,
+        "form": [
+          "W",
+          "L",
+          "D",
+          "D",
+          "L"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 11
+      },
+      "prediction": {
+        "prob": {
+          "home": 34,
+          "draw": 27,
+          "away": 39
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "BL1-2026-11-29-SCF-RBL",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-11-29T14:30:00Z",
+      "status": "scheduled",
+      "matchday": 11,
+      "venue": "",
+      "home": {
+        "name": "弗赖堡",
+        "nameEn": "SC Freiburg",
+        "rank": 3,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 21,
+        "goalsAgainst": 10
+      },
+      "away": {
+        "name": "莱比锡红牛",
+        "nameEn": "RB Leipzig",
+        "rank": 4,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "L"
+        ],
+        "goalsFor": 32,
+        "goalsAgainst": 14
+      },
+      "prediction": {
+        "prob": {
+          "home": 46,
+          "draw": 27,
+          "away": 27
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "home",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    },
+    {
+      "id": "PD-2026-11-29-DEP-FCB",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-11-29T15:15:00Z",
+      "status": "scheduled",
+      "matchday": 14,
+      "venue": "",
+      "home": {
+        "name": "Deportivo",
+        "nameEn": "RC Deportivo La Coruña",
+        "rank": 12,
+        "form": [
+          "L",
+          "D",
+          "W",
+          "L",
+          "D"
+        ],
+        "goalsFor": 16,
+        "goalsAgainst": 17
+      },
+      "away": {
+        "name": "Barça",
+        "nameEn": "FC Barcelona",
+        "rank": 1,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 51,
+        "goalsAgainst": 15
+      },
+      "prediction": {
+        "prob": {
+          "home": 32,
+          "draw": 27,
+          "away": 41
+        },
+        "score": {
+          "home": 1,
+          "away": 1
+        },
+        "confidence": 30,
+        "pick": "away",
+        "reasons": [
+          "模型未返回有效结果，使用排名先验估计",
+          "该结果仅基于积分榜排名差，参考价值有限"
+        ],
+        "factors": [
+          "排名差"
+        ],
+        "risk": "该场为兜底结果，仅供参考"
+      },
+      "degraded": true,
+      "result": null
+    }
+  ]
+}
