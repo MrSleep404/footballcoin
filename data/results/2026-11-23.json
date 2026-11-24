@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-24T14:06:40+08:00",
+  "source": "football-data.org",
+  "count": 8,
+  "results": [
+    {
+      "id": "BL1-2026-11-23-SVW-HSV",
+      "league": "BL1",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "FL1-2026-11-23-FCL-REN",
+      "league": "FL1",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "FL1-2026-11-23-MAR-LMF",
+      "league": "FL1",
+      "homeGoals": 2,
+      "awayGoals": 3,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PD-2026-11-23-GET-ATL",
+      "league": "PD",
+      "homeGoals": 0,
+      "awayGoals": 3,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PD-2026-11-23-OSA-MAL",
+      "league": "PD",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "PL-2026-11-23-LIV-MUN",
+      "league": "PL",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "SA-2026-11-23-ATA-INT",
+      "league": "SA",
+      "homeGoals": 4,
+      "awayGoals": 4,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    },
+    {
+      "id": "SA-2026-11-23-MIL-FRO",
+      "league": "SA",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-24T14:06:40+08:00"
+    }
+  ]
+}
