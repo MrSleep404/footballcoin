@@ -217,6 +217,13 @@
           "link": "https://www.espn.com/soccer/story/_/id/50575536/lazio-serie-fan-protests-claudio-lotito",
           "published": "2026-11-24",
           "source": "ESPN"
+        },
+        {
+          "title": "Lazio ultras temporarily lift Stadio Olimpico boycott but not everybody agrees",
+          "summary": "Ultras of Lazio’s Curva Nord have announced that they will temporarily lift their Stadio Olimpico...",
+          "link": "https://football-italia.net/lazio-ultras-temporarily-lift-olimpico-boycott/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
         }
       ]
     },
@@ -509,7 +516,30 @@
           "draw": 21,
           "away": 24
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Who is Markus Krösche and who are his best signings?",
+          "summary": "Monday’s reports claim that Milan have reached an agreement with Eintracht Frankfurt over the compensation...",
+          "link": "https://football-italia.net/who-is-milan-linked-krosche-best-signings/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Milan strike €5m agreement with Eintracht Frankfurt for new Head of Football Krösche",
+          "summary": "Multiple outlets in Italy and Germany are reporting that Milan have reached an agreement with...",
+          "link": "https://football-italia.net/milan-strike-5m-agreement-for-krosche/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
+          "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
+          "link": "https://football-italia.net/zielinski-at-risk-of-missing-inter-stuttgart/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "SA-2026-11-29-INT-GEN",
@@ -611,7 +641,23 @@
           "draw": 17,
           "away": 11
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
+          "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
+          "link": "https://football-italia.net/zielinski-at-risk-of-missing-inter-stuttgart/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Football Italia Show: Malen on fire, Inter’s old problem & Amorim learns from Man Utd mistakes",
+          "summary": "Lorenzo Bettoni and Giancarlo Rinaldi are back with the first weekly episode of the Football...",
+          "link": "https://football-italia.net/football-italia-malen-fire-inter-problem-milan/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "FL1-2026-11-29-LMF-LIL",
@@ -1214,13 +1260,6 @@
       },
       "news": [
         {
-          "title": "Transfer Centre LIVE! 'Real Madrid close to agreeing new contract with Bellingham'",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        },
-        {
           "title": "Brentford latest: 'Get real' - Andrews pushes back against rising expectations",
           "summary": "",
           "link": "https://www.skysports.com/football/live-blog/11095/13279280/brentford-transfers-latest-news-rumours-and-gossip-live-updates-goals-and-highlights",
@@ -1329,7 +1368,23 @@
           "draw": 27,
           "away": 42
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Serie A | Monza 3-0 Fiorentina: Viola misery as Varela hits 11 goals in 11 games",
+          "summary": "Gustavo Varla is now up to 11 goals from his first 11 appearances in Serie...",
+          "link": "https://football-italia.net/serie-a-monza-3-0-fiorentina-viola-misery/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Serie A: Monza vs. Fiorentina – Confirmed line-ups and updates",
+          "summary": "Gustavo Varela leads the line for Monza, and Fiorentina have made just one change to...",
+          "link": "https://football-italia.net/serie-a-monza-fiorentina-confirmed-line-ups/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "PL-2026-11-29-EVE-LIV",
@@ -1440,18 +1495,18 @@
           "source": "Sky Sports"
         },
         {
-          "title": "Janelt scores rocket as Brentford thrash 10-man Everton to move sixth!",
-          "summary": "FREE TO WATCH: Highlights from Brentford’s match against Everton in the Premier League.",
-          "link": "https://www.skysports.com/watch/video/13615838/brentford-4-0-everton-premier-league-highlights",
-          "published": "2026-11-23",
-          "source": "Sky Sports"
+          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
+          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
         },
         {
-          "title": "Lewis-Potter scores twice as Brentford thump four past 10-man Everton",
-          "summary": "Keane Lewis-Potter’s first-half double set Brentford on their way to a comprehensive 4-0 Premier League win over 10-man Everton.",
-          "link": "https://www.skysports.com/football/brentford-vs-everton/report/559546",
-          "published": "2026-11-23",
-          "source": "Sky Sports"
+          "title": "🟥VAR review: Explaining Yoro's early red card vs. Liverpool",
+          "summary": "VAR often causes controversy, but how are decisions made? Our resident ref, Andy Davies, explains all.",
+          "link": "https://www.espn.com/soccer/story/_/id/49703019/premier-league-var-review-red-card-penalty-handball-goal-line-technology",
+          "published": "2026-11-24",
+          "source": "ESPN"
         }
       ]
     },
@@ -1656,7 +1711,30 @@
           "draw": 22,
           "away": 57
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Report: Napoli meet with McTominay agent in Manchester to discuss contract renewal",
+          "summary": "Tuesday’s reports claim that Napoli director Giovanni Manna has recently met with Scott McTominay’s agent,...",
+          "link": "https://football-italia.net/napoli-meet-with-mctominay-agent-in-manchester/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Champions League: Man City vs. Napoli – Probable line-ups and where to watch on TV",
+          "summary": "Kevin De Bruyne is set to start for Napoli when they take on his former...",
+          "link": "https://football-italia.net/ucl-man-city-napoli-probable-line-ups/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Allegri: ‘Losing to Man City won’t be decisive for Napoli, club making assessments’",
+          "summary": "Massimiliano Allegri maintained his stance that Tuesday’s Champions League match against Manchester City will not...",
+          "link": "https://football-italia.net/allegri-losing-to-man-city-wont-be-decisive/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "FL1-2026-11-29-AJA-MAR",
@@ -1964,6 +2042,13 @@
       },
       "news": [
         {
+          "title": "Arsenal’s David Raya ruled out of the game against Borussia Dortmund",
+          "summary": "Arsenal goalkeeper David Raya will be unavailable for Tuesday’s UEFA Champions League game against Borussia Dortmund after suffering an injury in his side’s 2-2 draw against Newcastle United on Saturday. …",
+          "link": "https://www.getfootballnewsgermany.com/2026/arsenals-david-raya-ruled-out-of-the-game-against-borussia-dortmund/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
           "title": "U.S. to co-host Women's World Cup in 2031; U.K. wins bid for 2035",
           "summary": "The United States has been confirmed as co-hosts of the 2031 Women's World Cup, before the United Kingdom hosts the tournament four years later.",
           "link": "https://www.espn.com/soccer/story/_/id/50571732/womens-world-cup-united-states-united-kindgom",
@@ -1974,13 +2059,6 @@
           "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
           "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
           "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Which USMNT players could follow Pochettino to Manchester United?",
-          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
-          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
           "published": "2026-11-24",
           "source": "ESPN"
         }
@@ -2185,11 +2263,18 @@
           "source": "Sky Sports"
         },
         {
-          "title": "Man City latest: De Bruyne speaks for first time on club's guilty verdict",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/13025499/man-city-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
-          "published": "2026-11-23",
-          "source": "Sky Sports"
+          "title": "Kolo Toure: ‘De Bruyne didn’t want to leave City, McTominay has been a surprise’",
+          "summary": "Former Manchester City defender and assistant coach Kolo Toure says that Kevin De Bruyne never...",
+          "link": "https://football-italia.net/kolo-toure-de-bruyne-didnt-want-to-leave-city/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Champions League: Man City vs. Napoli – Probable line-ups and where to watch on TV",
+          "summary": "Kevin De Bruyne is set to start for Napoli when they take on his former...",
+          "link": "https://football-italia.net/ucl-man-city-napoli-probable-line-ups/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
         }
       ]
     },
@@ -2293,7 +2378,16 @@
           "draw": 25,
           "away": 39
         }
-      }
+      },
+      "news": [
+        {
+          "title": "FEATURE | 5 standout players from Bundesliga, Matchday 10",
+          "summary": "Bundesliga Matchday 10 delivered an eventful return from the international break, with Werder Bremen dominating the Nordderby, RB Leipzig scoring five against Union Berlin and Bayer Leverkusen recording an emphatic…",
+          "link": "https://www.getfootballnewsgermany.com/2026/feature-5-standout-players-from-bundesliga-matchday-10/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        }
+      ]
     },
     {
       "id": "PD-2026-11-29-DEP-FCB",
@@ -2381,7 +2475,16 @@
           "draw": 14,
           "away": 76
         }
-      }
+      },
+      "news": [
+        {
+          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
+          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
+          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     }
   ]
 }

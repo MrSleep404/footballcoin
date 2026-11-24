@@ -2876,6 +2876,8 @@ workflow:
           FEEDS = [
               {"key": "espn", "name": "ESPN", "url": "https://www.espn.com/espn/rss/soccer/news"},
               {"key": "sky", "name": "Sky Sports", "url": "https://www.skysports.com/rss/11095"},
+              {"key": "italia", "name": "Football Italia", "url": "https://www.football-italia.net/rss.xml"},
+              {"key": "germany", "name": "Get German Football News", "url": "https://www.getfootballnewsgermany.com/feed/"},
           ]
 
 
@@ -3085,11 +3087,13 @@ workflow:
     - data:
         code: |
           import re
+          import unicodedata
 
           STOP = {
               "fc", "cf", "afc", "club", "calcio", "cp", "sv", "ac", "sc", "the",
               "de", "do", "da", "1899", "05", "04", "01",
           }
+          REPL = str.maketrans({"ø": "o", "ß": "ss", "æ": "ae", "ł": "l"})
           PHRASE_ALIAS = (
               (("manchester", "united"), ("man utd", "man united")),
               (("manchester", "city"), ("man city",)),
@@ -3101,17 +3105,24 @@ workflow:
               (("juventus",), ("juve",)),
               (("dortmund",), ("bvb",)),
               (("internazionale",), ("inter",)),
+              (("munchen",), ("munich", "bayern")),
+              (("koln",), ("cologne",)),
+              (("monchengladbach",), ("gladbach",)),
+          )
+          ALIAS_RULES = (
+              (("milan",), ("milan",), ("inter", "internazionale")),
           )
           AMBIGUOUS = {
-              "manchester", "milan", "madrid", "liverpool", "london", "munich",
-              "rome", "lisbon", "glasgow", "turin", "athens", "prague", "istanbul",
-              "baku", "warsaw", "moscow", "donetsk",
+              "manchester", "milan", "madrid", "lisbon", "athens", "istanbul",
+              "baku", "glasgow", "turin", "rome", "prague",
           }
 
 
           def _tokens(text):
-              text = str(text or "").lower().replace("&", " and ")
-              return [token for token in re.split(r"[^a-zà-ÿ]+", text) if token and token not in STOP]
+              text = unicodedata.normalize("NFKD", str(text or "").translate(REPL))
+              text = "".join(ch for ch in text if not unicodedata.combining(ch))
+              text = text.lower().replace("&", " and ")
+              return [token for token in re.split(r"[^a-z]+", text) if token and token not in STOP]
 
 
           def _team(name, freq):
@@ -3122,9 +3133,15 @@ workflow:
               for keywords, extra in PHRASE_ALIAS:
                   if all(keyword in tokens for keyword in keywords):
                       aliases.extend(extra)
+              negatives = []
+              for keywords, extra, blocked in ALIAS_RULES:
+                  if all(keyword in tokens for keyword in keywords):
+                      aliases.extend(extra)
+                      negatives.extend(blocked)
               return {
                   "full": " ".join(tokens),
                   "aliases": aliases,
+                  "negatives": negatives,
                   "unique": [
                       t for t in tokens
                       if len(t) >= 4 and t not in AMBIGUOUS and freq.get(t, 0) == 1
@@ -3156,14 +3173,14 @@ workflow:
                       continue
                   scored = []
                   for item in items:
-                      text = " " + " ".join(
-                          _tokens(f"{item.get('title') or ''} {item.get('summary') or ''}")
-                      ) + " "
+                      tokens = _tokens(f"{item.get('title') or ''} {item.get('summary') or ''}")
+                      text = " " + " ".join(tokens) + " "
                       score = 0
                       for team in teams:
                           if f" {team['full']} " in text:
                               score += 4
-                          if any(f" {alias} " in text for alias in team["aliases"]):
+                          blocked = any(token in tokens for token in team["negatives"])
+                          if not blocked and any(f" {alias} " in text for alias in team["aliases"]):
                               score += 3
                           score += sum(1 for token in team["unique"] if f" {token} " in text)
                       if score:

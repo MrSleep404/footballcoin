@@ -107,7 +107,30 @@
           "draw": 23,
           "away": 23
         }
-      }
+      },
+      "news": [
+        {
+          "title": "FEATURE | 5 standout players from Bundesliga, Matchday 10",
+          "summary": "Bundesliga Matchday 10 delivered an eventful return from the international break, with Werder Bremen dominating the Nordderby, RB Leipzig scoring five against Union Berlin and Bayer Leverkusen recording an emphatic…",
+          "link": "https://www.getfootballnewsgermany.com/2026/feature-5-standout-players-from-bundesliga-matchday-10/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "FEATURE | Surprise package Werder Bremen continue rise after Nordderby victory",
+          "summary": "Werder Bremen secured a memorable 4-0 victory over Hamburg in the 111th Bundesliga edition of the Nordderby. Marco Friedl, Justin Njinmah and Niclas Füllkrug all scored during an outstanding second-half…",
+          "link": "https://www.getfootballnewsgermany.com/2026/feature-surprise-package-werder-bremen-continue-rise-after-nordderby-victory/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "Borussia Mönchengladbach rule out January sale of Wael Mohya amid Bayern Munich Interest",
+          "summary": "Borussia Mönchengladbach star Wael Mohya is attracting interest from several big clubs, including Bayern Munich, and was subsequently named in Jürgen Klopp’s 24-man squad for the November international break, but…",
+          "link": "https://www.getfootballnewsgermany.com/2026/borussia-monchengladbach-rule-out-january-sale-of-wael-mohya-amid-bayern-munich-interest/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        }
+      ]
     },
     {
       "id": "SA-2026-11-28-VEN-BOL",
@@ -195,7 +218,16 @@
           "draw": 29,
           "away": 43
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Why Juventus replaced graphics with children’s drawings during 4-0 Venezia win",
+          "summary": "Sharp-eyed supporters may have noticed that Juventus replaced their line-up graphics with a series of...",
+          "link": "https://football-italia.net/why-juventus-replaced-graphics-with-drawings/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "FL1-2026-11-28-BRE-PFC",
@@ -909,6 +941,13 @@
       },
       "news": [
         {
+          "title": "FEATURE | 5 standout players from Bundesliga, Matchday 10",
+          "summary": "Bundesliga Matchday 10 delivered an eventful return from the international break, with Werder Bremen dominating the Nordderby, RB Leipzig scoring five against Union Berlin and Bayer Leverkusen recording an emphatic…",
+          "link": "https://www.getfootballnewsgermany.com/2026/feature-5-standout-players-from-bundesliga-matchday-10/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
           "title": "Philadelphia's Cavan Sullivan wins MLS Young Player of the Year award",
           "summary": "Philadelphia Union midfielder Cavan Sullivan has been selected as the MLS Young Player of the Year for his breakthrough performance as a 17-year-old.",
           "link": "https://www.espn.com/soccer/story/_/id/50573882/philadelphia-cavan-sullivan-mls-young-player-year",
@@ -1112,6 +1151,20 @@
           "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
           "published": "2026-11-24",
           "source": "ESPN"
+        },
+        {
+          "title": "Sven Ulreich yet to decide on Bayern Munich future",
+          "summary": "Bayern Munich goalkeeper Sven Ulreich stated that he is yet to make a decision about his future. “I will be speaking with Bayern in the near future about what happens…",
+          "link": "https://www.getfootballnewsgermany.com/2026/sven-ulreich-yet-to-decide-on-bayern-munich-future/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "Jonathan Tah names Florian Wirtz as the player he’d bring to Bayern Munich",
+          "summary": "Jonathan Tah has stated he would like to see Liverpool’s Florian Wirtz at Bayern Munich. The duo, of course, have history having played together at Bayer Leverkusen, where they did…",
+          "link": "https://www.getfootballnewsgermany.com/2026/jonathan-tah-names-florian-wirtz-as-the-player-hed-bring-to-bayern-munich/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
         }
       ]
     },
@@ -1211,11 +1264,18 @@
           "source": "Sky Sports"
         },
         {
-          "title": "Man City latest: De Bruyne speaks for first time on club's guilty verdict",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/13025499/man-city-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
-          "published": "2026-11-23",
-          "source": "Sky Sports"
+          "title": "Kolo Toure: ‘De Bruyne didn’t want to leave City, McTominay has been a surprise’",
+          "summary": "Former Manchester City defender and assistant coach Kolo Toure says that Kevin De Bruyne never...",
+          "link": "https://football-italia.net/kolo-toure-de-bruyne-didnt-want-to-leave-city/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Champions League: Man City vs. Napoli – Probable line-ups and where to watch on TV",
+          "summary": "Kevin De Bruyne is set to start for Napoli when they take on his former...",
+          "link": "https://football-italia.net/ucl-man-city-napoli-probable-line-ups/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
         }
       ]
     },

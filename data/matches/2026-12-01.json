@@ -207,7 +207,23 @@
         "temp": 12.3,
         "precip": 10,
         "wind": 5.6
-      }
+      },
+      "news": [
+        {
+          "title": "Who is Markus Krösche and who are his best signings?",
+          "summary": "Monday’s reports claim that Milan have reached an agreement with Eintracht Frankfurt over the compensation...",
+          "link": "https://football-italia.net/who-is-milan-linked-krosche-best-signings/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Milan strike €5m agreement with Eintracht Frankfurt for new Head of Football Krösche",
+          "summary": "Multiple outlets in Italy and Germany are reporting that Milan have reached an agreement with...",
+          "link": "https://football-italia.net/milan-strike-5m-agreement-for-krosche/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "PD-2026-12-01-ESP-GET",
@@ -308,7 +324,16 @@
         "temp": 10.2,
         "precip": 7,
         "wind": 3.8
-      }
+      },
+      "news": [
+        {
+          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
+          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
+          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     }
   ]
 }

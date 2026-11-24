@@ -117,7 +117,16 @@
             "reason": "Calf Injury"
           }
         ]
-      }
+      },
+      "news": [
+        {
+          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
+          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
+          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -404,7 +413,23 @@
             "reason": "Muscle Injury"
           }
         ]
-      }
+      },
+      "news": [
+        {
+          "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
+          "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
+          "link": "https://football-italia.net/zielinski-at-risk-of-missing-inter-stuttgart/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Football Italia Show: Malen on fire, Inter’s old problem & Amorim learns from Man Utd mistakes",
+          "summary": "Lorenzo Bettoni and Giancarlo Rinaldi are back with the first weekly episode of the Football...",
+          "link": "https://football-italia.net/football-italia-malen-fire-inter-problem-milan/",
+          "published": "2026-11-23",
+          "source": "Football Italia"
+        }
+      ]
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -954,6 +979,20 @@
           "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
           "published": "2026-11-24",
           "source": "ESPN"
+        },
+        {
+          "title": "Sven Ulreich yet to decide on Bayern Munich future",
+          "summary": "Bayern Munich goalkeeper Sven Ulreich stated that he is yet to make a decision about his future. “I will be speaking with Bayern in the near future about what happens…",
+          "link": "https://www.getfootballnewsgermany.com/2026/sven-ulreich-yet-to-decide-on-bayern-munich-future/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "Jonathan Tah names Florian Wirtz as the player he’d bring to Bayern Munich",
+          "summary": "Jonathan Tah has stated he would like to see Liverpool’s Florian Wirtz at Bayern Munich. The duo, of course, have history having played together at Bayer Leverkusen, where they did…",
+          "link": "https://www.getfootballnewsgermany.com/2026/jonathan-tah-names-florian-wirtz-as-the-player-hed-bring-to-bayern-munich/",
+          "published": "2026-11-23",
+          "source": "Get German Football News"
         }
       ]
     },
