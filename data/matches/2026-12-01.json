@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-24T20:30:55+08:00",
+  "generatedAt": "2026-11-24T21:57:53+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 3,
@@ -67,45 +67,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 20,
-          "draw": 27,
-          "away": 53
+          "home": 23,
+          "draw": 25,
+          "away": 52
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 67,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "主队近5场1平4负，状态明显低迷。",
-          "客队近5场1胜3平1负，整体更稳定。",
-          "近2次交手亚特兰大2胜，先后3-0、4-1。",
-          "市场去水客胜50%，与客胜判断方向一致。"
+          "莱切排名第15低于亚特兰大第12，客队排名略占优。",
+          "莱切近5场仅1平4负，近期状态明显低迷。",
+          "近2次交手亚特兰大2胜，最近两场为0-3、4-1。",
+          "莱切赛季进12失25，防守数据不如亚特兰大。"
         ],
         "factors": [
-          "主队状态低迷",
-          "客队排名略优",
+          "排名客队占优",
+          "近况客队更好",
           "交锋客队全胜",
-          "客队市场概率50%"
+          "主队防守薄弱",
+          "市场倾向客胜"
         ],
-        "risk": "本场伤病名单未提供（仅11月25日名单），场地与天气也未提供，增加不确定性。"
+        "risk": "本场场地、天气及对应日期的伤病名单未提供，是主要不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-24T12:27:46Z",
+        "capturedAt": "2026-11-24T13:54:43Z",
         "prob": {
           "home": 25,
           "draw": 25,
           "away": 50
         }
-      },
-      "weather": {
-        "temp": 10.5,
-        "precip": 2,
-        "wind": 7.2
       }
     },
     {
@@ -168,58 +164,47 @@
       },
       "prediction": {
         "prob": {
-          "home": 18,
-          "draw": 24,
-          "away": 58
+          "home": 21,
+          "draw": 25,
+          "away": 54
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 72,
+        "confidence": 70,
         "pick": "away",
         "reasons": [
-          "排名：卡利亚里第11，AC米兰第4，客队积分占优。",
-          "近5场：主队1胜4负，客队4胜1负，状态差距明显。",
-          "赛季进失球：主队10/17，客队28/14，客队攻防更佳。",
-          "市场均值：主胜20%/平25%/客胜55%，与客胜倾向一致。"
+          "AC米兰排名第4，卡利亚里第11，客队联赛位次占优。",
+          "近5场AC米兰4胜1负，卡利亚里1胜4负，状态差距明显。",
+          "赛季进失球AC米兰28/14，卡利亚里10/17，攻防数据占优。",
+          "近2次交手各胜1场，卡利亚里曾客场2-1击败AC米兰。"
         ],
         "factors": [
-          "客队排名领先",
-          "AC米兰状态更佳",
-          "攻防数据占优",
-          "市场偏向客胜"
+          "排名差距",
+          "近期状态",
+          "攻防数据",
+          "客胜倾向",
+          "交手均衡"
         ],
-        "risk": "伤病名单仅到2026-11-25、天气未提供，临场信息存在不确定性。"
+        "risk": "场地与天气未提供，伤病名单与比赛日期不一致，临场阵容存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-24T12:27:46Z",
+        "capturedAt": "2026-11-24T13:54:43Z",
         "prob": {
           "home": 20,
           "draw": 25,
           "away": 55
         }
       },
-      "weather": {
-        "temp": 12.3,
-        "precip": 10,
-        "wind": 5.6
-      },
       "news": [
         {
           "title": "Who is Markus Krösche and who are his best signings?",
           "summary": "Monday’s reports claim that Milan have reached an agreement with Eintracht Frankfurt over the compensation...",
           "link": "https://football-italia.net/who-is-milan-linked-krosche-best-signings/",
-          "published": "2026-11-23",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Milan strike €5m agreement with Eintracht Frankfurt for new Head of Football Krösche",
-          "summary": "Multiple outlets in Italy and Germany are reporting that Milan have reached an agreement with...",
-          "link": "https://football-italia.net/milan-strike-5m-agreement-for-krosche/",
           "published": "2026-11-23",
           "source": "Football Italia"
         }
@@ -264,28 +249,22 @@
         "goalsAgainst": 21
       },
       "h2h": {
-        "played": 3,
-        "homeWins": 3,
+        "played": 2,
+        "homeWins": 1,
         "draws": 0,
-        "awayWins": 0,
+        "awayWins": 1,
         "last": [
           {
-            "date": "2026-10-10",
-            "home": "Barça",
+            "date": "2026-03-21",
+            "home": "Espanyol",
             "away": "Getafe",
-            "score": "3-0"
+            "score": "1-2"
           },
           {
-            "date": "2026-04-25",
+            "date": "2025-12-13",
             "home": "Getafe",
-            "away": "Barça",
-            "score": "0-2"
-          },
-          {
-            "date": "2025-09-21",
-            "home": "Barça",
-            "away": "Getafe",
-            "score": "3-0"
+            "away": "Espanyol",
+            "score": "0-1"
           }
         ]
       },
@@ -299,37 +278,32 @@
           "home": 1,
           "away": 0
         },
-        "confidence": 64,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "主队排名第11高于客队第18，积分形势占优",
-          "主队近5场2胜1平2负，状态略好于客队",
-          "客队赛季失球21个，防守端明显承压",
-          "市场均值主胜46%，与排名优势方向一致"
+          "主队排名第11高于客队第18，客队赛季失球21个防守较差",
+          "近5场主队2胜1平2负，客队1胜1平3负，主队状态略优",
+          "市场均值主胜46%、平局30%、客胜24%，方向略偏主队",
+          "近2次交手各胜1场，最近西班牙人1-2赫塔菲"
         ],
         "factors": [
-          "排名优势",
+          "排名占优",
           "客队防守差",
-          "市场略倾主胜",
-          "交手互有胜负"
+          "市场偏主",
+          "状态略优"
         ],
-        "risk": "场地与比赛日天气未提供，本场伤病信息时效不足，增加不确定性。"
+        "risk": "本场伤病名单未按本场日期提供，天气和场地也未提供，阵容与临场条件存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T12:27:48Z",
+        "capturedAt": "2026-11-24T13:54:45Z",
         "prob": {
           "home": 46,
           "draw": 30,
           "away": 24
         }
-      },
-      "weather": {
-        "temp": 10.2,
-        "precip": 7,
-        "wind": 3.8
       },
       "news": [
         {
