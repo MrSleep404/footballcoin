@@ -3086,19 +3086,49 @@ workflow:
         code: |
           import re
 
-
           STOP = {
-              "football", "soccer", "news", "league", "champions", "match", "report",
-              "preview", "review", "video", "watch", "world", "cup", "club", "sport",
-              "sports", "transfer", "transfers", "united", "city", "real", "town",
+              "fc", "cf", "afc", "club", "calcio", "cp", "sv", "ac", "sc", "the",
+              "de", "do", "da", "1899", "05", "04", "01",
+          }
+          PHRASE_ALIAS = (
+              (("manchester", "united"), ("man utd", "man united")),
+              (("manchester", "city"), ("man city",)),
+              (("tottenham",), ("spurs",)),
+              (("wolverhampton",), ("wolves",)),
+              (("paris",), ("psg",)),
+              (("barcelona",), ("barca",)),
+              (("atletico",), ("atleti",)),
+              (("juventus",), ("juve",)),
+              (("dortmund",), ("bvb",)),
+              (("internazionale",), ("inter",)),
+          )
+          AMBIGUOUS = {
+              "manchester", "milan", "madrid", "liverpool", "london", "munich",
+              "rome", "lisbon", "glasgow", "turin", "athens", "prague", "istanbul",
+              "baku", "warsaw", "moscow", "donetsk",
           }
 
 
-          def _tokens(name):
+          def _tokens(text):
+              text = str(text or "").lower().replace("&", " and ")
+              return [token for token in re.split(r"[^a-zà-ÿ]+", text) if token and token not in STOP]
+
+
+          def _team(name, freq):
+              tokens = _tokens(name)
+              if not tokens:
+                  return None
+              aliases = []
+              for keywords, extra in PHRASE_ALIAS:
+                  if all(keyword in tokens for keyword in keywords):
+                      aliases.extend(extra)
               return {
-                  token
-                  for token in re.split(r"[^a-z]+", str(name or "").lower())
-                  if len(token) >= 4 and token not in STOP
+                  "full": " ".join(tokens),
+                  "aliases": aliases,
+                  "unique": [
+                      t for t in tokens
+                      if len(t) >= 4 and t not in AMBIGUOUS and freq.get(t, 0) == 1
+                  ],
               }
 
 
@@ -3108,18 +3138,34 @@ workflow:
                   for item in (feed or {}).get("items") or []:
                       if isinstance(item, dict) and item.get("link"):
                           items.append(item)
+
+              freq = {}
+              for match in matches or []:
+                  for side in ("home", "away"):
+                      for token in set(_tokens((match.get(side) or {}).get("nameEn"))):
+                          freq[token] = freq.get(token, 0) + 1
+
               result = []
               for match in matches or []:
-                  tokens = _tokens((match.get("home") or {}).get("nameEn")) | _tokens(
-                      (match.get("away") or {}).get("nameEn")
-                  )
-                  if not tokens:
+                  teams = [team for team in (
+                      _team((match.get("home") or {}).get("nameEn"), freq),
+                      _team((match.get("away") or {}).get("nameEn"), freq),
+                  ) if team]
+                  if not teams:
                       result.append(match)
                       continue
                   scored = []
                   for item in items:
-                      text = f"{item.get('title') or ''} {item.get('summary') or ''}".lower()
-                      score = sum(1 for token in tokens if token in text)
+                      text = " " + " ".join(
+                          _tokens(f"{item.get('title') or ''} {item.get('summary') or ''}")
+                      ) + " "
+                      score = 0
+                      for team in teams:
+                          if f" {team['full']} " in text:
+                              score += 4
+                          if any(f" {alias} " in text for alias in team["aliases"]):
+                              score += 3
+                          score += sum(1 for token in team["unique"] if f" {token} " in text)
                       if score:
                           scored.append((score, item.get("published") or "", item))
                   scored.sort(key=lambda row: (row[0], row[1]), reverse=True)

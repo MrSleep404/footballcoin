@@ -511,16 +511,7 @@
           }
         ],
         "away": []
-      },
-      "news": [
-        {
-          "title": "Transfer Centre LIVE! 'Real Madrid close to agreeing new contract with Bellingham'",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/12476234/transfer-centre-live-football-transfer-news-updates-and-rumours",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        }
-      ]
+      }
     },
     {
       "id": "CL-2026-11-26-PSG-ROM",
@@ -655,6 +646,13 @@
           "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
           "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
           "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
+          "published": "2026-11-24",
+          "source": "ESPN"
+        },
+        {
+          "title": "UCL-champs PSG drop one of this season's best kits in latest Jordan collab",
+          "summary": "PSG finally unveiled their 2026-27 third kit in collaboration with the Jordan brand. It was worth the wait.",
+          "link": "https://www.espn.com/soccer/story/_/id/50581189/psg-kit-nike-jordan-champions-league",
           "published": "2026-11-24",
           "source": "ESPN"
         }
