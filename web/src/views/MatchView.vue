@@ -125,7 +125,7 @@ onMounted(() => {
           <div class="team">
             <span class="role">主队</span>
             <span class="name">
-              <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="24" />
+              <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="30" />
               <span class="name-text">{{ match.home.name }}</span>
             </span>
             <span class="rank numeric">联赛第 {{ match.home.rank }}</span>
@@ -143,7 +143,7 @@ onMounted(() => {
           <div class="team right">
             <span class="role">客队</span>
             <span class="name">
-              <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="24" />
+              <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="30" />
               <span class="name-text">{{ match.away.name }}</span>
             </span>
             <span class="rank numeric">联赛第 {{ match.away.rank }}</span>

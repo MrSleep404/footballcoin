@@ -44,11 +44,11 @@ const scoreText = computed(() => {
 
     <div class="matchup">
       <div class="team">
-        <span class="name">
-          <TeamCrest :name="match.home.name" :crest="match.home.crest" />
-          <span class="name-text">{{ match.home.name }}</span>
-        </span>
-        <span class="sub numeric">#{{ match.home.rank }} <span class="sep">/</span> 主</span>
+        <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="30" />
+        <div class="team-text">
+          <span class="name">{{ match.home.name }}</span>
+          <span class="sub numeric">#{{ match.home.rank }} <span class="sep">/</span> 主</span>
+        </div>
       </div>
 
       <div class="score">
@@ -57,11 +57,11 @@ const scoreText = computed(() => {
       </div>
 
       <div class="team away">
-        <span class="name">
-          <TeamCrest :name="match.away.name" :crest="match.away.crest" />
-          <span class="name-text">{{ match.away.name }}</span>
-        </span>
-        <span class="sub numeric">#{{ match.away.rank }} <span class="sep">/</span> 客</span>
+        <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="30" />
+        <div class="team-text">
+          <span class="name">{{ match.away.name }}</span>
+          <span class="sub numeric">#{{ match.away.rank }} <span class="sep">/</span> 客</span>
+        </div>
       </div>
     </div>
 
@@ -180,31 +180,32 @@ const scoreText = computed(() => {
 
 .team {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.team.away {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.team-text {
+  display: flex;
   flex-direction: column;
   gap: 2px;
   min-width: 0;
 }
 
-.team.away {
+.team.away .team-text {
   align-items: flex-end;
-  text-align: right;
 }
 
 .name {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
+  overflow: hidden;
   font-size: 15px;
   font-weight: 700;
-}
-
-.team.away .name {
-  flex-direction: row-reverse;
-}
-
-.name-text {
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
