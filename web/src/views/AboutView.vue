@@ -3,7 +3,7 @@
     <header class="head">
       <span class="eyebrow">How it works</span>
       <h1>关于本站</h1>
-      <p>一个纯静态的五大联赛赛前预测展示站，预测由独立的 Dify 工作流生成。</p>
+      <p>一个纯静态的五大联赛与欧冠赛前预测展示站，预测由独立的 Dify 工作流生成。</p>
     </header>
 
     <section class="block">
@@ -13,7 +13,7 @@
           <span class="idx numeric">01</span>
           <div>
             <strong>采集</strong>
-            <p>每天从 football-data.org 拉取五大联赛赛程与积分榜。</p>
+            <p>每天从 football-data.org 拉取五大联赛与欧冠的赛程、积分榜；欧联与欧协联免费套餐不开放，暂不覆盖。</p>
           </div>
         </li>
         <li>

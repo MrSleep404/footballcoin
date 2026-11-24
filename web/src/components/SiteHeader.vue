@@ -14,7 +14,7 @@ import { RouterLink } from "vue-router";
         </span>
         <span class="brand-text">
           <span class="brand-name">FootballCoin</span>
-          <span class="brand-sub">五大联赛预测</span>
+          <span class="brand-sub">五大联赛 · 欧冠</span>
         </span>
       </RouterLink>
 

@@ -75,8 +75,8 @@ onMounted(() => {
   <div class="standings">
     <header class="head">
       <span class="eyebrow">Standings</span>
-      <h1>五大联赛积分榜</h1>
-      <p>排名与积分来自 football-data.org，随每日预测任务自动更新，同分并列按官方规则排序。</p>
+      <h1>五大联赛与欧冠积分榜</h1>
+      <p>排名与积分来自 football-data.org，随每日预测任务自动更新；欧冠为联赛阶段 36 队单表。</p>
       <p v-if="data?.updatedAt" class="updated numeric">更新于 {{ formatGeneratedAt(data.updatedAt) }}</p>
     </header>
 

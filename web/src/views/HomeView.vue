@@ -153,9 +153,9 @@ onUnmounted(() => {
     <section class="hero">
       <div class="hero-copy">
         <span class="eyebrow">Matchday Predictions</span>
-        <h1>五大联赛<span>赛前预测</span></h1>
+        <h1>五大联赛与欧冠<span>赛前预测</span></h1>
         <p>
-          基于赛程、积分榜与近期状态生成，展示胜平负概率、预测比分与判断依据。
+          基于赛程、积分榜与近期状态生成，覆盖五大联赛与欧冠联赛阶段，展示胜平负概率、预测比分与判断依据。
           <span class="hero-note">仅供娱乐参考。</span>
         </p>
       </div>
@@ -170,7 +170,7 @@ onUnmounted(() => {
         </div>
         <div class="stat">
           <span class="k">联赛</span>
-          <span class="v numeric">{{ index?.leagues.length ?? 5 }}</span>
+          <span class="v numeric">{{ index?.leagues.length ?? 6 }}</span>
         </div>
       </div>
     </section>

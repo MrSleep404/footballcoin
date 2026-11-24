@@ -1,16 +1,31 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from "vue";
 import { DataNotFoundError, loadStats } from "../api/data";
-import type { StatsFile } from "../types";
+import type { LeagueCode, LeagueStats, StatsFile } from "../types";
 import { LEAGUE_COLOR, LEAGUE_NAME, formatGeneratedAt } from "../utils/format";
 import StateEmpty from "../components/StateEmpty.vue";
 import StateError from "../components/StateError.vue";
+
+const LEAGUE_ORDER: LeagueCode[] = ["PL", "PD", "SA", "BL1", "FL1", "CL"];
 
 const stats = ref<StatsFile | null>(null);
 const loading = ref(true);
 const error = ref("");
 
-const rows = computed(() => (stats.value?.byLeague ?? []).filter((item) => item.total > 0));
+const rows = computed<LeagueStats[]>(() => {
+  const byLeague = new Map((stats.value?.byLeague ?? []).map((item) => [item.league, item]));
+  return LEAGUE_ORDER.map(
+    (code) =>
+      byLeague.get(code) ?? {
+        league: code,
+        total: 0,
+        outcomeHit: 0,
+        outcomeRate: 0,
+        scoreHit: 0,
+        scoreRate: 0,
+      },
+  );
+});
 
 async function init() {
   loading.value = true;
@@ -52,12 +67,15 @@ onMounted(() => {
     <StateError v-else-if="error" :message="error" @retry="init" />
 
     <StateEmpty
-      v-else-if="!stats || stats.overall.total === 0"
+      v-else-if="!stats"
       title="暂时还没有可统计的赛果"
       description="等首批比赛结束后，命中率会自动更新。"
     />
 
     <template v-else>
+      <p v-if="stats.overall.total === 0" class="empty-hint">
+        目前还没有已结算的比赛，下方按联赛列出累计口径（含欧冠），赛果回填后自动更新。
+      </p>
       <div class="cards">
         <section class="card kpi">
           <span class="label">已统计场次</span>
@@ -204,6 +222,16 @@ onMounted(() => {
 .track.dim i {
   background: var(--brand);
   opacity: 0.55;
+}
+
+.empty-hint {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 12px;
 }
 
 .table-card {
