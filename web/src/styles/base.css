@@ -219,8 +219,14 @@ svg {
   }
 }
 
+@media (max-width: 720px) {
+  #app {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-width: 640px) {
   .page {
-    padding: 14px 16px 88px;
+    padding: 14px 16px 40px;
   }
 }
