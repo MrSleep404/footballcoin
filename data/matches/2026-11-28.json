@@ -407,7 +407,7 @@
           "away": 32
         },
         "score": {
-          "home": 1,
+          "home": 2,
           "away": 1
         },
         "confidence": 58,
@@ -672,7 +672,7 @@
         },
         "score": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "confidence": 42,
         "pick": "away",
@@ -1113,7 +1113,7 @@
         },
         "score": {
           "home": 1,
-          "away": 1
+          "away": 2
         },
         "confidence": 52,
         "pick": "away",

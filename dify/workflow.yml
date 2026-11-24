@@ -2673,11 +2673,12 @@ workflow:
               draw = 27
               away = max(1, 100 - home - draw)
               prob = {"home": home, "draw": draw, "away": away}
+              pick = max(prob, key=prob.get)
               return {
                   "prob": prob,
-                  "score": {"home": 1, "away": 1},
+                  "score": _align_score({"home": 1, "away": 1}, pick),
                   "confidence": 30,
-                  "pick": max(prob, key=prob.get),
+                  "pick": pick,
                   "reasons": [
                       "模型未返回有效结果，使用排名先验估计",
                       "该结果仅基于积分榜排名差，参考价值有限",
@@ -2685,6 +2686,23 @@ workflow:
                   "factors": ["排名差"],
                   "risk": "该场为兜底结果，仅供参考",
               }
+
+
+          def _align_score(score, pick):
+              home = _clamp((score or {}).get("home"), 0, 9, 1)
+              away = _clamp((score or {}).get("away"), 0, 9, 1)
+              if pick == "home" and home <= away:
+                  home = min(9, away + 1)
+                  if home == away:
+                      away = max(0, home - 1)
+              elif pick == "away" and away <= home:
+                  away = min(9, home + 1)
+                  if away == home:
+                      home = max(0, away - 1)
+              elif pick == "draw" and home != away:
+                  both = max(0, min(9, int(round((home + away) / 2))))
+                  home = away = both
+              return {"home": home, "away": away}
 
 
           def main(raw_text: str, match) -> dict:
@@ -2709,14 +2727,12 @@ workflow:
                   reasons.append("综合双方近期状态与排名给出判断")
               factors = [str(text)[:12] for text in (data.get("factors") or []) if str(text).strip()][:5]
 
+              pick = max(prob, key=prob.get)
               merged["prediction"] = {
                   "prob": prob,
-                  "score": {
-                      "home": _clamp(score.get("home"), 0, 9, 1),
-                      "away": _clamp(score.get("away"), 0, 9, 1),
-                  },
+                  "score": _align_score(score, pick),
                   "confidence": _clamp(data.get("confidence"), 0, 100, 50),
-                  "pick": max(prob, key=prob.get),
+                  "pick": pick,
                   "reasons": reasons,
                   "factors": factors,
                   "risk": str(data.get("risk") or "")[:60],
