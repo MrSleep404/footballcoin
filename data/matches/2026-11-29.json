@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-29",
-  "generatedAt": "2026-11-24T20:30:48+08:00",
+  "generatedAt": "2026-11-24T21:57:46+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 23,
@@ -67,30 +67,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 20,
+          "home": 19,
           "draw": 24,
-          "away": 56
+          "away": 57
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 65,
         "pick": "away",
         "reasons": [
-          "朗斯排名第11高于昂热第17，市场客胜概率56%最高。",
-          "昂热近5场1平4负，赛季进失球9/23，防守承压。",
-          "近2次交手朗斯全胜，最近一场5-1大胜昂热。",
-          "朗斯近5场2胜1平2负，近期状态优于昂热。"
+          "主队排名第17，近5场1平4负，状态低迷。",
+          "主队赛季进失球9/23，防守失球明显偏多。",
+          "客队排名第11，近5场2胜1平2负，略占上风。",
+          "近2次交手朗斯全胜，曾5-1、2-1击败昂热。"
         ],
         "factors": [
-          "排名差距",
-          "交手劣势",
+          "排名劣势",
+          "状态低迷",
           "防守漏洞",
-          "客胜热度",
-          "状态反差"
+          "交手连败",
+          "市场偏客"
         ],
-        "risk": "场地未提供，本场伤病名单未提供（仅有2026-11-25名单），影响判断。"
+        "risk": "本场伤病名单和场地信息未提供，阵容与场地因素存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -101,7 +101,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:27:53Z",
+        "capturedAt": "2026-11-24T13:54:46Z",
         "prob": {
           "home": 21,
           "draw": 23,
@@ -169,30 +169,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
+          "home": 24,
           "draw": 27,
-          "away": 48
+          "away": 49
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 0,
+          "away": 1
         },
-        "confidence": 54,
+        "confidence": 63,
         "pick": "away",
         "reasons": [
-          "拉齐奥排名第1，近5场4胜1平，状态明显优于第13的都灵。",
-          "拉齐奥赛季进28失9，攻防数据全面占优；都灵进15失18。",
-          "近2次交手都灵1胜1平不败，最近主场2-0拉齐奥，存心理优势。",
-          "市场均值客胜46%，主胜27%、平局27%，与客队优势方向一致。"
+          "拉齐奥排名第1，近5场4胜1平，赛季进28失9",
+          "都灵排名第13，近5场1胜1平3负，进15失18",
+          "近2次交手都灵1胜1平，最近主场2-0胜拉齐奥",
+          "市场客胜46%、主胜27%，与客胜判断方向一致"
         ],
         "factors": [
-          "客队排名第1",
-          "客队攻防占优",
-          "主队状态低迷",
-          "主队交手不败",
-          "市场略偏客胜"
+          "拉齐奥榜首强势",
+          "攻防数据占优",
+          "都灵交手不败",
+          "市场倾向客胜"
         ],
-        "risk": "场地和本场伤病名单未提供，伤病名单日期不匹配，影响阵容判断。"
+        "risk": "伤病名单为11-25版本，未覆盖本场阵容；场地信息未提供，排兵与场地适应性存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -203,7 +202,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:46Z",
+        "capturedAt": "2026-11-24T13:54:42Z",
         "prob": {
           "home": 27,
           "draw": 27,
@@ -285,18 +284,18 @@
         "confidence": 62,
         "pick": "away",
         "reasons": [
-          "维拉近5场3平2胜保持不败，状态明显好于主队",
-          "伊普斯维奇近5场2平3负，赛季进失球15/22防守偏弱",
-          "排名客队第12、主队第16，市场去水客胜49%与判断方向一致",
-          "维拉赛季失球17个少于主队22个，防守更稳"
+          "客队近5场2胜3平保持不败，状态明显好于主队",
+          "主队近5场2平3负未尝胜绩，赛季失球达22个",
+          "客队赛季进14球失17球，攻守表现比主队更均衡",
+          "市场均值客胜49%，与本次判断方向一致"
         ],
         "factors": [
-          "维拉状态占优",
+          "客队状态占优",
           "主队防线不稳",
-          "客队保持不败",
-          "市场倾向客胜"
+          "市场倾向客胜",
+          "排名差距有限"
         ],
-        "risk": "伤病名单日期与本场不符且无交手记录，主队主场真实水平缺参考。"
+        "risk": "场地和本场伤病名单未提供，且双方排名接近，客胜仍有不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -307,7 +306,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:38Z",
+        "capturedAt": "2026-11-24T13:54:40Z",
         "prob": {
           "home": 26,
           "draw": 25,
@@ -375,29 +374,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 17,
-          "draw": 21,
-          "away": 62
+          "home": 18,
+          "draw": 23,
+          "away": 59
         },
         "score": {
-          "home": 0,
+          "home": 1,
           "away": 2
         },
-        "confidence": 71,
+        "confidence": 68,
         "pick": "away",
         "reasons": [
-          "主队排名第19，客队排名第3，积分排名差距明显",
-          "客队近5场4胜1负，主队近5场仅1胜2平2负",
-          "赛季进失球客队26/10，明显优于主队15/21",
-          "近2次交手埃尔切1胜1平，马德里竞技0胜，主队有韧性"
+          "客队排名第3，近5场4胜1负，赛季进26失10攻防俱佳",
+          "主队排名第19，近5场仅1胜，赛季失球21个防守偏弱",
+          "近2次交手埃尔切1胜1平，含3-2胜马德里竞技，往绩不利",
+          "市场均值客胜63%，与判断方向一致，分歧不大"
         ],
         "factors": [
-          "排名差距明显",
-          "客队攻防占优",
-          "交手主队不败",
-          "市场倾向客胜"
+          "排名差距悬殊",
+          "客队攻守均衡",
+          "交手往绩不利",
+          "主队主场低迷",
+          "赔率倾向客胜"
         ],
-        "risk": "本场伤病名单与场地信息未提供，阵容完整度和主场环境存在不确定性。"
+        "risk": "本场伤病名单未按比赛日期提供，场地信息也缺失，阵容不确定性是最大变数。"
       },
       "degraded": false,
       "result": null,
@@ -408,7 +408,7 @@
       },
       "market": {
         "bookmaker": "市场均值（20 家）",
-        "capturedAt": "2026-11-24T12:27:48Z",
+        "capturedAt": "2026-11-24T13:54:45Z",
         "prob": {
           "home": 16,
           "draw": 21,
@@ -476,30 +476,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 52,
-          "draw": 24,
-          "away": 24
+          "home": 48,
+          "draw": 26,
+          "away": 26
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 54,
+        "confidence": 60,
         "pick": "home",
         "reasons": [
-          "积分榜斯图加特第8、法兰克福第7，排名接近",
-          "斯图加特近5场D W W L L，状态有起伏",
-          "近2次交手斯图加特1胜1平，主场交手占优",
-          "市场均值主胜55%，对斯图加特略有倾向"
+          "斯图加特排名第8且主场作战，与客队第7实力接近",
+          "近2次交手斯图加特1胜1平，含主场3-2击败法兰克福",
+          "法兰克福赛季失球20个，多于主队15个，防守偏弱",
+          "法兰克福近5场3胜，斯图加特近2场连败，状态略偏客队"
         ],
         "factors": [
-          "排名接近",
-          "交手不败",
-          "客队失球偏多",
-          "市场倾向主胜",
+          "主场作战",
+          "交手占优",
+          "客队防守偏弱",
+          "主队近期连败",
           "低温无降水"
         ],
-        "risk": "本场伤病名单未提供、场地未提供，赛前信息不完整，增加判断不确定性。"
+        "risk": "本场伤病名单未提供、场地未提供，阵容与场地实际情况存在不确定性"
       },
       "degraded": false,
       "result": null,
@@ -510,7 +510,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:27:44Z",
+        "capturedAt": "2026-11-24T13:54:49Z",
         "prob": {
           "home": 55,
           "draw": 21,
@@ -522,13 +522,6 @@
           "title": "Who is Markus Krösche and who are his best signings?",
           "summary": "Monday’s reports claim that Milan have reached an agreement with Eintracht Frankfurt over the compensation...",
           "link": "https://football-italia.net/who-is-milan-linked-krosche-best-signings/",
-          "published": "2026-11-23",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Milan strike €5m agreement with Eintracht Frankfurt for new Head of Football Krösche",
-          "summary": "Multiple outlets in Italy and Germany are reporting that Milan have reached an agreement with...",
-          "link": "https://football-italia.net/milan-strike-5m-agreement-for-krosche/",
           "published": "2026-11-23",
           "source": "Football Italia"
         },
@@ -601,30 +594,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 70,
-          "draw": 19,
+          "home": 71,
+          "draw": 18,
           "away": 11
         },
         "score": {
           "home": 2,
-          "away": 1
+          "away": 0
         },
-        "confidence": 76,
+        "confidence": 78,
         "pick": "home",
         "reasons": [
-          "主队排名第3，赛季进32球失17球，攻防优于客队",
-          "近2次交手国际米兰全胜，往绩与对位占优",
-          "客队近5场4胜1负，状态不弱，需防其进球",
-          "市场均值主胜72%，与主队排名及往绩优势一致"
+          "国际米兰排名第3，热那亚第10，主队排名优势明显。",
+          "国际米兰赛季进32球失17球，攻防数据优于热那亚13/16。",
+          "近2次交手国际米兰全胜，最近主场2-0击败热那亚。",
+          "市场去水概率主胜72%，与主队优势判断基本一致。"
         ],
         "factors": [
           "排名优势",
-          "主场进攻",
-          "往绩压制",
-          "客队状态回升",
-          "市场倾向主胜"
+          "进攻火力",
+          "交手占优",
+          "市场看好"
         ],
-        "risk": "场地和本场伤病名单未提供，阵容不确定性可能影响主队发挥。"
+        "risk": "本场伤病名单与场地未提供，排兵布阵和场地适应存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -635,7 +627,7 @@
       },
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-24T12:27:46Z",
+        "capturedAt": "2026-11-24T13:54:42Z",
         "prob": {
           "home": 72,
           "draw": 17,
@@ -643,6 +635,13 @@
         }
       },
       "news": [
+        {
+          "title": "Report: Juventus, Inter, Napoli and five Premier League clubs want Monza’s Varela",
+          "summary": "Gustavo Varela has caught the eye of some of Europe’s biggest clubs with his performances...",
+          "link": "https://football-italia.net/juve-inter-five-prem-clubs-interested-varela/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
         {
           "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
           "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
@@ -706,30 +705,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
+          "home": 26,
           "draw": 27,
-          "away": 48
+          "away": 47
         },
         "score": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 63,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "里尔排名第3，勒芒第13，客队排名优势明显。",
-          "里尔赛季失球仅8个，勒芒失球21个，防守差距突出。",
-          "近5场里尔2胜2平1负，勒芒仅1胜2平2负，状态更稳。",
-          "市场均值客胜47%，与客队占优的判断方向一致。"
+          "里尔排名第3，勒芒第13，积分榜差距明显",
+          "客队近5场2胜2平1负，状态优于主队1胜2平2负",
+          "主队赛季进15失21，净胜球为负，防守隐患较大",
+          "市场均值客胜47%、主胜25%，与上述判断方向一致"
         ],
         "factors": [
-          "排名差距",
-          "防守稳固",
-          "客胜倾向",
-          "市场支持",
-          "主队失球多"
+          "排名差距明显",
+          "客队状态更稳",
+          "主队防守欠佳",
+          "市场偏向客胜"
         ],
-        "risk": "本场伤病名单和场地未提供，阵容与场地适应是最大变数。"
+        "risk": "本场伤病名单未提供、场地信息缺失，阵容与临场因素存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -740,7 +738,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:27:53Z",
+        "capturedAt": "2026-11-24T13:54:46Z",
         "prob": {
           "home": 25,
           "draw": 28,
@@ -796,28 +794,28 @@
       "prediction": {
         "prob": {
           "home": 56,
-          "draw": 24,
-          "away": 20
+          "draw": 25,
+          "away": 19
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 55,
         "pick": "home",
         "reasons": [
-          "主队排名第7高于客队第14，赛季进球17比10更多",
-          "主队近5场取得3胜2负，客队近5场仅2胜1平2负",
-          "市场均值主胜57%，明显倾向主队",
-          "客队赛季失球18个，防守数据弱于主队15个"
+          "主队排名第7，客队第14，积分榜主队占优。",
+          "近5场主队3胜2负，客队2胜1平2负，主队状态略好。",
+          "赛季进失球主队17/15，客队10/18，主队攻防更优。",
+          "市场均值主胜57%、平23%、客20%，与主胜倾向一致。"
         ],
         "factors": [
-          "排名优势",
-          "主场倾向",
-          "市场看好",
-          "客队防守偏弱"
+          "排名占优",
+          "攻防更稳",
+          "主场作战",
+          "市场倾向主胜"
         ],
-        "risk": "本场伤病名单未提供，且双方暂无历史交锋数据，阵容与对位不确定性较高。"
+        "risk": "本场伤病名单、场地和历史交锋数据缺失，增加预测不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -828,7 +826,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:27:53Z",
+        "capturedAt": "2026-11-24T13:54:46Z",
         "prob": {
           "home": 57,
           "draw": 23,
@@ -976,57 +974,51 @@
         "goalsAgainst": 9
       },
       "h2h": {
-        "played": 3,
-        "homeWins": 1,
-        "draws": 1,
-        "awayWins": 1,
+        "played": 2,
+        "homeWins": 0,
+        "draws": 2,
+        "awayWins": 0,
         "last": [
           {
-            "date": "2026-10-10",
-            "home": "Lorient",
-            "away": "Paris FC",
-            "score": "1-0"
-          },
-          {
-            "date": "2026-04-05",
-            "home": "Lorient",
-            "away": "Paris FC",
-            "score": "1-1"
-          },
-          {
-            "date": "2025-10-03",
-            "home": "Paris FC",
+            "date": "2026-05-02",
+            "home": "PSG",
             "away": "Lorient",
-            "score": "2-0"
+            "score": "2-2"
+          },
+          {
+            "date": "2025-10-29",
+            "home": "Lorient",
+            "away": "PSG",
+            "score": "1-1"
           }
         ]
       },
       "prediction": {
         "prob": {
-          "home": 75,
-          "draw": 16,
+          "home": 76,
+          "draw": 15,
           "away": 9
         },
         "score": {
-          "home": 2,
-          "away": 0
+          "home": 3,
+          "away": 1
         },
-        "confidence": 76,
+        "confidence": 77,
         "pick": "home",
         "reasons": [
-          "巴黎圣日耳曼排名第1且近5场全胜，状态明显占优",
-          "巴黎圣日耳曼赛季进25球，进攻火力强于洛里昂的10球",
-          "近2次交手巴黎圣日耳曼均战平洛里昂，需防平局",
-          "市场均值主胜78%，与模型的主胜倾向一致"
+          "主队排名第1，近5场全胜，状态明显占优",
+          "主队赛季进25球失12球，进攻火力强于客队",
+          "市场均值主胜78%，与主胜判断方向一致",
+          "近2次交手均平，需防客队韧性"
         ],
         "factors": [
-          "排名第1",
-          "近5场全胜",
-          "进25球",
-          "交手两连平",
-          "市场主胜78%"
+          "排名榜首",
+          "五连胜",
+          "进攻火力",
+          "市场主胜78%",
+          "交手连平"
         ],
-        "risk": "本场伤病名单未提供，临场阵容无法评估，是最大不确定性。"
+        "risk": "本场伤病名单未提供，且近两次交手均平，主队大胜仍有不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1037,7 +1029,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:27:53Z",
+        "capturedAt": "2026-11-24T13:54:46Z",
         "prob": {
           "home": 78,
           "draw": 14,
@@ -1121,30 +1113,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 30,
+          "home": 28,
           "draw": 27,
-          "away": 43
+          "away": 45
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 60,
         "pick": "away",
         "reasons": [
-          "主队近5场全败，赛季进失球10/25，防守失球偏多。",
-          "客队排名第16略高于主队第18，赛季进球18多于10。",
-          "市场均值客胜43%、主胜31%，客队更被看好。",
-          "近2次交手各胜1场，最近勒阿弗尔2-1斯特拉斯堡。"
+          "主队近5场全败且排名第18，状态低迷。",
+          "客队近5场1胜4负，市场客胜43%略占优。",
+          "主队赛季进10失25，防守漏洞较明显。",
+          "交手近2次各胜1场，最近勒阿弗尔2-1斯特拉斯堡。"
         ],
         "factors": [
-          "客队排名略优",
-          "主队近况全败",
-          "市场倾向客胜",
+          "主队五连败",
+          "主队防守失球多",
+          "客队稍被看好",
           "交手各胜一场",
-          "主队防守失球多"
+          "天气影响有限"
         ],
-        "risk": "本场伤病名单和场地信息未提供，阵容与场地适应性存在不确定性。"
+        "risk": "场地未提供，伤病名单与本场日期不符，双方状态低迷增加不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1155,7 +1147,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:27:53Z",
+        "capturedAt": "2026-11-24T13:54:46Z",
         "prob": {
           "home": 31,
           "draw": 26,
@@ -1223,8 +1215,8 @@
       },
       "prediction": {
         "prob": {
-          "home": 82,
-          "draw": 12,
+          "home": 83,
+          "draw": 11,
           "away": 6
         },
         "score": {
@@ -1234,19 +1226,18 @@
         "confidence": 82,
         "pick": "home",
         "reasons": [
-          "主队排名第2且近5场全胜，状态明显占优。",
-          "主队赛季进33球失11球，攻防优于客队18/18。",
-          "近2次交手皇家马德里全胜，比分均为2-1。",
-          "市场均值主胜83% / 平11% / 客胜6%，与判断一致。"
+          "主队第2、客队第9，排名与积分差距明显",
+          "主队近5场全胜，客队近5场仅1胜且2负",
+          "主队赛季进33失11，攻防两端全面优于客队18/18",
+          "近2次交手主队全胜，包括主场2-1取胜"
         ],
         "factors": [
-          "主队五连胜",
-          "排名差距",
-          "攻防优势",
-          "交手占优",
-          "市场看主胜"
+          "主场全胜势头",
+          "攻防数据碾压",
+          "交手记录占优",
+          "市场高度看好"
         ],
-        "risk": "本场伤病名单未提供（仅提供2026-11-25名单，日期不同），是主要不确定性。"
+        "risk": "本场伤病名单未提供，若主力临场缺阵可能影响发挥。"
       },
       "degraded": false,
       "result": null,
@@ -1257,22 +1248,13 @@
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T12:27:48Z",
+        "capturedAt": "2026-11-24T13:54:45Z",
         "prob": {
           "home": 83,
           "draw": 11,
           "away": 6
         }
-      },
-      "news": [
-        {
-          "title": "Brentford latest: 'Get real' - Andrews pushes back against rising expectations",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/13279280/brentford-transfers-latest-news-rumours-and-gossip-live-updates-goals-and-highlights",
-          "published": "2026-11-23",
-          "source": "Sky Sports"
-        }
-      ]
+      }
     },
     {
       "id": "SA-2026-11-29-UDI-FIO",
@@ -1334,30 +1316,28 @@
       },
       "prediction": {
         "prob": {
-          "home": 31,
-          "draw": 27,
+          "home": 30,
+          "draw": 28,
           "away": 42
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 62,
+        "confidence": 63,
         "pick": "away",
         "reasons": [
-          "主队第19、近5场仅2平3负，联赛形势更差。",
-          "客队第16，近5场1胜2平2负，状态略优于主队。",
-          "赛季进失球主队13/26、客队17/28，客队攻防略好。",
-          "市场去水概率主胜31%/平27%/客胜42%，略偏向佛罗伦萨。"
+          "主队排名第19且赛季失26球，防守漏洞明显。",
+          "客队近5场拿5分，状态略好于仅2分的主队。",
+          "去水赔率客胜42%，市场更倾向佛罗伦萨。"
         ],
         "factors": [
-          "排名接近",
-          "客队状态略优",
-          "市场偏客",
+          "客队排名稍优",
           "主队防守差",
-          "交手互有胜负"
+          "客队状态略好",
+          "市场偏向客胜"
         ],
-        "risk": "伤病名单未覆盖本场、场地未提供，影响排阵与主场因素判断。"
+        "risk": "场地信息缺失，且本场伤停名单日期不匹配，增加不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1368,7 +1348,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:46Z",
+        "capturedAt": "2026-11-24T13:54:43Z",
         "prob": {
           "home": 31,
           "draw": 27,
@@ -1452,9 +1432,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
+          "home": 23,
           "draw": 26,
-          "away": 49
+          "away": 51
         },
         "score": {
           "home": 1,
@@ -1463,18 +1443,18 @@
         "confidence": 66,
         "pick": "away",
         "reasons": [
-          "客队排名第 4，主队第 9，赛季进球 18 比 12 领先",
-          "近 5 场客队 W W L W W，胜率高于主队的 L W W L L",
-          "近 2 次交手客队全胜，两次均为 Everton 1-2 Liverpool",
-          "市场均值客胜 50%，与判断方向一致"
+          "利物浦排名第4高于埃弗顿第9，赛季进球18比12。",
+          "近5场利物浦4胜1负，埃弗顿2胜3负，状态更佳。",
+          "近2次交手利物浦全胜，打进4球失2球。",
+          "市场均值客胜50%、主胜24%，倾向客队。"
         ],
         "factors": [
-          "排名与进球优势",
-          "交手两连胜",
-          "主队状态起伏",
-          "低温大风场地"
+          "排名优势",
+          "近期状态",
+          "交锋连胜",
+          "市场倾向"
         ],
-        "risk": "本场伤病名单未提供，德比战主场因素或缩小差距。"
+        "risk": "伤病名单仅到11月25日且本场场地未提供，赛前信息存在缺口。"
       },
       "degraded": false,
       "result": null,
@@ -1485,7 +1465,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:38Z",
+        "capturedAt": "2026-11-24T13:54:41Z",
         "prob": {
           "home": 24,
           "draw": 26,
@@ -1576,29 +1556,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 41,
-          "draw": 29,
-          "away": 30
+          "home": 43,
+          "draw": 30,
+          "away": 27
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 0
         },
-        "confidence": 52,
+        "confidence": 58,
         "pick": "home",
         "reasons": [
-          "主队虽仅列第17，但主场作战且市场主胜概率44%",
-          "双方近5场同为2胜1平2负，状态接近",
-          "主队赛季进9失20、客队进13失23，两队防守均差",
-          "近2次交手各胜1场，最近一次瓦伦西亚1-0获胜"
+          "主队排名第17、客队第13，双方均处联赛下半区。",
+          "近5场双方同为2胜1平2负，近期状态接近。",
+          "主队赛季进9失20、客队进13失23，防守均不稳。",
+          "近2次交手各胜1场，最近瓦伦西亚1-0奥萨苏纳。"
         ],
         "factors": [
-          "主场微弱优势",
-          "双方防守皆差",
-          "近期状态接近",
-          "交手记录均势"
+          "排名接近",
+          "主场优势",
+          "防守均不稳",
+          "交手均势",
+          "市场略倾主"
         ],
-        "risk": "本场伤病名单与场地信息未提供，双方实力接近，比分走向不确定性较大。"
+        "risk": "伤病名单与本场日期不匹配、场地未提供，双方状态接近使赛果不确定性较高。"
       },
       "degraded": false,
       "result": null,
@@ -1609,7 +1590,7 @@
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T12:27:48Z",
+        "capturedAt": "2026-11-24T13:54:45Z",
         "prob": {
           "home": 44,
           "draw": 29,
@@ -1677,30 +1658,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 19,
-          "draw": 22,
+          "home": 18,
+          "draw": 23,
           "away": 59
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 76,
+        "confidence": 74,
         "pick": "away",
         "reasons": [
-          "主队第18且近5场全负，状态与排名均处劣势。",
-          "客队第8，近5场2胜2平1负，赛季失球14少于主队31。",
-          "近2次交手主队0胜客队2胜，主队两场均未进球。",
-          "市场均值客胜57%，与客胜判断方向一致。"
+          "萨索洛近5场全败且排名第18，赛季已失31球",
+          "那不勒斯近5场2胜2平1负，排名第8，状态更稳",
+          "近2次交手那不勒斯全胜：1-0、2-0",
+          "市场均值客胜57%，与判断方向一致"
         ],
         "factors": [
           "主队五连败",
-          "客队排名第8",
-          "交手客队两胜",
-          "市场客胜57%",
-          "主队失球31"
+          "防守漏洞明显",
+          "交手处劣势",
+          "客队状态更稳",
+          "市场倾向客胜"
         ],
-        "risk": "伤病名单日期与本场不一致、场地未提供，阵容和主场环境存在不确定性。"
+        "risk": "伤病名单非本场日期，无法确认双方本场伤停，阵容存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1711,7 +1692,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:46Z",
+        "capturedAt": "2026-11-24T13:54:43Z",
         "prob": {
           "home": 21,
           "draw": 22,
@@ -1719,6 +1700,13 @@
         }
       },
       "news": [
+        {
+          "title": "Report: Juventus, Inter, Napoli and five Premier League clubs want Monza’s Varela",
+          "summary": "Gustavo Varela has caught the eye of some of Europe’s biggest clubs with his performances...",
+          "link": "https://football-italia.net/juve-inter-five-prem-clubs-interested-varela/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
         {
           "title": "Report: Napoli meet with McTominay agent in Manchester to discuss contract renewal",
           "summary": "Tuesday’s reports claim that Napoli director Giovanni Manna has recently met with Scott McTominay’s agent,...",
@@ -1731,13 +1719,6 @@
           "summary": "Kevin De Bruyne is set to start for Napoli when they take on his former...",
           "link": "https://football-italia.net/ucl-man-city-napoli-probable-line-ups/",
           "published": "2026-11-24",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Allegri: ‘Losing to Man City won’t be decisive for Napoli, club making assessments’",
-          "summary": "Massimiliano Allegri maintained his stance that Tuesday’s Champions League match against Manchester City will not...",
-          "link": "https://football-italia.net/allegri-losing-to-man-city-wont-be-decisive/",
-          "published": "2026-11-23",
           "source": "Football Italia"
         }
       ]
@@ -1802,29 +1783,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 23,
+          "home": 22,
           "draw": 25,
-          "away": 52
+          "away": 53
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 0,
+          "away": 1
         },
-        "confidence": 66,
+        "confidence": 72,
         "pick": "away",
         "reasons": [
-          "马赛排名第5，欧塞尔第15，积分差距明显",
-          "近5场马赛4胜1负，欧塞尔仅1胜",
-          "欧塞尔赛季进14失25，防守漏洞突出",
-          "近2次交手马赛均1-0取胜，且两次都是客胜"
+          "主队第15对客队第5，排名差距明显",
+          "客队近5场4胜1负，状态显著占优",
+          "近2次交手马赛全胜，且均零封欧塞尔",
+          "市场均值客胜51%，与判断方向一致"
         ],
         "factors": [
           "排名差距",
-          "马赛状态火热",
-          "欧塞尔防守差",
-          "交手压制"
+          "状态客优",
+          "交手客全胜",
+          "主队防守差",
+          "市场客胜51%"
         ],
-        "risk": "本场伤病名单与场地未提供，只有11月25日的旧名单，阵容不确定性较大。"
+        "risk": "本场伤病名单未提供，伤停变化可能削弱马赛的纸面优势。"
       },
       "degraded": false,
       "result": null,
@@ -1835,7 +1817,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T12:27:53Z",
+        "capturedAt": "2026-11-24T13:54:46Z",
         "prob": {
           "home": 25,
           "draw": 24,
@@ -1903,30 +1885,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 31,
-          "draw": 29,
-          "away": 40
+          "home": 33,
+          "draw": 28,
+          "away": 39
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "伯恩茅斯近5场全胜，积分榜第5，状态与排名均优于富勒姆。",
-          "近2次交手伯恩茅斯全胜，且最近一次客场1-0击败富勒姆。",
-          "富勒姆近5场3平2胜保持不败，主场具备一定韧性。",
-          "市场均值主胜36%、平27%、客胜37%，与客胜略优判断接近。"
+          "客队排名第5、近5场全胜，状态明显优于主队",
+          "主队近5场3平2胜，主场韧性尚在但胜率有限",
+          "近2次交手客队全胜，2026-05-09 曾客场1-0取胜",
+          "市场均值主胜36%/平27%/客胜37%，与判断方向一致"
         ],
         "factors": [
-          "客队状态火热",
-          "排名优势",
-          "交手占优",
-          "市场均势",
-          "主场韧性"
+          "客队五连胜",
+          "排名差距明显",
+          "交手客队占优",
+          "平局概率偏高"
         ],
-        "risk": "本场伤停名单未提供（现有名单为11月25日），阵容变化是最大不确定性。"
+        "risk": "伤病名单为2026-11-25版本，与本场日期不同，无法确认；场地未提供。"
       },
       "degraded": false,
       "result": null,
@@ -1937,7 +1918,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:38Z",
+        "capturedAt": "2026-11-24T13:54:41Z",
         "prob": {
           "home": 36,
           "draw": 27,
@@ -2013,22 +1994,21 @@
           "home": 2,
           "away": 1
         },
-        "confidence": 75,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "布莱顿（主）排名第2，赛季进26失9，攻防数据优于第13的纽卡斯尔联（客）。",
-          "近5场布莱顿（主）3胜2负，纽卡斯尔联（客）1胜2平2负，状态更好。",
-          "市场均值主胜61%、平局21%、客胜18%，与主队倾向一致。",
-          "近2次交手各胜1场，最近布莱顿（主）1-3告负，需防客队。"
+          "主队排名第2，赛季进失球26/9明显优于客队15/18",
+          "近5场主队3胜2负，客队仅1胜2平2负，状态占优",
+          "市场均值主胜61%，与主队排名和攻防数据一致",
+          "近2次交手各胜1场，最近一次纽卡斯尔联3-1取胜"
         ],
         "factors": [
           "排名第2",
           "攻防占优",
-          "状态更佳",
-          "市场倾向主胜",
-          "交手均衡"
+          "市场主胜61%",
+          "交手均势"
         ],
-        "risk": "本场伤病名单与场地信息未提供，阵容与场地适应是主要不确定性。"
+        "risk": "本场伤病名单未提供（仅11月25日名单），阵容不确定性是最大风险"
       },
       "degraded": false,
       "result": null,
@@ -2039,7 +2019,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:38Z",
+        "capturedAt": "2026-11-24T13:54:42Z",
         "prob": {
           "home": 61,
           "draw": 21,
@@ -2053,20 +2033,6 @@
           "link": "https://www.getfootballnewsgermany.com/2026/arsenals-david-raya-ruled-out-of-the-game-against-borussia-dortmund/",
           "published": "2026-11-23",
           "source": "Get German Football News"
-        },
-        {
-          "title": "U.S. to co-host Women's World Cup in 2031; U.K. wins bid for 2035",
-          "summary": "The United States has been confirmed as co-hosts of the 2031 Women's World Cup, before the United Kingdom hosts the tournament four years later.",
-          "link": "https://www.espn.com/soccer/story/_/id/50571732/womens-world-cup-united-states-united-kindgom",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
-          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
         }
       ]
     },
@@ -2130,30 +2096,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 28,
-          "draw": 30,
-          "away": 42
+          "home": 27,
+          "draw": 29,
+          "away": 44
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 67,
+        "confidence": 66,
         "pick": "away",
         "reasons": [
-          "市场去水概率客胜45%、主胜27%，市场偏向热刺。",
-          "热刺近5场4胜，排名第10高于桑德兰第18。",
-          "桑德兰赛季进8失17，防守端数据明显偏弱。",
-          "近2次交手桑德兰1胜1平，主场交锋不落下风。"
+          "主队排名第18，近5场仅1胜2平2负，状态偏弱。",
+          "客队排名第10，近5场4胜1负，赛季进失球12/11优于主队。",
+          "近2次交手桑德兰1胜1平保持不败，主队有心理支撑。",
+          "市场均值主胜27%、平局28%、客胜45%，与客胜倾向一致。"
         ],
         "factors": [
-          "排名差距",
-          "热刺状态佳",
-          "桑德兰防守弱",
-          "交手不败",
-          "市场偏客胜"
+          "排名客队占优",
+          "热刺近况更佳",
+          "桑德兰交手不败",
+          "市场倾向客胜"
         ],
-        "risk": "本场伤病名单与场地信息未提供，阵容和主场环境存在不确定性。"
+        "risk": "本场伤病名单未提供、场地未提供，热刺客战稳定性是最大不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -2164,7 +2129,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:38Z",
+        "capturedAt": "2026-11-24T13:54:42Z",
         "prob": {
           "home": 27,
           "draw": 28,
@@ -2219,30 +2184,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 45,
-          "draw": 27,
-          "away": 28
+          "home": 34,
+          "draw": 31,
+          "away": 35
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 48,
-        "pick": "home",
+        "confidence": 47,
+        "pick": "away",
         "reasons": [
-          "水晶宫排名第20且近5场全败，状态低迷。",
-          "赫尔城排名第11，赛季失球11远少于水晶宫27。",
-          "市场均值主胜51%，高于平局25%和客胜24%。",
-          "双方暂无历史交锋数据，天气降水概率16%。"
+          "主队排名第20且近5场全败，状态低迷",
+          "主队赛季失球27个，防守漏洞明显",
+          "客队排名第11，净胜球+2略占优",
+          "市场均值主胜51%，与基本面判断明显背离"
         ],
         "factors": [
-          "水晶宫状态全败",
-          "赫尔城排名占优",
-          "市场倾向主胜",
-          "防守差距明显",
-          "降水概率16%"
+          "主队五连败",
+          "主队防守失27球",
+          "客队排名第11",
+          "市场分歧大"
         ],
-        "risk": "本场伤病名单未提供，历史交手缺失，且水晶宫低迷状态与市场主胜51%存在分歧，冷门风险高。"
+        "risk": "伤病名单未覆盖本场、场地未提供，且市场主胜51%与基本面分歧较大。"
       },
       "degraded": false,
       "result": null,
@@ -2253,7 +2217,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T12:27:38Z",
+        "capturedAt": "2026-11-24T13:54:41Z",
         "prob": {
           "home": 51,
           "draw": 25,
@@ -2267,20 +2231,6 @@
           "link": "https://www.skysports.com/football/news/11095/13615948/crystal-palace-women-deducted-three-points-in-wsl-for-making-substitutions-at-four-windows-in-everton-win",
           "published": "2026-11-24",
           "source": "Sky Sports"
-        },
-        {
-          "title": "Kolo Toure: ‘De Bruyne didn’t want to leave City, McTominay has been a surprise’",
-          "summary": "Former Manchester City defender and assistant coach Kolo Toure says that Kevin De Bruyne never...",
-          "link": "https://football-italia.net/kolo-toure-de-bruyne-didnt-want-to-leave-city/",
-          "published": "2026-11-24",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Champions League: Man City vs. Napoli – Probable line-ups and where to watch on TV",
-          "summary": "Kevin De Bruyne is set to start for Napoli when they take on his former...",
-          "link": "https://football-italia.net/ucl-man-city-napoli-probable-line-ups/",
-          "published": "2026-11-24",
-          "source": "Football Italia"
         }
       ]
     },
@@ -2352,22 +2302,22 @@
           "home": 1,
           "away": 2
         },
-        "confidence": 58,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "主队第3、客队第4，排名接近，实力差距有限。",
-          "莱比锡红牛赛季32球，进攻火力强于弗赖堡的21球。",
-          "近5场客队4胜1负，状态略优于主队3胜2负。",
-          "市场均值主胜36%、平25%、客胜39%，客胜略被看好。"
+          "积分接近：主队第3、客队第4，整体实力差距不大。",
+          "客队近5场4胜1负，赛季32球，进攻端表现更突出。",
+          "主队近5场3胜2负，最近交手曾主场4-1大胜客队。",
+          "市场均值客胜39%略高于主胜36%，倾向客队但不明显。"
         ],
         "factors": [
-          "排名接近",
-          "客队火力强",
-          "主场因素",
-          "市场偏客",
-          "状态客队稍优"
+          "积分接近",
+          "客队进攻强",
+          "主队主场大胜",
+          "市场略倾客队",
+          "低温低降水"
         ],
-        "risk": "场地信息与本场伤病名单未提供，阵容和临场条件存在不确定性。"
+        "risk": "本场伤病名单未按比赛日提供，场地与其他信息也缺失，临场变量难评估。"
       },
       "degraded": false,
       "result": null,
@@ -2378,7 +2328,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T12:27:44Z",
+        "capturedAt": "2026-11-24T13:54:49Z",
         "prob": {
           "home": 36,
           "draw": 25,
@@ -2442,29 +2392,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 10,
+          "home": 12,
           "draw": 15,
-          "away": 75
+          "away": 73
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 74,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "巴塞罗那排名第1，赛季进51失15，攻防数据联赛顶尖",
-          "拉科鲁尼亚排名第12，近5场仅1胜2平2负，状态平淡",
-          "市场均值客胜76%、主胜10%，与实力差距判断一致",
-          "开赛降水概率48%，湿滑场地或略微压低进球数"
+          "客队排名第1，主队仅第12，排名差距明显",
+          "客队赛季进51球失15球，攻防优势突出",
+          "客队近5场4胜1负，状态优于主队",
+          "市场均值客胜76%，与客胜判断方向一致"
         ],
         "factors": [
-          "客队实力碾压",
-          "主队状态低迷",
-          "市场一致看好客胜",
-          "降水影响节奏"
+          "排名差距",
+          "攻防悬殊",
+          "客队状态佳",
+          "市场倾向客胜"
         ],
-        "risk": "伤病名单非本场、场地未提供，且无历史交锋数据，爆冷风险难以量化。"
+        "risk": "本场伤病名单未提供，阵容信息不完整。"
       },
       "degraded": false,
       "result": null,
@@ -2475,7 +2425,7 @@
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T12:27:48Z",
+        "capturedAt": "2026-11-24T13:54:45Z",
         "prob": {
           "home": 10,
           "draw": 14,
