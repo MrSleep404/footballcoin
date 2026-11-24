@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { nextTick, onMounted, ref, watch } from "vue";
 import { isToday, monthDayLabel, weekdayLabel } from "../utils/format";
 
-defineProps<{
+const props = defineProps<{
   dates: string[];
   modelValue: string;
 }>();
@@ -9,10 +10,32 @@ defineProps<{
 const emit = defineEmits<{
   "update:modelValue": [value: string];
 }>();
+
+const strip = ref<HTMLElement | null>(null);
+
+function centerActive(behavior: ScrollBehavior) {
+  const box = strip.value;
+  const item = box?.querySelector<HTMLElement>(".day.active");
+  if (!box || !item) return;
+  const left = Math.max(0, item.offsetLeft - (box.clientWidth - item.offsetWidth) / 2);
+  if (behavior === "smooth") box.scrollTo({ left, behavior });
+  else box.scrollLeft = left;
+}
+
+watch(
+  () => props.modelValue,
+  () => {
+    void nextTick(() => centerActive("smooth"));
+  },
+);
+
+onMounted(() => {
+  void nextTick(() => centerActive("auto"));
+});
 </script>
 
 <template>
-  <div class="strip" role="tablist" aria-label="按日期筛选">
+  <div ref="strip" class="strip" role="tablist" aria-label="按日期筛选">
     <button
       v-for="date in dates"
       :key="date"
@@ -36,11 +59,32 @@ const emit = defineEmits<{
   gap: 6px;
   overflow-x: auto;
   padding: 2px 2px 8px;
-  scrollbar-width: none;
+  scrollbar-color: var(--border-strong) transparent;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 .strip::-webkit-scrollbar {
-  display: none;
+  height: 4px;
+}
+
+.strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.strip::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--border-strong);
+}
+
+@media (max-width: 640px) {
+  .strip {
+    scrollbar-width: none;
+  }
+
+  .strip::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .day {
