@@ -43,7 +43,7 @@ const syncNarrow = () => {
 };
 
 onMounted(() => {
-  media = window.matchMedia("(max-width: 640px)");
+  media = window.matchMedia("(max-width: 1024px)");
   syncNarrow();
   media.addEventListener("change", syncNarrow);
 });
