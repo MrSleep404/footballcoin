@@ -19,7 +19,7 @@ const stale = computed(() => isStale(props.generatedAt));
         数据可能未更新：最后生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）
       </span>
       <span v-else>
-        数据生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）
+        数据生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）· 每日更新，覆盖未来 7 天
       </span>
     </div>
     <div class="right">
@@ -52,6 +52,7 @@ const stale = computed(() => isStale(props.generatedAt));
 
 .left {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
 }

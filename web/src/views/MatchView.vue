@@ -209,6 +209,7 @@ onMounted(() => {
         <section class="card metric">
           <span class="metric-label">数据生成</span>
           <span class="metric-date numeric">{{ formatGeneratedAt(generatedAt) }}</span>
+          <span class="metric-note">每日更新 · 开赛前以最新版本为准</span>
         </section>
       </div>
 
@@ -594,6 +595,13 @@ onMounted(() => {
 .metric-date {
   font-size: 13px;
   font-weight: 700;
+}
+
+.metric-note {
+  margin-top: 1px;
+  color: var(--text-dim);
+  font-size: 10px;
+  line-height: 1.4;
 }
 
 .meter {
