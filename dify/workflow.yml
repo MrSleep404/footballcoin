@@ -1390,6 +1390,7 @@ workflow:
     - data:
         code: |
           import base64
+          import gzip
           import json
           from datetime import datetime, timedelta, timezone
 
@@ -1413,8 +1414,12 @@ workflow:
               if not text:
                   return {}
               try:
-                  return json.loads(base64.b64decode(str(text)).decode("utf-8"))
-              except (TypeError, ValueError):
+                  raw = base64.b64decode(str(text))
+                  # 缓存文件以 gzip+base64 存储，兼容早期的明文 JSON
+                  if raw[:2] == b"\x1f\x8b":
+                      raw = gzip.decompress(raw)
+                  return json.loads(raw.decode("utf-8"))
+              except (TypeError, ValueError, OSError):
                   return {}
 
 
@@ -1476,10 +1481,12 @@ workflow:
               if not updated:
                   return {"changed": False, "contentBase64": "", "sha": sha, "updated": 0}
               data["updatedAt"] = datetime.now(BJ).isoformat(timespec="seconds")
-              text = json.dumps(data, ensure_ascii=False, indent=2)
+              # 缓存已超过代码节点单个输出变量的长度上限，改为紧凑 JSON + gzip 后 base64
+              raw = json.dumps(data, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+              payload = base64.b64encode(gzip.compress(raw, 6, mtime=0)).decode("ascii")
               return {
                   "changed": True,
-                  "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                  "contentBase64": payload,
                   "sha": sha,
                   "updated": updated,
               }
@@ -1592,6 +1599,7 @@ workflow:
     - data:
         code: |
           import base64
+          import gzip
           import json
           from datetime import datetime, timedelta, timezone
 
@@ -1751,8 +1759,12 @@ workflow:
               body = _parse(payload)
               if isinstance(body, dict) and body.get("content"):
                   try:
-                      body = json.loads(base64.b64decode(str(body["content"])).decode("utf-8"))
-                  except (TypeError, ValueError, KeyError):
+                      raw = base64.b64decode(str(body["content"]))
+                      # 缓存文件以 gzip+base64 存储，兼容早期的明文 JSON
+                      if raw[:2] == b"\x1f\x8b":
+                          raw = gzip.decompress(raw)
+                      body = json.loads(raw.decode("utf-8"))
+                  except (TypeError, ValueError, KeyError, OSError):
                       return {}
               if not isinstance(body, dict):
                   return {}
