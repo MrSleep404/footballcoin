@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-24T21:57:53+08:00",
+  "generatedAt": "2026-11-25T09:15:21+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 3,
@@ -67,36 +67,35 @@
       },
       "prediction": {
         "prob": {
-          "home": 23,
-          "draw": 25,
-          "away": 52
+          "home": 26,
+          "draw": 26,
+          "away": 48
         },
         "score": {
-          "home": 0,
+          "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "莱切排名第15低于亚特兰大第12，客队排名略占优。",
-          "莱切近5场仅1平4负，近期状态明显低迷。",
-          "近2次交手亚特兰大2胜，最近两场为0-3、4-1。",
-          "莱切赛季进12失25，防守数据不如亚特兰大。"
+          "莱切近5场1平4负，本赛事主场场均失2.4球",
+          "亚特兰大本赛事进21球，客场场均进1.2球",
+          "近2次交手亚特兰大全胜，总比分7-1",
+          "市场去水概率客胜50%，与判断方向一致"
         ],
         "factors": [
-          "排名客队占优",
-          "近况客队更好",
-          "交锋客队全胜",
-          "主队防守薄弱",
-          "市场倾向客胜"
+          "客队进攻占优",
+          "主队防线不稳",
+          "交手两连败",
+          "客胜倾向"
         ],
-        "risk": "本场场地、天气及对应日期的伤病名单未提供，是主要不确定性。"
+        "risk": "亚特兰大本赛事场均失2球、防守波动大，且伤病名单未覆盖本场，存在阵容不确定。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-24T13:54:43Z",
+        "capturedAt": "2026-11-25T01:10:58Z",
         "prob": {
           "home": 25,
           "draw": 25,
@@ -164,36 +163,36 @@
       },
       "prediction": {
         "prob": {
-          "home": 21,
+          "home": 19,
           "draw": 25,
-          "away": 54
+          "away": 56
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 0,
+          "away": 1
         },
-        "confidence": 70,
+        "confidence": 69,
         "pick": "away",
         "reasons": [
-          "AC米兰排名第4，卡利亚里第11，客队联赛位次占优。",
-          "近5场AC米兰4胜1负，卡利亚里1胜4负，状态差距明显。",
-          "赛季进失球AC米兰28/14，卡利亚里10/17，攻防数据占优。",
-          "近2次交手各胜1场，卡利亚里曾客场2-1击败AC米兰。"
+          "客队排名第4高于主队第11，赛季进球28比10、失球14比17均占优。",
+          "AC米兰近5场4胜1负，卡利亚里近5场1胜4负，状态差距明显。",
+          "卡利亚里主场场均进0.6球，AC米兰客场场均进1.67球。",
+          "市场均值客胜55%，与预测方向一致。"
         ],
         "factors": [
           "排名差距",
-          "近期状态",
-          "攻防数据",
-          "客胜倾向",
-          "交手均衡"
+          "状态反差",
+          "客队进攻强",
+          "主队主场低产",
+          "市场偏客"
         ],
-        "risk": "场地与天气未提供，伤病名单与比赛日期不一致，临场阵容存在不确定性。"
+        "risk": "场地、天气和本场伤病名单未提供，阵容与临场环境存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-24T13:54:43Z",
+        "capturedAt": "2026-11-25T01:10:58Z",
         "prob": {
           "home": 20,
           "draw": 25,
@@ -202,10 +201,10 @@
       },
       "news": [
         {
-          "title": "Who is Markus Krösche and who are his best signings?",
-          "summary": "Monday’s reports claim that Milan have reached an agreement with Eintracht Frankfurt over the compensation...",
-          "link": "https://football-italia.net/who-is-milan-linked-krosche-best-signings/",
-          "published": "2026-11-23",
+          "title": "Krösche ‘operational’ with Milan announcement seemingly imminent",
+          "summary": "Markus Krösche is already in Milan and hard at work, even though his appointment as...",
+          "link": "https://football-italia.net/krosche-operational-milan-announcement-due/",
+          "published": "2026-11-24",
           "source": "Football Italia"
         }
       ]
@@ -270,35 +269,36 @@
       },
       "prediction": {
         "prob": {
-          "home": 48,
-          "draw": 29,
-          "away": 23
+          "home": 50,
+          "draw": 28,
+          "away": 22
         },
         "score": {
           "home": 1,
           "away": 0
         },
-        "confidence": 54,
+        "confidence": 68,
         "pick": "home",
         "reasons": [
-          "主队排名第11高于客队第18，客队赛季失球21个防守较差",
-          "近5场主队2胜1平2负，客队1胜1平3负，主队状态略优",
-          "市场均值主胜46%、平局30%、客胜24%，方向略偏主队",
-          "近2次交手各胜1场，最近西班牙人1-2赫塔菲"
+          "西班牙人第11、赫塔菲第18，主队排名占优。",
+          "赫塔菲客场6场0进球、场均失2.33，客战乏力。",
+          "西班牙人主场场均进1失1.17，表现较稳。",
+          "市场均值主胜46%，与主胜判断方向一致。"
         ],
         "factors": [
           "排名占优",
-          "客队防守差",
-          "市场偏主",
-          "状态略优"
+          "客队客场零进球",
+          "主队主场平稳",
+          "市场偏主胜",
+          "交手互有胜负"
         ],
-        "risk": "本场伤病名单未按本场日期提供，天气和场地也未提供，阵容与临场条件存在不确定性。"
+        "risk": "场地、天气及本场伤病名单未提供，临场信息不足；赫塔菲客场极弱但西班牙人主场火力有限，平局仍是主要风险。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T13:54:45Z",
+        "capturedAt": "2026-11-25T01:10:57Z",
         "prob": {
           "home": 46,
           "draw": 30,
