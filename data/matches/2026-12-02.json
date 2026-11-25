@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-02",
+  "generatedAt": "2026-11-25T09:15:24+08:00",
+  "source": "football-data.org",
+  "model": "gpt-4o-mini",
+  "matchCount": 1,
+  "degradedCount": 0,
+  "matches": [
+    {
+      "id": "PL-2026-12-02-COV-IPS",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-01T20:00:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "考文垂",
+        "nameEn": "Coventry City FC",
+        "crest": "https://crests.football-data.org/1076.png",
+        "rank": 14,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 21
+      },
+      "away": {
+        "name": "伊普斯维奇",
+        "nameEn": "Ipswich Town FC",
+        "crest": "https://crests.football-data.org/349.png",
+        "rank": 16,
+        "form": [
+          "L",
+          "L",
+          "D",
+          "D",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 22
+      },
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "prediction": {
+        "prob": {
+          "home": 43,
+          "draw": 27,
+          "away": 30
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 54,
+        "pick": "home",
+        "reasons": [
+          "主队第14、客队第16，排名接近，考文垂有主场优势。",
+          "考文垂本赛事主场场均进1.67，伊普斯维奇客场场均失2.5。",
+          "伊普斯维奇近5场2平3负不胜，客场防守漏洞较明显。",
+          "市场均值主胜42%、平26%、客32%，与主队小胜判断接近。"
+        ],
+        "factors": [
+          "主场优势",
+          "客队客防偏弱",
+          "客队近5场不胜",
+          "市场略倾主胜",
+          "排名接近"
+        ],
+        "risk": "伤停与天气未提供、无历史交锋，跨赛事无样本，信息不完整是最大不确定性。"
+      },
+      "degraded": false,
+      "result": null,
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-25T01:10:54Z",
+        "prob": {
+          "home": 42,
+          "draw": 26,
+          "away": 32
+        }
+      }
+    }
+  ]
+}
