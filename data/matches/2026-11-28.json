@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-28",
-  "generatedAt": "2026-11-25T09:15:11+08:00",
+  "generatedAt": "2026-11-25T17:00:39+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 14,
@@ -67,40 +67,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 60,
-          "draw": 22,
-          "away": 18
+          "home": 58,
+          "draw": 23,
+          "away": 19
         },
         "score": {
           "home": 2,
-          "away": 1
+          "away": 0
         },
         "confidence": 72,
         "pick": "home",
         "reasons": [
-          "不莱梅排名第6，门兴排名第18，积分差距明显。",
-          "不莱梅主场场均进2.8球，门兴客场场均失3球。",
-          "门兴赛季失26球、近5场1胜1平3负，防守偏弱。",
-          "近2次交手不莱梅1胜1平，且曾4-0取胜。"
+          "不莱梅本赛事场均进2.1失1.5，近5场取得3胜1平1负",
+          "不莱梅主场5场场均进2.8失1，主场攻防显著强于客场",
+          "门兴本赛事场均失2.6，客场5场场均失3球，防线漏洞大",
+          "近2次交手不莱梅1胜1平，含客场4-0大胜门兴"
         ],
         "factors": [
-          "排名差距",
-          "主场火力",
-          "客队防守",
+          "主场火力强",
+          "门兴客场防守差",
+          "排名差距大",
           "交手占优"
         ],
-        "risk": "本场伤病名单未提供，且双方无跨赛事样本，强度与轮换判断存在不确定性。"
+        "risk": "伤病情况未提供，低温可能影响技术发挥；门兴上轮客场曾3-2取胜，爆冷风险仍存。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": -3.3,
+        "temp": -2.7,
         "precip": 0,
-        "wind": 9.6
+        "wind": 7.6
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:11:13Z",
+        "capturedAt": "2026-11-25T08:55:09Z",
         "prob": {
           "home": 54,
           "draw": 23,
@@ -164,41 +164,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 23,
+          "home": 20,
           "draw": 27,
-          "away": 50
+          "away": 53
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 69,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "威尼斯排名第20，场均失2.08球，防守问题突出",
-          "博洛尼亚近5场4胜1平，客场场均进1.67球",
-          "威尼斯近5场1胜4负，主场场均仅进0.83球",
-          "市场均值客胜43%，与客胜方向一致"
+          "威尼斯本赛事场均进0.67失2.08，12轮总进8失25，攻防均弱。",
+          "博洛尼亚客场场均进1.67失1.00，近5场4胜1平，含客胜AC米兰4-2。",
+          "威尼斯近5场除主场2-1乌迪内斯外全败，且0-4负尤文，状态低迷。",
+          "市场客胜43%，予53%，分歧来自客队客场攻防和主队防守数据。"
         ],
         "factors": [
-          "排名差距",
-          "防守漏洞",
-          "客队状态",
-          "客场火力",
-          "市场倾向"
+          "客队近5场4胜1平",
+          "威尼斯防守薄弱",
+          "博洛尼亚客场强势",
+          "伤病信息缺失"
         ],
-        "risk": "本场伤病名单日期不匹配，且无历史交锋数据，场地未提供。"
+        "risk": "伤病、历史交锋及跨赛事数据均未提供，主队主力复出或客队轮换可能改变走势。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.0,
-        "precip": 15,
-        "wind": 11.1
+        "temp": 6.8,
+        "precip": 6,
+        "wind": 10.1
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T01:10:58Z",
+        "capturedAt": "2026-11-25T08:55:13Z",
         "prob": {
           "home": 28,
           "draw": 29,
@@ -266,40 +265,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 37,
-          "draw": 28,
+          "home": 36,
+          "draw": 29,
           "away": 35
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 50,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "布伦特福德主场5场场均进2球、失1.2球，主场进攻强于客场",
-          "巴黎FC客场5场场均仅进1球，远低于其主场2.67球",
-          "近5场双方同为3胜，状态接近，但主队刚客场1-0取胜",
-          "近2次交手主队0胜2负，巴黎FC在往绩上占优"
+          "布伦特福德在本赛事主场5场场均进2球、失1.2球，近5场3胜1平1负",
+          "巴黎FC在本赛事客场5场场均进1球、失1球，近两个客场1-0欧塞尔、1-2朗斯",
+          "市场客胜44%，但客队客场场均1球与主场2.67球差距大，故下调客胜至35%",
+          "近2次交手客队2胜0平，是本场客胜的主要上行风险"
         ],
         "factors": [
-          "主场火力",
-          "客队客场乏力",
-          "状态接近",
-          "往绩客优"
+          "主场场均2球",
+          "客队客场仅1球",
+          "两队状态接近",
+          "交手客队全胜",
+          "低温0%降水"
         ],
-        "risk": "本场伤病名单与场地未提供；市场客胜44%高于我的判断，分歧在于巴黎FC客场场均仅1球。"
+        "risk": "伤病与场地未提供，客队客场样本仅5场；-4.3℃低温可能压低总进球数。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": -3.6,
+        "temp": -4.3,
         "precip": 0,
-        "wind": 13.0
+        "wind": 12.1
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T01:10:55Z",
+        "capturedAt": "2026-11-25T08:55:13Z",
         "prob": {
           "home": 29,
           "draw": 27,
@@ -307,13 +307,6 @@
         }
       },
       "news": [
-        {
-          "title": "Luis Enrique insists PSG won't 'start crying' over Doué, Kvara injuries",
-          "summary": "Paris Saint-Germain boss Luis Enrique insisted the club will cope with long-term injuries to key players Désiré Doué and Khvicha Kvaratskhelia.",
-          "link": "https://www.espn.com/soccer/story/_/id/50584788/psg-luis-enrique-injuries-desire-doue-khvicha-kvaratskhelia",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
         {
           "title": "Gasperini: ‘A great moment for Roma to face the best’ ahead of PSG test",
           "summary": "Gian Piero Gasperini says Roma’s trip to Paris Saint-Germain is “a great moment” to test...",
@@ -390,45 +383,45 @@
       },
       "prediction": {
         "prob": {
-          "home": 34,
-          "draw": 29,
-          "away": 37
+          "home": 36,
+          "draw": 31,
+          "away": 33
         },
         "score": {
           "home": 1,
-          "away": 2
+          "away": 0
         },
-        "confidence": 48,
-        "pick": "away",
+        "confidence": 58,
+        "pick": "home",
         "reasons": [
-          "主队联赛第17，场均进0.82失1.36，主场5场仅进0.6球",
-          "客队第8，场均进1.82但失1.82，客场场均进1.2失1.6",
-          "近2次交手各胜1场，最近一次切尔西主场1-3负于诺丁汉森林",
-          "市场均值主胜36%/平28%/客胜36%，与判断基本一致"
+          "森林本赛事主场5场场均进0.6失0.8，防守较稳但火力有限。",
+          "切尔西本赛事客场5场场均进1.2失1.6，近5场2胜3负且1-4负利兹联。",
+          "近2次交手各胜1场，最近森林客场3-1胜切尔西。",
+          "天气1.1℃、降水54%，双方4天内无其他赛事，体能相近。"
         ],
         "factors": [
-          "主场进攻乏力",
-          "切尔西防守不稳",
-          "交手各胜一场",
-          "低温有降水",
-          "双方赛程轻松"
+          "主场防守稳",
+          "切尔西客场漏",
+          "状态均不稳",
+          "低温有雨",
+          "交手各一胜"
         ],
-        "risk": "伤病名单日期与本场不符已缺失，双方跨赛事数据无，主队主场样本仅5场。"
+        "risk": "伤病与场地未提供，具体排兵和主场环境仍存不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
         "temp": 1.1,
-        "precip": 56,
+        "precip": 54,
         "wind": 16.2
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T01:10:52Z",
+        "capturedAt": "2026-11-25T08:55:11Z",
         "prob": {
-          "home": 36,
+          "home": 37,
           "draw": 28,
-          "away": 36
+          "away": 35
         }
       },
       "news": [
@@ -488,40 +481,39 @@
       },
       "prediction": {
         "prob": {
-          "home": 44,
-          "draw": 27,
-          "away": 29
+          "home": 48,
+          "draw": 26,
+          "away": 26
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "莱万特主场6场场均进2.33球，主场进攻火力明显。",
-          "桑坦德竞技客场6场场均失3.17球，客场防守漏洞较大。",
-          "市场去水概率主胜45%高于客胜30%，倾向主队占优。",
-          "桑坦德竞技近5场3胜，状态不差，需防客队拿分。"
+          "莱万特本赛事主场场均进2.33、失2.17，主场进攻明显强于客场0.43。",
+          "桑坦德竞技客场场均失3.17球，近5场虽3胜但客场0-2负奥萨苏纳。",
+          "莱万特近5场仅1胜2平2负，状态不及客队近5场3胜，但主场3-1胜毕尔巴鄂。"
         ],
         "factors": [
           "主场火力",
-          "客队客场防守",
-          "市场倾向",
-          "状态反差"
+          "客队客场漏防",
+          "排名反差",
+          "天气平稳"
         ],
-        "risk": "伤病名单未提供，历史交锋暂无数据，两队状态反差可能加大不确定性。"
+        "risk": "伤病、历史交锋、场地与跨赛事数据均未提供，临场及对赛信息不足。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 11.3,
+        "temp": 11.6,
         "precip": 0,
         "wind": 2.9
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T01:10:57Z",
+        "capturedAt": "2026-11-25T08:55:12Z",
         "prob": {
           "home": 45,
           "draw": 25,
@@ -589,41 +581,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 63,
-          "draw": 22,
-          "away": 15
+          "home": 58,
+          "draw": 24,
+          "away": 18
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 72,
+        "confidence": 70,
         "pick": "home",
         "reasons": [
-          "主队排名第4、客队第16，积分榜差距明显",
-          "主队本赛事主场场均进2球，客队客场场均失2.33球",
-          "客队客场6场仅进6球失14球，客战能力偏弱",
-          "近两次交手均打平，主队需防平局"
+          "贝蒂斯本赛事场均进1.62、失1.23，主场6场场均进2球，火力稳定。",
+          "巴列卡诺客场6场场均失2.33，近5场两场0-1、一场0-3，防守承压。",
+          "近2次交手均为平局（1-1、0-0），巴列卡诺有守平先例。",
+          "贝蒂斯3.7天前踢欧冠，轮换与体能可能限制大胜，但仍占主动。"
         ],
         "factors": [
+          "主场火力",
+          "客防漏洞",
           "排名差距",
-          "主场进攻强",
-          "客队客场失球多",
           "交手连平",
-          "欧战消耗"
+          "欧冠赛程"
         ],
-        "risk": "伤病名单为2026-11-26版本与本场日期不符，实际伤停未知；主队3.7天前有欧战消耗，轮换幅度不确定。"
+        "risk": "伤病与场地信息未提供，贝蒂斯欧冠后轮换幅度未知，主胜存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 16.3,
+        "temp": 16.6,
         "precip": 0,
-        "wind": 8.4
+        "wind": 6.6
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T01:10:57Z",
+        "capturedAt": "2026-11-25T08:55:12Z",
         "prob": {
           "home": 60,
           "draw": 22,
@@ -679,44 +671,44 @@
       "prediction": {
         "prob": {
           "home": 60,
-          "draw": 22,
-          "away": 18
+          "draw": 21,
+          "away": 19
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 63,
         "pick": "home",
         "reasons": [
-          "主队排名第7高于客队第17，赛季进球25比10优势明显。",
-          "弗罗西诺内主场6场场均进2.67失1，主场火力突出。",
-          "帕尔马客场5场场均失1.8，且近5场仅1胜。",
-          "市场均值主胜62%、平20%、客18%，与主胜判断基本一致。"
+          "弗罗西诺内本赛事主场6场场均进2.67失1，主场进失球明显占优",
+          "帕尔马12场仅进10球失22球，场均进0.83失1.83，攻防皆弱",
+          "弗罗西诺内近5场两胜均在主场：2-0都灵、5-1莱切，主场状态可靠",
+          "帕尔马客场5场场均进1失1.8，仅3-0亚特兰大一役表现突出"
         ],
         "factors": [
-          "排名优势",
-          "主场火力",
-          "客队防守差",
-          "市场主胜",
-          "无赛程消耗"
+          "主场场均2.67球",
+          "帕尔马场均0.83球",
+          "主场攻防占优",
+          "客队客场失球多",
+          "无历史交锋参考"
         ],
-        "risk": "跨赛事数据、历史交锋及本场伤病名单缺失，帕尔马客场爆冷风险仍存。"
+        "risk": "伤病信息未提供，且帕尔马本季曾客场3-0胜亚特兰大，客队爆冷风险存在。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 14.3,
-        "precip": 2,
-        "wind": 1.8
+        "temp": 14.2,
+        "precip": 0,
+        "wind": 5.2
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T01:10:58Z",
+        "capturedAt": "2026-11-25T08:55:13Z",
         "prob": {
-          "home": 62,
-          "draw": 20,
-          "away": 18
+          "home": 64,
+          "draw": 19,
+          "away": 17
         }
       }
     },
@@ -775,33 +767,32 @@
           "home": 2,
           "away": 1
         },
-        "confidence": 60,
+        "confidence": 57,
         "pick": "home",
         "reasons": [
-          "科隆排名第14低于埃尔弗斯贝格第9，但主场场均进1.4球。",
-          "科隆近5场3平2负未尝胜绩，近期状态偏低。",
-          "埃尔弗斯贝格客场场均失2.0球，客战防守漏洞明显。",
-          "市场均值主胜48%、平25%、客27%，与主队略优判断一致。"
+          "科隆本赛事主场5场场均进1.4球、失1.2球，明显好于客场的0.8球和1.8球。",
+          "埃尔弗斯贝格本赛事客场5场场均进1球、失2球，近两客场1-2、0-4均负。",
+          "科隆近5场3平2负，但客场1-1逼平拜仁慕尼黑、主场仅0-1惜败法兰克福，防守韧",
+          "市场均值主胜48%、平25%、客胜27%；科隆场均仅1.1球、近5场不胜，故主胜"
         ],
         "factors": [
-          "主场火力略优",
-          "客队客场防守差",
-          "市场略倾主胜",
-          "科隆近5场不胜",
-          "埃尔弗斯贝格起伏"
+          "主场防守更稳",
+          "客队客场失2球",
+          "科隆锋线乏力",
+          "比赛节奏偏慢"
         ],
-        "risk": "伤病名单非本场日期、双方无历史交锋，跨赛事样本也缺失，判断依据受限。"
+        "risk": "双方交手记录暂无、伤病情况未提供，且科隆近5场不胜，主胜判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 2.5,
+        "temp": 3.2,
         "precip": 0,
         "wind": 12.0
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:11:13Z",
+        "capturedAt": "2026-11-25T08:55:09Z",
         "prob": {
           "home": 48,
           "draw": 25,
@@ -869,40 +860,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 56,
-          "draw": 24,
-          "away": 20
+          "home": 60,
+          "draw": 23,
+          "away": 17
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 52,
+        "confidence": 68,
         "pick": "home",
         "reasons": [
-          "美因茨第13，柏林联合第17，主队排名占优。",
-          "柏林联合客场4场场均进0.25球、失3.5球，客场攻防明显偏弱。",
-          "近2次交手柏林联合1胜1平，最近在美因茨3-1取胜。",
-          "市场均值主胜64%、平20%、客16%，明显倾向主队。"
+          "美因茨本赛事场均进1.9失2.2，近5场仅1胜。",
+          "柏林联合客场4场场均进0.25失3.5，客战攻防俱弱。",
+          "近2次交手美因茨0胜1平1负，最近主场1-3不敌柏林联合。",
+          "美因茨主场5场场均失2.4球，防守隐患限制主胜把握。"
         ],
         "factors": [
-          "主队排名占优",
-          "客队客场极弱",
-          "美因茨主场失球多",
-          "市场倾向主胜"
+          "主场进攻有球",
+          "客队客场极差",
+          "主队防守隐患",
+          "交手不占优",
+          "低温无降水"
         ],
-        "risk": "伤病名单未覆盖本场且场地未提供，阵容与主场因素存在不确定性。"
+        "risk": "伤病情况与跨赛事数据未提供，美因茨主场场均失2.4球，防守波动是最大不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.7,
+        "temp": 1.0,
         "precip": 0,
-        "wind": 8.3
+        "wind": 10.1
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:11:13Z",
+        "capturedAt": "2026-11-25T08:55:09Z",
         "prob": {
           "home": 64,
           "draw": 20,
@@ -967,8 +959,8 @@
       "prediction": {
         "prob": {
           "home": 40,
-          "draw": 30,
-          "away": 30
+          "draw": 32,
+          "away": 28
         },
         "score": {
           "home": 1,
@@ -977,29 +969,30 @@
         "confidence": 52,
         "pick": "home",
         "reasons": [
-          "帕德博恩近5场1胜3平1负，主场场均进1.2失1.2，状态略稳。",
-          "沙尔克04近5场2平3负，客场场均失1.6，防守表现更弱。",
-          "积分榜第15对第16，帕德博恩赛季进球8比5略占优。",
-          "市场均值主胜39%、客胜34%，主队仅有小幅优势。"
+          "本赛事口径：帕德博恩10场进8失15，主场5场场均进1.2失1.2，主场攻守相对",
+          "沙尔克04本赛事场均仅进0.5球，近5场只入1球并有3场失利。",
+          "沙尔克客场5场场均失1.6球，主队主场1.2的场均进球有兑现空间。",
+          "交手记录暂无，开赛气温0.6℃偏低，双方进攻效率均低，倾向小比分。"
         ],
         "factors": [
-          "排名接近",
-          "主场略稳",
-          "客队近况低迷",
-          "低进球倾向"
+          "主场攻守平衡",
+          "客队近5场1球",
+          "客队客场失1.6",
+          "低温抑制进球",
+          "排名相邻"
         ],
-        "risk": "跨赛事数据、交手记录和本场伤病名单未提供，临场对位信息不足。"
+        "risk": "伤病与场地未提供；两队排名相邻且状态均低迷，平局可能性不低。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.8,
+        "temp": 0.6,
         "precip": 0,
-        "wind": 15.8
+        "wind": 11.4
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:11:13Z",
+        "capturedAt": "2026-11-25T08:55:09Z",
         "prob": {
           "home": 39,
           "draw": 27,
@@ -1067,47 +1060,56 @@
       },
       "prediction": {
         "prob": {
-          "home": 12,
-          "draw": 16,
-          "away": 72
+          "home": 11,
+          "draw": 18,
+          "away": 71
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 76,
+        "confidence": 68,
         "pick": "away",
         "reasons": [
-          "拜仁慕尼黑排名第2，赛季场均进3失1，攻防明显优于第12汉堡。",
-          "汉堡赛季失24球、场均失2.4，主场场均失1.75，防线压力大。",
-          "拜仁慕尼黑近5场3胜2平，但2.8天前刚踢欧冠客场，体能与轮换存疑。",
-          "市场均值客胜76%，与客胜判断方向一致。"
+          "拜仁慕尼黑本赛事场均进3失1，客场场均进1.8球，客战火力回落。",
+          "汉堡本赛事场均失2.4，近5场0-4负云达不莱梅、1-3负法兰克福。",
+          "拜仁慕尼黑2.8天前欧冠客战，汉堡4天内无赛，主队体能占优。",
+          "近2次交手汉堡1平1负，最近主场2-2拜仁慕尼黑；开赛-0.7℃，市场客胜76%"
         ],
         "factors": [
-          "实力差距",
-          "拜仁慕尼黑客场",
-          "汉堡防守",
-          "欧冠消耗",
-          "市场倾向"
+          "拜仁慕尼黑实力占优",
+          "汉堡防线场均失2.4",
+          "拜仁慕尼黑客场火力降",
+          "周中欧冠赛程消耗",
+          "低温或压低节奏"
         ],
-        "risk": "汉堡无跨赛事数据，场地与适配本场日期的伤病名单未提供。"
+        "risk": "汉堡跨赛事数据缺失、伤病情况未提供，是本次预测的主要不确定来源。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": -0.3,
+        "temp": -0.7,
         "precip": 0,
-        "wind": 16.2
+        "wind": 15.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:11:13Z",
+        "capturedAt": "2026-11-25T08:55:09Z",
         "prob": {
           "home": 10,
           "draw": 14,
           "away": 76
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Bayern Munich predicted XI vs Lille: Who replaces Harry Kane?",
+          "summary": "Bayern Munich will be without Harry Kane for the next three months after England’s leading goalscorer underwent successful surgery on a torn syndesmosis ligament in his left ankle, sustained during…",
+          "link": "https://www.getfootballnewsgermany.com/2026/bayern-munich-predicted-xi-vs-lille-who-replaces-harry-kane/",
+          "published": "2026-11-25",
+          "source": "Get German Football News"
+        }
+      ]
     },
     {
       "id": "PL-2026-11-28-LEE-COV",
@@ -1156,41 +1158,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 63,
-          "draw": 22,
-          "away": 15
+          "home": 60,
+          "draw": 24,
+          "away": 16
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 72,
+        "confidence": 76,
         "pick": "home",
         "reasons": [
-          "利兹联排名第7高于考文垂第14，市场主胜均值64%形成支撑。",
-          "利兹联本赛事主场场均进1.4失0.6，主场攻守表现稳定。",
-          "考文垂客场场均进0.6失2.0，近5场2胜3负且客战偏弱。",
-          "天气2.9℃、降水概率61%，可能压低节奏但不改主队优势。"
+          "利兹联本赛事场均进1.27失0.82，主场5场场均仅失0.6。",
+          "考文垂本赛事场均失1.91，客场5场场均失2且仅进0.6。",
+          "利兹联近5场4-1胜切尔西、1-0胜热刺，状态优于近5场3负的考文垂。",
+          "市场均值主胜64%，与本判接近，仅小幅下调至60%。"
         ],
         "factors": [
-          "排名优势",
-          "主场攻守稳",
-          "客队客场疲软",
-          "市场看主胜",
-          "低温有雨"
+          "主场防守稳固",
+          "客战攻防失衡",
+          "近期状态主优",
+          "低温降雨",
+          "市场偏主胜"
         ],
-        "risk": "本场伤病未提供，历史交锋暂无，且低温有雨增加比赛波动。"
+        "risk": "伤病与历史交锋数据未提供，跨赛事参考口径无已结束场次，判断依赖本赛事样本。"
       },
       "degraded": false,
       "result": null,
       "weather": {
         "temp": 2.9,
-        "precip": 61,
+        "precip": 65,
         "wind": 10.1
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T01:10:53Z",
+        "capturedAt": "2026-11-25T08:55:11Z",
         "prob": {
           "home": 64,
           "draw": 21,
@@ -1258,41 +1260,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 42,
-          "draw": 27,
-          "away": 31
+          "home": 35,
+          "draw": 28,
+          "away": 37
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 58,
-        "pick": "home",
+        "confidence": 54,
+        "pick": "away",
         "reasons": [
-          "曼联排名第19，近5场L D L L D无胜，状态低迷。",
-          "布伦特福德排名第6，赛季场均进1.82失1.00，整体更稳。",
-          "曼联本赛事主场场均进2球，布伦特福德客场场均失1.6球，主队有进球能力。",
-          "市场均值主胜45%/平25%/客胜30%，与主队主场进攻倾向较接近。"
+          "曼联近5场仅2平3负，含0-4利物浦，状态低迷。",
+          "曼联本赛事场均失2.09、主场失2.2，防守漏洞明显。",
+          "布伦特福德本赛事场均失1，客场场均进1.2，攻守更稳。",
+          "曼联2.8天前欧冠客赛，布伦特福德同期无其他赛事。"
         ],
         "factors": [
-          "曼联主场火力",
-          "布伦特福德排名占优",
-          "曼联状态低迷",
-          "客队客场偏弱",
-          "市场略倾主胜"
+          "曼联防守漏洞",
+          "布伦特福德防守稳",
+          "曼联赛程密集",
+          "主场进攻尚可",
+          "客队排名占优"
         ],
-        "risk": "本场伤病名单日期不匹配且场地未提供，临场信息不足是最大不确定性。"
+        "risk": "布伦特福德无跨赛事数据，只能按本赛事11场样本判断，客队欧战强度未知。"
       },
       "degraded": false,
       "result": null,
       "weather": {
         "temp": 5.9,
-        "precip": 67,
+        "precip": 49,
         "wind": 7.9
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T01:10:53Z",
+        "capturedAt": "2026-11-25T08:55:11Z",
         "prob": {
           "home": 45,
           "draw": 25,
@@ -1300,13 +1302,6 @@
         }
       },
       "news": [
-        {
-          "title": "Sources: Man United to raise concerns after refs' chief backs Yoro red card",
-          "summary": "Manchester United are set to raise concerns after referee's chief Howard Webb backed the decision to send off Leny Yoro against Liverpool, sources told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50585934/man-united-leny-yoro-red-card-howard-webb-premier-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
         {
           "title": "Which USMNT players could follow Pochettino to Manchester United?",
           "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
@@ -1320,6 +1315,13 @@
           "link": "https://www.espn.com/soccer/story/_/id/50571270/man-united-january-transfers-premier-league-relegation",
           "published": "2026-11-24",
           "source": "ESPN"
+        },
+        {
+          "title": "Man Utd to contact PL and refs over 'totally wrong' Yoro red card interpretation",
+          "summary": "Manchester United will contact ProRef and the Premier League directly over what they believe to be a 'totally wrong' interpretation of Leny Yoro's red card against Liverpool.",
+          "link": "https://www.skysports.com/football/news/11095/13616033/leny-yoro-red-card-ref-chief-howard-webb-backs-process-that-saw-man-utd-defender-sent-off-at-liverpool",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
         }
       ]
     },
@@ -1370,40 +1372,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 20,
-          "draw": 26,
-          "away": 54
+          "home": 22,
+          "draw": 27,
+          "away": 51
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 60,
         "pick": "away",
         "reasons": [
-          "主队排名第20，近5场1平4负，赛季失24球防守差。",
-          "客队排名第8，赛季进15失12，整体表现明显优于主队。",
-          "市场均值客胜55%、主胜20%，与客队优势方向一致。",
-          "客队客场5场场均仅0.8球，难言大胜，平局需防。"
+          "马拉加本赛事13场进9失24，场均失1.85球，防线问题突出。",
+          "马拉加近5场1平4负，主场先后1-2、2-5告负，状态低迷。",
+          "毕尔巴鄂客场5场场均进0.8失1.2，客场表现明显弱于主场。",
+          "排名第20对第8，主队处于降级区且整体进失球数据落后。"
         ],
         "factors": [
-          "排名差距",
-          "主队防守差",
-          "客胜热度",
-          "客队客场一般"
+          "主队防线漏洞",
+          "客队排名占优",
+          "客队客场乏力",
+          "平局风险"
         ],
-        "risk": "本场伤病名单、场地及历史交锋数据未提供，排阵与对位不确定性较高。"
+        "risk": "伤病数据未提供且无历史交锋数据，排兵与对位判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 17.7,
+        "temp": 17.6,
         "precip": 0,
-        "wind": 6.7
+        "wind": 5.8
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T01:10:57Z",
+        "capturedAt": "2026-11-25T08:55:12Z",
         "prob": {
           "home": 20,
           "draw": 25,
