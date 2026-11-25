@@ -77,7 +77,7 @@ const displayName = (name: string) => {
 
     <div class="matchup">
       <div class="team">
-        <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="30" />
+        <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="isNarrow ? 26 : 30" />
         <div class="team-text">
           <span class="name" :title="match.home.name">{{ displayName(match.home.name) }}</span>
           <span class="sub numeric">#{{ match.home.rank }} <span class="sep">/</span> 主</span>
@@ -99,7 +99,7 @@ const displayName = (name: string) => {
       </div>
 
       <div class="team away">
-        <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="30" />
+        <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="isNarrow ? 26 : 30" />
         <div class="team-text">
           <span class="name" :title="match.away.name">{{ displayName(match.away.name) }}</span>
           <span class="sub numeric">#{{ match.away.rank }} <span class="sep">/</span> 客</span>
@@ -443,7 +443,17 @@ const displayName = (name: string) => {
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
+  .team {
+    gap: 4px;
+  }
+
+  .name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 300px) {
   /* 极窄屏放不下「4 字 + 省略号」，退回浏览器省略号，避免硬裁切 */
   .name {
     text-overflow: ellipsis;
