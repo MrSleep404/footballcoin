@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-26",
-  "generatedAt": "2026-11-25T12:21:46+08:00",
+  "generatedAt": "2026-11-25T13:26:46+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 9,
@@ -19,7 +19,7 @@
         "name": "萨巴巴库",
         "nameEn": "Sabah FK",
         "crest": "https://crests.football-data.org/10233.png",
-        "rank": 31,
+        "rank": 30,
         "form": [
           "L",
           "L",
@@ -33,7 +33,7 @@
         "name": "巴塞罗那",
         "nameEn": "FC Barcelona",
         "crest": "https://crests.football-data.org/81.png",
-        "rank": 6,
+        "rank": 8,
         "form": [
           "W",
           "L",
@@ -52,56 +52,47 @@
       },
       "prediction": {
         "prob": {
-          "home": 7,
-          "draw": 10,
+          "home": 6,
+          "draw": 11,
           "away": 83
         },
         "score": {
           "home": 1,
           "away": 3
         },
-        "confidence": 82,
+        "confidence": 79,
         "pick": "away",
         "reasons": [
-          "巴塞罗那本赛事场均进3.5球，4场共进14球，进攻明显占优。",
-          "萨巴巴库本赛事场均失2.5球，近5场有1-4和0-4失利。",
-          "萨巴巴库排名第31，市场客胜概率89%，实力差距明显。",
-          "巴塞罗那5人伤停，含Lamine Yamal；天气降水概率75%。"
+          "巴塞罗那本赛事场均进3.5失1.5，客场场均进3球，进攻火力明显占优。",
+          "萨巴巴库本赛事场均失2.5球，4场1胜3负，含1-4、0-4失利。",
+          "巴塞罗那伤缺Lamine Yamal、Christensen等5人，跨赛事近5场",
+          "天气降水概率80%、风速29.7km/h，可能压低节奏但难改实力差距。"
         ],
         "factors": [
-          "实力差距明显",
-          "客队进攻强势",
+          "巴萨进攻强势",
           "主队防守薄弱",
-          "巴萨伤病隐患",
-          "风雨天气影响"
+          "客队伤病较多",
+          "恶劣天气",
+          "无历史交锋"
         ],
-        "risk": "萨巴巴库无跨赛事数据参考；巴萨5人伤停且客场场均失2.5球，轮换与防守波动是最大变数。"
+        "risk": "双方无历史交锋且场地未提供，巴萨5人伤缺和强风降水增加轮换与比分偏差。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 8.0,
-        "precip": 75,
-        "wind": 29.9
+        "temp": 8.2,
+        "precip": 80,
+        "wind": 29.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 4,
-          "draw": 7,
-          "away": 89
+          "draw": 8,
+          "away": 88
         }
       },
-      "news": [
-        {
-          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
-          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
-          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        }
-      ],
       "injuries": {
         "date": "2026-11-25",
         "home": [],
@@ -160,7 +151,7 @@
         "name": "比利亚雷亚尔",
         "nameEn": "Villarreal CF",
         "crest": "https://crests.football-data.org/94.png",
-        "rank": 28,
+        "rank": 29,
         "form": [
           "L",
           "L",
@@ -179,41 +170,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 33,
-          "draw": 26,
+          "home": 30,
+          "draw": 29,
           "away": 41
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 52,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "本赛事4场布拉格斯拉维亚进5失9、场均失2.25，主2场场均失2.5",
-          "比利亚雷亚尔本赛事场均进2失3.5，客场2场场均进2.5失3.5",
-          "近5场主队L D L L、客队L L W L，双方状态均低迷",
-          "市场去水概率客胜44%、主胜31%，与判断方向一致"
+          "斯拉维亚本赛事场均失2.25，主场两战1-2、2-3均告负。",
+          "比利亚雷亚尔本赛事场均失3.5，客场两战共失7球。",
+          "比利亚雷亚尔3.2天前客战Barça、4天后还有PD客场，消耗更大。",
+          "双方各5人伤停，比利亚雷亚尔Foyth、Moreno等主力缺阵。"
         ],
         "factors": [
-          "双方防守漏洞明显",
-          "客队进攻效率更高",
-          "主队主场场均失2.5",
-          "主队5人伤停",
-          "客队赛程更密集"
+          "客队进攻更强",
+          "双方防守漏洞",
+          "客队赛程密集",
+          "伤停较多",
+          "主场低温"
         ],
-        "risk": "布拉格斯拉维亚无跨赛事数据、场地与历史交锋缺失，双方防守均差使比分波动大。"
+        "risk": "斯拉维亚无跨赛事参考、场地未提供，欧冠样本仅4场，不确定性较高。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.9,
+        "temp": 1.0,
         "precip": 0,
-        "wind": 4.3
+        "wind": 6.1
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 31,
           "draw": 25,
@@ -334,7 +325,7 @@
         "name": "斯图加特",
         "nameEn": "VfB Stuttgart",
         "crest": "https://crests.football-data.org/10.png",
-        "rank": 14,
+        "rank": 15,
         "form": [
           "L",
           "D",
@@ -361,33 +352,32 @@
           "home": 2,
           "away": 1
         },
-        "confidence": 66,
+        "confidence": 63,
         "pick": "home",
         "reasons": [
-          "国际米兰本赛事4场进8失6，场均进2球，主场两战2/2。",
-          "斯图加特本赛事4场进7失4，客场场均进1.5失1，防守不差。",
-          "跨赛事国际米兰意甲场均2.67球，进攻强度高于斯图加特德甲1.5球。",
-          "市场均值主胜68%，且斯图加特3人伤停，主队优势更明显。"
+          "国际米兰本赛事场均进2失1.5，主场2场场均失2，防线不稳。",
+          "斯图加特本赛事场均进1.75失1，客场2场1胜1负，曾3-0布拉迪斯拉发。",
+          "国际米兰无官方伤停；斯图加特伤停名单3人，主队阵容更完整。",
+          "双方均约3天后踢联赛，赛程消耗接近；8.3℃且80%降水概率增加变数。"
         ],
         "factors": [
-          "本赛事主场进攻",
-          "斯图加特防守稳",
-          "雨战高降水",
-          "市场看主",
-          "客队伤停"
+          "主队进攻占优",
+          "主队防线波动",
+          "客队伤停偏多",
+          "雨战增加变数"
         ],
-        "risk": "场地信息缺失，临场阵型与具体战术安排未知，判断存在波动。"
+        "risk": "场地未提供、无历史交锋数据，欧冠主客场各仅2场增加不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 8.4,
-        "precip": 90,
-        "wind": 5.8
+        "temp": 8.3,
+        "precip": 80,
+        "wind": 6.6
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 68,
           "draw": 17,
@@ -444,7 +434,7 @@
         "name": "马德里竞技",
         "nameEn": "Club Atlético de Madrid",
         "crest": "https://crests.football-data.org/78.png",
-        "rank": 24,
+        "rank": 26,
         "form": [
           "L",
           "D",
@@ -458,7 +448,7 @@
         "name": "维京",
         "nameEn": "Viking FK",
         "crest": "https://crests.football-data.org/5720.png",
-        "rank": 23,
+        "rank": 25,
         "form": [
           "W",
           "L",
@@ -477,44 +467,45 @@
       },
       "prediction": {
         "prob": {
-          "home": 82,
-          "draw": 12,
-          "away": 6
+          "home": 78,
+          "draw": 13,
+          "away": 9
         },
         "score": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
-        "confidence": 76,
+        "confidence": 72,
         "pick": "home",
         "reasons": [
-          "马竞本赛事4场进4失5，主场2场场均进1失1，防守可控。",
-          "维京本赛事4场进9失10，客场2场场均进1失3，客战漏洞明显。",
-          "市场均值主胜87%、平9%、客4%，与主队实力定位一致。",
-          "马竞有Lookman、Romero伤缺；维京暂无官方伤停记录。"
+          "马竞欧冠4场进4失5，主场2场场均进1失1，进攻效率一般。",
+          "维京欧冠客场2场场均进1失3，先后1-3负维拉、1-3负斯图加特。",
+          "马竞跨赛事13场场均进2仅失0.77，联赛近5场4胜，实力上限更高。",
+          "马竞有2人伤停且3天后踢联赛，维京无伤停且4天内无其他赛事。"
         ],
         "factors": [
-          "主场优势",
-          "客战防守差",
-          "市场强倾斜",
-          "伤停影响"
+          "马竞欧冠主场平",
+          "维京客场失3球",
+          "马竞联赛状态强",
+          "马竞赛程密集",
+          "维京休整更足"
         ],
-        "risk": "维京跨赛事无已结束数据，且马竞欧冠进攻仅场均1球，主胜存在小胜或失分不确定性。"
+        "risk": "维京跨赛事数据缺失，无法判断其联赛强度与赛程消耗，是最大不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.1,
+        "temp": 6.9,
         "precip": 0,
-        "wind": 8.8
+        "wind": 9.2
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
-          "home": 87,
+          "home": 86,
           "draw": 9,
-          "away": 4
+          "away": 5
         }
       },
       "injuries": {
@@ -546,7 +537,7 @@
         "name": "巴黎圣日耳曼",
         "nameEn": "Paris Saint-Germain FC",
         "crest": "https://crests.football-data.org/524.png",
-        "rank": 1,
+        "rank": 2,
         "form": [
           "W",
           "W",
@@ -560,7 +551,7 @@
         "name": "罗马",
         "nameEn": "AS Roma",
         "crest": "https://crests.football-data.org/100.png",
-        "rank": 21,
+        "rank": 23,
         "form": [
           "L",
           "W",
@@ -579,40 +570,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 70,
-          "draw": 17,
-          "away": 13
+          "home": 68,
+          "draw": 18,
+          "away": 14
         },
         "score": {
           "home": 3,
           "away": 1
         },
-        "confidence": 72,
+        "confidence": 78,
         "pick": "home",
         "reasons": [
-          "巴黎本赛事4场进20失5，场均进5球，主场2场场均进5失1.5",
-          "罗马本赛事客场2场场均进1.5失2，4场仅1胜1平2负",
-          "市场均值主胜66%，与主胜判断方向一致",
-          "巴黎三名伤停，罗马亦缺佩莱格里尼等主力"
+          "巴黎本赛事4战全胜，合计进20失5，场均进5球。",
+          "巴黎欧冠主场2场场均进5球、失1.5球，主场火力突出。",
+          "罗马欧冠客场场均进1.5失2，且2-3负曼联，客战防守不稳。",
+          "双方各有3人伤停，巴黎锋线减员，罗马中后场受损。"
         ],
         "factors": [
-          "巴黎场均5球",
+          "巴黎欧冠全胜",
+          "场均5球火力",
           "罗马客场失2球",
-          "伤停削弱轮换",
-          "赛程密度接近"
+          "双方均有伤停",
+          "巴黎主场强势"
         ],
-        "risk": "场地未提供且无历史交锋参考；巴黎3天后有联赛，可能轮换阵容"
+        "risk": "场地未提供且无历史交锋数据，这两项缺失增加判断不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 5.5,
-        "precip": 23,
-        "wind": 7.9
+        "temp": 5.9,
+        "precip": 5,
+        "wind": 6.2
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 66,
           "draw": 19,
@@ -692,7 +684,7 @@
         "name": "布鲁日",
         "nameEn": "Club Brugge KV",
         "crest": "https://crests.football-data.org/851.png",
-        "rank": 9,
+        "rank": 11,
         "form": [
           "W",
           "W",
@@ -706,7 +698,7 @@
         "name": "利物浦",
         "nameEn": "Liverpool FC",
         "crest": "https://crests.football-data.org/64.png",
-        "rank": 8,
+        "rank": 10,
         "form": [
           "L",
           "W",
@@ -725,66 +717,66 @@
       },
       "prediction": {
         "prob": {
-          "home": 22,
-          "draw": 22,
-          "away": 56
+          "home": 27,
+          "draw": 26,
+          "away": 47
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 62,
+        "confidence": 64,
         "pick": "away",
         "reasons": [
-          "布鲁日本赛事场均进2.75失1.75，主场2场进2.5失1.5",
-          "利物浦本赛事场均进3.5失2.5，客场2场进4失3",
-          "市场去水客胜58%、平21%、主胜21%，客队明显被看好",
-          "利物浦伤停5人含Gakpo、Ekitike，布鲁日仅Ordonez伤停"
+          "布鲁日本赛事场均进2.75、失1.75，主场2场场均进2.5，进攻有支撑。",
+          "利物浦本赛事客场2场进8失6，场均失3球，防守漏洞明显。",
+          "利物浦伤停含Gakpo、Ekitike、Chiesa等5人，布鲁日仅Ordone",
+          "市场客胜59%，但利物浦3.1天前刚踢PL且3.7天后有PL，轮换消耗需计入。"
         ],
         "factors": [
-          "欧冠进攻火力",
-          "双方防守漏风",
-          "利物浦伤停偏多",
-          "客队市场优势",
-          "赛程消耗"
+          "布鲁日主场火力",
+          "利物浦客场失球多",
+          "利物浦伤停五人",
+          "赛程轮换消耗",
+          "市场客胜基线"
         ],
-        "risk": "布鲁日跨赛事数据缺失，且无历史交锋与场地信息，判断依据有限。"
+        "risk": "布鲁日无跨赛事样本、双方无历史交锋且场地未提供，主队强度参照有限。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": -0.2,
-        "precip": 1,
-        "wind": 19.8
+        "temp": 0.0,
+        "precip": 0,
+        "wind": 19.4
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 21,
-          "draw": 21,
-          "away": 58
+          "draw": 20,
+          "away": 59
         }
       },
       "news": [
         {
-          "title": "Sources: Man United to raise concerns after refs' chief backs Yoro red card",
-          "summary": "Manchester United are set to raise concerns after referee's chief Howard Webb backed the decision to send off Leny Yoro against Liverpool, sources told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50585934/man-united-leny-yoro-red-card-howard-webb-premier-league",
-          "published": "2026-11-25",
-          "source": "ESPN"
-        },
-        {
-          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
-          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
-          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
           "title": "Poch fumes at Yoro red and thinks Szoboszlai goal shouldn't have stood",
           "summary": "Mauricio Pochettino has heavily criticised VAR in Manchester United's loss at Liverpool after Leny Yoro's red card was overturned, while the Argentine believes Dominik Szoboszlai’s opener should not have stood.",
           "link": "https://www.skysports.com/football/news/11095/13616134/mauricio-pochettino-man-utd-boss-fumes-at-var-in-liverpool-loss-over-leny-yoro-and-dominik-szoboszlai-calls",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Man Utd to contact PL and refs over 'totally wrong' Yoro red card interpretation",
+          "summary": "Manchester United will contact ProRef and the Premier League directly over what they believe to be a 'totally wrong' interpretation of Leny Yoro's red card against Liverpool.",
+          "link": "https://www.skysports.com/football/news/11095/13616033/leny-yoro-red-card-ref-chief-howard-webb-backs-process-that-saw-man-utd-defender-sent-off-at-liverpool",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "How 'quick check' and unseen angle saw Timber's Isak shirt-pull go unpunished",
+          "summary": "Referees’ chief Howard Webb admitted it was a “quick check” by VAR for Arsenal defender Jurrien Timber’s unpunished shirt-pull on Liverpool striker Alexander Isak in the Gunners’ win at Anfield.",
+          "link": "https://www.skysports.com/football/news/11095/13616058/jurrien-timbers-shirt-pull-on-alexander-isak-ref-chief-howard-webb-admits-quick-check-in-arsenals-win-at-liverpool",
           "published": "2026-11-24",
           "source": "Sky Sports"
         }
@@ -868,7 +860,7 @@
         "name": "拜仁慕尼黑",
         "nameEn": "FC Bayern München",
         "crest": "https://crests.football-data.org/5.png",
-        "rank": 13,
+        "rank": 14,
         "form": [
           "W",
           "D",
@@ -888,44 +880,44 @@
       "prediction": {
         "prob": {
           "home": 20,
-          "draw": 24,
-          "away": 56
+          "draw": 25,
+          "away": 55
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 64,
         "pick": "away",
         "reasons": [
-          "里尔本赛事4场进4失10，主场两战失7球，防线承压。",
-          "拜仁慕尼黑本赛事场均进3球，客场2场进5球，火力占优。",
-          "市场去水客胜58%，与拜仁慕尼黑本赛事12/5的攻防数据方向一致。",
-          "拜仁慕尼黑有5人伤停，客胜优势被削弱。"
+          "拜仁慕尼黑本赛事场均进3失1.25，客场场均进2.5，火力仍强。",
+          "里尔本赛事4场失10、场均失2.5，主场2场场均失3.5，防守漏洞明显。",
+          "拜仁慕尼黑伤停含Kane、Neuer、Olise等5人，攻防实力受损。",
+          "里尔近5场D L L L，本赛事4场仅进4球，状态低迷。"
         ],
         "factors": [
-          "本赛事攻防差距",
-          "拜仁客场火力",
-          "里尔主场失球多",
-          "拜仁伤停较多",
-          "市场倾向客胜"
+          "拜仁慕尼黑火力强",
+          "里尔防守漏洞大",
+          "拜仁慕尼黑5人伤停",
+          "低温大风",
+          "主场进攻尚可"
         ],
-        "risk": "场地与历史交锋未提供，拜仁慕尼黑5人伤停影响临场强度，客胜仍有波动。"
+        "risk": "拜仁慕尼黑5名伤停球员的临场替代效果与进攻效率存在较大不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.3,
-        "precip": 4,
-        "wind": 18.0
+        "temp": 0.5,
+        "precip": 2,
+        "wind": 18.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
-          "home": 19,
+          "home": 18,
           "draw": 23,
-          "away": 58
+          "away": 59
         }
       },
       "injuries": {
@@ -982,7 +974,7 @@
         "name": "葡萄牙体育",
         "nameEn": "Sporting Clube de Portugal",
         "crest": "https://crests.football-data.org/498.png",
-        "rank": 10,
+        "rank": 12,
         "form": [
           "W",
           "L",
@@ -996,7 +988,7 @@
         "name": "曼联",
         "nameEn": "Manchester United FC",
         "crest": "https://crests.football-data.org/66.png",
-        "rank": 18,
+        "rank": 19,
         "form": [
           "W",
           "L",
@@ -1015,41 +1007,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 47,
-          "draw": 27,
-          "away": 26
+          "home": 52,
+          "draw": 25,
+          "away": 23
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 66,
+        "confidence": 72,
         "pick": "home",
         "reasons": [
-          "葡萄牙体育本赛事4场进8失4，主场2场场均进2.5失2。",
-          "曼联欧冠客场2场场均仅进0.5失3，近两客比分1-4、0-2。",
-          "曼联伤停含C. Baleba、M. Rashford、B. Sesko等5人，阵",
-          "市场均值主胜38%、客胜36%，主队排名第10高于客队第18。"
+          "葡萄牙体育本赛事4场进8失4，主场场均进2.5球，火力稳定。",
+          "曼联欧冠客场2场仅进1球失6球，先后1-4科莫、0-2马德里竞技。",
+          "曼联5人伤停且3.1天前0-4利物浦，C. Baleba等缺阵。",
+          "葡萄牙体育无伤停，前后4天无其他赛事，体能明显占优。"
         ],
         "factors": [
           "本赛事主场火力",
-          "曼联伤病严重",
-          "曼联欧冠客场弱",
-          "主队赛程更宽松",
-          "市场赔率接近"
+          "曼联欧冠客场疲软",
+          "曼联伤停5人",
+          "曼联赛程消耗大"
         ],
-        "risk": "葡萄牙体育跨赛事数据缺失，且双方无历史交锋数据，判断主要依赖欧冠小样本。"
+        "risk": "葡萄牙体育无跨赛事数据、双方无历史交锋、场地未提供，判断主要依赖本赛事样本。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 13.2,
-        "precip": 5,
+        "temp": 12.5,
+        "precip": 3,
         "wind": 4.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 38,
           "draw": 26,
@@ -1057,13 +1048,6 @@
         }
       },
       "news": [
-        {
-          "title": "Sources: Man United to raise concerns after refs' chief backs Yoro red card",
-          "summary": "Manchester United are set to raise concerns after referee's chief Howard Webb backed the decision to send off Leny Yoro against Liverpool, sources told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50585934/man-united-leny-yoro-red-card-howard-webb-premier-league",
-          "published": "2026-11-25",
-          "source": "ESPN"
-        },
         {
           "title": "Which USMNT players could follow Pochettino to Manchester United?",
           "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
@@ -1077,6 +1061,13 @@
           "link": "https://www.espn.com/soccer/story/_/id/50571270/man-united-january-transfers-premier-league-relegation",
           "published": "2026-11-24",
           "source": "ESPN"
+        },
+        {
+          "title": "Man Utd to contact PL and refs over 'totally wrong' Yoro red card interpretation",
+          "summary": "Manchester United will contact ProRef and the Premier League directly over what they believe to be a 'totally wrong' interpretation of Leny Yoro's red card against Liverpool.",
+          "link": "https://www.skysports.com/football/news/11095/13616033/leny-yoro-red-card-ref-chief-howard-webb-backs-process-that-saw-man-utd-defender-sent-off-at-liverpool",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
         }
       ],
       "injuries": {
@@ -1123,7 +1114,7 @@
         "name": "顿涅茨克矿工",
         "nameEn": "FK Shakhtar Donetsk",
         "crest": "https://crests.football-data.org/1887.png",
-        "rank": 22,
+        "rank": 24,
         "form": [
           "L",
           "L",
@@ -1137,7 +1128,7 @@
         "name": "费内巴切",
         "nameEn": "Fenerbahçe SK",
         "crest": "https://crests.football-data.org/613.png",
-        "rank": 19,
+        "rank": 22,
         "form": [
           "W",
           "D",
@@ -1156,41 +1147,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 33,
-          "draw": 29,
-          "away": 38
+          "home": 38,
+          "draw": 28,
+          "away": 34
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 1
         },
-        "confidence": 58,
-        "pick": "away",
+        "confidence": 54,
+        "pick": "home",
         "reasons": [
-          "本赛事费内巴切4场进6失11，场均失2.75，防守漏洞明显。",
-          "顿涅茨克矿工本赛事主场2场场均进1.5失1，主场火力尚可。",
-          "费内巴切唯一欧冠客场0-6负阿斯顿维拉，客场稳定性存疑。",
-          "顿涅茨克矿工5人伤停，费内巴切暂无官方伤停记录。"
+          "顿涅茨克矿工本赛事4场进4失4，主场2场进3失2，攻守较平衡。",
+          "费内巴切本赛事场均失2.75，客场唯一场0-6负阿斯顿维拉。",
+          "费内巴切4场进6球且全在主场，顿涅茨克矿工5人伤停削弱阵容。"
         ],
         "factors": [
-          "费内防守不稳",
-          "矿工主场火力",
-          "矿工伤停偏多",
-          "客胜市场倾向",
+          "顿涅茨克矿工主场",
+          "费内巴切防守漏",
+          "费内巴切客场惨败",
+          "顿涅茨克矿工伤停多",
           "低温低降水"
         ],
-        "risk": "跨赛事参考数据缺失，双方无历史交锋数据，费内巴切欧冠客场仅1场样本不足，判断不确定性较高。"
+        "risk": "跨赛事参考与历史交锋数据缺失，无法校准双方跨赛事强度与往绩。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": -0.9,
-        "precip": 3,
+        "temp": -0.7,
+        "precip": 5,
         "wind": 15.9
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T04:20:40Z",
+        "capturedAt": "2026-11-25T05:24:29Z",
         "prob": {
           "home": 32,
           "draw": 27,
