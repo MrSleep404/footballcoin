@@ -10,10 +10,17 @@ const props = defineProps<{
   date: string;
 }>();
 
-const hit = computed(() => {
+const outcomeHit = computed(() => {
   if (!props.match.result) return null;
   const actual = outcomeFromScore(props.match.result.homeGoals, props.match.result.awayGoals);
   return actual === props.match.prediction.pick;
+});
+
+const scoreHit = computed(() => {
+  const result = props.match.result;
+  const score = props.match.prediction?.score;
+  if (!result || !score) return null;
+  return score.home === result.homeGoals && score.away === result.awayGoals;
 });
 
 const scoreText = computed(() => {
@@ -43,9 +50,6 @@ const predictedText = computed(() => {
       </span>
       <span class="time numeric">{{ formatKickoffTime(match.kickoff) }}</span>
       <span v-if="match.degraded" class="tag warn">兜底</span>
-      <span v-if="hit !== null" class="tag" :class="hit ? 'ok' : 'bad'">
-        {{ hit ? "命中" : "未中" }}
-      </span>
     </div>
 
     <div class="matchup">
@@ -61,6 +65,14 @@ const predictedText = computed(() => {
         <span class="nums numeric">{{ scoreText }}</span>
         <span class="label">{{ match.result ? "赛果" : "预测比分" }}</span>
         <span v-if="match.result" class="predicted numeric">预测 {{ predictedText }}</span>
+        <div v-if="match.result" class="hits">
+          <span class="tag" :class="outcomeHit ? 'ok' : 'miss'" title="胜平负按概率最高项判断">
+            胜平负 {{ outcomeHit ? "✓" : "✗" }}
+          </span>
+          <span class="tag" :class="scoreHit ? 'ok' : 'miss'" title="比分要求与预测完全一致">
+            比分 {{ scoreHit ? "✓" : "✗" }}
+          </span>
+        </div>
       </div>
 
       <div class="team away">
@@ -166,9 +178,9 @@ const predictedText = computed(() => {
   color: var(--home);
 }
 
-.tag.bad {
-  background: var(--danger-soft);
-  color: var(--danger);
+.tag.miss {
+  background: var(--surface-2);
+  color: var(--text-dim);
 }
 
 .tag.warn {
@@ -258,6 +270,14 @@ const predictedText = computed(() => {
   font-weight: 600;
   letter-spacing: 0.3px;
   white-space: nowrap;
+}
+
+.hits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 2px;
 }
 
 .odds {

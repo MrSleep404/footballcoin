@@ -124,7 +124,7 @@ onMounted(() => {
           <span v-if="match.matchday" class="chip">第 {{ match.matchday }} 轮</span>
           <span v-if="match.degraded" class="chip chip-warning">兜底估计</span>
           <span v-if="match.result" class="chip" :class="hit ? 'hit' : 'miss'">
-            {{ hit ? "预测命中" : "预测未中" }}
+            {{ hit ? "胜平负命中" : "胜平负未中" }}
           </span>
         </div>
 
@@ -194,11 +194,14 @@ onMounted(() => {
         </p>
         <p class="result-tags">
           <span class="chip" :class="hit ? 'hit' : 'miss'">
-            胜负平：{{ hit ? "命中" : "未中" }}
+            胜平负：{{ hit ? "命中" : "未中" }}
           </span>
           <span class="chip" :class="scoreHit ? 'hit' : 'miss'">
             比分：{{ scoreHit ? "命中" : "未中" }}
           </span>
+        </p>
+        <p class="result-note">
+          胜平负按概率最高项判断，比分要求与预测完全一致；比分命中时胜平负必然同时命中。
         </p>
       </section>
 
@@ -741,6 +744,12 @@ onMounted(() => {
   display: flex;
   gap: 6px;
   margin-top: 8px;
+}
+
+.result-note {
+  margin-top: 6px;
+  color: var(--text-dim);
+  font-size: 11px;
 }
 
 .hit {
