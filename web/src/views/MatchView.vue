@@ -56,8 +56,36 @@ const market = computed(() => match.value?.market ?? null);
 const injuries = computed(() => match.value?.injuries ?? null);
 const news = computed(() => match.value?.news ?? []);
 const hasIntel = computed(() =>
-  Boolean(h2h.value || weather.value || market.value || injuries.value || news.value.length),
+  Boolean(h2h.value || weather.value || injuries.value || news.value.length),
 );
+
+const COMPARE_ITEMS = [
+  { key: "home", label: "主胜" },
+  { key: "draw", label: "平局" },
+  { key: "away", label: "客胜" },
+] as const;
+
+const compare = computed(() => {
+  const current = match.value;
+  const source = market.value;
+  if (!current || !source) return null;
+  const rows = COMPARE_ITEMS.map((item) => {
+    const model = current.prediction.prob[item.key];
+    const marketValue = source.prob[item.key];
+    return { ...item, model, market: marketValue, diff: model - marketValue };
+  });
+  const maxDiff = Math.max(...rows.map((row) => Math.abs(row.diff)));
+  return { rows, maxDiff, bookmaker: source.bookmaker };
+});
+
+const compareNote = computed(() => {
+  const value = compare.value;
+  if (!value) return "";
+  const source = value.bookmaker ? `市场数据来自 ${value.bookmaker}` : "市场数据";
+  return value.maxDiff <= 3
+    ? `${source}；模型与市场共识基本一致（最大分歧 ${value.maxDiff} 个百分点）。`
+    : `${source}；模型与市场存在分歧（最大 ${value.maxDiff} 个百分点），分歧原因见预测理由。`;
+});
 
 async function init() {
   loading.value = true;
@@ -184,6 +212,42 @@ onMounted(() => {
         </section>
       </div>
 
+      <section v-if="compare" class="block">
+        <h2>模型与市场对比</h2>
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col">口径</th>
+              <th v-for="item in compare.rows" :key="item.key" scope="col">{{ item.label }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">模型判断</th>
+              <td v-for="item in compare.rows" :key="item.key" class="numeric">{{ item.model }}%</td>
+            </tr>
+            <tr>
+              <th scope="row">市场共识</th>
+              <td v-for="item in compare.rows" :key="item.key" class="numeric muted">
+                {{ item.market }}%
+              </td>
+            </tr>
+            <tr class="diff-row">
+              <th scope="row">分歧</th>
+              <td
+                v-for="item in compare.rows"
+                :key="item.key"
+                class="numeric"
+                :class="{ big: Math.abs(item.diff) >= 5 }"
+              >
+                {{ item.diff > 0 ? "+" : "" }}{{ item.diff }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="compare-note">{{ compareNote }}</p>
+      </section>
+
       <section v-if="match.result" class="block">
         <h2>赛果复盘</h2>
         <p class="result-line">
@@ -255,18 +319,6 @@ onMounted(() => {
             </span>
           </div>
 
-          <div v-if="market" class="intel-item">
-            <span class="intel-label">
-              市场概率{{ market.bookmaker ? `（${market.bookmaker}）` : "" }}
-            </span>
-            <span class="intel-value numeric">
-              主 {{ market.prob.home }}% · 平 {{ market.prob.draw }}% · 客 {{ market.prob.away }}%
-            </span>
-            <span class="intel-compare numeric">
-              模型：主 {{ match.prediction.prob.home }}% · 平 {{ match.prediction.prob.draw }}% ·
-              客 {{ match.prediction.prob.away }}%
-            </span>
-          </div>
         </div>
       </section>
 
@@ -598,9 +650,59 @@ onMounted(() => {
   font-weight: 700;
 }
 
-.intel-compare {
+.compare {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.compare th,
+.compare td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.compare thead th {
+  color: var(--text-dim);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.compare tbody th {
   color: var(--text-muted);
   font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.compare td {
+  font-weight: 700;
+}
+
+.compare td.muted {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.compare .diff-row th {
+  border-bottom: none;
+}
+
+.compare .diff-row td {
+  border-bottom: none;
+}
+
+.compare td.big {
+  color: var(--brand);
+}
+
+.compare-note {
+  margin-top: 8px;
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .intel-list {
