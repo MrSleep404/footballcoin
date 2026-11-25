@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-26",
-  "generatedAt": "2026-11-24T22:00:35+08:00",
+  "generatedAt": "2026-11-25T09:30:08+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 9,
@@ -19,7 +19,7 @@
         "name": "萨巴巴库",
         "nameEn": "Sabah FK",
         "crest": "https://crests.football-data.org/10233.png",
-        "rank": 31,
+        "rank": 30,
         "form": [
           "L",
           "L",
@@ -33,7 +33,7 @@
         "name": "巴塞罗那",
         "nameEn": "FC Barcelona",
         "crest": "https://crests.football-data.org/81.png",
-        "rank": 5,
+        "rank": 8,
         "form": [
           "W",
           "L",
@@ -52,40 +52,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 7,
-          "draw": 11,
-          "away": 82
+          "home": 5,
+          "draw": 7,
+          "away": 88
         },
         "score": {
-          "home": 0,
-          "away": 2
+          "home": 1,
+          "away": 3
         },
         "confidence": 78,
         "pick": "away",
         "reasons": [
-          "巴塞罗那排名第5，萨巴巴库排名第31，实力差距明显。",
-          "赛季进失球：巴塞罗那14/6，萨巴巴库4/10，攻防数据客队占优。",
-          "近期战绩客队3胜1负、主队1胜3负，客队状态更佳。",
-          "市场均值客胜89%，与排名和攻防数据一致指向客胜。"
+          "萨巴巴库欧冠4场进4失10，排名第30，场均失2.5。",
+          "巴塞罗那欧冠4场进14失6，排名第8，场均进3.5。",
+          "市场均值客胜89%、平局7%、主胜4%，与实力差距一致。",
+          "巴塞罗那客场欧冠场均进3失2.5，萨巴巴库主场场均进1.5失1。"
         ],
         "factors": [
-          "排名差距明显",
-          "攻防数据占优",
-          "客队状态更佳",
-          "市场客胜89%"
+          "实力差距明显",
+          "巴塞罗那火力强",
+          "主队防守漏洞",
+          "市场倾向客胜",
+          "风雨影响进球"
         ],
-        "risk": "场地与其他信息未提供，双方无历史交锋数据，赛前参考维度有限。"
+        "risk": "萨巴巴库跨赛事数据缺失，且伤病名单未覆盖本场，实力与轮换判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 8.2,
-        "precip": 55,
-        "wind": 25.4
+        "temp": 8.0,
+        "precip": 75,
+        "wind": 29.9
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 4,
           "draw": 7,
@@ -100,33 +101,7 @@
           "published": "2026-11-24",
           "source": "ESPN"
         }
-      ],
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "R. Bardghji",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "A. Christensen",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "X. Espart",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "Rodri",
-            "type": "Missing Fixture",
-            "reason": "Calf Injury"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -154,7 +129,7 @@
         "name": "比利亚雷亚尔",
         "nameEn": "Villarreal CF",
         "crest": "https://crests.football-data.org/94.png",
-        "rank": 28,
+        "rank": 29,
         "form": [
           "L",
           "L",
@@ -173,128 +148,46 @@
       },
       "prediction": {
         "prob": {
-          "home": 30,
-          "draw": 27,
-          "away": 43
+          "home": 29,
+          "draw": 24,
+          "away": 47
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 3
         },
         "confidence": 54,
         "pick": "away",
         "reasons": [
-          "客队排名第28略高于主队第34，市场客胜44%占优",
-          "主队近期L D L L，赛季进5失9，状态低迷",
-          "布拉格斯拉维亚5人伤停，比利亚雷亚尔4人伤停，阵容均不整",
-          "双方暂无历史交锋数据，低温1.3℃且无降水影响有限"
+          "市场均值主胜31%/平25%/客胜44%，客队更受青睐",
+          "比利亚雷亚尔本赛事场均进2球，客场场均进2.5球",
+          "布拉格斯拉维亚本赛事场均失2.25，主场失2.5球",
+          "客队跨赛事PD场均失1.38，防守稳定性高于欧冠"
         ],
         "factors": [
-          "客队排名稍高",
+          "客队进攻强",
+          "主队主场防守漏",
           "市场倾向客胜",
-          "双方伤停较多",
           "低温无降水",
-          "主队近期低迷"
+          "欧冠大球倾向"
         ],
-        "risk": "场地未提供，近期战绩仅列4场，数据完整性不足增加不确定性。"
+        "risk": "伤病名单未提供，无历史交锋与主队跨赛事数据，欧冠样本仅4场，预测波动较大。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.3,
+        "temp": 0.8,
         "precip": 0,
-        "wind": 7.0
+        "wind": 4.8
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 31,
           "draw": 25,
           "away": 44
         }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "S. Chaloupek",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "T. Chory",
-            "type": "Missing Fixture",
-            "reason": "Coach's decision"
-          },
-          {
-            "player": "H. Kante",
-            "type": "Missing Fixture",
-            "reason": "Injury"
-          },
-          {
-            "player": "O. Kolar",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "D. Moses",
-            "type": "Missing Fixture",
-            "reason": "Hamstring Injury"
-          },
-          {
-            "player": "I. Ogbu",
-            "type": "Missing Fixture",
-            "reason": "Achilles Tendon Injury"
-          },
-          {
-            "player": "A. Ouanda",
-            "type": "Missing Fixture",
-            "reason": "Injury"
-          },
-          {
-            "player": "E. Pitak",
-            "type": "Missing Fixture",
-            "reason": "Health problems"
-          },
-          {
-            "player": "T. Diakite",
-            "type": "Questionable",
-            "reason": "Health problems"
-          },
-          {
-            "player": "L. Provod",
-            "type": "Questionable",
-            "reason": "Injury"
-          },
-          {
-            "player": "D. Sturm",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ],
-        "away": [
-          {
-            "player": "I. Akhomach",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "A. Diatta",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "J. Foyth",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "G. Moreno",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          }
-        ]
       }
     },
     {
@@ -309,7 +202,7 @@
         "name": "国际米兰",
         "nameEn": "FC Internazionale Milano",
         "crest": "https://crests.football-data.org/108.png",
-        "rank": 15,
+        "rank": 17,
         "form": [
           "W",
           "W",
@@ -323,7 +216,7 @@
         "name": "斯图加特",
         "nameEn": "VfB Stuttgart",
         "crest": "https://crests.football-data.org/10.png",
-        "rank": 14,
+        "rank": 15,
         "form": [
           "L",
           "D",
@@ -342,9 +235,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 62,
-          "draw": 22,
-          "away": 16
+          "home": 64,
+          "draw": 21,
+          "away": 15
         },
         "score": {
           "home": 2,
@@ -353,30 +246,30 @@
         "confidence": 70,
         "pick": "home",
         "reasons": [
-          "市场均值主胜68%、平17%、客15%，明显看好国际米兰。",
-          "斯图加特伤停5人，包括Stiller等，阵容完整性受损。",
-          "国际米兰无官方伤停，主场作战且赛季进球8个略优于客队7个。",
-          "积分排名主队第15、客队第14相近，比赛仍有较强不确定性。"
+          "市场均值主胜68%、平17%、客15%，明显倾向国际米兰。",
+          "国际米兰本赛事场均进2球，主场2场场均进2球。",
+          "斯图加特本赛事客场2场场均进1.5球、失1球，具备进球能力。",
+          "开赛降水概率90%，雨战可能压低节奏，但国际米兰进攻效率占优。"
         ],
         "factors": [
-          "主场优势",
-          "客队伤病多",
-          "市场看主胜",
-          "排名接近",
-          "雨天影响"
+          "市场主胜68%",
+          "国际米兰场均2球",
+          "斯图加特客场进球",
+          "降水概率90%",
+          "轮换与雨战风险"
         ],
-        "risk": "双方近5场均只列出4场，完整状态未知；且无历史交锋可参考，增加判断难度。"
+        "risk": "本场伤病名单未提供，降水概率90%的雨战和双方3天内联赛赛程带来轮换不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
         "temp": 8.4,
-        "precip": 88,
-        "wind": 4.7
+        "precip": 90,
+        "wind": 5.8
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 68,
           "draw": 17,
@@ -385,58 +278,20 @@
       },
       "news": [
         {
-          "title": "Zielinski at risk of missing Inter vs. VfB Stuttgart Champions League clash",
-          "summary": "Inter are preparing to take on Bundesliga side VfB Stuttgart in the Champions League on...",
-          "link": "https://football-italia.net/zielinski-at-risk-of-missing-inter-stuttgart/",
+          "title": "Stuttgart coach Hoeness hails Inter ahead of Champions League trip: ‘One of the best in Europe’",
+          "summary": "Sebastian Hoeness believes Inter are one of the best teams in Europe, but insists Stuttgart...",
+          "link": "https://football-italia.net/stuttgart-coach-hoeness-hails-inter/",
           "published": "2026-11-24",
           "source": "Football Italia"
         },
         {
-          "title": "Report: Juventus, Inter, Napoli and five Premier League clubs want Monza’s Varela",
-          "summary": "Gustavo Varela has caught the eye of some of Europe’s biggest clubs with his performances...",
-          "link": "https://football-italia.net/juve-inter-five-prem-clubs-interested-varela/",
+          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
+          "summary": "Both Arsenal and Newcastle United are looking to improve their attack by signing Inter's Pio Esposito. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
           "published": "2026-11-24",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Football Italia Show: Malen on fire, Inter’s old problem & Amorim learns from Man Utd mistakes",
-          "summary": "Lorenzo Bettoni and Giancarlo Rinaldi are back with the first weekly episode of the Football...",
-          "link": "https://football-italia.net/football-italia-malen-fire-inter-problem-milan/",
-          "published": "2026-11-23",
-          "source": "Football Italia"
+          "source": "ESPN"
         }
-      ],
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "S. Drljaca",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "L. Jaquez",
-            "type": "Missing Fixture",
-            "reason": "Ribs Injury"
-          },
-          {
-            "player": "L. Stergiou",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "A. Stiller",
-            "type": "Missing Fixture",
-            "reason": "Groin Injury"
-          },
-          {
-            "player": "L. Sauer",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -450,7 +305,7 @@
         "name": "马德里竞技",
         "nameEn": "Club Atlético de Madrid",
         "crest": "https://crests.football-data.org/78.png",
-        "rank": 23,
+        "rank": 26,
         "form": [
           "L",
           "D",
@@ -464,7 +319,7 @@
         "name": "维京",
         "nameEn": "Viking FK",
         "crest": "https://crests.football-data.org/5720.png",
-        "rank": 22,
+        "rank": 25,
         "form": [
           "W",
           "L",
@@ -483,67 +338,46 @@
       },
       "prediction": {
         "prob": {
-          "home": 80,
+          "home": 79,
           "draw": 13,
-          "away": 7
+          "away": 8
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 62,
+        "confidence": 76,
         "pick": "home",
         "reasons": [
-          "市场均值主胜87%、平9%、客胜4%，主队受强支持",
-          "积分排名主队第23、客队第22，双方接近但赔率差距悬殊",
-          "主队近5场L D W L起伏，赛季进4失5攻守平平",
-          "马德里竞技伤停三人：A. Lookman、M. Pubill、C. Romero"
+          "市场均值主胜87%、平9%、客4%，马德里竞技获明显支持。",
+          "马德里竞技跨赛事13场场均进2失0.77，稳定性和强度占优。",
+          "维京本赛事客场2场场均进1失3，客场防守明显不稳。",
+          "马德里竞技本赛事主场2场1胜1负，主场表现并非压倒性。"
         ],
         "factors": [
-          "市场强压主胜",
-          "主队状态起伏",
-          "客队防线漏球",
-          "主队三人伤停",
-          "实力差距明显"
+          "市场主胜87%",
+          "维京客场失3球",
+          "马德里竞技强度",
+          "赛程密度高",
+          "无历史交锋"
         ],
-        "risk": "场地未提供；主队近况低迷且三人伤停，与市场高预期存在分歧，需防平局。"
+        "risk": "维京无跨赛事数据，伤病名单日期不符未提供，双方暂无历史交锋，判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 6.8,
+        "temp": 7.1,
         "precip": 0,
-        "wind": 8.4
+        "wind": 8.8
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 87,
           "draw": 9,
           "away": 4
         }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "A. Lookman",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "M. Pubill",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "C. Romero",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          }
-        ],
-        "away": []
       }
     },
     {
@@ -558,7 +392,7 @@
         "name": "巴黎圣日耳曼",
         "nameEn": "Paris Saint-Germain FC",
         "crest": "https://crests.football-data.org/524.png",
-        "rank": 1,
+        "rank": 2,
         "form": [
           "W",
           "W",
@@ -572,7 +406,7 @@
         "name": "罗马",
         "nameEn": "AS Roma",
         "crest": "https://crests.football-data.org/100.png",
-        "rank": 20,
+        "rank": 23,
         "form": [
           "L",
           "W",
@@ -591,105 +425,70 @@
       },
       "prediction": {
         "prob": {
-          "home": 64,
-          "draw": 21,
-          "away": 15
+          "home": 70,
+          "draw": 18,
+          "away": 12
         },
         "score": {
-          "home": 2,
-          "away": 0
+          "home": 3,
+          "away": 1
         },
         "confidence": 76,
         "pick": "home",
         "reasons": [
-          "主队排名第1，客队第20，实力差距明显。",
-          "主队近5场列出W W W W，客队L W L D。",
-          "主队赛季进20失5，攻防优于罗马的10/8。",
-          "市场均值主胜68%，与主胜判断方向一致。"
+          "巴黎圣日耳曼本赛事4场进20失5，场均5球，主场2场进10球。",
+          "罗马本赛事客场2场场均进1.5失2，面对强队防线承压。",
+          "积分榜巴黎圣日耳曼第2、罗马第23，排名差距明显。",
+          "市场均值主胜67%、平18%、客15%，与主胜判断方向一致。"
         ],
         "factors": [
-          "排名第1对第20",
-          "主队攻防强势",
-          "市场主胜68%",
-          "双方均有伤停",
-          "天气影响有限"
+          "欧冠场均进5球",
+          "积分排名差距明显",
+          "巴黎主场火力强",
+          "罗马客场场均失2",
+          "市场主胜67%"
         ],
-        "risk": "历史交锋数据暂无且场地未提供，预测主要依据排名与近期状态。"
+        "risk": "本场伤病名单未提供，阵容轮换存在不确定性；双方无历史交锋数据可参考。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 6.0,
-        "precip": 10,
-        "wind": 8.1
+        "temp": 5.7,
+        "precip": 23,
+        "wind": 5.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
-          "home": 68,
+          "home": 67,
           "draw": 18,
-          "away": 14
+          "away": 15
         }
       },
       "news": [
         {
+          "title": "Gasperini: ‘A great moment for Roma to face the best’ ahead of PSG test",
+          "summary": "Gian Piero Gasperini says Roma’s trip to Paris Saint-Germain is “a great moment” to test...",
+          "link": "https://football-italia.net/gasperini-a-great-moment-for-roma-psg/",
+          "published": "2026-11-24",
+          "source": "Football Italia"
+        },
+        {
           "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
+          "summary": "Both Arsenal and Newcastle United are looking to improve their attack by signing Inter's Pio Esposito. Transfer Talk has the latest.",
           "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
           "published": "2026-11-24",
           "source": "ESPN"
         },
         {
-          "title": "UCL-champs PSG drop one of this season's best kits in latest Jordan collab",
-          "summary": "PSG finally unveiled their 2026-27 third kit in collaboration with the Jordan brand. It was worth the wait.",
-          "link": "https://www.espn.com/soccer/story/_/id/50581189/psg-kit-nike-jordan-champions-league",
+          "title": "Dybala ‘proud’ of Roma’s Champions League return and claims: ‘I want to end my career in Italy’",
+          "summary": "Paulo Dybala says he is proud to have helped bring Roma back to the Champions...",
+          "link": "https://football-italia.net/dybala-proud-of-romas-champions-league-return/",
           "published": "2026-11-24",
-          "source": "ESPN"
+          "source": "Football Italia"
         }
-      ],
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "D. Doue",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "K. Kvaratskhelia",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "A. Longoni",
-            "type": "Missing Fixture",
-            "reason": "Thigh Injury"
-          }
-        ],
-        "away": [
-          {
-            "player": "L. Pellegrini",
-            "type": "Missing Fixture",
-            "reason": "Thigh Injury"
-          },
-          {
-            "player": "D. Rensch",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "D. S. Vasquez Llach",
-            "type": "Missing Fixture",
-            "reason": "Inactive"
-          },
-          {
-            "player": "L. Balerdi",
-            "type": "Questionable",
-            "reason": "Injury"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -703,7 +502,7 @@
         "name": "布鲁日",
         "nameEn": "Club Brugge KV",
         "crest": "https://crests.football-data.org/851.png",
-        "rank": 9,
+        "rank": 11,
         "form": [
           "W",
           "W",
@@ -717,7 +516,7 @@
         "name": "利物浦",
         "nameEn": "Liverpool FC",
         "crest": "https://crests.football-data.org/64.png",
-        "rank": 8,
+        "rank": 10,
         "form": [
           "L",
           "W",
@@ -736,59 +535,53 @@
       },
       "prediction": {
         "prob": {
-          "home": 24,
-          "draw": 24,
-          "away": 52
+          "home": 25,
+          "draw": 21,
+          "away": 54
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 3
         },
-        "confidence": 62,
+        "confidence": 61,
         "pick": "away",
         "reasons": [
-          "市场均值客胜58%，利物浦被明显看好",
-          "布鲁日近4场3胜，主场状态不俗",
-          "利物浦伤停5人，含C. Gakpo等攻击手",
-          "利物浦赛季进球14多于布鲁日11，失球10对7"
+          "利物浦欧冠场均进3.5球、客场场均4球，进攻效率更高。",
+          "布鲁日欧冠主场场均进2.5球，主场也有进球能力。",
+          "市场客胜59%与判断同向；利物浦3.1天前刚踢联赛，轮换存消耗。",
+          "气温0.3℃、风速19.4km/h，可能降低比赛节奏。"
         ],
         "factors": [
-          "客胜倾向",
-          "伤病影响",
-          "主场状态",
-          "低温大风"
+          "欧冠火力",
+          "客队实力",
+          "主场进球",
+          "市场倾向",
+          "赛程消耗"
         ],
-        "risk": "交手记录与场地未提供，双方近5场实际仅列4场，利物浦5人伤停影响难以量化。"
+        "risk": "场地与伤病名单未提供，且无历史交锋数据，临场信息有限。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.4,
-        "precip": 4,
-        "wind": 16.9
+        "temp": 0.3,
+        "precip": 1,
+        "wind": 19.4
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 21,
-          "draw": 21,
-          "away": 58
+          "draw": 20,
+          "away": 59
         }
       },
       "news": [
         {
-          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
-          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "🟥VAR review: Explaining Yoro's early red card vs. Liverpool",
-          "summary": "VAR often causes controversy, but how are decisions made? Our resident ref, Andy Davies, explains all.",
-          "link": "https://www.espn.com/soccer/story/_/id/49703019/premier-league-var-review-red-card-penalty-handball-goal-line-technology",
-          "published": "2026-11-24",
+          "title": "Sources: Man United to raise concerns after refs' chief backs Yoro red card",
+          "summary": "Manchester United are set to raise concerns after referee's chief Howard Webb backed the decision to send off Leny Yoro against Liverpool, sources told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50585934/man-united-leny-yoro-red-card-howard-webb-premier-league",
+          "published": "2026-11-25",
           "source": "ESPN"
         },
         {
@@ -797,65 +590,15 @@
           "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
           "published": "2026-11-24",
           "source": "ESPN"
+        },
+        {
+          "title": "Poch fumes at Yoro red and thinks Szoboszlai goal shouldn't have stood",
+          "summary": "Mauricio Pochettino has heavily criticised VAR in Manchester United's loss at Liverpool after Leny Yoro's red card was overturned, while the Argentine believes Dominik Szoboszlai’s opener should not have stood.",
+          "link": "https://www.skysports.com/football/news/11095/13616134/mauricio-pochettino-man-utd-boss-fumes-at-var-in-liverpool-loss-over-leny-yoro-and-dominik-szoboszlai-calls",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
         }
-      ],
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "J. Ordonez",
-            "type": "Missing Fixture",
-            "reason": "Foot Injury"
-          },
-          {
-            "player": "J. Virgili",
-            "type": "Questionable",
-            "reason": "Groin Injury"
-          }
-        ],
-        "away": [
-          {
-            "player": "C. Bradley",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "F. Chiesa",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "H. Ekitike",
-            "type": "Missing Fixture",
-            "reason": "Achilles Tendon Injury"
-          },
-          {
-            "player": "W. Endo",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "C. Gakpo",
-            "type": "Missing Fixture",
-            "reason": "Calf Injury"
-          },
-          {
-            "player": "R. Gravenberch",
-            "type": "Missing Fixture",
-            "reason": "Heel Injury"
-          },
-          {
-            "player": "G. Leoni",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "A. Nallo",
-            "type": "Missing Fixture",
-            "reason": "Leg Injury"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -883,7 +626,7 @@
         "name": "拜仁慕尼黑",
         "nameEn": "FC Bayern München",
         "crest": "https://crests.football-data.org/5.png",
-        "rank": 13,
+        "rank": 14,
         "form": [
           "W",
           "D",
@@ -902,105 +645,46 @@
       },
       "prediction": {
         "prob": {
-          "home": 20,
-          "draw": 23,
-          "away": 57
+          "home": 18,
+          "draw": 22,
+          "away": 60
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 64,
+        "confidence": 72,
         "pick": "away",
         "reasons": [
-          "欧冠排名：里尔第35，拜仁慕尼黑第13，客队排名优势明显。",
-          "赛季进失球：里尔4/10，拜仁慕尼黑12/5，攻防差距清晰。",
-          "近5场：里尔D L L L，拜仁慕尼黑W D D W，主队状态低迷。",
-          "拜仁慕尼黑有Kane、Neuer、Davies等5人伤停，客胜不宜高估。"
+          "里尔欧冠4场进4失10，主场场均失3.5，防线承压。",
+          "拜仁欧冠4场进12失5，客场场均进2.5，攻击力占优。",
+          "积分排名里尔第35、拜仁第14，市场均值客胜58%与判断同向。",
+          "赛程密度接近：里尔3.0天后、拜仁2.8天后均有下一场联赛。"
         ],
         "factors": [
-          "排名差距",
-          "拜仁慕尼黑伤停",
-          "里尔近况低迷",
-          "市场倾向客胜",
+          "拜仁攻防占优",
+          "里尔欧冠防线差",
+          "客胜市场58%",
+          "赛程密度接近",
           "低温大风"
         ],
-        "risk": "场地与其他信息未提供，且里尔近5场仅列4场，状态样本略不足。"
+        "risk": "伤病名单因日期不同未提供，场地信息缺失，是主要不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.2,
-        "precip": 6,
-        "wind": 15.5
+        "temp": 0.4,
+        "precip": 4,
+        "wind": 16.2
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 19,
-          "draw": 22,
-          "away": 59
+          "draw": 23,
+          "away": 58
         }
-      },
-      "news": [
-        {
-          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Paris Saint-Germain have added Bayern Munich's Luis Díaz and Chelsea's Estêvão to their shortlist. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Sven Ulreich yet to decide on Bayern Munich future",
-          "summary": "Bayern Munich goalkeeper Sven Ulreich stated that he is yet to make a decision about his future. “I will be speaking with Bayern in the near future about what happens…",
-          "link": "https://www.getfootballnewsgermany.com/2026/sven-ulreich-yet-to-decide-on-bayern-munich-future/",
-          "published": "2026-11-23",
-          "source": "Get German Football News"
-        },
-        {
-          "title": "Jonathan Tah names Florian Wirtz as the player he’d bring to Bayern Munich",
-          "summary": "Jonathan Tah has stated he would like to see Liverpool’s Florian Wirtz at Bayern Munich. The duo, of course, have history having played together at Bayer Leverkusen, where they did…",
-          "link": "https://www.getfootballnewsgermany.com/2026/jonathan-tah-names-florian-wirtz-as-the-player-hed-bring-to-bayern-munich/",
-          "published": "2026-11-23",
-          "source": "Get German Football News"
-        }
-      ],
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "A. Davies",
-            "type": "Missing Fixture",
-            "reason": "Hamstring Injury"
-          },
-          {
-            "player": "S. Gnabry",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "H. Kane",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "M. Neuer",
-            "type": "Missing Fixture",
-            "reason": "Foot Injury"
-          },
-          {
-            "player": "I. Saibari",
-            "type": "Missing Fixture",
-            "reason": "Ankle Injury"
-          },
-          {
-            "player": "M. Olise",
-            "type": "Questionable",
-            "reason": "Leg Injury"
-          }
-        ]
       }
     },
     {
@@ -1015,7 +699,7 @@
         "name": "葡萄牙体育",
         "nameEn": "Sporting Clube de Portugal",
         "crest": "https://crests.football-data.org/498.png",
-        "rank": 10,
+        "rank": 12,
         "form": [
           "W",
           "L",
@@ -1029,7 +713,7 @@
         "name": "曼联",
         "nameEn": "Manchester United FC",
         "crest": "https://crests.football-data.org/66.png",
-        "rank": 17,
+        "rank": 19,
         "form": [
           "W",
           "L",
@@ -1048,40 +732,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 46,
+          "home": 45,
           "draw": 27,
-          "away": 27
+          "away": 28
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 66,
+        "confidence": 64,
         "pick": "home",
         "reasons": [
-          "葡萄牙体育排名第10，高于曼联第17，主场作战占优。",
-          "主队赛季进8失4，防守好于曼联的进8失8。",
-          "曼联伤停包括B. Sesko、M. Ugarte等多人，阵容受损。",
-          "市场均值主胜38%、客胜36%，主队仅小幅占优。"
+          "葡萄牙体育欧冠主场场均进2.5球，曼联欧冠客场场均仅0.5球且失3球",
+          "积分排名主队第12、客队第19，主队本赛事净胜球+4优于曼联0",
+          "曼联3.1天前刚踢PL且2.8天后还有PL，赛程密度高于主队",
+          "市场均值主胜38%/平26%/客胜36%，主胜方向与判断一致"
         ],
         "factors": [
-          "主场优势",
-          "曼联伤停多",
-          "防守更稳",
-          "市场略倾主"
+          "主场火力",
+          "曼联客场疲软",
+          "赛程密度",
+          "排名优势"
         ],
-        "risk": "场地信息未提供；市场客胜36%仍接近，曼联残阵临场表现是最大变数。"
+        "risk": "场地与主队跨赛事数据未提供，本场伤病名单缺失，不确定性偏高。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 11.8,
-        "precip": 0,
-        "wind": 3.1
+        "temp": 13.2,
+        "precip": 5,
+        "wind": 4.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
           "home": 38,
           "draw": 26,
@@ -1090,10 +774,10 @@
       },
       "news": [
         {
-          "title": "Sources: Man Utd to appeal Yoro red card against Liverpool",
-          "summary": "Manchester United have notified the Football Association of their intention to appeal Leny Yoro's red card in the 4-0 defeat to Liverpool, sources have told ESPN.",
-          "link": "https://www.espn.com/soccer/story/_/id/50572590/man-united-leny-yoro-red-card-liverpool-premier-league",
-          "published": "2026-11-24",
+          "title": "Sources: Man United to raise concerns after refs' chief backs Yoro red card",
+          "summary": "Manchester United are set to raise concerns after referee's chief Howard Webb backed the decision to send off Leny Yoro against Liverpool, sources told ESPN.",
+          "link": "https://www.espn.com/soccer/story/_/id/50585934/man-united-leny-yoro-red-card-howard-webb-premier-league",
+          "published": "2026-11-25",
           "source": "ESPN"
         },
         {
@@ -1110,48 +794,7 @@
           "published": "2026-11-24",
           "source": "ESPN"
         }
-      ],
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [],
-        "away": [
-          {
-            "player": "C. Baleba",
-            "type": "Missing Fixture",
-            "reason": "Thigh Injury"
-          },
-          {
-            "player": "M. Cunha",
-            "type": "Missing Fixture",
-            "reason": "Red Card"
-          },
-          {
-            "player": "K. Darlow",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "B. Sesko",
-            "type": "Missing Fixture",
-            "reason": "Leg Injury"
-          },
-          {
-            "player": "M. Ugarte",
-            "type": "Missing Fixture",
-            "reason": "Knee Injury"
-          },
-          {
-            "player": "M. Rashford",
-            "type": "Questionable",
-            "reason": "Hip Injury"
-          },
-          {
-            "player": "L. Shaw",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -1165,7 +808,7 @@
         "name": "顿涅茨克矿工",
         "nameEn": "FK Shakhtar Donetsk",
         "crest": "https://crests.football-data.org/1887.png",
-        "rank": 21,
+        "rank": 24,
         "form": [
           "L",
           "L",
@@ -1179,7 +822,7 @@
         "name": "费内巴切",
         "nameEn": "Fenerbahçe SK",
         "crest": "https://crests.football-data.org/613.png",
-        "rank": 19,
+        "rank": 22,
         "form": [
           "W",
           "D",
@@ -1198,92 +841,46 @@
       },
       "prediction": {
         "prob": {
-          "home": 35,
+          "home": 37,
           "draw": 29,
-          "away": 36
+          "away": 34
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 1
         },
         "confidence": 55,
-        "pick": "away",
+        "pick": "home",
         "reasons": [
-          "双方排名接近（主队第21、客队第19），市场均值主胜36%平27%客胜37%，呈",
-          "费内巴切赛季进6球失11球，防守不稳但进攻略优于4球的顿涅茨克矿工",
-          "顿涅茨克矿工有5人伤停，阵容深度受影响",
-          "开赛气温-1.0℃、风速15.2km/h，可能压低比赛节奏"
+          "矿工本赛事主场2场场均进1.5失1，主场有拿分能力。",
+          "费内巴切本赛事客场仅1场，0-6负阿斯顿维拉，客场数据弱。",
+          "市场均值主胜33%/平27%/客胜40%，客队仅小幅占优。",
+          "积分排名主队第24、客队第22，双方接近，主场因素或成关键。"
         ],
         "factors": [
-          "排名仅差两位",
-          "客队失球偏多",
-          "主队伤停五人",
-          "低温影响节奏",
-          "市场呈三分"
+          "主场进攻",
+          "客队客场惨败",
+          "市场客队略优",
+          "低温大风",
+          "排名接近"
         ],
-        "risk": "场地与其他信息未提供，主队近5场仅列出4场，状态样本有限，判断不确定性较大。"
+        "risk": "伤病名单未提供，两队跨赛事数据缺失，费内巴切本赛事客场仅1场，参考有限。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": -1.0,
+        "temp": -0.9,
         "precip": 3,
-        "wind": 15.2
+        "wind": 15.9
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:59:08Z",
+        "capturedAt": "2026-11-25T01:28:33Z",
         "prob": {
-          "home": 36,
+          "home": 33,
           "draw": 27,
-          "away": 37
+          "away": 40
         }
-      },
-      "injuries": {
-        "date": "2026-11-25",
-        "home": [
-          {
-            "player": "Eguinaldo",
-            "type": "Missing Fixture",
-            "reason": "Shoulder Injury"
-          },
-          {
-            "player": "Kaua Elias",
-            "type": "Missing Fixture",
-            "reason": "Foot Injury"
-          },
-          {
-            "player": "V. Korniyenko",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "Pedrinho",
-            "type": "Missing Fixture",
-            "reason": "Muscle Injury"
-          },
-          {
-            "player": "T. Puzankov",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "M. Shved",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "D. Tvardovskyi",
-            "type": "Missing Fixture",
-            "reason": "Off the roster"
-          },
-          {
-            "player": "Marlon",
-            "type": "Questionable",
-            "reason": "Muscle Injury"
-          }
-        ],
-        "away": []
       }
     }
   ]
