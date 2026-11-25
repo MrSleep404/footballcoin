@@ -83,7 +83,7 @@ workflow:
     - COMPETITION_SET
     value: domestic
     value_type: string
-  - description: API-Football 的 x-apisports-key，用于拉取次日伤停；留空则无伤病数据
+  - description: API-Football 的 x-apisports-key，用于拉取最近 3 个比赛日的伤停；留空则无伤病数据
     id: 7c1d4a90-2f63-4e8b-9b57-9d0e6a3c2f12
     name: API_FOOTBALL_KEY
     selector:
@@ -164,36 +164,38 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: http-request
-      id: code_leagues-source-http_injuries-target
-      source: code_leagues
-      sourceHandle: source
-      target: http_injuries
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInLoop: false
-        sourceType: http-request
-        targetType: code
-      id: http_injuries-source-code_injuries-target
-      source: http_injuries
-      sourceHandle: source
-      target: code_injuries
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInLoop: false
-        sourceType: code
         targetType: iteration
-      id: code_injuries-source-iter_leagues-target
-      source: code_injuries
+      id: code_leagues-source-iter_leagues-target
+      source: code_leagues
       sourceHandle: source
       target: iter_leagues
       targetHandle: target
       type: custom
       zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_injuries
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_injuries_start-source-http_injuries-target
+      source: iter_injuries_start
+      sourceHandle: source
+      target: http_injuries
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_injuries
+        sourceType: http-request
+        targetType: code
+      id: http_injuries-source-code_injuries_pack-target
+      source: http_injuries
+      sourceHandle: source
+      target: code_injuries_pack
+      targetHandle: target
+      type: custom
+      zIndex: 1002
     - data:
         isInLoop: false
         sourceType: iteration
@@ -209,8 +211,41 @@ workflow:
         isInLoop: false
         sourceType: code
         targetType: code
-      id: code_normalize-source-code_weather_plan-target
+      id: code_normalize-source-code_injury_plan-target
       source: code_normalize
+      sourceHandle: source
+      target: code_injury_plan
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_injury_plan-source-iter_injuries-target
+      source: code_injury_plan
+      sourceHandle: source
+      target: iter_injuries
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_injuries-source-code_injuries-target
+      source: iter_injuries
+      sourceHandle: source
+      target: code_injuries
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: code
+      id: code_injuries-source-code_weather_plan-target
+      source: code_injuries
       sourceHandle: source
       target: code_weather_plan
       targetHandle: target
@@ -984,31 +1019,22 @@ workflow:
       width: 244
     - data:
         code: |
-          from datetime import datetime, timedelta, timezone
-
-          BJ = timezone(timedelta(hours=8))
-
-
           def main(mode: str, competition_set: str) -> dict:
               value = (mode or "both").strip().lower()
-              tomorrow = (datetime.now(timezone.utc) + timedelta(days=1)).strftime("%Y-%m-%d")
               if value == "results":
-                  return {"result": [], "injuryDate": tomorrow}
+                  return {"result": []}
               group = (competition_set or "domestic").strip().lower()
               if group in ("europe", "euro", "cl"):
-                  return {"result": ["CL"], "injuryDate": tomorrow}
+                  return {"result": ["CL"]}
               if group in ("all", "both"):
-                  return {"result": ["PL", "PD", "SA", "BL1", "FL1", "CL"], "injuryDate": tomorrow}
-              return {"result": ["PL", "PD", "SA", "BL1", "FL1"], "injuryDate": tomorrow}
+                  return {"result": ["PL", "PD", "SA", "BL1", "FL1", "CL"]}
+              return {"result": ["PL", "PD", "SA", "BL1", "FL1"]}
         code_language: python3
         desc: ''
         outputs:
           result:
             children: null
             type: array[string]
-          injuryDate:
-            children: null
-            type: string
         selected: false
         title: 联赛列表
         type: code
@@ -1043,6 +1069,8 @@ workflow:
           x-apisports-key: {{#env.API_FOOTBALL_KEY#}}
           Accept: application/json
           User-Agent: footballcoin-dify
+        isInIteration: true
+        iteration_id: iter_injuries
         method: get
         params: ''
         selected: false
@@ -1052,18 +1080,155 @@ workflow:
           write: 30
         title: 拉取伤病
         type: http-request
-        url: 'https://v3.football.api-sports.io/injuries?date={{#code_leagues.injuryDate#}}'
+        url: 'https://v3.football.api-sports.io/injuries?date={{#iter_injuries.item#}}'
         variables: []
       height: 113
       id: http_injuries
+      parentId: iter_injuries
       position:
-        x: 340
-        y: 140
+        x: 128
+        y: 68
       selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
       width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          from datetime import datetime, timezone
+
+
+          def main(matches: list) -> dict:
+              # API-Football 的伤病按 UTC 日期划分，这里从赛程反推比赛日，只取最近 3 天
+              days = []
+              for match in matches or []:
+                  kickoff = match.get("kickoff") if isinstance(match, dict) else None
+                  if not kickoff:
+                      continue
+                  try:
+                      moment = datetime.fromisoformat(str(kickoff).replace("Z", "+00:00"))
+                  except (TypeError, ValueError):
+                      continue
+                  if moment.tzinfo is None:
+                      moment = moment.replace(tzinfo=timezone.utc)
+                  day = moment.astimezone(timezone.utc).strftime("%Y-%m-%d")
+                  if day not in days:
+                      days.append(day)
+              days.sort()
+              return {"dates": days[:3], "count": len(days[:3])}
+        code_language: python3
+        desc: ''
+        outputs:
+          dates:
+            children: null
+            type: array[string]
+          count:
+            children: null
+            type: number
+        selected: false
+        title: 伤病日期计划
+        type: code
+        variables:
+        - value_selector:
+          - code_normalize
+          - matches
+          variable: matches
+      height: 90
+      id: code_injury_plan
+      position:
+        x: 2940
+        y: 1180
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[string]
+        iterator_selector:
+        - code_injury_plan
+        - dates
+        output_selector:
+        - code_injuries_pack
+        - item
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_injuries_start
+        title: 伤病日期迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_injuries
+      position:
+        x: 3220
+        y: 1180
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_injuries_start
+      parentId: iter_injuries
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        code: |
+          def main(day: str, body) -> dict:
+              return {"item": {"date": day, "body": body}}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_injuries
+        outputs:
+          item:
+            children: null
+            type: object
+        selected: false
+        title: 打包伤病
+        type: code
+        variables:
+        - value_selector:
+          - iter_injuries
+          - item
+          variable: day
+        - value_selector:
+          - http_injuries
+          - body
+          variable: body
+      height: 90
+      id: code_injuries_pack
+      parentId: iter_injuries
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
     - data:
         code: |
           import json
@@ -1091,28 +1256,40 @@ workflow:
               return [ALIASES.get(token, token) for token in text.split() if token and token not in STOPWORDS]
 
 
-          def main(body) -> dict:
-              if isinstance(body, str):
+          def _parse(raw):
+              if isinstance(raw, str):
                   try:
-                      body = json.loads(body)
+                      return json.loads(raw)
                   except ValueError:
-                      body = {}
-              payload = body if isinstance(body, dict) else {}
-              items = payload.get("response") or []
+                      return {}
+              return raw if isinstance(raw, dict) else {}
+
+
+          def main(items: list) -> dict:
+              # 每个日期一份响应，按「日期|球队」拼键，输出结构与单日期版本保持一致
               teams = {}
-              for item in items:
-                  tokens = _tokens((item.get("team") or {}).get("name"))
-                  if not tokens:
+              records = 0
+              for entry in items or []:
+                  item = entry if isinstance(entry, dict) else {}
+                  day = str(item.get("date") or "")[:10]
+                  if not day:
                       continue
-                  player = item.get("player") or {}
-                  teams.setdefault(" ".join(sorted(tokens)), []).append(
-                      {
-                          "player": player.get("name") or "",
-                          "type": player.get("type") or "",
-                          "reason": player.get("reason") or "",
-                      }
-                  )
-              return {"injuries": {"teams": teams}, "teamCount": len(teams), "recordCount": len(items)}
+                  payload = _parse(item.get("body"))
+                  for row in payload.get("response") or []:
+                      tokens = _tokens((row.get("team") or {}).get("name"))
+                      if not tokens:
+                          continue
+                      player = row.get("player") or {}
+                      key = day + "|" + " ".join(sorted(tokens))
+                      teams.setdefault(key, []).append(
+                          {
+                              "player": player.get("name") or "",
+                              "type": player.get("type") or "",
+                              "reason": player.get("reason") or "",
+                          }
+                      )
+                      records += 1
+              return {"injuries": {"teams": teams}, "teamCount": len(teams), "recordCount": records}
         code_language: python3
         desc: ''
         outputs:
@@ -1130,14 +1307,14 @@ workflow:
         type: code
         variables:
         - value_selector:
-          - http_injuries
-          - body
-          variable: body
+          - iter_injuries
+          - output
+          variable: items
       height: 90
       id: code_injuries
       position:
-        x: 620
-        y: 140
+        x: 4300
+        y: 1180
       selected: false
       sourcePosition: right
       targetPosition: left
@@ -4068,16 +4245,20 @@ workflow:
               return [ALIASES.get(token, token) for token in text.split() if token and token not in STOPWORDS]
 
 
-          def _find(teams, name):
+          def _find(teams, name, day):
               tokens = _tokens(name)
-              if not tokens:
+              if not tokens or not teams:
                   return []
-              key = " ".join(sorted(tokens))
+              prefix = f"{day}|"
+              key = prefix + " ".join(sorted(tokens))
               if key in teams:
                   return teams[key]
               current = set(tokens)
               for other, items in teams.items():
-                  candidate = set(other.split())
+                  other = str(other)
+                  if not other.startswith(prefix):
+                      continue
+                  candidate = set(other[len(prefix):].split())
                   if len(current) >= 2 and current <= candidate:
                       return items
                   if len(candidate) >= 2 and candidate <= current:
@@ -4095,7 +4276,7 @@ workflow:
               return f"{label}：" + "、".join(parts)
 
 
-          def main(match: dict, injuries: dict, injury_date: str) -> dict:
+          def main(match: dict, injuries: dict) -> dict:
               home = match.get("home") or {}
               away = match.get("away") or {}
               kickoff = match.get("kickoff")
@@ -4162,14 +4343,16 @@ workflow:
               )
 
               teams = (injuries or {}).get("teams") or {}
-              if injury_date and teams and day == injury_date:
+              home_inj = _find(teams, home.get("nameEn"), day)
+              away_inj = _find(teams, away.get("nameEn"), day)
+              if home_inj or away_inj:
                   injury_text = (
-                      f"伤病情况（API-Football，{injury_date} 名单）：\n"
-                      f"{_line(home.get('name', '') + '伤停', _find(teams, home.get('nameEn')))}\n"
-                      f"{_line(away.get('name', '') + '伤停', _find(teams, away.get('nameEn')))}"
+                      f"伤病情况（API-Football，{day} 名单）：\n"
+                      f"{_line(home.get('name', '') + '伤停', home_inj)}\n"
+                      f"{_line(away.get('name', '') + '伤停', away_inj)}"
                   )
-              elif injury_date and teams:
-                  injury_text = f"伤病情况：仅提供 {injury_date} 的名单，本场日期不同，未提供。"
+              elif teams:
+                  injury_text = f"伤病情况：该日（{day}）无名单。"
               else:
                   injury_text = "伤病情况：未提供。"
 
@@ -4210,10 +4393,6 @@ workflow:
           - code_injuries
           - injuries
           variable: injuries
-        - value_selector:
-          - code_leagues
-          - injuryDate
-          variable: injury_date
       height: 90
       id: code_prompt
       parentId: iter_matches
@@ -4326,16 +4505,21 @@ workflow:
               return [ALIASES.get(token, token) for token in text.split() if token and token not in STOPWORDS]
 
 
-          def _injuries_for(teams, name):
+          def _injuries_for(teams, name, day):
               parts = _tokens(name)
               if not parts or not isinstance(teams, dict):
                   return []
-              key = " ".join(sorted(parts))
-              if key in teams:
-                  return teams[key]
+              prefix = f"{day}|"
+              if not day:
+                  return []
+              if prefix + " ".join(sorted(parts)) in teams:
+                  return teams[prefix + " ".join(sorted(parts))]
               current = set(parts)
               for other, items in teams.items():
-                  candidate = set(other.split())
+                  other = str(other)
+                  if not other.startswith(prefix):
+                      continue
+                  candidate = set(other[len(prefix):].split())
                   if len(current) >= 2 and current <= candidate:
                       return items
                   if len(candidate) >= 2 and candidate <= current:
@@ -4343,17 +4527,18 @@ workflow:
               return []
 
 
-          def _attach_injuries(merged, injuries, injury_date):
+          def _attach_injuries(merged, injuries):
               if not isinstance(injuries, dict):
                   return
               teams = injuries.get("teams") or {}
-              date = str(injury_date or "")[:10]
-              if not teams or not date or str(merged.get("kickoff") or "")[:10] != date:
+              # 伤病按比赛自身的 UTC 开球日取名单，不再依赖全局查询日期
+              day = str(merged.get("kickoff") or "")[:10]
+              if not teams or not day:
                   return
-              home = _injuries_for(teams, (merged.get("home") or {}).get("nameEn"))
-              away = _injuries_for(teams, (merged.get("away") or {}).get("nameEn"))
+              home = _injuries_for(teams, (merged.get("home") or {}).get("nameEn"), day)
+              away = _injuries_for(teams, (merged.get("away") or {}).get("nameEn"), day)
               if home or away:
-                  merged["injuries"] = {"date": date, "home": home, "away": away}
+                  merged["injuries"] = {"date": day, "home": home, "away": away}
 
 
           def _clamp(value, lo, hi, default):
@@ -4466,10 +4651,10 @@ workflow:
               return {"home": home, "away": away}
 
 
-          def main(raw_text: str, match, injuries, injury_date) -> dict:
+          def main(raw_text: str, match, injuries) -> dict:
               item = _parse_match(match)
               merged = dict(item)
-              _attach_injuries(merged, injuries, injury_date)
+              _attach_injuries(merged, injuries)
               # 统计口径只服务提示词，不写入数据文件
               for key in ("statsHomeOwn", "statsHomeCross", "statsHomeLoad",
                           "statsAwayOwn", "statsAwayCross", "statsAwayLoad"):
@@ -4535,10 +4720,6 @@ workflow:
           - code_injuries
           - injuries
           variable: injuries
-        - value_selector:
-          - code_leagues
-          - injuryDate
-          variable: injury_date
       height: 90
       id: code_validate
       parentId: iter_matches
