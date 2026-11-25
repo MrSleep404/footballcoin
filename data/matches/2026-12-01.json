@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-25T09:15:21+08:00",
+  "generatedAt": "2026-11-25T17:00:50+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 3,
@@ -67,35 +67,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 26,
-          "draw": 26,
-          "away": 48
+          "home": 23,
+          "draw": 27,
+          "away": 50
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 62,
+        "confidence": 66,
         "pick": "away",
         "reasons": [
-          "莱切近5场1平4负，本赛事主场场均失2.4球",
-          "亚特兰大本赛事进21球，客场场均进1.2球",
-          "近2次交手亚特兰大全胜，总比分7-1",
-          "市场去水概率客胜50%，与判断方向一致"
+          "莱切本赛事场均失2.08、主场失2.4，近5场1平4负，防守持续承压。",
+          "亚特兰大本赛事场均进1.75，近5场进11球，客场曾1-0蒙扎。",
+          "近2次交手亚特兰大2胜，最近莱切0-3、亚特兰大4-1，对位优势明显。",
+          "天气10.9℃、降水概率11%、风速13.3 km/h，对节奏影响有限。"
         ],
         "factors": [
-          "客队进攻占优",
-          "主队防线不稳",
-          "交手两连败",
-          "客胜倾向"
+          "莱切防守低迷",
+          "亚特兰大进攻占优",
+          "交手客队全胜",
+          "天气影响有限"
         ],
-        "risk": "亚特兰大本赛事场均失2球、防守波动大，且伤病名单未覆盖本场，存在阵容不确定。"
+        "risk": "伤病信息未提供，跨赛事参考缺失，临场阵容变化是最大不确定性。"
       },
       "degraded": false,
       "result": null,
+      "weather": {
+        "temp": 10.9,
+        "precip": 11,
+        "wind": 13.3
+      },
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-25T01:10:58Z",
+        "capturedAt": "2026-11-25T08:55:13Z",
         "prob": {
           "home": 25,
           "draw": 25,
@@ -163,36 +168,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 19,
-          "draw": 25,
-          "away": 56
+          "home": 18,
+          "draw": 24,
+          "away": 58
         },
         "score": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
-        "confidence": 69,
+        "confidence": 70,
         "pick": "away",
         "reasons": [
-          "客队排名第4高于主队第11，赛季进球28比10、失球14比17均占优。",
-          "AC米兰近5场4胜1负，卡利亚里近5场1胜4负，状态差距明显。",
-          "卡利亚里主场场均进0.6球，AC米兰客场场均进1.67球。",
-          "市场均值客胜55%，与预测方向一致。"
+          "卡利亚里本赛事场均进0.83球、失1.42球，12场共进10球、失17球",
+          "米兰本赛事场均进2.33球，近5场14比8，含5比1胜弗罗西诺内",
+          "卡利亚里主场5场场均进0.6球、失0.8球，进攻乏力但失球不多",
+          "近2次交手双方各1胜，米兰曾客场1比2负于卡利亚里，需防冷"
         ],
         "factors": [
-          "排名差距",
-          "状态反差",
-          "客队进攻强",
-          "主队主场低产",
-          "市场偏客"
+          "米兰进攻火力强",
+          "卡利亚里主场进球少",
+          "米兰近5场4胜1负",
+          "交手各胜一场"
         ],
-        "risk": "场地、天气和本场伤病名单未提供，阵容与临场环境存在不确定性。"
+        "risk": "伤病情况未提供；卡利亚里主场场均失球仅0.8，米兰存在被逼平或小胜落空的不确定性。"
       },
       "degraded": false,
       "result": null,
+      "weather": {
+        "temp": 13.3,
+        "precip": 2,
+        "wind": 7.3
+      },
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-25T01:10:58Z",
+        "capturedAt": "2026-11-25T08:55:13Z",
         "prob": {
           "home": 20,
           "draw": 25,
@@ -277,43 +286,39 @@
           "home": 1,
           "away": 0
         },
-        "confidence": 68,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "西班牙人第11、赫塔菲第18，主队排名占优。",
-          "赫塔菲客场6场0进球、场均失2.33，客战乏力。",
-          "西班牙人主场场均进1失1.17，表现较稳。",
-          "市场均值主胜46%，与主胜判断方向一致。"
+          "赫塔菲本赛事客场6场0进球、场均失2.33球，客战攻防严重失衡。",
+          "西班牙人本赛事场均进1.08、失1.08，近5场有3场零封，防守端较稳。",
+          "积分榜第11对第18，西班牙人近5场2胜1平2负优于赫塔菲1胜1平3负。",
+          "近2次交手各胜1场，最近西班牙人主场1-2赫塔菲，需防客队反击。"
         ],
         "factors": [
-          "排名占优",
           "客队客场零进球",
-          "主队主场平稳",
-          "市场偏主胜",
-          "交手互有胜负"
+          "主队防守较稳",
+          "排名差七位",
+          "交手互有胜负",
+          "天气影响有限"
         ],
-        "risk": "场地、天气及本场伤病名单未提供，临场信息不足；赫塔菲客场极弱但西班牙人主场火力有限，平局仍是主要风险。"
+        "risk": "伤病情况未提供，跨赛事也无已结束数据，是判断的主要不确定性。"
       },
       "degraded": false,
       "result": null,
+      "weather": {
+        "temp": 12.8,
+        "precip": 15,
+        "wind": 5.1
+      },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T01:10:57Z",
+        "capturedAt": "2026-11-25T08:55:12Z",
         "prob": {
           "home": 46,
           "draw": 30,
           "away": 24
         }
-      },
-      "news": [
-        {
-          "title": "We knew Man United were a mess before Liverpool loss. Plus: Epic Barça comeback",
-          "summary": "Mauricio Pochettino's debut as Man United manager didn't tell us anything we didn't already know when it came to the scale of rebuild required.",
-          "link": "https://www.espn.com/soccer/story/_/id/50568399/man-united-liverpool-pochettino-barcelona-man-city",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        }
-      ]
+      }
     }
   ]
 }
