@@ -1,6 +1,10 @@
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readdirSync, readFileSync, writeFileSync, existsSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+
+const startedAt = Date.now();
+const SCALE_FILES = 120;
+const SCALE_KB = 8 * 1024;
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const DATA = join(ROOT, "data");
@@ -111,3 +115,17 @@ writeFileSync(join(DATA, "stats.json"), `${JSON.stringify(stats, null, 2)}\n`, "
 console.log(
   `✓ 生成索引：${dates.length} 个预测日期，${resultDates.length} 个赛果日期；命中统计 ${overall.total} 场`,
 );
+
+const sumBytes = (dir, list) =>
+  list.reduce((sum, date) => sum + statSync(join(dir, `${date}.json`)).size, 0);
+const matchBytes = sumBytes(MATCH_DIR, dates);
+const resultBytes = sumBytes(RESULT_DIR, resultDates);
+const totalKb = Math.round((matchBytes + resultBytes) / 1024);
+console.log(
+  `· 数据规模：预测 ${dates.length} 个文件 / ${Math.round(matchBytes / 1024)} KB，赛果 ${resultDates.length} 个 / ${Math.round(resultBytes / 1024)} KB，合计 ${totalKb} KB，耗时 ${Date.now() - startedAt} ms`,
+);
+if (dates.length > SCALE_FILES || totalKb > SCALE_KB) {
+  console.warn(
+    `⚠ 数据规模已达阈值（预测文件 > ${SCALE_FILES} 个或合计 > ${SCALE_KB} KB），按技术方案 12.4 评估是否启用按赛季分目录`,
+  );
+}
