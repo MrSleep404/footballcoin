@@ -3,7 +3,7 @@
     <header class="head">
       <span class="eyebrow">How it works</span>
       <h1>关于本站</h1>
-      <p>一个纯静态的五大联赛与欧冠赛前预测展示站，预测由独立的 Dify 工作流生成。</p>
+      <p>一个纯静态的五大联赛与欧冠 AI 赛前预测展示站，预测由独立的 Dify 工作流生成。</p>
     </header>
 
     <section class="block">
