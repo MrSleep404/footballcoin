@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-24",
-  "generatedAt": "2026-11-25T09:15:32+08:00",
+  "generatedAt": "2026-11-25T09:30:16+08:00",
   "source": "football-data.org",
   "count": 3,
   "results": [
@@ -12,7 +12,7 @@
       "awayGoals": 1,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-25T09:15:32+08:00"
+      "updatedAt": "2026-11-25T09:30:16+08:00"
     },
     {
       "id": "PL-2026-11-24-BRE-EVE",
@@ -21,7 +21,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T09:15:32+08:00"
+      "updatedAt": "2026-11-25T09:30:16+08:00"
     },
     {
       "id": "SA-2026-11-24-MON-FIO",
@@ -30,7 +30,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T09:15:32+08:00"
+      "updatedAt": "2026-11-25T09:30:16+08:00"
     }
   ]
 }
