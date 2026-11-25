@@ -58,7 +58,7 @@ onMounted(() => {
   display: flex;
   gap: 6px;
   overflow-x: auto;
-  padding: 2px 2px 8px;
+  padding: 8px 6px 8px 2px;
   scrollbar-color: var(--border-strong) transparent;
   scrollbar-width: thin;
   scroll-behavior: smooth;
