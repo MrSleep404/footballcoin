@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import type { Match } from "../types";
 import { LEAGUE_COLOR, formatKickoffTime, outcomeFromScore } from "../utils/format";
 import OddsRow from "./OddsRow.vue";
@@ -34,6 +34,29 @@ const predictedText = computed(() => {
   const score = props.match.prediction?.score;
   return score ? `${score.home} : ${score.away}` : "";
 });
+
+// 移动端列宽有限，队名按固定规则截断：超过 5 个字符保留前 4 个再补省略号
+const isNarrow = ref(false);
+let media: MediaQueryList | null = null;
+const syncNarrow = () => {
+  isNarrow.value = media?.matches ?? false;
+};
+
+onMounted(() => {
+  media = window.matchMedia("(max-width: 640px)");
+  syncNarrow();
+  media.addEventListener("change", syncNarrow);
+});
+
+onBeforeUnmount(() => {
+  media?.removeEventListener("change", syncNarrow);
+});
+
+const displayName = (name: string) => {
+  if (!isNarrow.value) return name;
+  const chars = Array.from(name);
+  return chars.length > 5 ? `${chars.slice(0, 4).join("")}…` : name;
+};
 </script>
 
 <template>
@@ -56,7 +79,7 @@ const predictedText = computed(() => {
       <div class="team">
         <TeamCrest :name="match.home.name" :crest="match.home.crest" :size="30" />
         <div class="team-text">
-          <span class="name">{{ match.home.name }}</span>
+          <span class="name" :title="match.home.name">{{ displayName(match.home.name) }}</span>
           <span class="sub numeric">#{{ match.home.rank }} <span class="sep">/</span> 主</span>
         </div>
       </div>
@@ -78,7 +101,7 @@ const predictedText = computed(() => {
       <div class="team away">
         <TeamCrest :name="match.away.name" :crest="match.away.crest" :size="30" />
         <div class="team-text">
-          <span class="name">{{ match.away.name }}</span>
+          <span class="name" :title="match.away.name">{{ displayName(match.away.name) }}</span>
           <span class="sub numeric">#{{ match.away.rank }} <span class="sep">/</span> 客</span>
         </div>
       </div>
