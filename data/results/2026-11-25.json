@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "generatedAt": "2026-11-25T09:15:32+08:00",
+  "source": "football-data.org",
+  "count": 9,
+  "results": [
+    {
+      "id": "CL-2026-11-25-ARS-BVB",
+      "league": "CL",
+      "homeGoals": 1,
+      "awayGoals": 1,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-COM-AEK",
+      "league": "CL",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-FEY-FCP",
+      "league": "CL",
+      "homeGoals": 0,
+      "awayGoals": 1,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-FK-LIN",
+      "league": "CL",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-GAL-AVL",
+      "league": "CL",
+      "homeGoals": 1,
+      "awayGoals": 0,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-MCI-NAP",
+      "league": "CL",
+      "homeGoals": 2,
+      "awayGoals": 2,
+      "outcome": "draw",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-RBL-RCL",
+      "league": "CL",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-RMA-PSV",
+      "league": "CL",
+      "homeGoals": 5,
+      "awayGoals": 1,
+      "outcome": "home",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    },
+    {
+      "id": "CL-2026-11-25-SBA-BET",
+      "league": "CL",
+      "homeGoals": 0,
+      "awayGoals": 2,
+      "outcome": "away",
+      "status": "FT",
+      "updatedAt": "2026-11-25T09:15:32+08:00"
+    }
+  ]
+}
