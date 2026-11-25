@@ -386,9 +386,66 @@ workflow:
     - data:
         isInLoop: false
         sourceType: code
-        targetType: iteration
-      id: code_news_merge-source-iter_matches-target
+        targetType: code
+      id: code_news_merge-source-code_ref_leagues-target
       source: code_news_merge
+      sourceHandle: source
+      target: code_ref_leagues
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_ref_leagues-source-iter_refs-target
+      source: code_ref_leagues
+      sourceHandle: source
+      target: iter_refs
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: iteration
+        targetType: code
+      id: iter_refs-source-code_stats-target
+      source: iter_refs
+      sourceHandle: source
+      target: code_stats
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: true
+        iteration_id: iter_refs
+        sourceType: iteration-start
+        targetType: http-request
+      id: iter_refs_start-source-http_ref_matches-target
+      source: iter_refs_start
+      sourceHandle: source
+      target: http_ref_matches
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInIteration: true
+        iteration_id: iter_refs
+        sourceType: http-request
+        targetType: code
+      id: http_ref_matches-source-code_ref_pack-target
+      source: http_ref_matches
+      sourceHandle: source
+      target: code_ref_pack
+      targetHandle: target
+      type: custom
+      zIndex: 1002
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: iteration
+      id: code_stats-source-iter_matches-target
+      source: code_stats
       sourceHandle: source
       target: iter_matches
       targetHandle: target
@@ -1770,6 +1827,7 @@ workflow:
 
           def _team_entry(team, row, form, league):
               return {
+                  "id": team.get("id"),
                   "name": _team_name(team, league),
                   "nameEn": team.get("name") or "Unknown",
                   "crest": team.get("crest") or "",
@@ -1817,13 +1875,36 @@ workflow:
               }
 
 
+          def _pool(matches, league):
+              # 精简后的比赛池：只保留跨赛事统计需要的字段
+              items = []
+              for match in matches or []:
+                  home = match.get("homeTeam") or {}
+                  away = match.get("awayTeam") or {}
+                  full = (match.get("score") or {}).get("fullTime") or {}
+                  items.append({
+                      "utc": str(match.get("utcDate") or ""),
+                      "status": match.get("status"),
+                      "homeId": home.get("id"),
+                      "awayId": away.get("id"),
+                      "homeName": _team_name(home, league),
+                      "awayName": _team_name(away, league),
+                      "homeGoals": full.get("home"),
+                      "awayGoals": full.get("away"),
+                  })
+              items.sort(key=lambda item: item["utc"], reverse=True)
+              return items
+
+
           def main(league_results: list, mode: str, h2h_cache) -> dict:
               current = datetime.now(timezone.utc)
               deadline = current + timedelta(days=7)
               cache = _cache_map(h2h_cache)
-              flat = []
+              pools = {}
+              names = {}
               tables = []
               additions = {}
+              pending = []
 
               for item in league_results or []:
                   if not isinstance(item, dict):
@@ -1834,6 +1915,12 @@ workflow:
                   standings = _parse(item.get("standings"))
                   rank_map = _table_map(standings)
                   raw_matches = fixtures.get("matches") or []
+                  pools[code] = _pool(raw_matches, code)
+                  for match in raw_matches:
+                      for team in (match.get("homeTeam") or {}, match.get("awayTeam") or {}):
+                          team_id = team.get("id")
+                          if team_id is not None and team_id not in names:
+                              names[team_id] = _team_name(team, code)
                   matchday = (fixtures.get("season") or {}).get("currentMatchday")
                   if not matchday:
                       upcoming = [
@@ -1849,7 +1936,31 @@ workflow:
                       tables.append(table)
                   if not raw_matches:
                       continue
+                  pending.append((code, league_name, raw_matches, rank_map, forms, finished))
 
+                  league_add = {}
+                  for done in finished:
+                      home_team = done.get("homeTeam") or {}
+                      away_team = done.get("awayTeam") or {}
+                      if not home_team.get("id") or not away_team.get("id"):
+                          continue
+                      full = (done.get("score") or {}).get("fullTime") or {}
+                      hg, ag = full.get("home"), full.get("away")
+                      if hg is None or ag is None:
+                          continue
+                      low, high = sorted([home_team["id"], away_team["id"]])
+                      league_add.setdefault(f"{low}-{high}", []).append({
+                          "date": str(done.get("utcDate") or "")[:10],
+                          "home": home_team.get("shortName") or home_team.get("name") or "",
+                          "away": away_team.get("shortName") or away_team.get("name") or "",
+                          "score": f"{hg}-{ag}",
+                          "lowIsHome": home_team["id"] == low,
+                      })
+                  if league_add:
+                      additions[code] = league_add
+
+              flat = []
+              for code, league_name, raw_matches, rank_map, forms, finished in pending:
                   for match in raw_matches:
                       if match.get("status") not in ("SCHEDULED", "TIMED"):
                           continue
@@ -1883,27 +1994,6 @@ workflow:
                           "result": None,
                       })
 
-                  league_add = {}
-                  for done in finished:
-                      home_team = done.get("homeTeam") or {}
-                      away_team = done.get("awayTeam") or {}
-                      if not home_team.get("id") or not away_team.get("id"):
-                          continue
-                      full = (done.get("score") or {}).get("fullTime") or {}
-                      hg, ag = full.get("home"), full.get("away")
-                      if hg is None or ag is None:
-                          continue
-                      low, high = sorted([home_team["id"], away_team["id"]])
-                      league_add.setdefault(f"{low}-{high}", []).append({
-                          "date": str(done.get("utcDate") or "")[:10],
-                          "home": home_team.get("shortName") or home_team.get("name") or "",
-                          "away": away_team.get("shortName") or away_team.get("name") or "",
-                          "score": f"{hg}-{ag}",
-                          "lowIsHome": home_team["id"] == low,
-                      })
-                  if league_add:
-                      additions[code] = league_add
-
               flat.sort(key=lambda item: item["kickoff"])
 
               tasks = []
@@ -1919,7 +2009,7 @@ workflow:
                       "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
                       "commitMessage": f"data: 五大联赛积分榜（{len(tables)} 个联赛）",
                   })
-              return {"matches": flat, "syncTasks": tasks, "h2hAdditions": additions}
+              return {"matches": flat, "syncTasks": tasks, "h2hAdditions": additions, "pools": pools, "names": names}
         code_language: python3
         desc: ''
         outputs:
@@ -1930,6 +2020,12 @@ workflow:
             children: null
             type: array[object]
           h2hAdditions:
+            children: null
+            type: object
+          pools:
+            children: null
+            type: object
+          names:
             children: null
             type: object
         selected: false
@@ -3223,6 +3319,409 @@ workflow:
       type: custom
       width: 244
     - data:
+        code: |
+          def main(competition_set: str, mode: str) -> dict:
+              # 预测范围内的赛事已有赛程，只需补拉范围外的赛事作为跨赛事参考
+              value = (mode or "both").strip().lower()
+              if value == "results":
+                  return {"codes": []}
+              group = (competition_set or "domestic").strip().lower()
+              if group in ("europe", "euro", "cl"):
+                  return {"codes": ["PL", "PD", "SA", "BL1", "FL1"]}
+              if group in ("all", "both"):
+                  return {"codes": []}
+              return {"codes": ["CL"]}
+        code_language: python3
+        desc: ''
+        outputs:
+          codes:
+            children: null
+            type: array[string]
+        selected: false
+        title: 参考赛事列表
+        type: code
+        variables:
+        - value_selector:
+          - env
+          - COMPETITION_SET
+          variable: competition_set
+        - value_selector:
+          - env
+          - RUN_MODE
+          variable: mode
+      height: 90
+      id: code_ref_leagues
+      position:
+        x: 3000
+        y: 1000
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: ''
+        error_handle_mode: continue-on-error
+        height: 201
+        is_parallel: false
+        iterator_input_type: array[string]
+        iterator_selector:
+        - code_ref_leagues
+        - codes
+        output_selector:
+        - code_ref_pack
+        - item
+        output_type: array[object]
+        parallel_nums: 1
+        selected: false
+        start_node_id: iter_refs_start
+        title: 参考赛事迭代
+        type: iteration
+        width: 996
+      height: 201
+      id: iter_refs
+      position:
+        x: 3300
+        y: 1000
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 996
+      zIndex: 1
+    - data:
+        desc: ''
+        isInIteration: true
+        selected: false
+        title: ''
+        type: iteration-start
+      draggable: false
+      height: 48
+      id: iter_refs_start
+      parentId: iter_refs
+      position:
+        x: 24
+        y: 68
+      selectable: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom-iteration-start
+      width: 44
+      zIndex: 1002
+    - data:
+        authorization:
+          config: null
+          type: no-auth
+        body:
+          data: []
+          type: none
+        desc: ''
+        headers: |-
+          X-Auth-Token: {{#env.FD_TOKEN#}}
+          Accept: application/json
+        isInIteration: true
+        iteration_id: iter_refs
+        method: get
+        params: ''
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: 拉取参考赛程
+        type: http-request
+        url: 'https://api.football-data.org/v4/competitions/{{#iter_refs.item#}}/matches'
+        variables: []
+      height: 113
+      id: http_ref_matches
+      parentId: iter_refs
+      position:
+        x: 128
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          def main(code: str, body) -> dict:
+              return {"item": {"code": code, "body": body}}
+        code_language: python3
+        desc: ''
+        isInIteration: true
+        iteration_id: iter_refs
+        outputs:
+          item:
+            children: null
+            type: object
+        selected: false
+        title: 打包参考赛程
+        type: code
+        variables:
+        - value_selector:
+          - iter_refs
+          - item
+          variable: code
+        - value_selector:
+          - http_ref_matches
+          - body
+          variable: body
+      height: 90
+      id: code_ref_pack
+      parentId: iter_refs
+      position:
+        x: 432
+        y: 68
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+      zIndex: 1002
+    - data:
+        code: |
+          import json
+          from datetime import datetime, timezone
+
+
+          def _parse(raw):
+              if isinstance(raw, (dict, list)):
+                  return raw
+              if not raw:
+                  return {}
+              try:
+                  return json.loads(raw)
+              except (TypeError, ValueError):
+                  return {}
+
+
+          def _pool(matches):
+              items = []
+              for match in matches or []:
+                  home = match.get("homeTeam") or {}
+                  away = match.get("awayTeam") or {}
+                  full = (match.get("score") or {}).get("fullTime") or {}
+                  items.append({
+                      "utc": str(match.get("utcDate") or ""),
+                      "status": match.get("status"),
+                      "homeId": home.get("id"),
+                      "awayId": away.get("id"),
+                      "homeName": home.get("shortName") or home.get("name") or "",
+                      "awayName": away.get("shortName") or away.get("name") or "",
+                      "homeGoals": full.get("home"),
+                      "awayGoals": full.get("away"),
+                  })
+              items.sort(key=lambda item: item["utc"], reverse=True)
+              return items
+
+
+          def _games(pool_map, team_id, only=None, exclude=None):
+              games = []
+              if team_id is None:
+                  return games
+              for code, pool in (pool_map or {}).items():
+                  if only and code != only:
+                      continue
+                  if exclude and code == exclude:
+                      continue
+                  for game in pool:
+                      if game.get("homeId") == team_id:
+                          games.append((code, game, True))
+                      elif game.get("awayId") == team_id:
+                          games.append((code, game, False))
+              games.sort(key=lambda item: item[1]["utc"], reverse=True)
+              return games
+
+
+          def _avg(total, count):
+              return round(total / count, 2) if count else None
+
+
+          def _stats(games, split):
+              played = gf = ga = 0
+              home_played = home_for = home_against = 0
+              away_played = away_for = away_against = 0
+              leagues = set()
+              last = []
+              for code, game, is_home in games:
+                  home_goals, away_goals = game.get("homeGoals"), game.get("awayGoals")
+                  if game.get("status") != "FINISHED" or home_goals is None or away_goals is None:
+                      continue
+                  own, opp = (home_goals, away_goals) if is_home else (away_goals, home_goals)
+                  played += 1
+                  gf += own
+                  ga += opp
+                  leagues.add(code)
+                  if is_home:
+                      home_played += 1
+                      home_for += own
+                      home_against += opp
+                  else:
+                      away_played += 1
+                      away_for += own
+                      away_against += opp
+                  if len(last) < 5:
+                      last.append({
+                          "date": game["utc"][:10],
+                          "league": code,
+                          "venue": "主" if is_home else "客",
+                          "opponent": game.get("awayName") if is_home else game.get("homeName"),
+                          "score": f"{own}-{opp}",
+                          "result": "W" if own > opp else "D" if own == opp else "L",
+                      })
+              data = {
+                  "played": played,
+                  "goalsFor": gf,
+                  "goalsAgainst": ga,
+                  "perGameFor": _avg(gf, played),
+                  "perGameAgainst": _avg(ga, played),
+                  "leagues": sorted(leagues),
+                  "last5": last,
+              }
+              if split:
+                  data["home"] = {
+                      "played": home_played,
+                      "goalsFor": home_for,
+                      "goalsAgainst": home_against,
+                      "perGameFor": _avg(home_for, home_played),
+                      "perGameAgainst": _avg(home_against, home_played),
+                  }
+                  data["away"] = {
+                      "played": away_played,
+                      "goalsFor": away_for,
+                      "goalsAgainst": away_against,
+                      "perGameFor": _avg(away_for, away_played),
+                      "perGameAgainst": _avg(away_against, away_played),
+                  }
+              return data
+
+
+          def _load(pool_map, team_id, kickoff, exclude):
+              # 前后 4 天内是否有其他赛事，用于提示赛程密度与轮换
+              if team_id is None or kickoff is None:
+                  return []
+              hits = []
+              for code, pool in (pool_map or {}).items():
+                  if code == exclude:
+                      continue
+                  for game in pool:
+                      if team_id not in (game.get("homeId"), game.get("awayId")):
+                          continue
+                      if game.get("status") in ("CANCELLED", "POSTPONED", "SUSPENDED"):
+                          continue
+                      try:
+                          moment = datetime.fromisoformat(str(game.get("utc")).replace("Z", "+00:00"))
+                      except (TypeError, ValueError):
+                          continue
+                      if moment.tzinfo is None:
+                          moment = moment.replace(tzinfo=timezone.utc)
+                      gap = (moment - kickoff).total_seconds() / 86400
+                      if 0 < abs(gap) <= 4:
+                          hits.append({
+                              "league": code,
+                              "date": str(game.get("utc"))[:10],
+                              "venue": "主" if game.get("homeId") == team_id else "客",
+                              "gapDays": round(gap, 1),
+                          })
+              hits.sort(key=lambda item: abs(item["gapDays"]))
+              return hits[:2]
+
+
+          def _team(pool_map, team_id, league, kickoff):
+              return {
+                  "own": _stats(_games(pool_map, team_id, only=league), True),
+                  "cross": _stats(_games(pool_map, team_id, exclude=league), False),
+                  "load": _load(pool_map, team_id, kickoff, league),
+              }
+
+
+          def _relabel(pool, names):
+              # 参考赛事的球队名统一成与预测赛事一致的叫法
+              if not names:
+                  return pool
+              for game in pool:
+                  mapped = names.get(game.get("homeId"))
+                  if mapped:
+                      game["homeName"] = mapped
+                  mapped = names.get(game.get("awayId"))
+                  if mapped:
+                      game["awayName"] = mapped
+              return pool
+
+
+          def main(matches: list, pools, refs, names) -> dict:
+              pool_map = {}
+              if isinstance(pools, dict):
+                  for key, value in pools.items():
+                      pool_map[key] = value if isinstance(value, list) else []
+              for entry in refs or []:
+                  if not isinstance(entry, dict):
+                      continue
+                  code = entry.get("code")
+                  if not code or code in pool_map:
+                      continue
+                  body = _parse(entry.get("body"))
+                  items = body.get("matches") if isinstance(body, dict) else None
+                  if items:
+                      pool_map[code] = _relabel(_pool(items), names)
+
+              result = []
+              for match in matches or []:
+                  if not isinstance(match, dict):
+                      continue
+                  item = dict(match)
+                  league = item.get("league") or ""
+                  try:
+                      kickoff = datetime.fromisoformat(str(item.get("kickoff")).replace("Z", "+00:00"))
+                      if kickoff.tzinfo is None:
+                          kickoff = kickoff.replace(tzinfo=timezone.utc)
+                  except (TypeError, ValueError):
+                      kickoff = None
+                  item["stats"] = {
+                      "home": _team(pool_map, (item.get("home") or {}).get("id"), league, kickoff),
+                      "away": _team(pool_map, (item.get("away") or {}).get("id"), league, kickoff),
+                  }
+                  result.append(item)
+              return {"matches": result}
+        code_language: python3
+        desc: ''
+        outputs:
+          matches:
+            children: null
+            type: array[object]
+        selected: false
+        title: 计算进失球统计
+        type: code
+        variables:
+        - value_selector:
+          - code_news_merge
+          - matches
+          variable: matches
+        - value_selector:
+          - code_normalize
+          - pools
+          variable: pools
+        - value_selector:
+          - iter_refs
+          - output
+          variable: refs
+        - value_selector:
+          - code_normalize
+          - names
+          variable: names
+      height: 90
+      id: code_stats
+      position:
+        x: 3600
+        y: 1000
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
         desc: ''
         error_handle_mode: continue-on-error
         height: 201
@@ -3481,7 +3980,7 @@ workflow:
         is_parallel: true
         iterator_input_type: array[object]
         iterator_selector:
-        - code_news_merge
+        - code_stats
         - matches
         output_selector:
         - code_validate
@@ -3578,6 +4077,57 @@ workflow:
               return f"{label}：" + "、".join(parts)
 
 
+          def _num(value):
+              if value is None:
+                  return "-"
+              text = f"{float(value):.2f}"
+              return text.rstrip("0").rstrip(".") if "." in text else text
+
+
+          def _last5(items):
+              if not items:
+                  return "近 5 场：暂无"
+              pieces = []
+              for item in items[:5]:
+                  pieces.append(
+                      f"{item.get('date')} {item.get('venue')} {item.get('score')} "
+                      f"vs {item.get('opponent')} {item.get('result')}"
+                  )
+              return "近 5 场（该队视角：主/客 进球-失球 对手 结果）：" + "；".join(pieces)
+
+
+          def _stats_block(label, data, split):
+              if not isinstance(data, dict) or not data.get("played"):
+                  return f"{label}：暂无该队场次数据"
+              source = "、".join(data.get("leagues") or []) or "无"
+              lines = [
+                  f"{label}（来源赛事 {source}，样本 {data.get('played')} 场）："
+                  f"场均进 {_num(data.get('perGameFor'))} / 失 {_num(data.get('perGameAgainst'))}，"
+                  f"合计进 {data.get('goalsFor')} / 失 {data.get('goalsAgainst')}"
+              ]
+              if split:
+                  for key, name in (("home", "主场"), ("away", "客场")):
+                      part = data.get(key) or {}
+                      if part.get("played"):
+                          lines.append(
+                              f"  {name} {part.get('played')} 场："
+                              f"场均进 {_num(part.get('perGameFor'))} / 失 {_num(part.get('perGameAgainst'))}"
+                          )
+              lines.append("  " + _last5(data.get("last5")))
+              return "\n".join(lines)
+
+
+          def _load_line(items):
+              pieces = []
+              for item in items or []:
+                  gap = item.get("gapDays")
+                  if gap is None:
+                      continue
+                  when = f"{_num(abs(gap))} 天后" if gap > 0 else f"{_num(abs(gap))} 天前"
+                  pieces.append(f"{when}（{item.get('date')} {item.get('league')} {item.get('venue')}）")
+              return "、".join(pieces) if pieces else "前后 4 天内无其他赛事"
+
+
           def main(match: dict, injuries: dict, injury_date: str) -> dict:
               home = match.get("home") or {}
               away = match.get("away") or {}
@@ -3631,6 +4181,22 @@ workflow:
               else:
                   market_text = "市场赔率：未提供"
 
+              stats = match.get("stats") or {}
+              home_stats = stats.get("home") or {}
+              away_stats = stats.get("away") or {}
+              own_text = (
+                  _stats_block(f"{home.get('name')} 本赛事", home_stats.get("own"), True)
+                  + "\n" + _stats_block(f"{away.get('name')} 本赛事", away_stats.get("own"), True)
+              )
+              cross_text = (
+                  _stats_block(f"{home.get('name')} 跨赛事", home_stats.get("cross"), False)
+                  + "\n" + _stats_block(f"{away.get('name')} 跨赛事", away_stats.get("cross"), False)
+              )
+              load_text = (
+                  f"{home.get('name')}：{_load_line(home_stats.get('load'))}\n"
+                  f"{away.get('name')}：{_load_line(away_stats.get('load'))}"
+              )
+
               teams = (injuries or {}).get("teams") or {}
               if injury_date and teams and day == injury_date:
                   injury_text = (
@@ -3654,6 +4220,9 @@ workflow:
                   f"{weather_text}\n"
                   f"{market_text}\n"
                   f"{injury_text}\n"
+                  f"【本赛事口径】\n{own_text}\n"
+                  f"【跨赛事参考口径】\n{cross_text}\n"
+                  f"【赛程密度】\n{load_text}\n"
                   f"其他信息：未提供"
               )
               return {"result": text}
@@ -3729,6 +4298,9 @@ workflow:
             9. 使用简体中文，球队名必须与输入完全一致，不要改写或翻译。
             10. 若输入提供了市场赔率，只能引用其中的数值，不得编造；当市场概率与你的判断相差超过 10 个百分点时，降低 confidence 并在 risk 中说明分歧原因。
             11. risk 中只能描述输入里确实缺失的数据；交手记录、天气、市场赔率、伤病只要输入已给出，就不得写成「未提供」「缺失」或「空白」。
+            12. 输入分为「本赛事口径」与「跨赛事参考口径」：本赛事是主口径，跨赛事只用于判断强度、对抗类型与赛程消耗；不得把不同赛事的场均进球相加或平均，也不得用某队在某赛事的场均替换另一赛事的均值。
+            13. 跨赛事口径的作用随本场赛事变化：预测国内联赛时，欧冠数据只作实力上限与轮换消耗的参考；预测欧冠时，国内联赛数据样本更大、反映稳定实力，欧冠数据反映对手类型与欧战节奏。
+            14. 主客场拆分只在同一赛事内成立，不得把欧冠主场表现当作联赛主场表现，反之亦然；跨赛事样本不足 3 场或缺失时按「无跨赛事数据」处理，不得用同赛事均值填补，并在 risk 中说明。
 
             输出结构（严格按此键名）：
             {
@@ -3934,6 +4506,14 @@ workflow:
               item = _parse_match(match)
               merged = dict(item)
               _attach_injuries(merged, injuries, injury_date)
+              # 统计口径只服务提示词，不写入数据文件
+              merged.pop("stats", None)
+              for side in ("home", "away"):
+                  team = merged.get(side)
+                  if isinstance(team, dict):
+                      team = dict(team)
+                      team.pop("id", None)
+                      merged[side] = team
 
               data = _extract_json(raw_text)
               if not isinstance(data, dict):
