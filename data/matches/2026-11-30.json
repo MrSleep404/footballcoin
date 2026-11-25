@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-30",
-  "generatedAt": "2026-11-24T21:57:49+08:00",
+  "generatedAt": "2026-11-25T09:15:18+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 9,
@@ -68,39 +68,39 @@
       "prediction": {
         "prob": {
           "home": 40,
-          "draw": 28,
-          "away": 32
+          "draw": 29,
+          "away": 31
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 56,
+        "confidence": 55,
         "pick": "home",
         "reasons": [
-          "主队近5场2胜2平1负，客队1胜1平3负，状态主队明显更好",
-          "客队排名第9高于主队第12，赛季进22球进攻更强",
-          "近2次交手主队0胜1平1负，雷恩保持不败",
-          "市场去水概率主胜37%、平26%、客胜37%，双方几乎五五开"
+          "图卢兹近5场2胜2平1负，状态较雷恩更稳。",
+          "雷恩本赛事客场5场场均失3球，防线隐患大。",
+          "近2次交手图卢兹0胜1平1负，未占心理优势。",
+          "市场均值主胜37%、平26%、客胜37%，与主队小优判断接近。"
         ],
         "factors": [
-          "主场优势",
-          "主队状态更佳",
-          "客队失球偏多",
-          "市场五五开"
+          "图卢兹近况更稳",
+          "雷恩客场失球多",
+          "市场呈均势",
+          "主场攻守均衡"
         ],
-        "risk": "伤病名单日期与本场不符无法使用，双方实力接近且市场完全均势，主胜判断不确定较大。"
+        "risk": "本场伤病名单、场地和跨赛事数据均未提供，阵容与强度判断受限。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 11.1,
-        "precip": 30,
-        "wind": 3.6
+        "temp": 7.6,
+        "precip": 35,
+        "wind": 7.6
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T13:54:46Z",
+        "capturedAt": "2026-11-25T01:10:56Z",
         "prob": {
           "home": 37,
           "draw": 26,
@@ -168,41 +168,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 50,
-          "draw": 25,
-          "away": 25
+          "home": 47,
+          "draw": 29,
+          "away": 24
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 66,
         "pick": "home",
         "reasons": [
-          "阿森纳排名第1，近5场4胜1平，状态优于曼城。",
-          "曼城近5场仅1胜并遭3负，联赛状态低迷。",
-          "市场均值主胜48%、平局26%、客胜26%，略偏主队。",
-          "近2次交手阿森纳0胜1平1负，曼城占优。"
+          "阿森纳排名第1，近5场4胜1平，状态明显更好。",
+          "阿森纳主场场均进2球、仅失0.4球，主场数据强势。",
+          "曼城近5场1胜1平3负，英超场均失1.27球。",
+          "近2次交手阿森纳0胜1平1负，市场主胜48%仍略倾主队。"
         ],
         "factors": [
-          "排名优势",
-          "近期状态",
-          "市场倾向",
-          "交手劣势",
-          "主场气势"
+          "阿森纳主场强势",
+          "曼城近况低迷",
+          "主队防守稳固",
+          "市场略倾主胜"
         ],
-        "risk": "本场伤病名单及场地未提供，阵容与场地适应性存在不确定性。"
+        "risk": "场地和本场最新伤病名单未提供，临场调整存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 9.1,
-        "precip": 13,
-        "wind": 9.4
+        "temp": 7.8,
+        "precip": 11,
+        "wind": 5.0
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T13:54:41Z",
+        "capturedAt": "2026-11-25T01:10:54Z",
         "prob": {
           "home": 48,
           "draw": 26,
@@ -211,25 +210,25 @@
       },
       "news": [
         {
-          "title": "Allegri: ‘Losing to Man City won’t be decisive for Napoli, club making assessments’",
-          "summary": "Massimiliano Allegri maintained his stance that Tuesday’s Champions League match against Manchester City will not...",
-          "link": "https://football-italia.net/allegri-losing-to-man-city-wont-be-decisive/",
-          "published": "2026-11-23",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Why the Premier League's set-piece goals dried up -- and why Arsenal are still No. 1 anyway",
-          "summary": "Arsenal won the Premier League in controversial fashion last season, but the set-piece goals they counted on have disappeared. Why?",
-          "link": "https://www.espn.com/soccer/story/_/id/50576776/premier-league-set-piece-goal-arsenal-standings-table",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Arsenal latest: Carragher backs Gunners duo to become best Prem CB pairing",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/13025486/arsenal-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "title": "Arsenal showing bluntless in attack - but Man City have problems too",
+          "summary": "Arsenal face Manchester City in a blockbuster Premier League contest this weekend, but in recent days and months, both teams have issues to overcome.",
+          "link": "https://www.skysports.com/football/news/11095/13616234/arsenal-and-manchester-citys-problems-analysed-as-both-set-to-meet-in-bumper-premier-league-clash-this-weekend",
           "published": "2026-11-24",
           "source": "Sky Sports"
+        },
+        {
+          "title": "Man City latest: Maresca reveals key issue to fix ahead of Arsenal clash",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025499/man-city-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-23",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Cherki unhappy despite salvaging Man City draw: 'Don't care about my goal'",
+          "summary": "Rayan Cherki was in no mood for celebrating after rescuing a 2-2 draw for Manchester City at home to Napoli in the Champions League on Tuesday.",
+          "link": "https://www.espn.com/soccer/story/_/id/50586567/rayan-cherki-man-city-goal-napoli-champions-league",
+          "published": "2026-11-24",
+          "source": "ESPN"
         }
       ]
     },
@@ -294,39 +293,40 @@
       "prediction": {
         "prob": {
           "home": 50,
-          "draw": 26,
-          "away": 24
+          "draw": 22,
+          "away": 28
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 3,
+          "away": 2
         },
-        "confidence": 66,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "主队近5场3胜2负，状态好于近4场不胜的客队。",
-          "近2次交手霍芬海姆1胜1平，且主场曾3-0击败奥格斯堡。",
-          "市场去水主胜概率55%，略偏向主场作战的霍芬海姆。"
+          "霍芬海姆主场5场场均进2.2失1.6，主场火力稳定",
+          "奥格斯堡客场4场场均失3.25，客场防线漏洞明显",
+          "近2次交手霍芬海姆1胜1平，含主场3-0取胜",
+          "市场均值主胜55%，与主胜判断方向一致"
         ],
         "factors": [
-          "主场交锋优势",
-          "客队近4场不胜",
-          "市场略偏主胜",
-          "低温天气",
-          "排名接近"
+          "主队主场进攻强",
+          "客队客场失球多",
+          "交手略占优",
+          "低温0.4℃",
+          "双方赛程不密"
         ],
-        "risk": "场地与本场伤病名单未提供，阵容和场地适应性存在不确定性。"
+        "risk": "伤病名单非本场日期、双方无跨赛事数据；奥格斯堡客场场均进2.75，对攻下有爆冷风险。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.2,
-        "precip": 13,
-        "wind": 1.8
+        "temp": 0.4,
+        "precip": 6,
+        "wind": 1.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:54:49Z",
+        "capturedAt": "2026-11-25T01:11:13Z",
         "prob": {
           "home": 55,
           "draw": 21,
@@ -381,41 +381,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 77,
-          "draw": 14,
+          "home": 76,
+          "draw": 15,
           "away": 9
         },
         "score": {
-          "home": 2,
-          "away": 0
+          "home": 3,
+          "away": 1
         },
-        "confidence": 78,
+        "confidence": 79,
         "pick": "home",
         "reasons": [
-          "主队排名第2，客队第14，积分榜差距明显",
-          "主队近5场4胜1平，客队近5场1胜4负",
-          "主队赛季进36失11，攻防数据优于蒙扎20/25",
-          "市场均值主胜79%，与主队优势判断一致"
+          "罗马排名第2，近5场4胜1平，状态明显占优",
+          "蒙扎排名第14，近5场1胜4负，客场场均失2.67",
+          "罗马赛季进36失11，蒙扎进20失25，攻防差距大",
+          "市场均值主胜79%、平13%、客8%，与主队优势一致"
         ],
         "factors": [
-          "排名第2",
-          "近5场4胜1平",
-          "攻防占优",
-          "市场主胜79%",
-          "主场作战"
+          "主队状态火热",
+          "攻防差距明显",
+          "客队客场防守差",
+          "市场倾向主胜",
+          "欧冠后体能消耗"
         ],
-        "risk": "本场伤病名单未提供，且无历史交锋数据，是主要不确定性。"
+        "risk": "本场伤病名单未按比赛日提供，双方暂无历史交锋数据，蒙扎无跨赛事数据参考。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 10.5,
+        "temp": 9.9,
         "precip": 0,
-        "wind": 9.7
+        "wind": 14.3
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T13:54:43Z",
+        "capturedAt": "2026-11-25T01:10:58Z",
         "prob": {
           "home": 79,
           "draw": 13,
@@ -424,24 +424,17 @@
       },
       "news": [
         {
-          "title": "Report: Juventus, Inter, Napoli and five Premier League clubs want Monza’s Varela",
-          "summary": "Gustavo Varela has caught the eye of some of Europe’s biggest clubs with his performances...",
-          "link": "https://football-italia.net/juve-inter-five-prem-clubs-interested-varela/",
+          "title": "Gasperini: ‘A great moment for Roma to face the best’ ahead of PSG test",
+          "summary": "Gian Piero Gasperini says Roma’s trip to Paris Saint-Germain is “a great moment” to test...",
+          "link": "https://football-italia.net/gasperini-a-great-moment-for-roma-psg/",
           "published": "2026-11-24",
           "source": "Football Italia"
         },
         {
-          "title": "Serie A | Monza 3-0 Fiorentina: Viola misery as Varela hits 11 goals in 11 games",
-          "summary": "Gustavo Varla is now up to 11 goals from his first 11 appearances in Serie...",
-          "link": "https://football-italia.net/serie-a-monza-3-0-fiorentina-viola-misery/",
-          "published": "2026-11-23",
-          "source": "Football Italia"
-        },
-        {
-          "title": "Serie A: Monza vs. Fiorentina – Confirmed line-ups and updates",
-          "summary": "Gustavo Varela leads the line for Monza, and Fiorentina have made just one change to...",
-          "link": "https://football-italia.net/serie-a-monza-fiorentina-confirmed-line-ups/",
-          "published": "2026-11-23",
+          "title": "Dybala ‘proud’ of Roma’s Champions League return and claims: ‘I want to end my career in Italy’",
+          "summary": "Paulo Dybala says he is proud to have helped bring Roma back to the Champions...",
+          "link": "https://football-italia.net/dybala-proud-of-romas-champions-league-return/",
+          "published": "2026-11-24",
           "source": "Football Italia"
         }
       ]
@@ -506,36 +499,35 @@
       },
       "prediction": {
         "prob": {
-          "home": 34,
-          "draw": 28,
-          "away": 38
+          "home": 37,
+          "draw": 30,
+          "away": 33
         },
         "score": {
-          "home": 1,
-          "away": 2
+          "home": 2,
+          "away": 1
         },
-        "confidence": 56,
-        "pick": "away",
+        "confidence": 55,
+        "pick": "home",
         "reasons": [
-          "积分榜塞尔塔第14、比利亚雷亚尔第10，客队排名略高。",
-          "近5场塞尔塔1胜2平2负，比利亚雷亚尔2胜1平2负，状态接近。",
-          "赛季进球塞尔塔11球、比利亚雷亚尔19球，客队进攻更强。",
-          "近2次交手比利亚雷亚尔1胜1平保持不败，心理略占优。"
+          "塞尔塔主场7场场均进1.29、失0.86，主场失球偏少",
+          "比利亚雷亚尔客场7场场均进1.57、失1.57，客战防守漏洞明显",
+          "比利亚雷亚尔4天前刚踢完欧冠客场，轮换与体能承压",
+          "市场均值主胜35%、平局27%、客胜38%，与主队略优的判断接近"
         ],
         "factors": [
-          "客队进攻更强",
-          "排名略占优",
-          "交手不败",
-          "状态接近",
-          "市场略偏客胜"
+          "主场防守稳",
+          "客队体能消耗",
+          "客战失球多",
+          "排名接近"
         ],
-        "risk": "伤病名单为11月25日且非本场，天气与场地未提供，双方差距小，市场客胜仅38%。"
+        "risk": "本场伤病名单未提供、天气与场地均缺失，双方排名接近，判断不确定性较大。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T13:54:45Z",
+        "capturedAt": "2026-11-25T01:10:57Z",
         "prob": {
           "home": 35,
           "draw": 27,
@@ -603,36 +595,36 @@
       },
       "prediction": {
         "prob": {
-          "home": 46,
-          "draw": 26,
-          "away": 28
+          "home": 47,
+          "draw": 27,
+          "away": 26
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 66,
+        "confidence": 68,
         "pick": "home",
         "reasons": [
-          "多特蒙德排名第1，勒沃库森第5，主队联赛位置占优。",
-          "多特蒙德近5场3胜2平不败，勒沃库森近5场3胜2负。",
-          "多特蒙德赛季进失球17/7，防守数据优于勒沃库森24/17。",
-          "市场去水概率主胜45%、平24%、客胜31%，主胜略占优。"
+          "多特蒙德排名第1，勒沃库森第5，主队积分榜占优。",
+          "本赛事多特主场场均进2失0.6，防守明显稳固。",
+          "勒沃库森客场场均进2失2.4，攻强但防守漏洞大。",
+          "近5场多特3胜2平不败，勒沃3胜2负，状态主队更稳。"
         ],
         "factors": [
-          "主队排名占优",
-          "主队防守更稳",
-          "客队火力强",
-          "市场略倾主胜",
-          "交手互有胜负"
+          "主场防守稳固",
+          "客队攻强守弱",
+          "排名主队占优",
+          "交手各胜一场",
+          "市场略偏主胜"
         ],
-        "risk": "本场伤病名单、场地和天气未提供，临场信息不足。"
+        "risk": "勒沃库森跨赛事样本缺失、本场伤病未提供，客队客场攻强守弱增加比分不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-24T13:54:49Z",
+        "capturedAt": "2026-11-25T01:11:13Z",
         "prob": {
           "home": 45,
           "draw": 24,
@@ -641,6 +633,13 @@
       },
       "news": [
         {
+          "title": "Niko Kovač ‘happy’ with Borussia Dortmund’s mentality against Arsenal",
+          "summary": "Niko Kovač has instilled somewhat of a winning mentality into his Borussia Dortmund side this season. With three 1-0 wins in the Bundesliga, his BVB team faced arguably their biggest…",
+          "link": "https://www.getfootballnewsgermany.com/2026/niko-kovac-happy-with-borussia-dortmunds-mentality-against-arsenal/",
+          "published": "2026-11-24",
+          "source": "Get German Football News"
+        },
+        {
           "title": "FEATURE | 5 standout players from Bundesliga, Matchday 10",
           "summary": "Bundesliga Matchday 10 delivered an eventful return from the international break, with Werder Bremen dominating the Nordderby, RB Leipzig scoring five against Union Berlin and Bayer Leverkusen recording an emphatic…",
           "link": "https://www.getfootballnewsgermany.com/2026/feature-5-standout-players-from-bundesliga-matchday-10/",
@@ -648,17 +647,10 @@
           "source": "Get German Football News"
         },
         {
-          "title": "Jonathan Tah names Florian Wirtz as the player he’d bring to Bayern Munich",
-          "summary": "Jonathan Tah has stated he would like to see Liverpool’s Florian Wirtz at Bayern Munich. The duo, of course, have history having played together at Bayer Leverkusen, where they did…",
-          "link": "https://www.getfootballnewsgermany.com/2026/jonathan-tah-names-florian-wirtz-as-the-player-hed-bring-to-bayern-munich/",
-          "published": "2026-11-23",
-          "source": "Get German Football News"
-        },
-        {
-          "title": "Mikel Arteta full of praise for Borussia Dortmund ahead of Champions League tie",
-          "summary": "Arsenal boss Mikel Arteta had positive words to say about Borussia Dortmund ahead of Tuesday’s UEFA Champions League game clash. “I am very impressed with them, and you see their…",
-          "link": "https://www.getfootballnewsgermany.com/2026/mikel-arteta-full-of-praise-for-borussia-dortmund-ahead-of-champions-league-tie/",
-          "published": "2026-11-23",
+          "title": "Nico Schlotterbeck praises Borussia Dortmund’s response against Arsenal after ‘weak’ start",
+          "summary": "Borussia Dortmund captain Nico Schlotterbeck made a superb block to deny Declan Rice from doubling Arsenal’s tally shortly after Viktor Gyökeres fired the hosts into a ten-minute lead. Although going…",
+          "link": "https://www.getfootballnewsgermany.com/2026/nico-schlotterbeck-praises-borussia-dortmund-response-against-arsenal-after-weak-start/",
+          "published": "2026-11-25",
           "source": "Get German Football News"
         }
       ]
@@ -724,35 +716,34 @@
       "prediction": {
         "prob": {
           "home": 48,
-          "draw": 27,
-          "away": 25
+          "draw": 28,
+          "away": 24
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 70,
+        "confidence": 63,
         "pick": "home",
         "reasons": [
-          "积分榜科莫第5、尤文图斯第6，主队排名略占优",
-          "近5场科莫4胜1负，尤文图斯3胜1平1负，主队状态更好",
-          "近2次交手科莫全胜，赛季进失球20/10优于19/12",
-          "市场均值主胜45%，与主队排名和交锋优势基本一致"
+          "科莫本赛事主场5场场均进1.4失0.2，防守稳固",
+          "近2次交手科莫全胜，且两场均为2-0",
+          "尤文图斯本赛事客场6场场均失1.33球，客战防守一般",
+          "市场去水主胜45%，对科莫略有倾斜"
         ],
         "factors": [
-          "主场状态佳",
-          "交锋两连胜",
-          "排名略占优",
-          "防守更稳固",
-          "市场稍偏主"
+          "主场防守稳固",
+          "交手两连胜",
+          "尤文客战一般",
+          "市场略偏主胜"
         ],
-        "risk": "伤病名单与本场日期不符且天气、场地未提供，阵容和临场条件不确定。"
+        "risk": "本场伤病名单与天气、场地未提供，尤文图斯也无跨赛事参考数据，增加不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-24T13:54:43Z",
+        "capturedAt": "2026-11-25T01:10:58Z",
         "prob": {
           "home": 45,
           "draw": 27,
@@ -761,23 +752,23 @@
       },
       "news": [
         {
-          "title": "Report: Juventus, Inter, Napoli and five Premier League clubs want Monza’s Varela",
-          "summary": "Gustavo Varela has caught the eye of some of Europe’s biggest clubs with his performances...",
-          "link": "https://football-italia.net/juve-inter-five-prem-clubs-interested-varela/",
+          "title": "Fabregas: ‘Como raise the bar in Champions League, can sell Milla for €20m’",
+          "summary": "Cesc Fabregas feels Como really made a Champions League statement in their 1-0 victory over...",
+          "link": "https://football-italia.net/fabregas-como-raise-bar-champions-league/",
           "published": "2026-11-24",
           "source": "Football Italia"
         },
         {
-          "title": "Five names on Juventus’s January striker shortlist: Scamacca back in fashion",
-          "summary": "Juventus are on the hunt for a new centre-forward heading into the January transfer window,...",
-          "link": "https://football-italia.net/five-names-juventus-january-striker-shortlist/",
+          "title": "UCL | Como 1-0 AEK Athens: Milla magic cancels out Da Cunha miss",
+          "summary": "The Luis Milla curler into the far top corner proved enough for Como to see...",
+          "link": "https://football-italia.net/ucl-como-1-0-aek-athens-milla-magic-da-cunha/",
           "published": "2026-11-24",
           "source": "Football Italia"
         },
         {
-          "title": "Champions League: Como vs. AEK – Probable line-ups and where to watch on TV",
-          "summary": "Nico Paz is expected to return to the Como starting XI as Cesc Fabregas and...",
-          "link": "https://football-italia.net/champions-league-como-aek-probable-line-ups/",
+          "title": "Champions League Liveblog: Man City vs. Napoli, Como vs. AEK Athens",
+          "summary": "{rsn-live-v2}",
+          "link": "https://football-italia.net/champions-league-live-man-city-napoli-como-aek/",
           "published": "2026-11-24",
           "source": "Football Italia"
         }
@@ -843,36 +834,35 @@
       },
       "prediction": {
         "prob": {
-          "home": 44,
-          "draw": 28,
-          "away": 28
+          "home": 48,
+          "draw": 27,
+          "away": 25
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 62,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "里昂排名第4、赛季进失球16/9，均优于第8的摩纳哥14/12",
-          "摩纳哥近5场3平2负未尝胜绩，客战状态低迷",
-          "市场均值主胜40%高于客胜32%，与主队占优方向一致",
-          "近2次交手各取1胜，最近摩纳哥曾客场2-1击败里昂"
+          "里昂排名第4，主场5场场均进2.4失0.6，主场优势明显",
+          "摩纳哥近5场3平2负不胜，客场场均仅进1失1.17",
+          "近2次交手各胜1场，最近摩纳哥在里昂主场2-1取胜",
+          "市场均值主胜40%/平28%/客32%，主胜方向与判断一致"
         ],
         "factors": [
-          "排名优势",
-          "客队近况低迷",
-          "主场进攻效率",
-          "赔率略偏主胜",
-          "交手各胜一场"
+          "里昂主场强势",
+          "摩纳哥近况低迷",
+          "交手互有胜负",
+          "市场略偏主胜"
         ],
-        "risk": "场地与天气未提供，伤病名单为11月25日版本；里昂近5场胜负交替，稳定性存疑。"
+        "risk": "本场伤病名单、天气和场地未提供，跨赛事样本缺失，信心受限。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-24T13:54:46Z",
+        "capturedAt": "2026-11-25T01:10:55Z",
         "prob": {
           "home": 40,
           "draw": 28,
@@ -940,35 +930,36 @@
       },
       "prediction": {
         "prob": {
-          "home": 45,
-          "draw": 28,
-          "away": 27
+          "home": 44,
+          "draw": 27,
+          "away": 29
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 64,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "积分榜第5对第6，双方实力接近，主队有主场加成",
-          "近5场主队3胜2负，客队1胜2平2负，主队状态略好",
-          "市场均值主胜45%、平26%、客29%，与主胜倾向接近",
-          "近2次交手各胜1场，最近一次客队1-0取胜"
+          "主队第5、客队第6，市场主胜概率45%略占优。",
+          "皇家社会主场场均进1.33失1.17，塞维利亚客场场均进1.67失2。",
+          "近5场主队3胜2负，客队1胜2平2负，主队状态稍好。",
+          "近2次交手各胜1场，最近塞维利亚1-0，交锋均势。"
         ],
         "factors": [
-          "主场优势",
           "排名接近",
-          "主队状态略优",
-          "市场略倾主胜"
+          "主场优势",
+          "客队客场防守弱",
+          "市场略倾主胜",
+          "交锋均势"
         ],
-        "risk": "本场伤病名单与天气未提供，阵容完整度和场地条件存在不确定性。"
+        "risk": "场地、天气与当前伤病名单未提供，双方也无跨赛事参考数据，增加不确定性。"
       },
       "degraded": false,
       "result": null,
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-24T13:54:45Z",
+        "capturedAt": "2026-11-25T01:10:57Z",
         "prob": {
           "home": 45,
           "draw": 26,
