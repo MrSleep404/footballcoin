@@ -21,6 +21,12 @@ const scoreText = computed(() => {
   if (result) return `${result.homeGoals} : ${result.awayGoals}`;
   return `${props.match.prediction.score.home} : ${props.match.prediction.score.away}`;
 });
+
+// 已有赛果时，卡片主比分改为实际比分，预测比分以小字并列显示
+const predictedText = computed(() => {
+  const score = props.match.prediction?.score;
+  return score ? `${score.home} : ${score.away}` : "";
+});
 </script>
 
 <template>
@@ -54,6 +60,7 @@ const scoreText = computed(() => {
       <div class="score">
         <span class="nums numeric">{{ scoreText }}</span>
         <span class="label">{{ match.result ? "赛果" : "预测比分" }}</span>
+        <span v-if="match.result" class="predicted numeric">预测 {{ predictedText }}</span>
       </div>
 
       <div class="team away">
@@ -243,6 +250,14 @@ const scoreText = computed(() => {
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.4px;
+}
+
+.predicted {
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .odds {
