@@ -363,6 +363,11 @@ const displayName = (name: string) => {
     padding: 14px 16px;
   }
 
+  /* 移动端队名由脚本按字符数截断，不再叠加 CSS 省略号 */
+  .name {
+    text-overflow: clip;
+  }
+
   .arrow {
     display: none;
   }
@@ -402,8 +407,12 @@ const displayName = (name: string) => {
     margin-right: auto;
   }
 
+  .team {
+    gap: 6px;
+  }
+
   .name {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .nums {
@@ -429,6 +438,13 @@ const displayName = (name: string) => {
     order: 2;
     flex: 1;
     width: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  /* 极窄屏放不下「4 字 + 省略号」，退回浏览器省略号，避免硬裁切 */
+  .name {
+    text-overflow: ellipsis;
   }
 }
 </style>
