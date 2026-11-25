@@ -35,7 +35,7 @@ const predictedText = computed(() => {
   return score ? `${score.home} : ${score.away}` : "";
 });
 
-// 移动端列宽有限，队名按固定规则截断：超过 5 个字符保留前 4 个再补省略号
+// 移动端列宽有限，队名按固定规则截断：超过 6 个字符保留前 5 个再补省略号
 const isNarrow = ref(false);
 let media: MediaQueryList | null = null;
 const syncNarrow = () => {
@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
 const displayName = (name: string) => {
   if (!isNarrow.value) return name;
   const chars = Array.from(name);
-  return chars.length > 5 ? `${chars.slice(0, 4).join("")}…` : name;
+  return chars.length > 6 ? `${chars.slice(0, 5).join("")}…` : name;
 };
 </script>
 
@@ -453,8 +453,8 @@ const displayName = (name: string) => {
   }
 }
 
-@media (max-width: 300px) {
-  /* 极窄屏放不下「4 字 + 省略号」，退回浏览器省略号，避免硬裁切 */
+@media (max-width: 340px) {
+  /* 极窄屏放不下「5 字 + 省略号」，退回浏览器省略号，避免硬裁切 */
   .name {
     text-overflow: ellipsis;
   }
