@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-26",
-  "generatedAt": "2026-11-25T09:30:08+08:00",
+  "generatedAt": "2026-11-25T10:35:15+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 9,
@@ -53,29 +53,29 @@
       "prediction": {
         "prob": {
           "home": 5,
-          "draw": 7,
-          "away": 88
+          "draw": 9,
+          "away": 86
         },
         "score": {
           "home": 1,
           "away": 3
         },
-        "confidence": 78,
+        "confidence": 84,
         "pick": "away",
         "reasons": [
-          "萨巴巴库欧冠4场进4失10，排名第30，场均失2.5。",
-          "巴塞罗那欧冠4场进14失6，排名第8，场均进3.5。",
-          "市场均值客胜89%、平局7%、主胜4%，与实力差距一致。",
-          "巴塞罗那客场欧冠场均进3失2.5，萨巴巴库主场场均进1.5失1。"
+          "欧冠排名萨巴巴库第30、巴塞罗那第8，实力差距明显。",
+          "巴塞罗那本赛事场均进3.5球，萨巴巴库场均失2.5球。",
+          "市场均值客胜89%，与预测方向一致。",
+          "巴塞罗那5人伤停，但萨巴巴库本赛事4场仅1胜且防守承压。"
         ],
         "factors": [
-          "实力差距明显",
-          "巴塞罗那火力强",
-          "主队防守漏洞",
-          "市场倾向客胜",
-          "风雨影响进球"
+          "实力差距",
+          "客队火力",
+          "主队防守",
+          "市场倾向",
+          "伤停轮换"
         ],
-        "risk": "萨巴巴库跨赛事数据缺失，且伤病名单未覆盖本场，实力与轮换判断存在不确定性。"
+        "risk": "场地信息未提供，且巴塞罗那5人伤停、3.9天后有联赛，轮换幅度是最大不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -86,7 +86,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 4,
           "draw": 7,
@@ -101,7 +101,38 @@
           "published": "2026-11-24",
           "source": "ESPN"
         }
-      ]
+      ],
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "R. Bardghji",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Christensen",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "X. Espart",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "Lamine Yamal",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "Rodri",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -148,46 +179,132 @@
       },
       "prediction": {
         "prob": {
-          "home": 29,
-          "draw": 24,
-          "away": 47
+          "home": 30,
+          "draw": 25,
+          "away": 45
         },
         "score": {
           "home": 2,
           "away": 3
         },
-        "confidence": 54,
+        "confidence": 60,
         "pick": "away",
         "reasons": [
-          "市场均值主胜31%/平25%/客胜44%，客队更受青睐",
-          "比利亚雷亚尔本赛事场均进2球，客场场均进2.5球",
-          "布拉格斯拉维亚本赛事场均失2.25，主场失2.5球",
-          "客队跨赛事PD场均失1.38，防守稳定性高于欧冠"
+          "客队本赛事4场进8球，客场场均2.5球，进攻占优。",
+          "主队本赛事4场失9球，主场场均失2.5球，防线不稳。",
+          "市场均值客胜44%高于主胜31%，与客队稍占优判断一致。",
+          "双方各有5人伤停，阵容完整性均受影响。"
         ],
         "factors": [
-          "客队进攻强",
-          "主队主场防守漏",
+          "客队进攻占优",
+          "主队防守不稳",
           "市场倾向客胜",
-          "低温无降水",
-          "欧冠大球倾向"
+          "双方伤停较多"
         ],
-        "risk": "伤病名单未提供，无历史交锋与主队跨赛事数据，欧冠样本仅4场，预测波动较大。"
+        "risk": "布拉格斯拉维亚无跨赛事数据，无历史交锋可参考，且欧冠样本仅4场，是主要不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.8,
+        "temp": 0.9,
         "precip": 0,
-        "wind": 4.8
+        "wind": 4.3
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 31,
           "draw": 25,
           "away": 44
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "S. Chaloupek",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Chory",
+            "type": "Missing Fixture",
+            "reason": "Coach's decision"
+          },
+          {
+            "player": "H. Kante",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "player": "O. Kolar",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "D. Moses",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "player": "I. Ogbu",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "player": "A. Ouanda",
+            "type": "Missing Fixture",
+            "reason": "Injury"
+          },
+          {
+            "player": "E. Pitak",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "L. Provod",
+            "type": "Missing Fixture",
+            "reason": "Surgery"
+          },
+          {
+            "player": "D. Sturm",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Diakite",
+            "type": "Questionable",
+            "reason": "Health problems"
+          }
+        ],
+        "away": [
+          {
+            "player": "I. Akhomach",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "A. Diatta",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "J. Foyth",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "N. Saliba",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "G. Moreno",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ]
       }
     },
     {
@@ -235,30 +352,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 64,
+          "home": 62,
           "draw": 21,
-          "away": 15
+          "away": 17
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 70,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "市场均值主胜68%、平17%、客15%，明显倾向国际米兰。",
-          "国际米兰本赛事场均进2球，主场2场场均进2球。",
-          "斯图加特本赛事客场2场场均进1.5球、失1球，具备进球能力。",
-          "开赛降水概率90%，雨战可能压低节奏，但国际米兰进攻效率占优。"
+          "市场均值主胜68%，国际米兰被明显看好",
+          "国际米兰本赛事场均进2球，4场共进8球，进攻效率稳定",
+          "斯图加特本赛事场均失1球，客场2场进1.5失1，抗压一般",
+          "降水概率90%、风速5.8km/h，湿滑场地易放大双方失误"
         ],
         "factors": [
-          "市场主胜68%",
-          "国际米兰场均2球",
-          "斯图加特客场进球",
-          "降水概率90%",
-          "轮换与雨战风险"
+          "主场之利",
+          "进攻火力",
+          "客队防守尚稳",
+          "雨天变数",
+          "赛程密集"
         ],
-        "risk": "本场伤病名单未提供，降水概率90%的雨战和双方3天内联赛赛程带来轮换不确定性。"
+        "risk": "场地未提供且无历史交锋可参考，90%降雨加大比分与结果的不确定性"
       },
       "degraded": false,
       "result": null,
@@ -269,7 +386,7 @@
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 68,
           "draw": 17,
@@ -291,7 +408,28 @@
           "published": "2026-11-24",
           "source": "ESPN"
         }
-      ]
+      ],
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "S. Drljaca",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "L. Stergiou",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "L. Sauer",
+            "type": "Questionable",
+            "reason": "Muscle Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-ATL-VIK",
@@ -338,30 +476,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 79,
-          "draw": 13,
+          "home": 80,
+          "draw": 12,
           "away": 8
         },
         "score": {
           "home": 2,
           "away": 0
         },
-        "confidence": 76,
+        "confidence": 73,
         "pick": "home",
         "reasons": [
-          "市场均值主胜87%、平9%、客4%，马德里竞技获明显支持。",
-          "马德里竞技跨赛事13场场均进2失0.77，稳定性和强度占优。",
-          "维京本赛事客场2场场均进1失3，客场防守明显不稳。",
-          "马德里竞技本赛事主场2场1胜1负，主场表现并非压倒性。"
+          "市场均值主胜87%，主队获得明显支持",
+          "马竞本赛事主场2场场均进1失1，防守尚可",
+          "维京欧冠客场2场场均失3球，客战防守薄弱",
+          "马竞三人伤停，可能影响轮换与进攻效率"
         ],
         "factors": [
-          "市场主胜87%",
+          "市场强压主胜",
           "维京客场失3球",
-          "马德里竞技强度",
-          "赛程密度高",
-          "无历史交锋"
+          "马竞主场稳健",
+          "主队伤停三人",
+          "欧冠状态一般"
         ],
-        "risk": "维京无跨赛事数据，伤病名单日期不符未提供，双方暂无历史交锋，判断存在不确定性。"
+        "risk": "场地未提供，维京无跨赛事数据；马竞三人伤停且欧冠状态一般，主场大胜存疑。"
       },
       "degraded": false,
       "result": null,
@@ -372,12 +510,33 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 87,
           "draw": 9,
           "away": 4
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "A. Lookman",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "C. Romero",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "M. Pubill",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          }
+        ],
+        "away": []
       }
     },
     {
@@ -426,43 +585,43 @@
       "prediction": {
         "prob": {
           "home": 70,
-          "draw": 18,
-          "away": 12
+          "draw": 17,
+          "away": 13
         },
         "score": {
           "home": 3,
           "away": 1
         },
-        "confidence": 76,
+        "confidence": 78,
         "pick": "home",
         "reasons": [
-          "巴黎圣日耳曼本赛事4场进20失5，场均5球，主场2场进10球。",
-          "罗马本赛事客场2场场均进1.5失2，面对强队防线承压。",
-          "积分榜巴黎圣日耳曼第2、罗马第23，排名差距明显。",
-          "市场均值主胜67%、平18%、客15%，与主胜判断方向一致。"
+          "欧冠4轮巴黎圣日耳曼全胜，场均进5球、失1.25球，主场2场场均进5球。",
+          "罗马欧冠4轮1胜1平2负，客场2场场均进1.5球、失2球。",
+          "市场均值主胜66%、平局19%、客胜15%，与主胜判断方向一致。",
+          "巴黎圣日耳曼伤停Doue、Kvaratskhelia，罗马三人伤停，双方均非完整"
         ],
         "factors": [
-          "欧冠场均进5球",
-          "积分排名差距明显",
-          "巴黎主场火力强",
-          "罗马客场场均失2",
-          "市场主胜67%"
+          "欧冠主场火力",
+          "罗马客场防守",
+          "巴黎边路伤停",
+          "市场主胜66%",
+          "赛程密度接近"
         ],
-        "risk": "本场伤病名单未提供，阵容轮换存在不确定性；双方无历史交锋数据可参考。"
+        "risk": "场地与历史交锋数据未提供，临场环境与对阵心理缺少参考，是主要不确定来源。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 5.7,
+        "temp": 5.5,
         "precip": 23,
-        "wind": 5.7
+        "wind": 7.9
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
-          "home": 67,
-          "draw": 18,
+          "home": 66,
+          "draw": 19,
           "away": 15
         }
       },
@@ -488,7 +647,44 @@
           "published": "2026-11-24",
           "source": "Football Italia"
         }
-      ]
+      ],
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "D. Doue",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "K. Kvaratskhelia",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Longoni",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "L. Pellegrini",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "player": "D. Rensch",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "D. S. Vasquez Llach",
+            "type": "Missing Fixture",
+            "reason": "Inactive"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -535,41 +731,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
+          "home": 24,
           "draw": 21,
-          "away": 54
+          "away": 55
         },
         "score": {
-          "home": 2,
-          "away": 3
+          "home": 1,
+          "away": 2
         },
-        "confidence": 61,
+        "confidence": 66,
         "pick": "away",
         "reasons": [
-          "利物浦欧冠场均进3.5球、客场场均4球，进攻效率更高。",
-          "布鲁日欧冠主场场均进2.5球，主场也有进球能力。",
-          "市场客胜59%与判断同向；利物浦3.1天前刚踢联赛，轮换存消耗。",
-          "气温0.3℃、风速19.4km/h，可能降低比赛节奏。"
+          "利物浦本赛事场均进3.5球，客场2场场均进4球。",
+          "布鲁日本赛事主场2场场均进2.5球、失1.5球，主战有进球能力。",
+          "市场均值客胜59%，明显高于主胜21%与平局20%。",
+          "利物浦5人伤停且3.1天前刚踢联赛，轮换与体能存疑。"
         ],
         "factors": [
-          "欧冠火力",
-          "客队实力",
-          "主场进球",
-          "市场倾向",
-          "赛程消耗"
+          "利物浦进攻火力",
+          "布鲁日主场进球",
+          "市场倾向客胜",
+          "利物浦伤停偏多",
+          "赛程密度偏高"
         ],
-        "risk": "场地与伤病名单未提供，且无历史交锋数据，临场信息有限。"
+        "risk": "场地信息缺失，布鲁日无跨赛事参考数据，且双方无历史交锋样本，判断不确定性较高。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.3,
+        "temp": -0.2,
         "precip": 1,
-        "wind": 19.4
+        "wind": 19.8
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 21,
           "draw": 20,
@@ -598,7 +794,59 @@
           "published": "2026-11-24",
           "source": "Sky Sports"
         }
-      ]
+      ],
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "J. Ordonez",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          }
+        ],
+        "away": [
+          {
+            "player": "C. Bradley",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "F. Chiesa",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "H. Ekitike",
+            "type": "Missing Fixture",
+            "reason": "Achilles Tendon Injury"
+          },
+          {
+            "player": "W. Endo",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "C. Gakpo",
+            "type": "Missing Fixture",
+            "reason": "Calf Injury"
+          },
+          {
+            "player": "R. Gravenberch",
+            "type": "Missing Fixture",
+            "reason": "Heel Injury"
+          },
+          {
+            "player": "G. Leoni",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          },
+          {
+            "player": "A. Nallo",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -645,46 +893,87 @@
       },
       "prediction": {
         "prob": {
-          "home": 18,
-          "draw": 22,
-          "away": 60
+          "home": 20,
+          "draw": 24,
+          "away": 56
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 72,
+        "confidence": 70,
         "pick": "away",
         "reasons": [
-          "里尔欧冠4场进4失10，主场场均失3.5，防线承压。",
-          "拜仁欧冠4场进12失5，客场场均进2.5，攻击力占优。",
-          "积分排名里尔第35、拜仁第14，市场均值客胜58%与判断同向。",
-          "赛程密度接近：里尔3.0天后、拜仁2.8天后均有下一场联赛。"
+          "拜仁慕尼黑本赛事场均进3球、失1.25球，攻防效率高于里尔。",
+          "里尔本赛事场均失2.5球，主场2场场均失3.5球，防守压力大。",
+          "拜仁慕尼黑伤停含 H. Kane、M. Neuer 等5人，阵容完整性存疑。",
+          "市场均值客胜58%，与客胜方向一致，但未形成压倒性优势。"
         ],
         "factors": [
-          "拜仁攻防占优",
-          "里尔欧冠防线差",
-          "客胜市场58%",
-          "赛程密度接近",
-          "低温大风"
+          "拜仁进攻效率",
+          "里尔主场失球",
+          "拜仁5人伤停",
+          "市场客胜58%",
+          "欧冠强度"
         ],
-        "risk": "伤病名单因日期不同未提供，场地信息缺失，是主要不确定性。"
+        "risk": "场地未提供；拜仁慕尼黑伤停5人，实际首发与轮换不确定性较高。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.4,
+        "temp": 0.3,
         "precip": 4,
-        "wind": 16.2
+        "wind": 18.0
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 19,
           "draw": 23,
           "away": 58
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "A. Davies",
+            "type": "Missing Fixture",
+            "reason": "Hamstring Injury"
+          },
+          {
+            "player": "S. Gnabry",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "H. Kane",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "M. Neuer",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "M. Olise",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          },
+          {
+            "player": "I. Saibari",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "B. Sapoko Ndiaye",
+            "type": "Missing Fixture",
+            "reason": "Abdominal strain"
+          }
+        ]
       }
     },
     {
@@ -732,29 +1021,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 45,
-          "draw": 27,
-          "away": 28
+          "home": 46,
+          "draw": 28,
+          "away": 26
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 64,
+        "confidence": 63,
         "pick": "home",
         "reasons": [
-          "葡萄牙体育欧冠主场场均进2.5球，曼联欧冠客场场均仅0.5球且失3球",
-          "积分排名主队第12、客队第19，主队本赛事净胜球+4优于曼联0",
-          "曼联3.1天前刚踢PL且2.8天后还有PL，赛程密度高于主队",
-          "市场均值主胜38%/平26%/客胜36%，主胜方向与判断一致"
+          "曼联欧冠客场2场场均仅进0.5球、失3球",
+          "葡萄牙体育欧冠主场2场场均进2.5球，主场火力更稳",
+          "曼联伤停5人，Cunha红牌停赛、Rashford等主力缺阵",
+          "曼联跨赛事近5场0-4、0-2等客场比赛连败，2.8天后还有联赛"
         ],
         "factors": [
-          "主场火力",
-          "曼联客场疲软",
-          "赛程密度",
-          "排名优势"
+          "曼联欧冠客场疲软",
+          "主队主场火力",
+          "曼联五人伤停",
+          "赛程密度利主队",
+          "市场分歧明显"
         ],
-        "risk": "场地与主队跨赛事数据未提供，本场伤病名单缺失，不确定性偏高。"
+        "risk": "葡萄牙体育无跨赛事数据、场地未提供，且市场主胜仅38%，与我判断存在分歧。"
       },
       "degraded": false,
       "result": null,
@@ -765,7 +1055,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 38,
           "draw": 26,
@@ -794,7 +1084,38 @@
           "published": "2026-11-24",
           "source": "ESPN"
         }
-      ]
+      ],
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [],
+        "away": [
+          {
+            "player": "C. Baleba",
+            "type": "Missing Fixture",
+            "reason": "Thigh Injury"
+          },
+          {
+            "player": "M. Cunha",
+            "type": "Missing Fixture",
+            "reason": "Red Card"
+          },
+          {
+            "player": "M. Rashford",
+            "type": "Missing Fixture",
+            "reason": "Hip Injury"
+          },
+          {
+            "player": "B. Sesko",
+            "type": "Missing Fixture",
+            "reason": "Leg Injury"
+          },
+          {
+            "player": "M. Ugarte",
+            "type": "Missing Fixture",
+            "reason": "Knee Injury"
+          }
+        ]
+      }
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -841,30 +1162,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 37,
-          "draw": 29,
-          "away": 34
+          "home": 34,
+          "draw": 28,
+          "away": 38
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 55,
-        "pick": "home",
+        "confidence": 54,
+        "pick": "away",
         "reasons": [
-          "矿工本赛事主场2场场均进1.5失1，主场有拿分能力。",
-          "费内巴切本赛事客场仅1场，0-6负阿斯顿维拉，客场数据弱。",
-          "市场均值主胜33%/平27%/客胜40%，客队仅小幅占优。",
-          "积分排名主队第24、客队第22，双方接近，主场因素或成关键。"
+          "市场均值主胜33%、平局27%、客胜40%，客队略被看好。",
+          "费内巴切本赛事场均失2.75球，客场0-6负阿斯顿维拉。",
+          "顿涅茨克矿工主场场均进1.5失1，具备拿分能力。",
+          "矿工有5人伤停，费内巴切暂无官方伤停记录。"
         ],
         "factors": [
-          "主场进攻",
-          "客队客场惨败",
-          "市场客队略优",
-          "低温大风",
-          "排名接近"
+          "客队防线漏风",
+          "主队主场有韧性",
+          "矿工伤停偏多",
+          "市场略偏客胜",
+          "欧冠样本偏少"
         ],
-        "risk": "伤病名单未提供，两队跨赛事数据缺失，费内巴切本赛事客场仅1场，参考有限。"
+        "risk": "跨赛事参考数据缺失、场地未提供，双方也无历史交锋数据。"
       },
       "degraded": false,
       "result": null,
@@ -875,12 +1196,63 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T01:28:33Z",
+        "capturedAt": "2026-11-25T02:34:06Z",
         "prob": {
           "home": 33,
           "draw": 27,
           "away": 40
         }
+      },
+      "injuries": {
+        "date": "2026-11-25",
+        "home": [
+          {
+            "player": "Eguinaldo",
+            "type": "Missing Fixture",
+            "reason": "Shoulder Injury"
+          },
+          {
+            "player": "Kaua Elias",
+            "type": "Missing Fixture",
+            "reason": "Foot Injury"
+          },
+          {
+            "player": "V. Korniyenko",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "Marlon",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "G. Mendoza",
+            "type": "Missing Fixture",
+            "reason": "Ankle Injury"
+          },
+          {
+            "player": "Pedrinho",
+            "type": "Missing Fixture",
+            "reason": "Muscle Injury"
+          },
+          {
+            "player": "T. Puzankov",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "M. Shved",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          },
+          {
+            "player": "D. Tvardovskyi",
+            "type": "Missing Fixture",
+            "reason": "Off the roster"
+          }
+        ],
+        "away": []
       }
     }
   ]
