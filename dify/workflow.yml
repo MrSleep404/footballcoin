@@ -3539,11 +3539,19 @@ workflow:
               return round(total / count, 2) if count else None
 
 
-          def _stats(games, split):
+          def _num(value):
+              if value is None:
+                  return "0"
+              text = f"{float(value):.2f}".rstrip("0").rstrip(".")
+              return text or "0"
+
+
+          def _summary(games, split, label):
+              # 直接输出成文本，避免结果嵌套过深触发变量深度限制
               played = gf = ga = 0
               home_played = home_for = home_against = 0
               away_played = away_for = away_against = 0
-              leagues = set()
+              leagues = []
               last = []
               for code, game, is_home in games:
                   home_goals, away_goals = game.get("homeGoals"), game.get("awayGoals")
@@ -3553,7 +3561,8 @@ workflow:
                   played += 1
                   gf += own
                   ga += opp
-                  leagues.add(code)
+                  if code not in leagues:
+                      leagues.append(code)
                   if is_home:
                       home_played += 1
                       home_for += own
@@ -3563,39 +3572,28 @@ workflow:
                       away_for += own
                       away_against += opp
                   if len(last) < 5:
-                      last.append({
-                          "date": game["utc"][:10],
-                          "league": code,
-                          "venue": "主" if is_home else "客",
-                          "opponent": game.get("awayName") if is_home else game.get("homeName"),
-                          "score": f"{own}-{opp}",
-                          "result": "W" if own > opp else "D" if own == opp else "L",
-                      })
-              data = {
-                  "played": played,
-                  "goalsFor": gf,
-                  "goalsAgainst": ga,
-                  "perGameFor": _avg(gf, played),
-                  "perGameAgainst": _avg(ga, played),
-                  "leagues": sorted(leagues),
-                  "last5": last,
-              }
-              if split:
-                  data["home"] = {
-                      "played": home_played,
-                      "goalsFor": home_for,
-                      "goalsAgainst": home_against,
-                      "perGameFor": _avg(home_for, home_played),
-                      "perGameAgainst": _avg(home_against, home_played),
-                  }
-                  data["away"] = {
-                      "played": away_played,
-                      "goalsFor": away_for,
-                      "goalsAgainst": away_against,
-                      "perGameFor": _avg(away_for, away_played),
-                      "perGameAgainst": _avg(away_against, away_played),
-                  }
-              return data
+                      result = "W" if own > opp else "D" if own == opp else "L"
+                      opponent = game.get("awayName") if is_home else game.get("homeName")
+                      last.append(
+                          f"{game['utc'][:10]} {'主' if is_home else '客'} {own}-{opp} vs {opponent} {result}"
+                      )
+              if not played:
+                  return f"{label}：暂无该队已结束的场次数据"
+              source = "、".join(leagues) or "无"
+              lines = [
+                  f"{label}（来源赛事 {source}，样本 {played} 场）："
+                  f"场均进 {_num(_avg(gf, played))} / 失 {_num(_avg(ga, played))}，合计进 {gf} / 失 {ga}"
+              ]
+              if split and home_played:
+                  lines.append(
+                      f"  主场 {home_played} 场：场均进 {_num(_avg(home_for, home_played))} / 失 {_num(_avg(home_against, home_played))}"
+                  )
+              if split and away_played:
+                  lines.append(
+                      f"  客场 {away_played} 场：场均进 {_num(_avg(away_for, away_played))} / 失 {_num(_avg(away_against, away_played))}"
+                  )
+              lines.append("  近 5 场（该队视角：主/客 进球-失球 对手 结果）：" + "；".join(last))
+              return "\n".join(lines)
 
 
           def _load(pool_map, team_id, kickoff, exclude):
@@ -3629,11 +3627,21 @@ workflow:
               return hits[:2]
 
 
-          def _team(pool_map, team_id, league, kickoff):
+          def _load_line(pool_map, team_id, kickoff, exclude):
+              hits = _load(pool_map, team_id, kickoff, exclude)
+              if not hits:
+                  return "前后 4 天内无其他赛事"
+              return "、".join(
+                  f"{abs(hit['gapDays'])} 天{'前' if hit['gapDays'] < 0 else '后'}（{hit['date']} {hit['league']} {hit['venue']}）"
+                  for hit in hits
+              )
+
+
+          def _team(pool_map, team_id, league, kickoff, prefix):
               return {
-                  "own": _stats(_games(pool_map, team_id, only=league), True),
-                  "cross": _stats(_games(pool_map, team_id, exclude=league), False),
-                  "load": _load(pool_map, team_id, kickoff, league),
+                  prefix + "Own": _summary(_games(pool_map, team_id, only=league), True, "本赛事"),
+                  prefix + "Cross": _summary(_games(pool_map, team_id, exclude=league), False, "跨赛事"),
+                  prefix + "Load": _load_line(pool_map, team_id, kickoff, league),
               }
 
 
@@ -3679,10 +3687,8 @@ workflow:
                           kickoff = kickoff.replace(tzinfo=timezone.utc)
                   except (TypeError, ValueError):
                       kickoff = None
-                  item["stats"] = {
-                      "home": _team(pool_map, (item.get("home") or {}).get("id"), league, kickoff),
-                      "away": _team(pool_map, (item.get("away") or {}).get("id"), league, kickoff),
-                  }
+                  item.update(_team(pool_map, (item.get("home") or {}).get("id"), league, kickoff, "statsHome"))
+                  item.update(_team(pool_map, (item.get("away") or {}).get("id"), league, kickoff, "statsAway"))
                   result.append(item)
               return {"matches": result}
         code_language: python3
@@ -4077,57 +4083,6 @@ workflow:
               return f"{label}：" + "、".join(parts)
 
 
-          def _num(value):
-              if value is None:
-                  return "-"
-              text = f"{float(value):.2f}"
-              return text.rstrip("0").rstrip(".") if "." in text else text
-
-
-          def _last5(items):
-              if not items:
-                  return "近 5 场：暂无"
-              pieces = []
-              for item in items[:5]:
-                  pieces.append(
-                      f"{item.get('date')} {item.get('venue')} {item.get('score')} "
-                      f"vs {item.get('opponent')} {item.get('result')}"
-                  )
-              return "近 5 场（该队视角：主/客 进球-失球 对手 结果）：" + "；".join(pieces)
-
-
-          def _stats_block(label, data, split):
-              if not isinstance(data, dict) or not data.get("played"):
-                  return f"{label}：暂无该队场次数据"
-              source = "、".join(data.get("leagues") or []) or "无"
-              lines = [
-                  f"{label}（来源赛事 {source}，样本 {data.get('played')} 场）："
-                  f"场均进 {_num(data.get('perGameFor'))} / 失 {_num(data.get('perGameAgainst'))}，"
-                  f"合计进 {data.get('goalsFor')} / 失 {data.get('goalsAgainst')}"
-              ]
-              if split:
-                  for key, name in (("home", "主场"), ("away", "客场")):
-                      part = data.get(key) or {}
-                      if part.get("played"):
-                          lines.append(
-                              f"  {name} {part.get('played')} 场："
-                              f"场均进 {_num(part.get('perGameFor'))} / 失 {_num(part.get('perGameAgainst'))}"
-                          )
-              lines.append("  " + _last5(data.get("last5")))
-              return "\n".join(lines)
-
-
-          def _load_line(items):
-              pieces = []
-              for item in items or []:
-                  gap = item.get("gapDays")
-                  if gap is None:
-                      continue
-                  when = f"{_num(abs(gap))} 天后" if gap > 0 else f"{_num(abs(gap))} 天前"
-                  pieces.append(f"{when}（{item.get('date')} {item.get('league')} {item.get('venue')}）")
-              return "、".join(pieces) if pieces else "前后 4 天内无其他赛事"
-
-
           def main(match: dict, injuries: dict, injury_date: str) -> dict:
               home = match.get("home") or {}
               away = match.get("away") or {}
@@ -4181,20 +4136,17 @@ workflow:
               else:
                   market_text = "市场赔率：未提供"
 
-              stats = match.get("stats") or {}
-              home_stats = stats.get("home") or {}
-              away_stats = stats.get("away") or {}
               own_text = (
-                  _stats_block(f"{home.get('name')} 本赛事", home_stats.get("own"), True)
-                  + "\n" + _stats_block(f"{away.get('name')} 本赛事", away_stats.get("own"), True)
+                  f"{home.get('name')} {match.get('statsHomeOwn') or '本赛事：暂无该队场次数据'}\n"
+                  f"{away.get('name')} {match.get('statsAwayOwn') or '本赛事：暂无该队场次数据'}"
               )
               cross_text = (
-                  _stats_block(f"{home.get('name')} 跨赛事", home_stats.get("cross"), False)
-                  + "\n" + _stats_block(f"{away.get('name')} 跨赛事", away_stats.get("cross"), False)
+                  f"{home.get('name')} {match.get('statsHomeCross') or '跨赛事：暂无该队场次数据'}\n"
+                  f"{away.get('name')} {match.get('statsAwayCross') or '跨赛事：暂无该队场次数据'}"
               )
               load_text = (
-                  f"{home.get('name')}：{_load_line(home_stats.get('load'))}\n"
-                  f"{away.get('name')}：{_load_line(away_stats.get('load'))}"
+                  f"{home.get('name')}：{match.get('statsHomeLoad') or '前后 4 天内无其他赛事'}\n"
+                  f"{away.get('name')}：{match.get('statsAwayLoad') or '前后 4 天内无其他赛事'}"
               )
 
               teams = (injuries or {}).get("teams") or {}
@@ -4507,7 +4459,9 @@ workflow:
               merged = dict(item)
               _attach_injuries(merged, injuries, injury_date)
               # 统计口径只服务提示词，不写入数据文件
-              merged.pop("stats", None)
+              for key in ("statsHomeOwn", "statsHomeCross", "statsHomeLoad",
+                          "statsAwayOwn", "statsAwayCross", "statsAwayLoad"):
+                  merged.pop(key, None)
               for side in ("home", "away"):
                   team = merged.get(side)
                   if isinstance(team, dict):
