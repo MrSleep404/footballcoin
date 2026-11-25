@@ -43,7 +43,7 @@ const syncNarrow = () => {
 };
 
 onMounted(() => {
-  media = window.matchMedia("(max-width: 1024px)");
+  media = window.matchMedia("(max-width: 640px)");
   syncNarrow();
   media.addEventListener("change", syncNarrow);
 });
@@ -363,11 +363,6 @@ const displayName = (name: string) => {
     padding: 14px 16px;
   }
 
-  /* 移动端队名由脚本按字符数截断，不再叠加 CSS 省略号 */
-  .name {
-    text-overflow: clip;
-  }
-
   .arrow {
     display: none;
   }
@@ -413,10 +408,17 @@ const displayName = (name: string) => {
 
   .name {
     font-size: 14px;
+    /* 已由脚本按字符数截断，不再叠加 CSS 省略号 */
+    text-overflow: clip;
   }
 
   .nums {
     font-size: 18px;
+  }
+
+  /* 限制中间比分列宽度，命中标签自动换行，把空间让给两侧队名 */
+  .score {
+    max-width: 76px;
   }
 
   .conf {
@@ -441,7 +443,7 @@ const displayName = (name: string) => {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 340px) {
   /* 极窄屏放不下「4 字 + 省略号」，退回浏览器省略号，避免硬裁切 */
   .name {
     text-overflow: ellipsis;
