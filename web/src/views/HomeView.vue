@@ -211,7 +211,6 @@ onUnmounted(() => {
       <FreshnessBanner
         v-if="day && !loading"
         :generated-at="day.generatedAt"
-        :model="day.model"
         :degraded-count="day.degradedCount"
       />
 

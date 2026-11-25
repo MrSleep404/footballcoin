@@ -4,7 +4,6 @@ import { formatGeneratedAt, isStale, relativeHours } from "../utils/format";
 
 const props = defineProps<{
   generatedAt: string;
-  model?: string;
   degradedCount?: number;
 }>();
 
@@ -23,7 +22,6 @@ const stale = computed(() => isStale(props.generatedAt));
       </span>
     </div>
     <div class="right">
-      <span v-if="model" class="chip">{{ model }}</span>
       <span v-if="degradedCount" class="chip chip-warning">{{ degradedCount }} 场兜底</span>
     </div>
   </div>
