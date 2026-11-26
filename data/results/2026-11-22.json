@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-22",
-  "generatedAt": "2026-11-26T09:23:39+08:00",
+  "generatedAt": "2026-11-26T10:02:35+08:00",
   "source": "football-data.org",
   "count": 8,
   "results": [
@@ -12,7 +12,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "FL1-2026-11-22-PFC-ANG",
@@ -21,7 +21,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "PD-2026-11-22-FCB-VIL",
@@ -30,7 +30,7 @@
       "awayGoals": 2,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "PD-2026-11-22-SAN-RSO",
@@ -39,7 +39,7 @@
       "awayGoals": 2,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "PL-2026-11-22-HUL-BHA",
@@ -48,7 +48,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "SA-2026-11-22-BOL-UDI",
@@ -57,7 +57,7 @@
       "awayGoals": 1,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "SA-2026-11-22-JUV-VEN",
@@ -66,7 +66,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "SA-2026-11-22-SAS-GEN",
@@ -75,7 +75,7 @@
       "awayGoals": 2,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     }
   ]
 }
