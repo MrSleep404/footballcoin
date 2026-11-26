@@ -4844,6 +4844,9 @@ workflow:
 
           BJ = timezone(timedelta(hours=8))
 
+          # 修改提示词后同步递增此版本号，用于复盘时区分不同提示词批次
+          PROMPT_VERSION = "2026-11-26-a"
+
 
           def main(day: dict, model: str) -> dict:
               date = day.get("date")
@@ -4854,6 +4857,7 @@ workflow:
                   "generatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
                   "source": "football-data.org",
                   "model": model,
+                  "promptVersion": PROMPT_VERSION,
                   "matchCount": len(matches),
                   "degradedCount": sum(1 for item in matches if item.get("degraded")),
                   "matches": matches,
@@ -5165,6 +5169,10 @@ workflow:
               return data if isinstance(data, dict) else {}
 
 
+          # 修改提示词后同步递增此版本号，用于复盘时区分不同提示词批次
+          PROMPT_VERSION = "2026-11-26-a"
+
+
           def main(body, content: str, date: str) -> dict:
               payload = _as_dict(body)
               sha = str(payload.get("sha") or "")
@@ -5186,6 +5194,7 @@ workflow:
                   "generatedAt": incoming.get("generatedAt") or old.get("generatedAt") or "",
                   "source": incoming.get("source") or old.get("source") or "football-data.org",
                   "model": incoming.get("model") or old.get("model") or "",
+                  "promptVersion": incoming.get("promptVersion") or old.get("promptVersion") or PROMPT_VERSION,
                   "matchCount": len(matches),
                   "degradedCount": sum(1 for item in matches if item.get("degraded")),
                   "matches": matches,

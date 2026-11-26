@@ -4,6 +4,9 @@ from datetime import datetime, timedelta, timezone
 
 BJ = timezone(timedelta(hours=8))
 
+# 修改提示词后同步递增此版本号，用于复盘时区分不同提示词批次
+PROMPT_VERSION = "2026-11-26-a"
+
 
 def main(date: str, matches: list, model: str, degraded_count: int) -> dict:
     payload = {
@@ -12,6 +15,7 @@ def main(date: str, matches: list, model: str, degraded_count: int) -> dict:
         "generatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
         "source": "football-data.org",
         "model": model,
+        "promptVersion": PROMPT_VERSION,
         "matchCount": len(matches),
         "degradedCount": degraded_count,
         "matches": matches,

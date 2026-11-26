@@ -4,6 +4,7 @@ web/dist/
 web/public/data/
 data/index.json
 data/stats.json
+data/review.csv
 __pycache__/
 *.pyc
 .screenshots/
