@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-22",
-  "generatedAt": "2026-11-25T17:01:00+08:00",
+  "generatedAt": "2026-11-26T08:13:03+08:00",
   "source": "football-data.org",
-  "count": 19,
+  "count": 8,
   "results": [
     {
       "id": "BL1-2026-11-22-FCA-M05",
@@ -12,43 +12,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "BL1-2026-11-22-S04-VFB",
-      "league": "BL1",
-      "homeGoals": 0,
-      "awayGoals": 0,
-      "outcome": "draw",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "FL1-2026-11-22-ASM-AJA",
-      "league": "FL1",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "outcome": "draw",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "FL1-2026-11-22-LIL-LYO",
-      "league": "FL1",
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "outcome": "away",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "FL1-2026-11-22-NIC-PSG",
-      "league": "FL1",
-      "homeGoals": 2,
-      "awayGoals": 3,
-      "outcome": "away",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "FL1-2026-11-22-PFC-ANG",
@@ -57,25 +21,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "FL1-2026-11-22-RC-BRE",
-      "league": "FL1",
-      "homeGoals": 0,
-      "awayGoals": 1,
-      "outcome": "away",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "FL1-2026-11-22-RCL-TOU",
-      "league": "FL1",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "outcome": "draw",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "PD-2026-11-22-FCB-VIL",
@@ -84,16 +30,7 @@
       "awayGoals": 2,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "PD-2026-11-22-RMA-CEL",
-      "league": "PD",
-      "homeGoals": 2,
-      "awayGoals": 1,
-      "outcome": "home",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "PD-2026-11-22-SAN-RSO",
@@ -102,16 +39,7 @@
       "awayGoals": 2,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "PD-2026-11-22-SEV-BET",
-      "league": "PD",
-      "homeGoals": 1,
-      "awayGoals": 1,
-      "outcome": "draw",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "PL-2026-11-22-HUL-BHA",
@@ -120,16 +48,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "PL-2026-11-22-NEW-ARS",
-      "league": "PL",
-      "homeGoals": 2,
-      "awayGoals": 2,
-      "outcome": "draw",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "SA-2026-11-22-BOL-UDI",
@@ -138,7 +57,7 @@
       "awayGoals": 1,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "SA-2026-11-22-JUV-VEN",
@@ -147,25 +66,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "SA-2026-11-22-NAP-TOR",
-      "league": "SA",
-      "homeGoals": 1,
-      "awayGoals": 0,
-      "outcome": "home",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
-    },
-    {
-      "id": "SA-2026-11-22-PAR-ROM",
-      "league": "SA",
-      "homeGoals": 1,
-      "awayGoals": 5,
-      "outcome": "away",
-      "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     },
     {
       "id": "SA-2026-11-22-SAS-GEN",
@@ -174,7 +75,7 @@
       "awayGoals": 2,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-25T17:01:00+08:00"
+      "updatedAt": "2026-11-26T08:13:03+08:00"
     }
   ]
 }
