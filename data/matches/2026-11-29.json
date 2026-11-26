@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-29",
-  "generatedAt": "2026-11-25T17:00:43+08:00",
+  "generatedAt": "2026-11-26T08:24:38+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 23,
@@ -67,41 +67,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 21,
-          "draw": 24,
-          "away": 55
+          "home": 19,
+          "draw": 25,
+          "away": 56
         },
         "score": {
-          "home": 1,
+          "home": 0,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 64,
         "pick": "away",
         "reasons": [
-          "昂热本赛事场均进0.82失2.09，近5场1平4负仅入2球。",
-          "朗斯本赛事场均进1.64失1.45，客场场均进1.4球。",
-          "近2次交手朗斯全胜，包括在昂热主场2-1取胜。",
-          "朗斯3.8天前刚踢欧冠客场，体能消耗可能限制大胜。"
+          "昂热本赛事场均进0.82失2.09，近5场仅入2球失13球。",
+          "昂热主场6场场均进0.83失1.83，主场进攻同样乏力。",
+          "朗斯本赛事场均进1.64失1.45，客场5场场均进1.4球。",
+          "近2次交手朗斯全胜且共入7球，朗斯3.8天前欧冠客场作战。"
         ],
         "factors": [
-          "客胜倾向",
           "昂热攻防低迷",
-          "朗斯交锋占优",
-          "欧战体能消耗",
-          "小胜概率高"
+          "主场同样乏力",
+          "朗斯客场占优",
+          "交锋心理压制",
+          "欧冠体能消耗"
         ],
-        "risk": "昂热无跨赛事数据，伤病与场地信息未提供，临场阵容和场地条件变化会加大不确定性。"
+        "risk": "昂热跨赛事数据缺失、场地未提供，朗斯欧冠消耗幅度难以量化。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 5.8,
-        "precip": 2,
-        "wind": 9.5
+        "temp": 9.0,
+        "precip": 7,
+        "wind": 6.9
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 20,
           "draw": 23,
@@ -109,6 +109,20 @@
         }
       },
       "news": [
+        {
+          "title": "Antonio Nusa enjoying his football after another great display in the Champions League",
+          "summary": "RB Leipzig’s man on form Antonio Nusa continued to put on another dazzling display in his team’s 3-1 win against French side RC Lens. Scoring a brace, the Norwegian takes…",
+          "link": "https://www.getfootballnewsgermany.com/2026/antonio-nusa-enjoying-his-football-after-another-great-display-in-the-champions-league/",
+          "published": "2026-11-25",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "‘We need to learn to enjoy moments like these’ – Martin Demichelis on RB Leipzig’s latest win",
+          "summary": "RB Leipzig secured a 3-1 win against RC Lens in the Champions League on Tuesday night. Speaking after the game, head coach Martin Demichelis said the team still has issues…",
+          "link": "https://www.getfootballnewsgermany.com/2026/we-need-to-learn-to-enjoy-moments-like-these-martin-demichelis-on-rb-leipzigs-latest-win/",
+          "published": "2026-11-25",
+          "source": "Get German Football News"
+        },
         {
           "title": "PLAYER RATINGS | RB Leipzig 3 – 1 Lens: Antonio Nusa drives Leipzig forward",
           "summary": "RB Leipzig climbed into the UEFA Champions League play-off spots with a 3-1 win over French outfit Lens, thanks largely to a superb performance from the in-form Antonio Nusa, who…",
@@ -186,33 +200,32 @@
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 72,
         "pick": "away",
         "reasons": [
-          "拉齐奥本赛事场均进2.33失0.75，客场进2.5失0.67，攻防占优。",
-          "都灵本赛事主场场均失1.83，近5场1胜1平3负，防守稳定性不足。",
-          "近2次交手都灵1胜1平，最近主场2-0拉齐奥，具备一定抗衡。",
-          "市场客胜46%，预测52%略高，主要因拉齐奥客场进2.5失0.67。"
+          "拉齐奥12场进28失9，客场场均进2.5失0.67，攻防均为联赛顶级。",
+          "都灵近5场1胜1平3负，主场6场场均失1.83，防线持续不稳。",
+          "近2次交手都灵1胜1平，2026-03-01主场2-0取胜，是其最大支撑。",
+          "双方4天内均无其他赛事，体能对等；伤停名单未提供，无法评估。"
         ],
         "factors": [
-          "拉齐奥攻防占优",
-          "都灵主场防守差",
-          "拉齐奥客场强势",
+          "拉齐奥客场2.5球",
+          "都灵主场失1.83",
           "交手都灵不败",
-          "伤病场地缺失"
+          "体能对等"
         ],
-        "risk": "伤病与场地信息未提供，临场阵容和场地因素可能影响判断。"
+        "risk": "伤停名单与场地未提供，且都灵近两次交手不败，存在被逼平的可能。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.4,
+        "temp": 7.3,
         "precip": 0,
         "wind": 2.3
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 27,
           "draw": 27,
@@ -226,13 +239,6 @@
           "link": "https://www.espn.com/soccer/story/_/id/50575536/lazio-serie-fan-protests-claudio-lotito",
           "published": "2026-11-24",
           "source": "ESPN"
-        },
-        {
-          "title": "Taylor shuts down Lazio exit amid Newcastle and Juventus links: ‘I want to help the club return to the Champions League’",
-          "summary": "Kenneth Taylor has ruled out leaving Lazio in January, insisting he wants to help Gennaro...",
-          "link": "https://football-italia.net/taylor-shuts-lazio-exit-newcastle-juventus/",
-          "published": "2026-11-24",
-          "source": "Football Italia"
         }
       ]
     },
@@ -283,63 +289,47 @@
       },
       "prediction": {
         "prob": {
-          "home": 30,
+          "home": 26,
           "draw": 28,
-          "away": 42
+          "away": 46
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "伊普斯维奇近5场2平3负，进6失10，主场近两战1平1负。",
-          "维拉近5场2胜3平不败，含客场4-4曼联、1-0纽卡斯尔联。",
-          "维拉本赛事客场场均进1.6失2.0，伊普斯维奇主场场均失1.4。",
-          "维拉4天前欧冠客战0-1加拉塔萨雷，赛程消耗更大。"
+          "维拉近5场联赛3平2胜不败，状态优于伊普斯维奇的2平3负。",
+          "伊普斯维奇本赛事场均失2球，近5场联赛共失10球。",
+          "维拉客场场均进1.6球，伊普斯维奇主场场均失1.4球。",
+          "维拉4天前刚踢欧冠客场，赛程消耗可能削弱其优势。"
         ],
         "factors": [
-          "维拉近5场不败",
-          "伊普斯主场防守",
-          "维拉欧冠消耗",
-          "客场失球偏多",
-          "平局概率偏高"
+          "维拉近5轮不败",
+          "伊普斯维奇防守漏",
+          "维拉客场进1.6球",
+          "欧冠后4天作战",
+          "低温雨战风大"
         ],
-        "risk": "伤病与场地信息未提供，是判断双方阵容和主场环境的最大不确定性。"
+        "risk": "维拉4天前刚踢欧冠客场，轮换与体能影响是本场最大变数。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 4.5,
-        "precip": 23,
-        "wind": 22.0
+        "temp": 5.2,
+        "precip": 58,
+        "wind": 24.1
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:11Z",
+        "capturedAt": "2026-11-26T00:18:06Z",
         "prob": {
-          "home": 26,
+          "home": 27,
           "draw": 25,
-          "away": 49
+          "away": 48
         }
-      },
-      "news": [
-        {
-          "title": "Villa beaten late on at Galatasaray as winless run continues",
-          "summary": "Aston Villa's winless run extended to six games as a late Deniz Gul's header saw them beaten 1-0 by Galatasaray in the Champions League league phase.",
-          "link": "https://www.skysports.com/football/galatasaray-vs-aston-villa/report/577673",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        },
-        {
-          "title": "Aston Villa latest: Emery's blunt response when asked about Garnacho absence",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/13025491/aston-villa-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        }
-      ]
+      }
     },
     {
       "id": "PD-2026-11-29-ELC-ATL",
@@ -401,44 +391,45 @@
       },
       "prediction": {
         "prob": {
-          "home": 18,
-          "draw": 23,
-          "away": 59
+          "home": 16,
+          "draw": 21,
+          "away": 63
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 74,
+        "confidence": 76,
         "pick": "away",
         "reasons": [
-          "埃尔切本赛事主场6场场均仅0.67球、失2.33球，主场攻防明显失衡。",
-          "马德里竞技本赛事客场7场场均进2球、失0.71球，近5场4胜，客战稳定。",
-          "近2次交手埃尔切1胜1平，包括3-2胜马德里竞技，具备爆冷记忆。",
-          "马德里竞技2.9天前刚踢欧冠，轮换与体能消耗可能削弱客场压制。"
+          "埃尔切主场6场场均0.67/2.33，近两主场0-2皇家贝蒂斯、0-1瓦伦西亚。",
+          "马竞本赛事场均进2失0.77，客场7场场均进2失0.71，近5场4胜1负。",
+          "马竞2.9天前刚踢欧冠，埃尔切4天内无其他赛事，主队体能占优。",
+          "近2次交手埃尔切1胜1平，最近埃尔切3-2马德里竞技，不能排除冷门。"
         ],
         "factors": [
-          "主场攻防失衡",
-          "客战攻防强势",
-          "交手不惧",
-          "欧冠后体能"
+          "马竞客场强势",
+          "埃尔切主场疲软",
+          "马竞欧冠消耗",
+          "交手埃尔切不败",
+          "天气影响有限"
         ],
-        "risk": "伤病情况未提供，双方实际阵容无法确认，是最大不确定性。"
+        "risk": "场地未提供；马竞2.9天前刚踢欧冠且轮换未知，体能分配是客胜最大变数。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 14.5,
+        "temp": 14.9,
         "precip": 0,
-        "wind": 5.1
+        "wind": 5.5
       },
       "market": {
         "bookmaker": "市场均值（20 家）",
-        "capturedAt": "2026-11-25T08:55:12Z",
+        "capturedAt": "2026-11-26T00:18:12Z",
         "prob": {
-          "home": 16,
-          "draw": 21,
-          "away": 63
+          "home": 15,
+          "draw": 20,
+          "away": 65
         }
       }
     },
@@ -502,53 +493,67 @@
       },
       "prediction": {
         "prob": {
-          "home": 50,
-          "draw": 25,
+          "home": 48,
+          "draw": 27,
           "away": 25
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 62,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "斯图加特本赛事主场场均进1.75、失1.25，主场进攻效率高于客场。",
-          "法兰克福本赛事客场5场场均失2.6，客场防守明显弱于主场1.4。",
-          "近5场斯图加特2胜1平2负，法兰克福3胜1平1负，客队近期状态略优。",
-          "斯图加特2.9天前刚踢欧冠，法兰克福4天内无赛事；近2次交手主队1胜1平。"
+          "斯图加特近5场2胜1平2负，本赛事10场15/15，场均1.5/1.5",
+          "法兰克福本赛事客场5场场均失2.6，防守漏洞明显",
+          "斯图加特2.9天前欧战客负，法兰克福4天内无其他赛事",
+          "近2次交手斯图加特1胜1平，主场曾3-2法兰克福"
         ],
         "factors": [
-          "主场进失更稳",
-          "客队客场失球多",
-          "主队欧冠消耗",
-          "客队近期状态好",
-          "交手主队不败"
+          "主场攻防略优",
+          "客队客场防守差",
+          "欧战疲劳",
+          "交手不败",
+          "低温无降水"
         ],
-        "risk": "伤病未提供，斯图加特欧冠后的体能恢复与法兰克福客场防守波动是最大不确定性。"
+        "risk": "伤病名单与场地未提供，法兰克福跨赛事数据缺失，斯图加特欧战轮换未知"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 1.1,
+        "temp": 0.5,
         "precip": 0,
-        "wind": 5.2
+        "wind": 5.7
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T08:55:09Z",
+        "capturedAt": "2026-11-26T00:18:09Z",
         "prob": {
-          "home": 55,
+          "home": 54,
           "draw": 21,
-          "away": 24
+          "away": 25
         }
       },
       "news": [
         {
-          "title": "Stuttgart coach Hoeness hails Inter ahead of Champions League trip: ‘One of the best in Europe’",
-          "summary": "Sebastian Hoeness believes Inter are one of the best teams in Europe, but insists Stuttgart...",
-          "link": "https://football-italia.net/stuttgart-coach-hoeness-hails-inter/",
-          "published": "2026-11-24",
+          "title": "Chivu: ‘Inter had right attitude, cannot dominate start to finish in Champions League’",
+          "summary": "Cristian Chivu insists Inter had the right attitude in their 2-0 win over VfB Stuttgart,...",
+          "link": "https://football-italia.net/chivu-inter-had-right-attitude-cannot-dominate/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        },
+        {
+          "title": "UCL | Inter 2-0 VfB Stuttgart: Sucic and Lautaro Martinez revive hope",
+          "summary": "Inter managed to get the better of VfB Stuttgart and leapfrog them in the Champions...",
+          "link": "https://football-italia.net/ucl-inter-2-0-vfb-stuttgart-revive-hope/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Champions League Liveblog: PSG vs. Roma and Inter vs. VfB Stuttgart",
+          "summary": "{rsn-live-v2}",
+          "link": "https://football-italia.net/champions-league-liveblog-psg-roma-inter-vfb/",
+          "published": "2026-11-25",
           "source": "Football Italia"
         }
       ]
@@ -613,41 +618,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 66,
-          "draw": 20,
-          "away": 14
+          "home": 68,
+          "draw": 19,
+          "away": 13
         },
         "score": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
-        "confidence": 68,
+        "confidence": 72,
         "pick": "home",
         "reasons": [
-          "国米本赛事主场6场场均进3.17失1.17，主场攻防效率明显高于客场。",
-          "热那亚本赛事12场仅进13球、场均1.08，客场5场只进5球，破门能力有限。",
-          "热那亚近5场4胜1负，含2-0胜尤文图斯、2-0胜萨索洛，状态不可低估。",
-          "国米3天前刚踢欧冠主场，轮换与体能消耗为变数，交手近2次2-0、2-1均胜。"
+          "国米本赛事12场进32失17，主场6场场均进3.17球，火力占优。",
+          "热那亚本赛事场均仅进1.08球，客场5场场均进1球，进攻产出有限。",
+          "国米近5场3胜1平1负，但客场4-4平亚特兰大、1-3负AC米兰，防线有波动。",
+          "交手近2次国米全胜（2-0、2-1），但3天前刚踢完欧冠，轮换消耗需留意。"
         ],
         "factors": [
           "主场火力",
-          "客队锋无力",
-          "国米体能消耗",
-          "交手压制",
-          "热那亚状态佳"
+          "客队进攻乏力",
+          "交手优势",
+          "欧冠轮换消耗",
+          "防线波动"
         ],
-        "risk": "伤病名单未提供；国米3天前欧冠作战的轮换幅度未知，平局风险不可忽视。"
+        "risk": "国米3天前刚踢欧冠，体能与轮换幅度不确定；本场伤病名单未提供，阵容变化难以评估。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 5.3,
+        "temp": 5.2,
         "precip": 0,
-        "wind": 2.4
+        "wind": 2.9
       },
       "market": {
         "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 72,
           "draw": 17,
@@ -656,24 +661,24 @@
       },
       "news": [
         {
-          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Both Arsenal and Newcastle United are looking to improve their attack by signing Inter's Pio Esposito. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
-          "published": "2026-11-24",
+          "title": "Suárez says 'no excuses left' as Miami looks to avoid early playoff exit",
+          "summary": "Luis Suárez said there are \"no excuses left\" for Inter Miami as the defending MLS Cup champion stares at a possible first-round playoff exit.",
+          "link": "https://www.espn.com/soccer/story/_/id/50594966/inter-miami-mls-playoffs-columbus-crews-luis-suarez",
+          "published": "2026-11-26",
           "source": "ESPN"
         },
         {
-          "title": "Stuttgart coach Hoeness hails Inter ahead of Champions League trip: ‘One of the best in Europe’",
-          "summary": "Sebastian Hoeness believes Inter are one of the best teams in Europe, but insists Stuttgart...",
-          "link": "https://football-italia.net/stuttgart-coach-hoeness-hails-inter/",
-          "published": "2026-11-24",
+          "title": "Chivu: ‘Inter had right attitude, cannot dominate start to finish in Champions League’",
+          "summary": "Cristian Chivu insists Inter had the right attitude in their 2-0 win over VfB Stuttgart,...",
+          "link": "https://football-italia.net/chivu-inter-had-right-attitude-cannot-dominate/",
+          "published": "2026-11-25",
           "source": "Football Italia"
         },
         {
-          "title": "Genoa defender Ostigard spends night in hospital with high fever",
-          "summary": "Genoa defender Leo Ostigard spent Monday night in hospital after suffering a sudden high fever,...",
-          "link": "https://football-italia.net/genoa-defender-ostigard-spends-night-hospital/",
-          "published": "2026-11-24",
+          "title": "UCL | Inter 2-0 VfB Stuttgart: Sucic and Lautaro Martinez revive hope",
+          "summary": "Inter managed to get the better of VfB Stuttgart and leapfrog them in the Champions...",
+          "link": "https://football-italia.net/ucl-inter-2-0-vfb-stuttgart-revive-hope/",
+          "published": "2026-11-25",
           "source": "Football Italia"
         }
       ]
@@ -725,48 +730,54 @@
       },
       "prediction": {
         "prob": {
-          "home": 26,
+          "home": 24,
           "draw": 28,
-          "away": 46
+          "away": 48
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 65,
+        "confidence": 60,
         "pick": "away",
         "reasons": [
-          "里尔本赛事场均失0.73，客场5场失0.8，防守远好于勒芒的场均失1.91。",
-          "勒芒近5场仅1胜，主场0-3负图卢兹、1-1平摩纳哥，主场场均失1.8。",
-          "里尔3天前刚踢欧冠，跨赛事4场失10球，体能和轮换可能削弱联赛稳定性。",
-          "天气低温但降水概率仅4%、风速6.0km/h，对比赛影响有限。"
+          "勒芒本赛事11场进15失21，场均失1.91；主场5场场均失1.8，防线持续漏球",
+          "里尔本赛事场均失0.73，客场5场场均进1.4失0.8，防守稳定性明显更高",
+          "勒芒近5场1胜2平2负，其中主场0-3负图卢兹、客场0-2负特鲁瓦，状态低迷",
+          "里尔3天前刚在欧冠主场2-1击败Bayern，轮换与体能消耗是最大变量"
         ],
         "factors": [
           "里尔防守稳固",
-          "勒芒主场失球多",
-          "里尔欧冠消耗",
-          "低温影响有限",
-          "交手数据缺失"
+          "勒芒防线漏球",
+          "客队欧战后疲劳",
+          "实力差距明显"
         ],
-        "risk": "伤病名单未提供，双方暂无历史交锋数据；里尔3天前踢欧冠，体能恢复存在不确定性。"
+        "risk": "双方无历史交锋数据、场地未提供，勒芒亦无跨赛事样本，里尔欧冠后体能恢复存疑"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 3.5,
-        "precip": 4,
-        "wind": 6.0
+        "temp": 6.6,
+        "precip": 10,
+        "wind": 5.8
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
-          "home": 25,
+          "home": 26,
           "draw": 28,
-          "away": 47
+          "away": 46
         }
       },
       "news": [
+        {
+          "title": "Gordon scores twice in Barca CL win as Bayern lose at Lille",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13575723/european-football-news-and-transfers-barcelona-real-madrid-psg-bayern-munich-latest-and-more",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        },
         {
           "title": "Bayern Munich predicted XI vs Lille: Who replaces Harry Kane?",
           "summary": "Bayern Munich will be without Harry Kane for the next three months after England’s leading goalscorer underwent successful surgery on a torn syndesmosis ligament in his left ankle, sustained during…",
@@ -823,44 +834,42 @@
       },
       "prediction": {
         "prob": {
-          "home": 60,
-          "draw": 23,
+          "home": 57,
+          "draw": 26,
           "away": 17
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 68,
+        "confidence": 70,
         "pick": "home",
         "reasons": [
-          "尼斯本赛事场均进1.55失1.36，主场6场场均进2失1.33。",
-          "特鲁瓦客场5场仅进2球、场均0.4球，进攻端明显受限。",
-          "近5场尼斯3胜2负，含5-2雷恩、2-0昂热；特鲁瓦2胜1平2负。",
-          "市场主胜57%，尼斯主场与攻防数据支持主胜略高于市场。"
+          "尼斯本赛事场均进1.55失1.36，主场场均进2失1.33。",
+          "特鲁瓦客场5场场均仅进0.4球、失1.2球，客战火力有限。",
+          "尼斯近5场3胜2负，含主场5-2雷恩；特鲁瓦2胜1平2负。"
         ],
         "factors": [
           "主场火力",
           "客战乏力",
-          "排名优势",
-          "状态占优",
-          "小比分风险"
+          "排名占优",
+          "无交锋数据"
         ],
-        "risk": "伤病未提供、无历史交锋，且双方无跨赛事数据；特鲁瓦客场低进球易拖成小比分平局。"
+        "risk": "交手记录、跨赛事样本与场地信息缺失，判断主要依赖本赛事数据。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 9.6,
+        "temp": 9.7,
         "precip": 0,
-        "wind": 11.2
+        "wind": 9.9
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
-          "home": 57,
-          "draw": 23,
+          "home": 56,
+          "draw": 24,
           "away": 20
         }
       }
@@ -1026,41 +1035,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 68,
-          "draw": 21,
-          "away": 11
+          "home": 71,
+          "draw": 19,
+          "away": 10
         },
         "score": {
           "home": 2,
-          "away": 0
+          "away": 1
         },
-        "confidence": 68,
+        "confidence": 74,
         "pick": "home",
         "reasons": [
-          "本赛事PSG场均进2.27球、失1.09球，近5场全胜合计进14球失4球。",
-          "洛里昂客场5场仅失2球（场均0.4），防守韧性强，但客场场均仅进0.8球。",
-          "交手近2次全部战平（PSG 2-2、1-1洛里昂），洛里昂对该对手有明显抵抗力。",
-          "PSG 3天前刚踢完欧冠主场，轮换与体能消耗；洛里昂前后4天内无其他赛事。"
+          "巴黎圣日耳曼本赛事场均进2.27失1.09，近5场全胜且进14球。",
+          "洛里昂本赛事场均进0.91失0.82，客场5场仅失2球。",
+          "近2次交手均战平（2-2、1-1），洛里昂不惧巴黎圣日耳曼。",
+          "巴黎圣日耳曼3天前刚踢欧冠，洛里昂4天内无其他赛事。"
         ],
         "factors": [
-          "主场火力稳定",
-          "客队客场低失球",
-          "交手两连平",
-          "欧冠后轮换消耗",
-          "低温0.3℃"
+          "主队全胜状态",
+          "客队客场防守",
+          "交手连平",
+          "主队欧冠疲劳",
+          "低温天气"
         ],
-        "risk": "伤病情况与场地未提供，PSG欧冠后轮换幅度未知，是最大不确定性。"
+        "risk": "场地与伤病名单未提供，洛里昂跨赛事数据缺失，判断存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.3,
-        "precip": 3,
-        "wind": 7.3
+        "temp": 2.8,
+        "precip": 7,
+        "wind": 10.3
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 78,
           "draw": 14,
@@ -1069,18 +1078,25 @@
       },
       "news": [
         {
-          "title": "Gasperini: ‘A great moment for Roma to face the best’ ahead of PSG test",
-          "summary": "Gian Piero Gasperini says Roma’s trip to Paris Saint-Germain is “a great moment” to test...",
-          "link": "https://football-italia.net/gasperini-a-great-moment-for-roma-psg/",
-          "published": "2026-11-24",
+          "title": "Roma end PSG's 12-game winning run with Champions League draw in Paris",
+          "summary": "Paris Saint-Germain's 12-game winning streak ended Wednesday with a 2-2 Champions League draw against Roma.",
+          "link": "https://www.espn.com/soccer/report/_/gameId/401915374",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Gasperini: ‘Roma have our characteristics and won’t change for PSG’",
+          "summary": "Gian Piero Gasperini insists Roma ‘stick to our characteristics’ against Paris Saint-Germain, but benching Donyell...",
+          "link": "https://football-italia.net/gasperini-roma-have-our-characteristics-psg/",
+          "published": "2026-11-25",
           "source": "Football Italia"
         },
         {
-          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Both Arsenal and Newcastle United are looking to improve their attack by signing Inter's Pio Esposito. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
-          "published": "2026-11-24",
-          "source": "ESPN"
+          "title": "Pastore previews PSG vs. Roma: ‘Gasperini’s philosophy is clear, like Luis Enrique’",
+          "summary": "Former Roma and Paris Saint-Germain attacker Javier Pastore has shared his thoughts ahead of the...",
+          "link": "https://football-italia.net/pastore-previews-psg-vs-roma-clear-philosophy/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
         }
       ]
     },
@@ -1145,40 +1161,40 @@
       "prediction": {
         "prob": {
           "home": 27,
-          "draw": 27,
-          "away": 46
+          "draw": 26,
+          "away": 47
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 64,
+        "confidence": 61,
         "pick": "away",
         "reasons": [
-          "勒阿弗尔本赛事场均进0.91失2.27，主场6场场均仅进0.5失2.17。",
-          "斯特拉斯堡场均进1.64失2.09，客场6场场均失2.67，进攻端更强。",
-          "勒阿弗尔近5场全败，含主场1-5巴黎、1-3欧塞尔，状态低迷。",
-          "近2次交手各胜1场，最近勒阿弗尔2-1斯特拉斯堡，主队不惧对手。"
+          "勒阿弗尔近5场全败共失17球，主场场均仅进0.5球。",
+          "斯特拉斯堡赛季场均进1.64球，客场场均1.5球，火力占优。",
+          "交手近2次各胜1场，最近勒阿弗尔主场2-1斯特拉斯堡。",
+          "斯特拉斯堡客场场均失2.67球，双方防线均不稳。"
         ],
         "factors": [
-          "主队主场进球荒",
-          "客队客场防守漏",
-          "主队近5场全败",
-          "交手各取一胜",
-          "客队进攻略强"
+          "主队五连败",
+          "客队攻强守弱",
+          "主队主场乏力",
+          "交手互有胜负",
+          "雨天增加变数"
         ],
-        "risk": "伤病情况未提供，且两队均无跨赛事样本，阵容完整度与强度判断受限。"
+        "risk": "场地与伤病名单未提供，阵容完整度及场地适应性存在不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 5.2,
-        "precip": 32,
-        "wind": 13.0
+        "temp": 7.3,
+        "precip": 61,
+        "wind": 15.0
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 31,
           "draw": 26,
@@ -1246,54 +1262,54 @@
       },
       "prediction": {
         "prob": {
-          "home": 82,
-          "draw": 12,
-          "away": 6
+          "home": 86,
+          "draw": 9,
+          "away": 5
         },
         "score": {
           "home": 3,
-          "away": 0
+          "away": 1
         },
-        "confidence": 80,
+        "confidence": 83,
         "pick": "home",
         "reasons": [
-          "皇家马德里本赛事场均进2.54失0.85，近5场全胜，含4-1塞维利亚。",
-          "阿拉维斯客场6场场均进0.67失1.83，近5场曾1-6负巴塞罗那。",
-          "近2次交手皇家马德里全胜，最近2026-04-21皇家马德里2-1阿拉维斯。",
-          "开赛气温7.3℃且无降水，市场均值主胜83%与上述判断一致。"
+          "皇家马德里西甲13场进33失11，主场场均进3.17失0.67。",
+          "阿拉维斯本赛事客场场均进0.67失1.83，近5场中客场1-6负巴塞罗那。",
+          "皇家马德里近5场联赛全胜，进14失3，含4-1塞维利亚、2-1巴塞罗那。",
+          "近2次交手皇家马德里2胜，最近主场2-1阿拉维斯；天气无降水。"
         ],
         "factors": [
-          "皇家马德里主场强",
-          "阿拉维斯客场弱",
-          "交锋皇家马德里优",
-          "赛程略消耗",
-          "市场主胜83%"
+          "主场场均3.17球",
+          "客队客场0.67球",
+          "近5场全胜",
+          "欧冠后轮换",
+          "交手皇家马德里2胜"
         ],
-        "risk": "伤病未提供，阿拉维斯无跨赛事数据，是本次预测的主要信息缺口。"
+        "risk": "伤病名单未提供，皇家马德里4天前刚踢欧冠，轮换幅度是最大变数。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.3,
+        "temp": 8.1,
         "precip": 0,
-        "wind": 1.6
+        "wind": 2.6
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T08:55:12Z",
+        "capturedAt": "2026-11-26T00:18:12Z",
         "prob": {
-          "home": 83,
-          "draw": 11,
-          "away": 6
+          "home": 85,
+          "draw": 10,
+          "away": 5
         }
       },
       "news": [
         {
-          "title": "Bellingham credits Mourinho 'full stop' for stellar form after Madrid stunner",
-          "summary": "Jude Bellingham praised José Mourinho for helping him reach career-best form after the midfielder scored a stunning goal in Real Madrid's 5-1 comeback win over PSV Eindhoven on Tuesday.",
-          "link": "https://www.espn.com/soccer/story/_/id/50586644/bellingham-mourinho-real-madrid-stunner",
+          "title": "Report Milan have €70m Endrick offer ready for Real Madrid",
+          "summary": "Spanish reports claim Milan are ready to offer €70m in January for Real Madrid and...",
+          "link": "https://football-italia.net/report-milan-have-e70m-endrick-offer-ready/",
           "published": "2026-11-25",
-          "source": "ESPN"
+          "source": "Football Italia"
         }
       ]
     },
@@ -1357,41 +1373,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 27,
-          "draw": 26,
-          "away": 47
+          "home": 28,
+          "draw": 28,
+          "away": 44
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 56,
+        "confidence": 55,
         "pick": "away",
         "reasons": [
-          "乌迪内斯本赛事场均失2.17球，主场6场仅进4球、失14球",
-          "佛罗伦萨客场场均进1.67、失2.5，近5轮客场有4-2胜萨索洛、0-3负蒙扎",
-          "乌迪内斯近5场2平3负，主场2-5负罗马、0-2负AC米兰",
-          "近2次交手双方各胜一场（3-0、5-1），比分悬殊，往绩参考价值有限"
+          "乌迪内斯主场6场场均进0.67失2.33，主场进攻乏力且失球多。",
+          "佛罗伦萨客场6场场均进1.67失2.5，进攻端输出优于对手但防守漏洞明显。",
+          "近5场乌迪内斯2平3负不胜，主场先后2-5负罗马、0-2负AC米兰。",
+          "交手近2次各胜1场，比分为3-0与5-1，波动大参考有限。"
         ],
         "factors": [
-          "主场进攻乏力",
-          "双方防守均差",
-          "客队客场火力更足",
-          "往绩各胜一场",
-          "赛程无额外消耗"
+          "主队主场进攻乏力",
+          "客队客场攻强守弱",
+          "双方防守漏洞大",
+          "交手互有胜负"
         ],
-        "risk": "伤病名单未提供，两队防线均不稳，比分波动与红牌等偶发因素难估。"
+        "risk": "跨赛事数据与伤病名单缺失，两队排名接近且防守均差，比分波动大。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 8.5,
+        "temp": 9.8,
         "precip": 0,
-        "wind": 2.3
+        "wind": 4.0
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 31,
           "draw": 27,
@@ -1459,41 +1474,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 22,
+          "home": 23,
           "draw": 26,
-          "away": 52
+          "away": 51
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 64,
+        "confidence": 73,
         "pick": "away",
         "reasons": [
-          "本赛事利物浦场均进1.64失0.91，两项均优于埃弗顿的1.09/1.27",
-          "利物浦客场5场场均进2球失0.8球，客战效率高于其主场1.33球",
-          "埃弗顿近5场2胜3负，11-23客场0-4负布伦特福德，主场仅1.6球",
-          "近2次交手利物浦全胜（2-1、1-2），且3.7天前刚打完欧冠客场"
+          "利物浦本赛事场均进1.64、失0.91，客场场均进2失0.8，攻防效率占优。",
+          "埃弗顿近5场联赛仅进4球失9球，且11-23客场0-4负布伦特福德，状态不稳。",
+          "近2次交手利物浦全胜，最近一次为Everton 1-2 Liverpool，对位",
+          "利物浦3.7天前刚踢欧冠客场，赛程消耗或削弱其客场压制力；天气降水概率39%。"
         ],
         "factors": [
-          "客场火力强",
-          "攻防效率差",
-          "交手两连胜",
-          "欧冠体能耗",
-          "德比变数"
+          "利物浦客场攻防占优",
+          "埃弗顿主场有火力",
+          "交手利物浦两连胜",
+          "利物浦欧冠后消耗",
+          "降水39%风偏大"
         ],
-        "risk": "伤病名单未提供，利物浦刚客场作战欧冠，轮换与体能存在不确定性"
+        "risk": "埃弗顿无跨赛事数据可校准，且场地信息未提供，限制强度判断。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.3,
-        "precip": 29,
-        "wind": 10.1
+        "temp": 7.0,
+        "precip": 39,
+        "wind": 15.5
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:11Z",
+        "capturedAt": "2026-11-26T00:18:06Z",
         "prob": {
           "home": 23,
           "draw": 25,
@@ -1502,24 +1517,24 @@
       },
       "news": [
         {
-          "title": "Poch fumes at Yoro red and thinks Szoboszlai goal shouldn't have stood",
-          "summary": "Mauricio Pochettino has heavily criticised VAR in Manchester United's loss at Liverpool after Leny Yoro's red card was overturned, while the Argentine believes Dominik Szoboszlai’s opener should not have stood.",
-          "link": "https://www.skysports.com/football/news/11095/13616134/mauricio-pochettino-man-utd-boss-fumes-at-var-in-liverpool-loss-over-leny-yoro-and-dominik-szoboszlai-calls",
-          "published": "2026-11-24",
+          "title": "Liverpool are all smiles as Wirtz, Isak start to click",
+          "summary": "Another match, another fine set of displays from Florian Wirtz and Alexander Isak. Is the huge investment in Liverpool's forward line beginning to pay off?",
+          "link": "https://www.espn.com/soccer/story/_/id/50598544/liverpool-all-smiles-wirtz-isak-start-click",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Isak and Wirtz power Liverpool to easy victory at Club Brugge",
+          "summary": "Liverpool recovered from their shock defeat to Fenerbahce in their last Champions League outing to beat Club Brugge 3-0 and improve their chances of a top-eight league phase finish.",
+          "link": "https://www.skysports.com/football/club-brugge-vs-liverpool/report/577679",
+          "published": "2026-11-25",
           "source": "Sky Sports"
         },
         {
-          "title": "How 'quick check' and unseen angle saw Timber's Isak shirt-pull go unpunished",
-          "summary": "Referees’ chief Howard Webb admitted it was a “quick check” by VAR for Arsenal defender Jurrien Timber’s unpunished shirt-pull on Liverpool striker Alexander Isak in the Gunners’ win at Anfield.",
-          "link": "https://www.skysports.com/football/news/11095/13616058/jurrien-timbers-shirt-pull-on-alexander-isak-ref-chief-howard-webb-admits-quick-check-in-arsenals-win-at-liverpool",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        },
-        {
-          "title": "Man Utd to contact PL and refs over 'totally wrong' Yoro red card interpretation",
-          "summary": "Manchester United will contact ProRef and the Premier League directly over what they believe to be a 'totally wrong' interpretation of Leny Yoro's red card against Liverpool.",
-          "link": "https://www.skysports.com/football/news/11095/13616033/leny-yoro-red-card-ref-chief-howard-webb-backs-process-that-saw-man-utd-defender-sent-off-at-liverpool",
-          "published": "2026-11-24",
+          "title": "Liverpool latest: Munoz adds to injury concern ahead of derby",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025501/liverpool-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-25",
           "source": "Sky Sports"
         }
       ]
@@ -1584,40 +1599,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 37,
-          "draw": 32,
-          "away": 31
+          "home": 33,
+          "draw": 31,
+          "away": 36
         },
         "score": {
           "home": 1,
-          "away": 0
+          "away": 2
         },
-        "confidence": 55,
-        "pick": "home",
+        "confidence": 54,
+        "pick": "away",
         "reasons": [
-          "瓦伦西亚本赛事主场场均进0.43失2，主场进攻效率极低。",
-          "奥萨苏纳客场场均失3.17球，防守漏洞明显，利好主队。",
-          "近2次交手各自主场1-0取胜，最近一次瓦伦西亚1-0奥萨苏纳。",
-          "市场均值主胜44%，但主队主场数据不足以支撑更高概率。"
+          "瓦伦西亚本赛事主场7场场均仅0.43球、失2球，主场攻防均弱。",
+          "奥萨苏纳客场6场场均进1.17、失3.17，防线漏洞明显。",
+          "近5场瓦伦西亚主场0-3、1-2、0-0，主场进球能力不足。",
+          "近两次交手各自主场1-0；市场主胜44%，但数据不支持高看主队。"
         ],
         "factors": [
           "主场进攻乏力",
-          "客队客场防守差",
-          "交手小比分",
-          "排名接近"
+          "客队客场漏防",
+          "交手主队小胜",
+          "无赛程消耗",
+          "天气无影响"
         ],
-        "risk": "伤病与场地未提供，双方也无跨赛事数据，缺阵信息可能影响判断。"
+        "risk": "跨赛事数据缺失、伤病名单未提供，是判断双方强度与阵容完整性的主要不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 16.9,
+        "temp": 17.6,
         "precip": 0,
-        "wind": 3.7
+        "wind": 2.4
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T08:55:12Z",
+        "capturedAt": "2026-11-26T00:18:12Z",
         "prob": {
           "home": 44,
           "draw": 29,
@@ -1685,67 +1701,68 @@
       },
       "prediction": {
         "prob": {
-          "home": 18,
-          "draw": 22,
-          "away": 60
+          "home": 16,
+          "draw": 21,
+          "away": 63
         },
         "score": {
-          "home": 0,
+          "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 78,
         "pick": "away",
         "reasons": [
-          "萨索洛近5场全败，合计进4失17，防守持续崩溃。",
-          "本赛事场均失2.58，主场场均失2.67，主场亦无改善。",
-          "那不勒斯本赛事场均进1.58失1.17，客场1.5/1.33更稳。",
-          "近2次交手那不勒斯均取胜且零封（1-0、2-0）。"
+          "萨索洛本赛事场均失2.58，近5场全败且共失17球，防线承压。",
+          "那不勒斯本赛事场均进1.58失1.17，客场场均进1.5，效率占优。",
+          "近2次交手那不勒斯均零封取胜（1-0、2-0），对位心理占优。",
+          "市场客胜57%仅作基线，主队防守崩盘支持客胜略高于市场。"
         ],
         "factors": [
-          "近5场全败",
-          "主队防守崩溃",
-          "客队攻守更稳",
-          "交手两连胜"
+          "主队5连败",
+          "主队场均失2.58",
+          "客队攻守占优",
+          "交手客队2连胜",
+          "天气无降水"
         ],
-        "risk": "伤病未提供且萨索洛无跨赛事数据，阵容与强度参照不足。"
+        "risk": "萨索洛无跨赛事数据，无法校验跨赛事强度，是判断客胜的主要不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 9.6,
+        "temp": 9.2,
         "precip": 0,
-        "wind": 2.4
+        "wind": 6.3
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 20,
-          "draw": 22,
-          "away": 58
+          "draw": 23,
+          "away": 57
         }
       },
       "news": [
         {
+          "title": "Allegri videogame lets you fling Napoli coach’s jacket in fury",
+          "summary": "Napoli fans can now play a videogame as coach Max Allegri, but rather than figure...",
+          "link": "https://football-italia.net/allegri-videogame-fling-napoli-jacket/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        },
+        {
+          "title": "How Donnarumma reacted to Napoli fans’ insults in Man City’s ‘theatre-like’ stadium",
+          "summary": "La Gazzetta dello Sport reports that Napoli fans’ insults towards Gianluigi Donnarumma were clearly audible...",
+          "link": "https://football-italia.net/donnarumma-reacted-napoli-fans-insults-stadium/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        },
+        {
           "title": "'You question everything' - Haaland lays City's frustrations bare",
-          "summary": "Erling Haaland has admitted Manchester City's poor form is affecting the players, admitting \"when you don't win, you question everything\" after they were held 2-2 at home by Napoli in the Champions League.",
+          "summary": "Erling Haaland said Manchester City's poor form is affecting the players, admitting \"when you don't win, you question everything\" after they were held 2-2 at home by Napoli in the Champions League.",
           "link": "https://www.skysports.com/football/news/11095/13616226/erling-haaland-frustrated-with-manchester-city-form-when-you-dont-win-you-question-everything",
           "published": "2026-11-24",
           "source": "Sky Sports"
-        },
-        {
-          "title": "Cherki salvages draw with Napoli but Man City frustrate",
-          "summary": "Rayan Cherki’s late strike salvaged a 2-2 draw for Manchester City at home to Napoli in the Champions League but Enzo Maresca’s side again struggled to find their fluency.",
-          "link": "https://www.skysports.com/football/manchester-city-vs-napoli/report/577674",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        },
-        {
-          "title": "Maresca explains surprising Manchester City choices in 2-2 with Napoli",
-          "summary": "Enzo Maresca explained some of his surprising Manchester City tactical choices in the 2-2 draw...",
-          "link": "https://football-italia.net/maresca-explains-surprising-manchester-city/",
-          "published": "2026-11-24",
-          "source": "Football Italia"
         }
       ]
     },
@@ -1809,41 +1826,40 @@
       },
       "prediction": {
         "prob": {
-          "home": 24,
+          "home": 22,
           "draw": 26,
-          "away": 50
+          "away": 52
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 54,
+        "confidence": 64,
         "pick": "away",
         "reasons": [
-          "马赛本赛事场均进2.18失1.55，近5场4胜，客场场均进1.8。",
-          "欧塞尔主场5场场均进1失1.2，近两主场0-1、1-1，火力有限。",
-          "近2次交手马赛分别1-0取胜，对位与心理均占优。",
-          "市场均值客胜51%仅作参照，与马赛客场攻守数据基本一致。"
+          "马赛本赛事场均进2.18失1.55，近5场4胜，客场场均进1.8",
+          "欧塞尔本赛事场均失2.27，主场5场场均仅进1球、失1.2",
+          "近2次交手马赛均以1-0取胜，对欧塞尔形成压制",
+          "开赛气温6.3℃、降水概率74%，湿冷或压低总进球"
         ],
         "factors": [
-          "马赛状态占优",
-          "客场攻守更稳",
-          "欧塞尔主场乏力",
-          "交手马赛两胜",
-          "低温有雨"
+          "马赛客场状态好",
+          "欧塞尔主场低进球",
+          "交手马赛两连胜",
+          "湿冷雨战"
         ],
-        "risk": "伤病情况与场地信息未提供，且双方无跨赛事数据，临场阵容变化是最大不确定性。"
+        "risk": "两队均无跨赛事数据，场地未提供；马赛客场场均失1.2，雨战若陷入僵持，平局风险上升"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 3.3,
-        "precip": 38,
-        "wind": 0.7
+        "temp": 6.3,
+        "precip": 74,
+        "wind": 4.7
       },
       "market": {
         "bookmaker": "市场均值（22 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 25,
           "draw": 24,
@@ -1912,55 +1928,46 @@
       "prediction": {
         "prob": {
           "home": 33,
-          "draw": 29,
-          "away": 38
+          "draw": 27,
+          "away": 40
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 60,
+        "confidence": 54,
         "pick": "away",
         "reasons": [
-          "伯恩茅斯本赛事场均进1.64球，近5场全胜，含客场3-0胜曼联",
-          "富勒姆本赛事场均进1球、失1.18球，近5场3平2胜保持不败",
-          "富勒姆主场场均失1.6球，伯恩茅斯客场场均进1.8球但失2球",
-          "近2次交手伯恩茅斯全胜，比分0-1与3-1"
+          "伯恩茅斯近5场全胜，本赛事场均进1.64失1.27，状态占优。",
+          "富勒姆本赛事主场5场场均进1.4失1.6，防守偏松。",
+          "近2次交手伯恩茅斯全胜，最近富勒姆主场0-1告负。",
+          "富勒姆近5场3平2胜保持不败，主场1-1纽卡斯尔联。"
         ],
         "factors": [
-          "客队五连胜",
-          "客场攻强守弱",
-          "主队平局偏多",
-          "交手客队占优",
-          "伤停未提供"
+          "伯恩茅斯五连胜",
+          "富勒姆主场失球多",
+          "往绩客队全胜",
+          "客队客场攻强守弱",
+          "赛程天气影响小"
         ],
-        "risk": "伤病名单未提供，且伯恩茅斯客场场均失2球、富勒姆主场场均失1.6球，双方防线稳定性存疑"
+        "risk": "伤病名单、场地和跨赛事数据未提供，临场信息不足是最大不确定性。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 8.1,
-        "precip": 16,
-        "wind": 5.8
+        "temp": 9.7,
+        "precip": 3,
+        "wind": 8.6
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:11Z",
+        "capturedAt": "2026-11-26T00:18:06Z",
         "prob": {
           "home": 36,
           "draw": 27,
           "away": 37
         }
-      },
-      "news": [
-        {
-          "title": "Papers: Chelsea will push to sign Bournemouth's Scott in January",
-          "summary": "The top stories and transfer rumours from Tuesday's newspapers...",
-          "link": "https://www.skysports.com/football/news/11095/13616238/chelsea-transfer-news-blues-will-push-to-sign-bournemouth-midfielder-alex-scott-in-january-paper-talk",
-          "published": "2026-11-24",
-          "source": "Sky Sports"
-        }
-      ]
+      }
     },
     {
       "id": "PL-2026-11-29-BHA-NEW",
@@ -2022,69 +2029,46 @@
       },
       "prediction": {
         "prob": {
-          "home": 63,
+          "home": 62,
           "draw": 21,
-          "away": 16
+          "away": 17
         },
         "score": {
           "home": 2,
-          "away": 1
+          "away": 0
         },
-        "confidence": 65,
+        "confidence": 54,
         "pick": "home",
         "reasons": [
-          "布莱顿本赛事主场5场场均进3球、合计仅失1球，主场攻防压制力极强",
-          "布莱顿赛季合计26进9失、场均净胜1.5球，排名第2明显强于第13的纽卡",
-          "纽卡本赛事客场5场场均失1.8球，近5场仅1胜且两场主场0-1告负",
-          "近2次交手各1胜，最近纽卡3-1取胜，说明客队具备一定爆冷能力"
+          "布莱顿本赛事主场5场场均进3球、仅失0.2球，主场攻防极强。",
+          "布莱顿赛季合计进26失9，场均进2.36/失0.82，优于纽卡15/18。",
+          "纽卡近5场仅1胜，本赛事客场场均失1.8球，防守不稳定。",
+          "近2次交手各胜1场，最近纽卡3-1布莱顿，客队有反击威胁。"
         ],
         "factors": [
-          "主场场均失0.2球",
-          "纽卡客场失1.8球",
-          "排名第2对第13",
-          "交手1胜1负"
+          "主场场均3球",
+          "赛季进26失9",
+          "纽卡客场失1.8",
+          "近2次各1胜"
         ],
-        "risk": "伤病与场地信息未提供；布莱顿近5场两场客场0-2失利，状态存在波动"
+        "risk": "伤病名单未提供，且双方无跨赛事数据，轮换与对抗强度判断受限。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 8.2,
-        "precip": 21,
-        "wind": 6.8
+        "temp": 9.3,
+        "precip": 4,
+        "wind": 8.3
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:11Z",
+        "capturedAt": "2026-11-26T00:18:06Z",
         "prob": {
           "home": 61,
           "draw": 21,
           "away": 18
         }
-      },
-      "news": [
-        {
-          "title": "Transfer rumors, news: PSG eye Estêvão and Luis Díaz amid injury woes",
-          "summary": "Both Arsenal and Newcastle United are looking to improve their attack by signing Inter's Pio Esposito. Transfer Talk has the latest.",
-          "link": "https://www.espn.com/soccer/story/_/id/50580721/transfer-rumors-news-psg-estevao-luis-diaz-chelsea-bayern",
-          "published": "2026-11-24",
-          "source": "ESPN"
-        },
-        {
-          "title": "Arsenal’s David Raya ruled out of the game against Borussia Dortmund",
-          "summary": "Arsenal goalkeeper David Raya will be unavailable for Tuesday’s UEFA Champions League game against Borussia Dortmund after suffering an injury in his side’s 2-2 draw against Newcastle United on Saturday. …",
-          "link": "https://www.getfootballnewsgermany.com/2026/arsenals-david-raya-ruled-out-of-the-game-against-borussia-dortmund/",
-          "published": "2026-11-23",
-          "source": "Get German Football News"
-        },
-        {
-          "title": "Taylor shuts down Lazio exit amid Newcastle and Juventus links: ‘I want to help the club return to the Champions League’",
-          "summary": "Kenneth Taylor has ruled out leaving Lazio in January, insisting he wants to help Gennaro...",
-          "link": "https://football-italia.net/taylor-shuts-lazio-exit-newcastle-juventus/",
-          "published": "2026-11-24",
-          "source": "Football Italia"
-        }
-      ]
+      }
     },
     {
       "id": "PL-2026-11-29-SUN-TOT",
@@ -2146,45 +2130,44 @@
       },
       "prediction": {
         "prob": {
-          "home": 28,
-          "draw": 31,
-          "away": 41
+          "home": 27,
+          "draw": 33,
+          "away": 40
         },
         "score": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 2
         },
-        "confidence": 54,
+        "confidence": 58,
         "pick": "away",
         "reasons": [
-          "热刺近5场4胜1负，本赛事总进12失11，状态优于桑德兰的1胜2平2负。",
-          "桑德兰主场场均仅进0.4失0.8，热刺客场场均进0.6失1.0，均偏低。",
-          "近2次交手桑德兰1胜1平，包括主场1-0热刺，心理层面不处下风。",
-          "双方4天内均无其他赛事，天气7.5℃、降水23%，对比赛影响有限。"
+          "桑德兰主场5场场均进0.4失0.8，出现1-0胜切尔西、0-0平利兹联等低比分。",
+          "热刺客场5场场均仅进0.6球，客场火力远低于其主场1.5球。",
+          "热刺近5场4胜状态占优，但联赛总进12失11，优势幅度有限。",
+          "近2次交手桑德兰1胜1平，含2026-04-12主场1-0击败热刺。"
         ],
         "factors": [
-          "热刺状态占优",
-          "主队主场守强",
-          "热刺客场火力弱",
+          "主场进球极低",
+          "热刺客场乏力",
           "交手桑德兰不败",
-          "低比分倾向"
+          "低比分平局"
         ],
-        "risk": "伤病信息与跨赛事数据均未提供，临场阵容和强度参照不足是最大不确定性。"
+        "risk": "双方进攻效率低、进球波动大，场地信息未提供，一次定位球即可改变结果。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.5,
-        "precip": 23,
-        "wind": 15.8
+        "temp": 8.0,
+        "precip": 12,
+        "wind": 27.4
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:11Z",
+        "capturedAt": "2026-11-26T00:18:06Z",
         "prob": {
-          "home": 27,
+          "home": 26,
           "draw": 28,
-          "away": 45
+          "away": 46
         }
       }
     },
@@ -2235,41 +2218,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
+          "home": 42,
           "draw": 28,
-          "away": 47
+          "away": 30
         },
         "score": {
-          "home": 0,
+          "home": 2,
           "away": 1
         },
-        "confidence": 60,
-        "pick": "away",
+        "confidence": 48,
+        "pick": "home",
         "reasons": [
-          "本赛事水晶宫场均失2.45，近5场全败共失15球，防线持续崩盘。",
-          "赫尔城本赛事场均仅失1.0，客场5场场均失1.2，防守明显更稳。",
-          "水晶宫主场场均进1.4却失2.6，攻守失衡；赫尔城客场进0.8但失球少。",
-          "市场主胜51%与数据相反，主队排名垫底且五连败，难以支撑主胜。"
+          "水晶宫本赛事11场合计失27球、场均失2.45，近5场全败共失15球，防守漏洞明",
+          "赫尔城本赛事场均仅失1球，客场5场场均失1.2球，防守韧性强于对手。",
+          "水晶宫主场场均进1.4球，赫尔城客场场均进0.8球，双方进攻效率有限，总进球偏小",
+          "市场均值主胜51%，但主队排名垫底且五连败，依据进失球与近期比分下调主胜概率。"
         ],
         "factors": [
-          "主队五连败",
-          "防线漏洞大",
-          "客队防守稳",
-          "排名反差",
-          "市场分歧"
+          "水晶宫五连败",
+          "赫尔城防守稳固",
+          "主队场均失2.45",
+          "客队客场进球少",
+          "分歧于市场主胜"
         ],
-        "risk": "伤病与场地未提供，历史交锋空白，主队状态能否触底反弹未知。"
+        "risk": "交手记录暂无、伤病名单未公布，缺少这两项关键参考，预测不确定性较大。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 7.7,
-        "precip": 19,
-        "wind": 6.1
+        "temp": 9.5,
+        "precip": 3,
+        "wind": 9.7
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-25T08:55:11Z",
+        "capturedAt": "2026-11-26T00:18:06Z",
         "prob": {
           "home": 51,
           "draw": 25,
@@ -2337,40 +2320,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 39,
+          "home": 41,
           "draw": 27,
-          "away": 34
+          "away": 32
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 54,
+        "confidence": 58,
         "pick": "home",
         "reasons": [
-          "弗赖堡本赛事主场5场场均进2.8失1，主场攻防强于客场。",
-          "莱比锡红牛客场5场场均进1.8失2.4，与本赛事总场均进3.2差距明显。",
-          "近5场弗赖堡3胜2负、莱比锡红牛4胜1负；最近交手弗赖堡4-1胜。",
-          "市场均值主胜35%、客胜40%，主场进失球差异支持略上调主胜。"
+          "本赛事弗赖堡主场场均进2.8失1，近5场2-0胜柏林联合、2-1胜奥格斯堡",
+          "莱比锡客场场均进1.8失2.4，与主场4.6/0.4反差极大，客战防守不稳",
+          "近2次交手各胜一场，最近2026-05-16弗赖堡主场4-1大胜莱比锡",
+          "莱比锡在欧冠客场1-4负Real Madrid、1-4负Como 1907，客战"
         ],
         "factors": [
-          "主场火力",
-          "客战防守",
-          "低温少雨",
-          "赛程宽松"
+          "主场攻防高效",
+          "客战防守漏洞",
+          "莱比锡火力强",
+          "低温低风",
+          "交手各胜一场"
         ],
-        "risk": "伤病与场地未提供，弗赖堡跨赛事数据缺失，阵容和强度参照有限。"
+        "risk": "弗赖堡无跨赛事数据，莱比锡客场5-1大胜柏林联合，客战状态或优于场均数据"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 0.6,
-        "precip": 3,
-        "wind": 2.4
+        "temp": 1.7,
+        "precip": 16,
+        "wind": 1.8
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-25T08:55:09Z",
+        "capturedAt": "2026-11-26T00:18:09Z",
         "prob": {
           "home": 35,
           "draw": 25,
@@ -2379,17 +2363,24 @@
       },
       "news": [
         {
+          "title": "Antonio Nusa enjoying his football after another great display in the Champions League",
+          "summary": "RB Leipzig’s man on form Antonio Nusa continued to put on another dazzling display in his team’s 3-1 win against French side RC Lens. Scoring a brace, the Norwegian takes…",
+          "link": "https://www.getfootballnewsgermany.com/2026/antonio-nusa-enjoying-his-football-after-another-great-display-in-the-champions-league/",
+          "published": "2026-11-25",
+          "source": "Get German Football News"
+        },
+        {
+          "title": "‘We need to learn to enjoy moments like these’ – Martin Demichelis on RB Leipzig’s latest win",
+          "summary": "RB Leipzig secured a 3-1 win against RC Lens in the Champions League on Tuesday night. Speaking after the game, head coach Martin Demichelis said the team still has issues…",
+          "link": "https://www.getfootballnewsgermany.com/2026/we-need-to-learn-to-enjoy-moments-like-these-martin-demichelis-on-rb-leipzigs-latest-win/",
+          "published": "2026-11-25",
+          "source": "Get German Football News"
+        },
+        {
           "title": "PLAYER RATINGS | RB Leipzig 3 – 1 Lens: Antonio Nusa drives Leipzig forward",
           "summary": "RB Leipzig climbed into the UEFA Champions League play-off spots with a 3-1 win over French outfit Lens, thanks largely to a superb performance from the in-form Antonio Nusa, who…",
           "link": "https://www.getfootballnewsgermany.com/2026/player-ratings-rb-leipzig-3-1-lens-nusa-drives-leipzig-forward/",
           "published": "2026-11-24",
-          "source": "Get German Football News"
-        },
-        {
-          "title": "FEATURE | 5 standout players from Bundesliga, Matchday 10",
-          "summary": "Bundesliga Matchday 10 delivered an eventful return from the international break, with Werder Bremen dominating the Nordderby, RB Leipzig scoring five against Union Berlin and Bayer Leverkusen recording an emphatic…",
-          "link": "https://www.getfootballnewsgermany.com/2026/feature-5-standout-players-from-bundesliga-matchday-10/",
-          "published": "2026-11-23",
           "source": "Get German Football News"
         }
       ]
@@ -2442,46 +2433,69 @@
       "prediction": {
         "prob": {
           "home": 9,
-          "draw": 12,
-          "away": 79
+          "draw": 15,
+          "away": 76
         },
         "score": {
           "home": 1,
           "away": 3
         },
-        "confidence": 54,
+        "confidence": 82,
         "pick": "away",
         "reasons": [
-          "巴塞罗那本赛事场均进3.92失1.15，客场6场场均进4失1。",
-          "拉科鲁尼亚本赛事场均进1.23失1.31，近5场仅1胜，且客场1-3负阿拉维斯。",
-          "巴塞罗那近5场4胜1负，含客场2-1马德里竞技、5-2皇家贝蒂斯。",
-          "巴塞罗那3.9天前欧冠客战，天气13.6℃、降水25%影响有限。"
+          "巴塞罗那本赛事场均进3.92失1.15，客场场均进4失1，攻防全面占优。",
+          "拉科鲁尼亚本赛事场均进1.23失1.31，近5场仅进4失6。",
+          "巴塞罗那近5场4胜1负，含客2-1马德里竞技、5-2皇家贝蒂斯。",
+          "巴塞罗那3.9天前刚踢欧冠客场，轮换与体能可能限制大胜幅度。"
         ],
         "factors": [
-          "客队火力占优",
-          "客场场均4球",
-          "主队防守一般",
-          "赛程消耗",
-          "实力差距明显"
+          "巴塞罗那火力",
+          "客场进球效率",
+          "拉科鲁尼亚低迷",
+          "巴塞罗那赛程消耗",
+          "客胜倾向"
         ],
-        "risk": "伤病未提供，历史交锋暂无数据，拉科鲁尼亚跨赛事无数据。"
+        "risk": "场地信息未提供，巴塞罗那3.9天前欧冠客场后的轮换与体能是最大变数。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 13.6,
-        "precip": 25,
-        "wind": 11.8
+        "temp": 14.1,
+        "precip": 4,
+        "wind": 6.6
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T08:55:12Z",
+        "capturedAt": "2026-11-26T00:18:12Z",
         "prob": {
           "home": 10,
           "draw": 14,
           "away": 76
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Gordon enjoys 'very special' Baku again to lead Barcelona rout",
+          "summary": "Baku brought the best out of Anthony Gordon once again as the England forward netted twice in Barcelona's 4-1 Champions League victory over Sabah.",
+          "link": "https://www.espn.com/soccer/story/_/id/50597280/anthony-gordon-barcelona-baku-sabah-fk-champions-league",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Who are Sabah? Barça's Champions League opponents from near Iranian border",
+          "summary": "Sabah, a club near the Iranian border that didn't exist a decade ago, with a coach who owes his career to a Lithuanian quiz show, are in this season Champions League. How did they make it?",
+          "link": "https://www.espn.com/soccer/story/_/id/49742966/who-champions-league-debutants-sabah-fk-heres-need-know",
+          "published": "2026-11-25",
+          "source": "ESPN"
+        },
+        {
+          "title": "Gordon scores twice in Barca CL win as Bayern lose at Lille",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13575723/european-football-news-and-transfers-barcelona-real-madrid-psg-bayern-munich-latest-and-more",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
     }
   ]
 }
