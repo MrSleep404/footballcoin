@@ -4,6 +4,7 @@
   "generatedAt": "2026-11-24T22:00:32+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
+  "promptVersion": "legacy-2026-11-24",
   "matchCount": 9,
   "degradedCount": 0,
   "matches": [
