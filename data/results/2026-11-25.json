@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-25",
-  "generatedAt": "2026-11-26T09:23:39+08:00",
+  "generatedAt": "2026-11-26T10:02:35+08:00",
   "source": "football-data.org",
   "count": 9,
   "results": [
@@ -12,7 +12,7 @@
       "awayGoals": 1,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-COM-AEK",
@@ -21,7 +21,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-FEY-FCP",
@@ -30,7 +30,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-FK-LIN",
@@ -39,7 +39,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-GAL-AVL",
@@ -48,7 +48,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-MCI-NAP",
@@ -57,7 +57,7 @@
       "awayGoals": 2,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-RBL-RCL",
@@ -66,7 +66,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-RMA-PSV",
@@ -75,7 +75,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     },
     {
       "id": "CL-2026-11-25-SBA-BET",
@@ -84,7 +84,7 @@
       "awayGoals": 2,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:23:39+08:00"
+      "updatedAt": "2026-11-26T10:02:35+08:00"
     }
   ]
 }
