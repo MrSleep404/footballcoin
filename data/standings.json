@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T16:55:03+08:00",
+  "updatedAt": "2026-11-26T08:12:34+08:00",
   "leagues": [
     {
       "code": "PL",
@@ -2056,7 +2056,7 @@
     {
       "code": "CL",
       "name": "欧冠",
-      "matchday": 5,
+      "matchday": 6,
       "table": [
         {
           "rank": 1,
@@ -2084,15 +2084,16 @@
           "name": "巴黎圣日耳曼",
           "tla": "PSG",
           "crest": "https://crests.football-data.org/524.png",
-          "played": 4,
+          "played": 5,
           "won": 4,
-          "draw": 0,
+          "draw": 1,
           "lost": 0,
-          "goalsFor": 20,
-          "goalsAgainst": 5,
+          "goalsFor": 22,
+          "goalsAgainst": 7,
           "goalDiff": 15,
-          "points": 12,
+          "points": 13,
           "form": [
+            "D",
             "W",
             "W",
             "W",
@@ -2122,6 +2123,48 @@
         },
         {
           "rank": 4,
+          "name": "巴塞罗那",
+          "tla": "FCB",
+          "crest": "https://crests.football-data.org/81.png",
+          "played": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goalsFor": 18,
+          "goalsAgainst": 7,
+          "goalDiff": 11,
+          "points": 12,
+          "form": [
+            "W",
+            "W",
+            "L",
+            "W",
+            "W"
+          ]
+        },
+        {
+          "rank": 5,
+          "name": "利物浦",
+          "tla": "LIV",
+          "crest": "https://crests.football-data.org/64.png",
+          "played": 5,
+          "won": 4,
+          "draw": 0,
+          "lost": 1,
+          "goalsFor": 17,
+          "goalsAgainst": 10,
+          "goalDiff": 7,
+          "points": 12,
+          "form": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "W"
+          ]
+        },
+        {
+          "rank": 6,
           "name": "皇家贝蒂斯",
           "tla": "BET",
           "crest": "https://crests.football-data.org/90.png",
@@ -2142,7 +2185,7 @@
           ]
         },
         {
-          "rank": 5,
+          "rank": 7,
           "name": "阿森纳",
           "tla": "ARS",
           "crest": "https://crests.football-data.org/57.png",
@@ -2163,7 +2206,7 @@
           ]
         },
         {
-          "rank": 6,
+          "rank": 8,
           "name": "曼城",
           "tla": "MCI",
           "crest": "https://crests.football-data.org/65.png",
@@ -2184,7 +2227,28 @@
           ]
         },
         {
-          "rank": 7,
+          "rank": 9,
+          "name": "葡萄牙体育",
+          "tla": "SPO",
+          "crest": "https://crests.football-data.org/498.png",
+          "played": 5,
+          "won": 3,
+          "draw": 1,
+          "lost": 1,
+          "goalsFor": 10,
+          "goalsAgainst": 6,
+          "goalDiff": 4,
+          "points": 10,
+          "form": [
+            "D",
+            "W",
+            "L",
+            "W",
+            "W"
+          ]
+        },
+        {
+          "rank": 10,
           "name": "多特蒙德",
           "tla": "BVB",
           "crest": "https://crests.football-data.org/4.png",
@@ -2205,27 +2269,7 @@
           ]
         },
         {
-          "rank": 8,
-          "name": "巴塞罗那",
-          "tla": "FCB",
-          "crest": "https://crests.football-data.org/81.png",
-          "played": 4,
-          "won": 3,
-          "draw": 0,
-          "lost": 1,
-          "goalsFor": 14,
-          "goalsAgainst": 6,
-          "goalDiff": 8,
-          "points": 9,
-          "form": [
-            "W",
-            "L",
-            "W",
-            "W"
-          ]
-        },
-        {
-          "rank": 9,
+          "rank": 11,
           "name": "阿斯顿维拉",
           "tla": "AVL",
           "crest": "https://crests.football-data.org/58.png",
@@ -2246,39 +2290,41 @@
           ]
         },
         {
-          "rank": 10,
-          "name": "利物浦",
-          "tla": "LIV",
-          "crest": "https://crests.football-data.org/64.png",
-          "played": 4,
+          "rank": 12,
+          "name": "国际米兰",
+          "tla": "INT",
+          "crest": "https://crests.football-data.org/108.png",
+          "played": 5,
           "won": 3,
           "draw": 0,
-          "lost": 1,
-          "goalsFor": 14,
-          "goalsAgainst": 10,
+          "lost": 2,
+          "goalsFor": 10,
+          "goalsAgainst": 6,
           "goalDiff": 4,
           "points": 9,
           "form": [
+            "W",
+            "W",
+            "W",
             "L",
-            "W",
-            "W",
-            "W"
+            "L"
           ]
         },
         {
-          "rank": 11,
+          "rank": 13,
           "name": "布鲁日",
           "tla": "BRU",
           "crest": "https://crests.football-data.org/851.png",
-          "played": 4,
+          "played": 5,
           "won": 3,
           "draw": 0,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 11,
-          "goalsAgainst": 7,
-          "goalDiff": 4,
+          "goalsAgainst": 10,
+          "goalDiff": 1,
           "points": 9,
           "form": [
+            "L",
             "W",
             "W",
             "W",
@@ -2286,27 +2332,7 @@
           ]
         },
         {
-          "rank": 12,
-          "name": "葡萄牙体育",
-          "tla": "SPO",
-          "crest": "https://crests.football-data.org/498.png",
-          "played": 4,
-          "won": 3,
-          "draw": 0,
-          "lost": 1,
-          "goalsFor": 8,
-          "goalsAgainst": 4,
-          "goalDiff": 4,
-          "points": 9,
-          "form": [
-            "W",
-            "L",
-            "W",
-            "W"
-          ]
-        },
-        {
-          "rank": 13,
+          "rank": 14,
           "name": "加拉塔萨雷",
           "tla": "GAL",
           "crest": "https://crests.football-data.org/610.png",
@@ -2327,19 +2353,20 @@
           ]
         },
         {
-          "rank": 14,
+          "rank": 15,
           "name": "拜仁慕尼黑",
           "tla": "FCB",
           "crest": "https://crests.football-data.org/5.png",
-          "played": 4,
+          "played": 5,
           "won": 2,
           "draw": 2,
-          "lost": 0,
-          "goalsFor": 12,
-          "goalsAgainst": 5,
-          "goalDiff": 7,
+          "lost": 1,
+          "goalsFor": 13,
+          "goalsAgainst": 7,
+          "goalDiff": 6,
           "points": 8,
           "form": [
+            "L",
             "W",
             "D",
             "D",
@@ -2347,19 +2374,41 @@
           ]
         },
         {
-          "rank": 15,
+          "rank": 16,
+          "name": "费内巴切",
+          "tla": "FEN",
+          "crest": "https://crests.football-data.org/613.png",
+          "played": 5,
+          "won": 2,
+          "draw": 2,
+          "lost": 1,
+          "goalsFor": 7,
+          "goalsAgainst": 11,
+          "goalDiff": -4,
+          "points": 8,
+          "form": [
+            "W",
+            "W",
+            "D",
+            "L",
+            "D"
+          ]
+        },
+        {
+          "rank": 17,
           "name": "斯图加特",
           "tla": "VFB",
           "crest": "https://crests.football-data.org/10.png",
-          "played": 4,
+          "played": 5,
           "won": 2,
           "draw": 1,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 7,
-          "goalsAgainst": 4,
-          "goalDiff": 3,
+          "goalsAgainst": 6,
+          "goalDiff": 1,
           "points": 7,
           "form": [
+            "L",
             "L",
             "D",
             "W",
@@ -2367,7 +2416,49 @@
           ]
         },
         {
-          "rank": 16,
+          "rank": 18,
+          "name": "马德里竞技",
+          "tla": "ATL",
+          "crest": "https://crests.football-data.org/78.png",
+          "played": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goalsFor": 6,
+          "goalsAgainst": 5,
+          "goalDiff": 1,
+          "points": 7,
+          "form": [
+            "W",
+            "L",
+            "D",
+            "W",
+            "L"
+          ]
+        },
+        {
+          "rank": 19,
+          "name": "曼联",
+          "tla": "MUN",
+          "crest": "https://crests.football-data.org/66.png",
+          "played": 5,
+          "won": 2,
+          "draw": 1,
+          "lost": 2,
+          "goalsFor": 10,
+          "goalsAgainst": 10,
+          "goalDiff": 0,
+          "points": 7,
+          "form": [
+            "D",
+            "W",
+            "L",
+            "L",
+            "W"
+          ]
+        },
+        {
+          "rank": 20,
           "name": "博多格林特",
           "tla": "FK",
           "crest": "https://crests.football-data.org/5721.png",
@@ -2388,27 +2479,7 @@
           ]
         },
         {
-          "rank": 17,
-          "name": "国际米兰",
-          "tla": "INT",
-          "crest": "https://crests.football-data.org/108.png",
-          "played": 4,
-          "won": 2,
-          "draw": 0,
-          "lost": 2,
-          "goalsFor": 8,
-          "goalsAgainst": 6,
-          "goalDiff": 2,
-          "points": 6,
-          "form": [
-            "W",
-            "W",
-            "L",
-            "L"
-          ]
-        },
-        {
-          "rank": 18,
+          "rank": 21,
           "name": "LASK林茨",
           "tla": "LIN",
           "crest": "https://crests.football-data.org/2016.png",
@@ -2429,27 +2500,7 @@
           ]
         },
         {
-          "rank": 19,
-          "name": "曼联",
-          "tla": "MUN",
-          "crest": "https://crests.football-data.org/66.png",
-          "played": 4,
-          "won": 2,
-          "draw": 0,
-          "lost": 2,
-          "goalsFor": 8,
-          "goalsAgainst": 8,
-          "goalDiff": 0,
-          "points": 6,
-          "form": [
-            "W",
-            "L",
-            "L",
-            "W"
-          ]
-        },
-        {
-          "rank": 20,
+          "rank": 22,
           "name": "波尔图",
           "tla": "FCP",
           "crest": "https://crests.football-data.org/503.png",
@@ -2470,7 +2521,7 @@
           ]
         },
         {
-          "rank": 21,
+          "rank": 23,
           "name": "莱比锡红牛",
           "tla": "RBL",
           "crest": "https://crests.football-data.org/721.png",
@@ -2491,107 +2542,91 @@
           ]
         },
         {
-          "rank": 22,
-          "name": "费内巴切",
-          "tla": "FEN",
-          "crest": "https://crests.football-data.org/613.png",
-          "played": 4,
-          "won": 1,
-          "draw": 2,
-          "lost": 1,
-          "goalsFor": 6,
-          "goalsAgainst": 11,
-          "goalDiff": -5,
-          "points": 5,
-          "form": [
-            "W",
-            "D",
-            "L",
-            "D"
-          ]
-        },
-        {
-          "rank": 23,
-          "name": "罗马",
-          "tla": "ROM",
-          "crest": "https://crests.football-data.org/100.png",
-          "played": 4,
-          "won": 1,
-          "draw": 1,
-          "lost": 2,
-          "goalsFor": 10,
-          "goalsAgainst": 8,
-          "goalDiff": 2,
-          "points": 4,
-          "form": [
-            "L",
-            "W",
-            "L",
-            "D"
-          ]
-        },
-        {
           "rank": 24,
-          "name": "顿涅茨克矿工",
-          "tla": "SHD",
-          "crest": "https://crests.football-data.org/1887.png",
-          "played": 4,
-          "won": 1,
-          "draw": 1,
-          "lost": 2,
-          "goalsFor": 4,
-          "goalsAgainst": 4,
-          "goalDiff": 0,
-          "points": 4,
-          "form": [
-            "L",
-            "L",
-            "W",
-            "D"
-          ]
-        },
-        {
-          "rank": 25,
-          "name": "维京",
-          "tla": "VIK",
-          "crest": "https://crests.football-data.org/5720.png",
-          "played": 4,
-          "won": 1,
-          "draw": 1,
-          "lost": 2,
+          "name": "比利亚雷亚尔",
+          "tla": "VIL",
+          "crest": "https://crests.football-data.org/94.png",
+          "played": 5,
+          "won": 2,
+          "draw": 0,
+          "lost": 3,
           "goalsFor": 9,
-          "goalsAgainst": 10,
-          "goalDiff": -1,
-          "points": 4,
+          "goalsAgainst": 14,
+          "goalDiff": -5,
+          "points": 6,
           "form": [
             "W",
             "L",
-            "D",
+            "L",
+            "W",
             "L"
           ]
         },
         {
+          "rank": 25,
+          "name": "罗马",
+          "tla": "ROM",
+          "crest": "https://crests.football-data.org/100.png",
+          "played": 5,
+          "won": 1,
+          "draw": 2,
+          "lost": 2,
+          "goalsFor": 12,
+          "goalsAgainst": 10,
+          "goalDiff": 2,
+          "points": 5,
+          "form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "D"
+          ]
+        },
+        {
           "rank": 26,
-          "name": "马德里竞技",
-          "tla": "ATL",
-          "crest": "https://crests.football-data.org/78.png",
-          "played": 4,
+          "name": "顿涅茨克矿工",
+          "tla": "SHD",
+          "crest": "https://crests.football-data.org/1887.png",
+          "played": 5,
           "won": 1,
           "draw": 1,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 4,
           "goalsAgainst": 5,
           "goalDiff": -1,
           "points": 4,
           "form": [
             "L",
-            "D",
+            "L",
+            "L",
             "W",
-            "L"
+            "D"
           ]
         },
         {
           "rank": 27,
+          "name": "维京",
+          "tla": "VIK",
+          "crest": "https://crests.football-data.org/5720.png",
+          "played": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "goalsFor": 9,
+          "goalsAgainst": 12,
+          "goalDiff": -3,
+          "points": 4,
+          "form": [
+            "L",
+            "W",
+            "L",
+            "D",
+            "L"
+          ]
+        },
+        {
+          "rank": 28,
           "name": "那不勒斯",
           "tla": "NAP",
           "crest": "https://crests.football-data.org/113.png",
@@ -2612,7 +2647,28 @@
           ]
         },
         {
-          "rank": 28,
+          "rank": 29,
+          "name": "里尔",
+          "tla": "LIL",
+          "crest": "https://crests.football-data.org/521.png",
+          "played": 5,
+          "won": 1,
+          "draw": 1,
+          "lost": 3,
+          "goalsFor": 6,
+          "goalsAgainst": 11,
+          "goalDiff": -5,
+          "points": 4,
+          "form": [
+            "W",
+            "D",
+            "L",
+            "L",
+            "L"
+          ]
+        },
+        {
+          "rank": 30,
           "name": "埃因霍温",
           "tla": "PSV",
           "crest": "https://crests.football-data.org/674.png",
@@ -2630,46 +2686,6 @@
             "W",
             "L",
             "D"
-          ]
-        },
-        {
-          "rank": 29,
-          "name": "比利亚雷亚尔",
-          "tla": "VIL",
-          "crest": "https://crests.football-data.org/94.png",
-          "played": 4,
-          "won": 1,
-          "draw": 0,
-          "lost": 3,
-          "goalsFor": 8,
-          "goalsAgainst": 14,
-          "goalDiff": -6,
-          "points": 3,
-          "form": [
-            "L",
-            "L",
-            "W",
-            "L"
-          ]
-        },
-        {
-          "rank": 30,
-          "name": "萨巴巴库",
-          "tla": "SAB",
-          "crest": "https://crests.football-data.org/10233.png",
-          "played": 4,
-          "won": 1,
-          "draw": 0,
-          "lost": 3,
-          "goalsFor": 4,
-          "goalsAgainst": 10,
-          "goalDiff": -6,
-          "points": 3,
-          "form": [
-            "L",
-            "L",
-            "W",
-            "L"
           ]
         },
         {
@@ -2716,6 +2732,27 @@
         },
         {
           "rank": 33,
+          "name": "萨巴巴库",
+          "tla": "SAB",
+          "crest": "https://crests.football-data.org/10233.png",
+          "played": 5,
+          "won": 1,
+          "draw": 0,
+          "lost": 4,
+          "goalsFor": 5,
+          "goalsAgainst": 14,
+          "goalDiff": -9,
+          "points": 3,
+          "form": [
+            "L",
+            "L",
+            "L",
+            "W",
+            "L"
+          ]
+        },
+        {
+          "rank": 34,
           "name": "朗斯",
           "tla": "RCL",
           "crest": "https://crests.football-data.org/546.png",
@@ -2736,41 +2773,22 @@
           ]
         },
         {
-          "rank": 34,
+          "rank": 35,
           "name": "布拉格斯拉维亚",
           "tla": "SLP",
           "crest": "https://crests.football-data.org/930.png",
-          "played": 4,
+          "played": 5,
           "won": 0,
           "draw": 1,
-          "lost": 3,
+          "lost": 4,
           "goalsFor": 5,
-          "goalsAgainst": 9,
-          "goalDiff": -4,
-          "points": 1,
-          "form": [
-            "L",
-            "D",
-            "L",
-            "L"
-          ]
-        },
-        {
-          "rank": 35,
-          "name": "里尔",
-          "tla": "LIL",
-          "crest": "https://crests.football-data.org/521.png",
-          "played": 4,
-          "won": 0,
-          "draw": 1,
-          "lost": 3,
-          "goalsFor": 4,
           "goalsAgainst": 10,
-          "goalDiff": -6,
+          "goalDiff": -5,
           "points": 1,
           "form": [
-            "D",
             "L",
+            "L",
+            "D",
             "L",
             "L"
           ]
