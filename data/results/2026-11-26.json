@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-26",
-  "generatedAt": "2026-11-26T09:22:12+08:00",
+  "generatedAt": "2026-11-26T09:23:39+08:00",
   "source": "football-data.org",
   "count": 9,
   "results": [
@@ -12,7 +12,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-BRU-LIV",
@@ -21,7 +21,7 @@
       "awayGoals": 3,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-INT-VFB",
@@ -30,7 +30,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-LIL-FCB",
@@ -39,7 +39,7 @@
       "awayGoals": 1,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-PSG-ROM",
@@ -48,7 +48,7 @@
       "awayGoals": 2,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-SAB-FCB",
@@ -57,7 +57,7 @@
       "awayGoals": 4,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-SHD-FEN",
@@ -66,7 +66,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-SLP-VIL",
@@ -75,7 +75,7 @@
       "awayGoals": 1,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     },
     {
       "id": "CL-2026-11-26-SPO-MUN",
@@ -84,7 +84,7 @@
       "awayGoals": 2,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-26T09:22:12+08:00"
+      "updatedAt": "2026-11-26T09:23:39+08:00"
     }
   ]
 }
