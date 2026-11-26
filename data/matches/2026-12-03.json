@@ -1,0 +1,1160 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-03",
+  "generatedAt": "2026-11-26T08:24:51+08:00",
+  "source": "football-data.org",
+  "model": "gpt-4o-mini",
+  "matchCount": 10,
+  "degradedCount": 0,
+  "matches": [
+    {
+      "id": "PD-2026-12-03-RSO-RMA",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-02T18:00:00Z",
+      "status": "scheduled",
+      "matchday": 23,
+      "venue": "",
+      "home": {
+        "name": "皇家社会",
+        "nameEn": "Real Sociedad de Fútbol",
+        "crest": "https://crests.football-data.org/92.png",
+        "rank": 5,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 23,
+        "goalsAgainst": 23
+      },
+      "away": {
+        "name": "皇家马德里",
+        "nameEn": "Real Madrid CF",
+        "crest": "https://crests.football-data.org/86.png",
+        "rank": 2,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 33,
+        "goalsAgainst": 11
+      },
+      "h2h": {
+        "played": 3,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 3,
+        "last": [
+          {
+            "date": "2026-08-26",
+            "home": "Real Madrid",
+            "away": "Real Sociedad",
+            "score": "4-1"
+          },
+          {
+            "date": "2026-02-14",
+            "home": "Real Madrid",
+            "away": "Real Sociedad",
+            "score": "4-1"
+          },
+          {
+            "date": "2025-09-13",
+            "home": "Real Sociedad",
+            "away": "Real Madrid",
+            "score": "1-2"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 17,
+          "draw": 21,
+          "away": 62
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "confidence": 72,
+        "pick": "away",
+        "reasons": [
+          "皇马本赛事场均进2.54失0.85，客场7场场均进2失1，攻防占优。",
+          "皇家社会本赛事场均进失均1.77，主场6场场均进1.33失1.17，火力有限。",
+          "近3次交手皇马全胜，比分4-1、4-1、2-1，皇家社会明显下风。",
+          "皇马近5场全胜，包括客场3-0瓦伦西亚、2-1巴塞罗那；双方4天内均无其他赛事。"
+        ],
+        "factors": [
+          "皇马客场攻防",
+          "社会主场火力",
+          "交手三连败",
+          "皇马五连胜",
+          "天气影响有限"
+        ],
+        "risk": "皇家社会无跨赛事数据，场地和伤停名单未提供，皇马轮换与临场阵容存在不确定性。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 11.3,
+        "precip": 17,
+        "wind": 7.1
+      },
+      "market": {
+        "bookmaker": "市场均值（18 家）",
+        "capturedAt": "2026-11-26T00:18:12Z",
+        "prob": {
+          "home": 16,
+          "draw": 18,
+          "away": 66
+        }
+      },
+      "news": [
+        {
+          "title": "Report Milan have €70m Endrick offer ready for Real Madrid",
+          "summary": "Spanish reports claim Milan are ready to offer €70m in January for Real Madrid and...",
+          "link": "https://football-italia.net/report-milan-have-e70m-endrick-offer-ready/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        }
+      ]
+    },
+    {
+      "id": "PL-2026-12-03-LIV-SUN",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T19:30:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "利物浦",
+        "nameEn": "Liverpool FC",
+        "crest": "https://crests.football-data.org/64.png",
+        "rank": 4,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "W",
+          "W"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 10
+      },
+      "away": {
+        "name": "桑德兰",
+        "nameEn": "Sunderland AFC",
+        "crest": "https://crests.football-data.org/71.png",
+        "rank": 18,
+        "form": [
+          "D",
+          "W",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 8,
+        "goalsAgainst": 17
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
+        "awayWins": 0,
+        "last": [
+          {
+            "date": "2026-02-11",
+            "home": "Sunderland",
+            "away": "Liverpool",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-12-03",
+            "home": "Liverpool",
+            "away": "Sunderland",
+            "score": "1-1"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 67,
+          "draw": 21,
+          "away": 12
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "confidence": 78,
+        "pick": "home",
+        "reasons": [
+          "利物浦本赛事11场18/10，近5场4胜且4-0胜曼联。",
+          "桑德兰本赛事11场仅8/17，客场场均失2.17。",
+          "近2次交手利物浦1胜1平，保持不败。",
+          "主队主场场均进1.33、失1，进攻效率不如客场。"
+        ],
+        "factors": [
+          "排名第4对第18",
+          "桑德兰客场失球多",
+          "利物浦近5场4胜",
+          "利物浦主场效率一般",
+          "交手利物浦不败"
+        ],
+        "risk": "最大不确定性在于场地信息与桑德兰跨赛事数据未提供，无法完整评估客队跨赛事强度。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 6.9,
+        "precip": 33,
+        "wind": 8.4
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:07Z",
+        "prob": {
+          "home": 65,
+          "draw": 20,
+          "away": 15
+        }
+      },
+      "news": [
+        {
+          "title": "Liverpool are all smiles as Wirtz, Isak start to click",
+          "summary": "Another match, another fine set of displays from Florian Wirtz and Alexander Isak. Is the huge investment in Liverpool's forward line beginning to pay off?",
+          "link": "https://www.espn.com/soccer/story/_/id/50598544/liverpool-all-smiles-wirtz-isak-start-click",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Isak and Wirtz power Liverpool to easy victory at Club Brugge",
+          "summary": "Liverpool recovered from their shock defeat to Fenerbahce in their last Champions League outing to beat Club Brugge 3-0 and improve their chances of a top-eight league phase finish.",
+          "link": "https://www.skysports.com/football/club-brugge-vs-liverpool/report/577679",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Liverpool latest: Munoz adds to injury concern ahead of derby",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025501/liverpool-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
+    },
+    {
+      "id": "PL-2026-12-03-HUL-NOT",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T19:30:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "赫尔城",
+        "nameEn": "Hull City AFC",
+        "crest": "https://crests.football-data.org/322.png",
+        "rank": 11,
+        "form": [
+          "W",
+          "L",
+          "D",
+          "D",
+          "L"
+        ],
+        "goalsFor": 13,
+        "goalsAgainst": 11
+      },
+      "away": {
+        "name": "诺丁汉森林",
+        "nameEn": "Nottingham Forest FC",
+        "crest": "https://crests.football-data.org/351.png",
+        "rank": 17,
+        "form": [
+          "L",
+          "W",
+          "L",
+          "D",
+          "L"
+        ],
+        "goalsFor": 9,
+        "goalsAgainst": 15
+      },
+      "h2h": {
+        "played": 0,
+        "homeWins": 0,
+        "draws": 0,
+        "awayWins": 0,
+        "last": []
+      },
+      "prediction": {
+        "prob": {
+          "home": 40,
+          "draw": 31,
+          "away": 29
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 58,
+        "pick": "home",
+        "reasons": [
+          "赫尔城本赛事场均进1.18失1，主场场均进1.5失0.83。",
+          "诺丁汉森林客场6场场均进1失1.83，近两客0-2伯恩茅斯、0-2布伦特福德。",
+          "赫尔城排名第11高于森林第17，近5场主队5分、客队4分。",
+          "市场给客胜50%，但森林客场失球偏多，分歧依据在客场防守。"
+        ],
+        "factors": [
+          "主场攻防更稳",
+          "森林客场漏防",
+          "排名主队占优",
+          "市场客胜偏高"
+        ],
+        "risk": "森林客场场均失1.83却获市场50%客胜，若其反弹，主胜判断将承压。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 6.2,
+        "precip": 25,
+        "wind": 9.5
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:06Z",
+        "prob": {
+          "home": 23,
+          "draw": 27,
+          "away": 50
+        }
+      }
+    },
+    {
+      "id": "PL-2026-12-03-CHE-CRY",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T19:30:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "切尔西",
+        "nameEn": "Chelsea FC",
+        "crest": "https://crests.football-data.org/61.png",
+        "rank": 8,
+        "form": [
+          "L",
+          "L",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 20
+      },
+      "away": {
+        "name": "水晶宫",
+        "nameEn": "Crystal Palace FC",
+        "crest": "https://crests.football-data.org/354.png",
+        "rank": 20,
+        "form": [
+          "L",
+          "L",
+          "L",
+          "L",
+          "L"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 27
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
+        "awayWins": 0,
+        "last": [
+          {
+            "date": "2026-01-25",
+            "home": "Crystal Palace",
+            "away": "Chelsea",
+            "score": "1-3"
+          },
+          {
+            "date": "2025-08-17",
+            "home": "Chelsea",
+            "away": "Crystal Palace",
+            "score": "0-0"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 60,
+          "draw": 22,
+          "away": 18
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 55,
+        "pick": "home",
+        "reasons": [
+          "切尔西本赛事场均进1.82、主场进2.33，主场进攻有支撑。",
+          "水晶宫近5场全败，本赛事场均失2.45、客场失2.33，防线漏洞大。",
+          "近2次交手切尔西1胜1平，最近一场3-1取胜。",
+          "天气7.9℃、降水28%，影响有限；市场主胜58%仅作参照。"
+        ],
+        "factors": [
+          "主场进攻支撑",
+          "客队五连败",
+          "客场防守差",
+          "交手占优"
+        ],
+        "risk": "伤病名单未提供，无法核实具体伤停对切尔西防线的影响。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 7.9,
+        "precip": 28,
+        "wind": 15.3
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:06Z",
+        "prob": {
+          "home": 58,
+          "draw": 22,
+          "away": 20
+        }
+      },
+      "news": [
+        {
+          "title": "Chelsea latest: Club did not sanction controversial Fofana interview",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025497/chelsea-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
+    },
+    {
+      "id": "PL-2026-12-03-MCI-LEE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T19:30:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "曼城",
+        "nameEn": "Manchester City FC",
+        "crest": "https://crests.football-data.org/65.png",
+        "rank": 3,
+        "form": [
+          "D",
+          "L",
+          "L",
+          "L",
+          "W"
+        ],
+        "goalsFor": 22,
+        "goalsAgainst": 14
+      },
+      "away": {
+        "name": "利兹联",
+        "nameEn": "Leeds United FC",
+        "crest": "https://crests.football-data.org/341.png",
+        "rank": 7,
+        "form": [
+          "W",
+          "W",
+          "L",
+          "D",
+          "D"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 9
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 2,
+        "draws": 0,
+        "awayWins": 0,
+        "last": [
+          {
+            "date": "2026-02-28",
+            "home": "Leeds United",
+            "away": "Man City",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-11-29",
+            "home": "Man City",
+            "away": "Leeds United",
+            "score": "3-2"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 55,
+          "draw": 25,
+          "away": 20
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 64,
+        "pick": "home",
+        "reasons": [
+          "曼城本赛事场均进2球、主场场均进2球，但近5场仅1胜",
+          "利兹联本赛事场均仅失0.82球，客场场均失1球，防守韧性强",
+          "近2次交手曼城全胜，最近作客1-0、主场3-2击败利兹联",
+          "市场均值主胜60%，因曼城近5场3负，主胜概率下调至55%"
+        ],
+        "factors": [
+          "曼城主场火力",
+          "利兹防守韧性",
+          "曼城近5场1胜",
+          "交手曼城两胜",
+          "市场主胜60%"
+        ],
+        "risk": "曼城近5场3负且进攻效率走低，若无法早早破门，利兹联的防守韧性可能拖成平局。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 5.7,
+        "precip": 32,
+        "wind": 3.0
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:07Z",
+        "prob": {
+          "home": 60,
+          "draw": 22,
+          "away": 18
+        }
+      },
+      "news": [
+        {
+          "title": "Arsenal punished for bluntness in attack - but Man City also have problems",
+          "summary": "Arsenal face Manchester City in a blockbuster Premier League contest this weekend, but in recent days and months, both teams have issues to overcome.",
+          "link": "https://www.skysports.com/football/news/11095/13616234/arsenal-and-manchester-citys-problems-analysed-as-both-set-to-meet-in-bumper-premier-league-clash-this-weekend",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "'You question everything' - Haaland lays City's frustrations bare",
+          "summary": "Erling Haaland said Manchester City's poor form is affecting the players, admitting \"when you don't win, you question everything\" after they were held 2-2 at home by Napoli in the Champions League.",
+          "link": "https://www.skysports.com/football/news/11095/13616226/erling-haaland-frustrated-with-manchester-city-form-when-you-dont-win-you-question-everything",
+          "published": "2026-11-24",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Man City latest: 'Title race over if City lose to Arsenal,' says Merse",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025499/man-city-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
+    },
+    {
+      "id": "PL-2026-12-03-AVL-EVE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T20:15:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "阿斯顿维拉",
+        "nameEn": "Aston Villa FC",
+        "crest": "https://crests.football-data.org/58.png",
+        "rank": 12,
+        "form": [
+          "D",
+          "D",
+          "D",
+          "W",
+          "W"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 17
+      },
+      "away": {
+        "name": "埃弗顿",
+        "nameEn": "Everton FC",
+        "crest": "https://crests.football-data.org/62.png",
+        "rank": 9,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "L",
+          "L"
+        ],
+        "goalsFor": 12,
+        "goalsAgainst": 14
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 0,
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-01-18",
+            "home": "Aston Villa",
+            "away": "Everton",
+            "score": "0-1"
+          },
+          {
+            "date": "2025-09-13",
+            "home": "Everton",
+            "away": "Aston Villa",
+            "score": "0-0"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 45,
+          "draw": 30,
+          "away": 25
+        },
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "confidence": 62,
+        "pick": "home",
+        "reasons": [
+          "本赛事阿斯顿维拉近5场2胜3平不败，进8失6，包括2-1曼城、1-0纽卡斯尔联。",
+          "埃弗顿客场6场场均进0.67失1.5，近客0-4布伦特福德、0-2阿森纳。",
+          "阿斯顿维拉主场6场场均进1失1.17，埃弗顿客场低产，主队优势有限。",
+          "近2次交手阿斯顿维拉0胜1平1负且一球未进，开赛5.9℃或压低比分。"
+        ],
+        "factors": [
+          "阿斯顿维拉近5不败",
+          "埃弗顿客场低产",
+          "主场防守一般",
+          "交手进球偏少",
+          "平局风险"
+        ],
+        "risk": "埃弗顿跨赛事数据缺失，只能按本赛事评估；阿斯顿维拉近两次交手未进球，低比分平局是最大变数。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 5.9,
+        "precip": 23,
+        "wind": 12.0
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:07Z",
+        "prob": {
+          "home": 47,
+          "draw": 26,
+          "away": 27
+        }
+      }
+    },
+    {
+      "id": "PL-2026-12-03-BRE-ARS",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T20:15:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "布伦特福德",
+        "nameEn": "Brentford FC",
+        "crest": "https://crests.football-data.org/402.png",
+        "rank": 6,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "D",
+          "L"
+        ],
+        "goalsFor": 20,
+        "goalsAgainst": 11
+      },
+      "away": {
+        "name": "阿森纳",
+        "nameEn": "Arsenal FC",
+        "crest": "https://crests.football-data.org/57.png",
+        "rank": 1,
+        "form": [
+          "D",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 17,
+        "goalsAgainst": 7
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 0,
+        "draws": 1,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-02-12",
+            "home": "Brentford",
+            "away": "Arsenal",
+            "score": "1-1"
+          },
+          {
+            "date": "2025-12-03",
+            "home": "Arsenal",
+            "away": "Brentford",
+            "score": "2-0"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 26,
+          "draw": 28,
+          "away": 46
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "confidence": 67,
+        "pick": "away",
+        "reasons": [
+          "布伦特福德本赛事主场6场场均进2.33失0.5，主场攻防极强。",
+          "阿森纳本赛事客场6场场均仅进1.17失0.83，客战进攻效率低于主场。",
+          "阿森纳近5场4胜1平，本赛事总失球仅7，防守稳定性更高。",
+          "交手近2次阿森纳1胜1平，最近布伦特福德1-1阿森纳。"
+        ],
+        "factors": [
+          "主场攻防强",
+          "客战进球偏低",
+          "防守稳定性高",
+          "交手客队占优",
+          "平局风险"
+        ],
+        "risk": "场地信息未提供，无法评估场地条件对比赛节奏与主队主场优势的影响。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 7.6,
+        "precip": 24,
+        "wind": 15.1
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:07Z",
+        "prob": {
+          "home": 22,
+          "draw": 25,
+          "away": 53
+        }
+      },
+      "news": [
+        {
+          "title": "Dortmund draw shows that the jury is still out on Gyökeres",
+          "summary": "Brought in to provide the cutting edge that Arsenal needed up front, Viktor Gyökeres hasn't quite done that.",
+          "link": "https://www.espn.com/soccer/story/_/id/50586544/arsenal-champions-league-dortmund-jury-viktor-gyokeres",
+          "published": "2026-11-25",
+          "source": "ESPN"
+        },
+        {
+          "title": "Arsenal latest: Merson accuses Gunners of second-half complacency",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025486/arsenal-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        },
+        {
+          "title": "Man City latest: 'Title race over if City lose to Arsenal,' says Merse",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13025499/man-city-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
+    },
+    {
+      "id": "PL-2026-12-03-NEW-MUN",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T20:15:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "纽卡斯尔联",
+        "nameEn": "Newcastle United FC",
+        "crest": "https://crests.football-data.org/67.png",
+        "rank": 13,
+        "form": [
+          "D",
+          "D",
+          "L",
+          "W",
+          "L"
+        ],
+        "goalsFor": 15,
+        "goalsAgainst": 18
+      },
+      "away": {
+        "name": "曼联",
+        "nameEn": "Manchester United FC",
+        "crest": "https://crests.football-data.org/66.png",
+        "rank": 19,
+        "form": [
+          "L",
+          "D",
+          "L",
+          "L",
+          "D"
+        ],
+        "goalsFor": 14,
+        "goalsAgainst": 23
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 1,
+        "draws": 0,
+        "awayWins": 1,
+        "last": [
+          {
+            "date": "2026-03-04",
+            "home": "Newcastle",
+            "away": "Man United",
+            "score": "2-1"
+          },
+          {
+            "date": "2025-12-26",
+            "home": "Man United",
+            "away": "Newcastle",
+            "score": "1-0"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 46,
+          "draw": 26,
+          "away": 28
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 60,
+        "pick": "home",
+        "reasons": [
+          "曼联客场6场场均进0.67失2，客场进攻极度乏力",
+          "纽卡主场6场场均进1.33失1.5，主场表现略好于自身均值",
+          "曼联近5场联赛2平3负，含客场0-4利物浦、0-2切尔西",
+          "纽卡近5场联赛1胜2平2负，主场2-2战平阿森纳，状态略好于曼联"
+        ],
+        "factors": [
+          "曼联客场进球荒",
+          "纽卡主场略优",
+          "双方防线均漏",
+          "交手各胜一场"
+        ],
+        "risk": "伤停名单未公布，两队近5场状态均低迷，曼联虽客战差但近2次交手各胜一场。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 4.8,
+        "precip": 13,
+        "wind": 12.1
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:07Z",
+        "prob": {
+          "home": 37,
+          "draw": 25,
+          "away": 38
+        }
+      },
+      "news": [
+        {
+          "title": "New coach, same chaos: Man United remain their own worst enemy",
+          "summary": "Manchester United showed signs of progress under Mauricio Pochettino, but familiar mistakes cost them a Champions League win against Sporting CP.",
+          "link": "https://www.espn.com/soccer/story/_/id/50598965/manchester-united-pochettino-champions-league-sporting",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Lammens errors cost Man United win despite bizarre Fernandes goal",
+          "summary": "Senne Lammens errors denied Mauricio Pochettino a first win in charge of Manchester United during a chaotic 2-2 Champions League draw at Sporting CP.",
+          "link": "https://www.espn.com/soccer/report/_/gameId/401915373",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Fernandes' 'strange' divot-assisted goal left even Man United star confused",
+          "summary": "Bruno Fernandes said even he was caught out by his bizarre divot-assisted goal in Manchester United's Champions League draw at Sporting CP on Wednesday.",
+          "link": "https://www.espn.com/soccer/story/_/id/50598666/bruno-fernandes-goal-man-united-sporting-divot-champions-league",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        }
+      ]
+    },
+    {
+      "id": "PL-2026-12-03-BOU-BHA",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-02T20:15:00Z",
+      "status": "scheduled",
+      "matchday": 13,
+      "venue": "",
+      "home": {
+        "name": "伯恩茅斯",
+        "nameEn": "AFC Bournemouth",
+        "crest": "https://crests.football-data.org/bournemouth.png",
+        "rank": 5,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 18,
+        "goalsAgainst": 14
+      },
+      "away": {
+        "name": "布莱顿",
+        "nameEn": "Brighton & Hove Albion FC",
+        "crest": "https://crests.football-data.org/397.png",
+        "rank": 2,
+        "form": [
+          "L",
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 26,
+        "goalsAgainst": 9
+      },
+      "h2h": {
+        "played": 2,
+        "homeWins": 1,
+        "draws": 1,
+        "awayWins": 0,
+        "last": [
+          {
+            "date": "2026-01-19",
+            "home": "Brighton Hove",
+            "away": "Bournemouth",
+            "score": "1-1"
+          },
+          {
+            "date": "2025-09-13",
+            "home": "Bournemouth",
+            "away": "Brighton Hove",
+            "score": "2-1"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 40,
+          "draw": 29,
+          "away": 31
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 61,
+        "pick": "home",
+        "reasons": [
+          "伯恩茅斯近5场全胜，进11球仅失1球。",
+          "本赛事主场6场场均进1.5失0.67，防守稳固。",
+          "布莱顿本赛事场均进2.36失0.82，但客场失1.33。",
+          "近2次交手伯恩茅斯1胜1平，保持不败。"
+        ],
+        "factors": [
+          "伯恩茅斯五连胜",
+          "主场防守稳固",
+          "布莱顿客场波动",
+          "交手主队不败",
+          "无跨赛事样本"
+        ],
+        "risk": "场地未提供且无跨赛事样本，对主客场环境与强度判断有限。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 7.6,
+        "precip": 22,
+        "wind": 19.3
+      },
+      "market": {
+        "bookmaker": "市场均值（20 家）",
+        "capturedAt": "2026-11-26T00:18:07Z",
+        "prob": {
+          "home": 38,
+          "draw": 27,
+          "away": 35
+        }
+      }
+    },
+    {
+      "id": "PD-2026-12-03-FCB-ATL",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-02T20:30:00Z",
+      "status": "scheduled",
+      "matchday": 23,
+      "venue": "",
+      "home": {
+        "name": "巴塞罗那",
+        "nameEn": "FC Barcelona",
+        "crest": "https://crests.football-data.org/81.png",
+        "rank": 1,
+        "form": [
+          "W",
+          "W",
+          "W",
+          "L",
+          "W"
+        ],
+        "goalsFor": 51,
+        "goalsAgainst": 15
+      },
+      "away": {
+        "name": "马德里竞技",
+        "nameEn": "Club Atlético de Madrid",
+        "crest": "https://crests.football-data.org/78.png",
+        "rank": 3,
+        "form": [
+          "W",
+          "L",
+          "W",
+          "W",
+          "W"
+        ],
+        "goalsFor": 26,
+        "goalsAgainst": 10
+      },
+      "h2h": {
+        "played": 3,
+        "homeWins": 3,
+        "draws": 0,
+        "awayWins": 0,
+        "last": [
+          {
+            "date": "2026-11-08",
+            "home": "Atleti",
+            "away": "Barça",
+            "score": "1-2"
+          },
+          {
+            "date": "2026-04-04",
+            "home": "Atleti",
+            "away": "Barça",
+            "score": "1-2"
+          },
+          {
+            "date": "2025-12-02",
+            "home": "Barça",
+            "away": "Atleti",
+            "score": "3-1"
+          }
+        ]
+      },
+      "prediction": {
+        "prob": {
+          "home": 63,
+          "draw": 21,
+          "away": 16
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "confidence": 74,
+        "pick": "home",
+        "reasons": [
+          "巴塞罗那本赛事场均进3.92球，近5场4胜，主场曾6-1大胜阿拉维斯。",
+          "马德里竞技本赛事场均失0.77球，客场失0.71球，防守韧性是最大阻力。",
+          "近3次交手巴塞罗那全胜，最近两次均以2-1击败马德里竞技。",
+          "双方前后4天无其他赛事，气温8.6℃、降水7%，外部消耗较小。"
+        ],
+        "factors": [
+          "巴塞罗那主场火力",
+          "马德里竞技防守稳固",
+          "交手三连胜",
+          "赛程无消耗",
+          "天气影响小"
+        ],
+        "risk": "场地信息与当日伤停具体名单未提供，是预测的主要不确定来源。"
+      },
+      "degraded": false,
+      "result": null,
+      "weather": {
+        "temp": 8.6,
+        "precip": 7,
+        "wind": 3.7
+      },
+      "market": {
+        "bookmaker": "市场均值（17 家）",
+        "capturedAt": "2026-11-26T00:18:12Z",
+        "prob": {
+          "home": 68,
+          "draw": 17,
+          "away": 15
+        }
+      },
+      "news": [
+        {
+          "title": "Gordon enjoys 'very special' Baku again to lead Barcelona rout",
+          "summary": "Baku brought the best out of Anthony Gordon once again as the England forward netted twice in Barcelona's 4-1 Champions League victory over Sabah.",
+          "link": "https://www.espn.com/soccer/story/_/id/50597280/anthony-gordon-barcelona-baku-sabah-fk-champions-league",
+          "published": "2026-11-26",
+          "source": "ESPN"
+        },
+        {
+          "title": "Who are Sabah? Barça's Champions League opponents from near Iranian border",
+          "summary": "Sabah, a club near the Iranian border that didn't exist a decade ago, with a coach who owes his career to a Lithuanian quiz show, are in this season Champions League. How did they make it?",
+          "link": "https://www.espn.com/soccer/story/_/id/49742966/who-champions-league-debutants-sabah-fk-heres-need-know",
+          "published": "2026-11-25",
+          "source": "ESPN"
+        },
+        {
+          "title": "Gordon scores twice in Barca CL win as Bayern lose at Lille",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13575723/european-football-news-and-transfers-barcelona-real-madrid-psg-bayern-munich-latest-and-more",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
+    }
+  ]
+}
