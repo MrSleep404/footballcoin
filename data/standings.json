@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T11:01:34+08:00",
+  "updatedAt": "2026-11-26T11:43:05+08:00",
   "leagues": [
     {
       "code": "PL",
@@ -1929,7 +1929,7 @@
           "rank": 13,
           "name": "勒芒",
           "tla": "LMF",
-          "crest": "https://crests.football-data.org/535.png",
+          "crest": "https://upload.wikimedia.org/wikipedia/en/5/57/Le_Mans_FC_logo.svg",
           "played": 11,
           "won": 2,
           "draw": 5,
