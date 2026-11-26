@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-25T17:00:50+08:00",
+  "generatedAt": "2026-11-26T08:24:45+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "matchCount": 3,
@@ -67,40 +67,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 23,
+          "home": 24,
           "draw": 27,
-          "away": 50
+          "away": 49
         },
         "score": {
           "home": 1,
           "away": 2
         },
-        "confidence": 66,
+        "confidence": 64,
         "pick": "away",
         "reasons": [
-          "莱切本赛事场均失2.08、主场失2.4，近5场1平4负，防守持续承压。",
-          "亚特兰大本赛事场均进1.75，近5场进11球，客场曾1-0蒙扎。",
-          "近2次交手亚特兰大2胜，最近莱切0-3、亚特兰大4-1，对位优势明显。",
-          "天气10.9℃、降水概率11%、风速13.3 km/h，对节奏影响有限。"
+          "莱切本赛事场均失2.08，主场场均失2.4，近5场1平4负防线持续漏球。",
+          "亚特兰大本赛事场均进1.75，但客场场均仅进1.2，客战火力有明显折扣。",
+          "交手近2次亚特兰大全胜，比分0-3和4-1，对位与心理优势明显。",
+          "莱切主场场均进1球，亚特兰大客场场均失1.8，主队有进球可能，平局不可忽视。"
         ],
         "factors": [
-          "莱切防守低迷",
-          "亚特兰大进攻占优",
-          "交手客队全胜",
-          "天气影响有限"
+          "莱切防守漏球",
+          "亚特兰大交锋占优",
+          "客队客场进攻一般",
+          "主队有进球可能",
+          "赛程无额外消耗"
         ],
-        "risk": "伤病信息未提供，跨赛事参考缺失，临场阵容变化是最大不确定性。"
+        "risk": "双方跨赛事数据缺失，场地未提供；亚特兰大客场场均仅1.2球，若久攻不下平局风险上升。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 10.9,
-        "precip": 11,
-        "wind": 13.3
+        "temp": 11.2,
+        "precip": 5,
+        "wind": 5.2
       },
       "market": {
-        "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "bookmaker": "市场均值（25 家）",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 25,
           "draw": 25,
@@ -168,40 +169,41 @@
       },
       "prediction": {
         "prob": {
-          "home": 18,
-          "draw": 24,
+          "home": 16,
+          "draw": 26,
           "away": 58
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 70,
+        "confidence": 68,
         "pick": "away",
         "reasons": [
-          "卡利亚里本赛事场均进0.83球、失1.42球，12场共进10球、失17球",
-          "米兰本赛事场均进2.33球，近5场14比8，含5比1胜弗罗西诺内",
-          "卡利亚里主场5场场均进0.6球、失0.8球，进攻乏力但失球不多",
-          "近2次交手双方各1胜，米兰曾客场1比2负于卡利亚里，需防冷"
+          "米兰本赛事场均进2.33球、失1.17球。",
+          "卡利亚里主场5场场均进0.6球、失0.8球。",
+          "卡利亚里近5场1胜4负，含0-2科莫、2-4罗马。",
+          "近两次交手各胜1场，最近卡利亚里2-1米兰。"
         ],
         "factors": [
-          "米兰进攻火力强",
-          "卡利亚里主场进球少",
-          "米兰近5场4胜1负",
-          "交手各胜一场"
+          "米兰进攻强势",
+          "卡利亚里主场低产",
+          "米兰客场稳定",
+          "交手各胜一场",
+          "跨赛事样本缺失"
         ],
-        "risk": "伤病情况未提供；卡利亚里主场场均失球仅0.8，米兰存在被逼平或小胜落空的不确定性。"
+        "risk": "跨赛事参考样本缺失，伤病名单未公布，客胜判断主要依赖本赛事数据。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 13.3,
+        "temp": 13.5,
         "precip": 2,
-        "wind": 7.3
+        "wind": 6.5
       },
       "market": {
-        "bookmaker": "市场均值（24 家）",
-        "capturedAt": "2026-11-25T08:55:13Z",
+        "bookmaker": "市场均值（25 家）",
+        "capturedAt": "2026-11-26T00:18:14Z",
         "prob": {
           "home": 20,
           "draw": 25,
@@ -210,10 +212,24 @@
       },
       "news": [
         {
-          "title": "Krösche ‘operational’ with Milan announcement seemingly imminent",
-          "summary": "Markus Krösche is already in Milan and hard at work, even though his appointment as...",
-          "link": "https://football-italia.net/krosche-operational-milan-announcement-due/",
-          "published": "2026-11-24",
+          "title": "Amorim: ‘Milan must do well in Europa League and Serie A, only way to be a good team’",
+          "summary": "Ruben Amorim warns Olympiacos are ‘aggressive, especially at home’ in the Europa League, but Milan...",
+          "link": "https://football-italia.net/amorim-milan-must-do-well-in-europa-league/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Montella: ‘Turkiye ambition, Milan chaos, Roma success and my apology to Capello’",
+          "summary": "Former Turkiye manager Vincenzo Montella looks back over his career, including the ‘chaos’ at Milan...",
+          "link": "https://football-italia.net/montella-turkiye-ambition-milan-chaos-roma/",
+          "published": "2026-11-25",
+          "source": "Football Italia"
+        },
+        {
+          "title": "Report Milan have €70m Endrick offer ready for Real Madrid",
+          "summary": "Spanish reports claim Milan are ready to offer €70m in January for Real Madrid and...",
+          "link": "https://football-italia.net/report-milan-have-e70m-endrick-offer-ready/",
+          "published": "2026-11-25",
           "source": "Football Italia"
         }
       ]
@@ -278,47 +294,62 @@
       },
       "prediction": {
         "prob": {
-          "home": 50,
-          "draw": 28,
-          "away": 22
+          "home": 52,
+          "draw": 30,
+          "away": 18
         },
         "score": {
           "home": 1,
           "away": 0
         },
-        "confidence": 54,
+        "confidence": 62,
         "pick": "home",
         "reasons": [
-          "赫塔菲本赛事客场6场0进球、场均失2.33球，客战攻防严重失衡。",
-          "西班牙人本赛事场均进1.08、失1.08，近5场有3场零封，防守端较稳。",
-          "积分榜第11对第18，西班牙人近5场2胜1平2负优于赫塔菲1胜1平3负。",
-          "近2次交手各胜1场，最近西班牙人主场1-2赫塔菲，需防客队反击。"
+          "西班牙人本赛事场均进1.08、失1.08，13轮合计14/14攻守持平",
+          "赫塔菲本赛事客场6场0进球、场均失2.33球，客战几乎无威胁",
+          "赫塔菲近5场1胜1平3负，共失11球，防线持续暴露",
+          "近2次交手各胜1场，2026-03-21西班牙人主场1-2告负"
         ],
         "factors": [
           "客队客场零进球",
-          "主队防守较稳",
-          "排名差七位",
-          "交手互有胜负",
+          "主队主场低产",
+          "交手各胜一场",
           "天气影响有限"
         ],
-        "risk": "伤病情况未提供，跨赛事也无已结束数据，是判断的主要不确定性。"
+        "risk": "赫塔菲客场6场0进球属极端样本，若其客战突然打开局面则主胜判断有变数；伤病名单未提供。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 12.8,
-        "precip": 15,
-        "wind": 5.1
+        "temp": 11.0,
+        "precip": 12,
+        "wind": 4.4
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-25T08:55:12Z",
+        "capturedAt": "2026-11-26T00:18:12Z",
         "prob": {
           "home": 46,
           "draw": 30,
           "away": 24
         }
-      }
+      },
+      "news": [
+        {
+          "title": "Who are Sabah? Barça's Champions League opponents from near Iranian border",
+          "summary": "Sabah, a club near the Iranian border that didn't exist a decade ago, with a coach who owes his career to a Lithuanian quiz show, are in this season Champions League. How did they make it?",
+          "link": "https://www.espn.com/soccer/story/_/id/49742966/who-champions-league-debutants-sabah-fk-heres-need-know",
+          "published": "2026-11-25",
+          "source": "ESPN"
+        },
+        {
+          "title": "Gordon scores twice in Barca CL win as Bayern lose at Lille",
+          "summary": "",
+          "link": "https://www.skysports.com/football/live-blog/11095/13575723/european-football-news-and-transfers-barcelona-real-madrid-psg-bayern-munich-latest-and-more",
+          "published": "2026-11-25",
+          "source": "Sky Sports"
+        }
+      ]
     }
   ]
 }
