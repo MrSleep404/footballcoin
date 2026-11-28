@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-04",
+  "generatedAt": "2026-11-28T10:03:17+08:00",
+  "matchCount": 1,
+  "matches": [
+    {
+      "id": "PL-2026-12-04-TOT-FUL",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-03T20:00:00Z",
+      "home": {
+        "name": "热刺",
+        "crest": "https://crests.football-data.org/73.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "富勒姆",
+        "crest": "https://crests.football-data.org/63.png",
+        "rank": 0
+      }
+    }
+  ]
+}
