@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-28",
+  "generatedAt": "2026-11-28T10:03:54+08:00",
+  "matchCount": 2,
+  "matches": [
+    {
+      "id": "PL-2026-12-28-MUN-NOT",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-27T16:30:00Z",
+      "home": {
+        "name": "曼联",
+        "crest": "https://crests.football-data.org/66.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "诺丁汉森林",
+        "crest": "https://crests.football-data.org/351.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-28-CRY-ARS",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-27T19:00:00Z",
+      "home": {
+        "name": "水晶宫",
+        "crest": "https://crests.football-data.org/354.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "阿森纳",
+        "crest": "https://crests.football-data.org/57.png",
+        "rank": 0
+      }
+    }
+  ]
+}
