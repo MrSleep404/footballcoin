@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-08",
+  "generatedAt": "2026-11-28T10:03:27+08:00",
+  "matchCount": 3,
+  "matches": [
+    {
+      "id": "SA-2026-12-08-VEN-SAS",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-07T17:30:00Z",
+      "home": {
+        "name": "威尼斯",
+        "crest": "https://crests.football-data.org/454.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "萨索洛",
+        "crest": "https://crests.football-data.org/471.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-08-FIO-CAG",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-07T19:45:00Z",
+      "home": {
+        "name": "佛罗伦萨",
+        "crest": "https://crests.football-data.org/99.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "卡利亚里",
+        "crest": "https://crests.football-data.org/104.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PD-2026-12-08-SEV-MAL",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-07T20:00:00Z",
+      "home": {
+        "name": "塞维利亚",
+        "crest": "https://crests.football-data.org/559.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "马拉加",
+        "crest": "https://crests.football-data.org/84.png",
+        "rank": 0
+      }
+    }
+  ]
+}
