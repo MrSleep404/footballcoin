@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-21",
+  "generatedAt": "2026-11-28T10:03:44+08:00",
+  "matchCount": 5,
+  "matches": [
+    {
+      "id": "PL-2026-12-21-ARS-MUN",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-20T16:30:00Z",
+      "home": {
+        "name": "阿森纳",
+        "crest": "https://crests.football-data.org/57.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "曼联",
+        "crest": "https://crests.football-data.org/66.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "BL1-2026-12-21-UNB-TSG",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-12-20T16:30:00Z",
+      "home": {
+        "name": "柏林联合",
+        "crest": "https://crests.football-data.org/28.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "霍芬海姆",
+        "crest": "https://crests.football-data.org/2.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-21-GEN-UDI",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-20T17:00:00Z",
+      "home": {
+        "name": "热那亚",
+        "crest": "https://crests.football-data.org/107.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "乌迪内斯",
+        "crest": "https://crests.football-data.org/115.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "BL1-2026-12-21-S04-BMG",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-12-20T18:30:00Z",
+      "home": {
+        "name": "沙尔克04",
+        "crest": "https://crests.football-data.org/6.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "门兴格拉德巴赫",
+        "crest": "https://crests.football-data.org/18.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-21-ATA-NAP",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-20T19:45:00Z",
+      "home": {
+        "name": "亚特兰大",
+        "crest": "https://crests.football-data.org/102.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "那不勒斯",
+        "crest": "https://crests.football-data.org/113.png",
+        "rank": 0
+      }
+    }
+  ]
+}
