@@ -4709,6 +4709,16 @@ workflow:
                       team.pop("id", None)
                       merged[side] = team
 
+              def _strip_meta(text):
+                  banned = ("位置", "场地")
+                  kept = []
+                  for sentence in re.split(r"[；;。]", str(text)):
+                      clauses = [c.strip() for c in re.split(r"[，,]", sentence) if c.strip()]
+                      good = [c for c in clauses if not any(word in c for word in banned)]
+                      if good:
+                          kept.append("，".join(good))
+                  return "；".join(kept)[:60]
+
               data = _extract_json(raw_text)
               if not isinstance(data, dict):
                   merged["prediction"] = _fallback(item)
@@ -4726,6 +4736,7 @@ workflow:
               if len(reasons) < 2:
                   reasons.append("综合双方近期状态与排名给出判断")
               factors = [str(text)[:12] for text in (data.get("factors") or []) if str(text).strip()][:5]
+              factors = [text for text in factors if "位置" not in text and "场地" not in text]
 
               pick = max(prob, key=prob.get)
               merged["prediction"] = {
@@ -4735,7 +4746,7 @@ workflow:
                   "pick": pick,
                   "reasons": reasons,
                   "factors": factors,
-                  "risk": str(data.get("risk") or "")[:60],
+                  "risk": _strip_meta(data.get("risk") or ""),
               }
               merged["degraded"] = False
               return {"match": merged}

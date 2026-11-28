@@ -62,6 +62,7 @@ if ($text -is [byte[]]) { $text = [Text.Encoding]::UTF8.GetString($text) }
 $status = ""
 $finished = $null
 $err = ""
+$failedNodes = @()
 foreach ($line in ($text -split "`r?`n")) {
   if (-not $line.StartsWith("data:")) { continue }
   $json = $line.Substring(5).Trim()
@@ -70,10 +71,18 @@ foreach ($line in ($text -split "`r?`n")) {
   if ($evt.event -eq "workflow_finished") {
     $status = $evt.data.status
     $finished = $evt.data
+  } elseif ($evt.event -eq "node_finished" -and $evt.data.status -ne "succeeded") {
+    $msg = $evt.data.error
+    if (-not $msg) { $msg = "status=" + $evt.data.status }
+    $failedNodes += ("[" + $evt.data.node_id + "] " + $msg)
   } elseif ($evt.event -eq "error") {
     $err = "$($evt.message) $($evt.code)"
   }
 }
+
+$logFile = Join-Path $env:TEMP "dify-workflow-last.log"
+Set-Content -LiteralPath $logFile -Value $text -Encoding UTF8
+Write-Host ("Raw stream saved to " + $logFile)
 
 if ($err) {
   Write-Host "Workflow error: $err" -ForegroundColor Red
@@ -85,20 +94,30 @@ if (-not $finished) {
   exit 1
 }
 
-if ($status -ne "succeeded") {
-  Write-Host ("Workflow status: " + $status) -ForegroundColor Red
-  if ($finished.error) { Write-Host ("Error: " + $finished.error) -ForegroundColor Red }
-  exit 1
-}
-
-Write-Host ("Workflow status: " + $status) -ForegroundColor Green
-if ($null -ne $finished.elapsed_time) { Write-Host ("Elapsed: " + $finished.elapsed_time + " s") }
-if ($null -ne $finished.total_tokens) { Write-Host ("Tokens: " + $finished.total_tokens) }
 if ($finished.outputs) {
   $keys = @($finished.outputs.PSObject.Properties | ForEach-Object { $_.Name })
   Write-Host ("Outputs: " + ($keys -join ", "))
-  if ($null -ne $finished.outputs.matchCount) { Write-Host ("Matches: " + $finished.outputs.matchCount) }
 }
+
+if ($failedNodes.Count -gt 0) {
+  Write-Host "Failed nodes:" -ForegroundColor Red
+  foreach ($item in $failedNodes) { Write-Host ("  " + $item) -ForegroundColor Red }
+}
+
+if ($status -eq "succeeded") {
+  Write-Host ("Workflow status: " + $status) -ForegroundColor Green
+} elseif ($status -eq "partial-succeeded" -and $failedNodes.Count -eq 0) {
+  Write-Host "Workflow status: partial-succeeded (all nodes succeeded, outputs written; Dify reports partial when some branches are skipped)." -ForegroundColor Yellow
+} else {
+  Write-Host ("Workflow status: " + $status) -ForegroundColor Red
+  if ($finished.error) { Write-Host ("Error: " + $finished.error) -ForegroundColor Red }
+  Write-Host "Check the failed node in Dify, then run again."
+  exit 1
+}
+
+if ($null -ne $finished.elapsed_time) { Write-Host ("Elapsed: " + $finished.elapsed_time + " s") }
+if ($null -ne $finished.total_tokens) { Write-Host ("Tokens: " + $finished.total_tokens) }
+if ($null -ne $finished.outputs.matchCount) { Write-Host ("Matches: " + $finished.outputs.matchCount) }
 
 if ($conf["SYNC_LOCAL"] -eq "0") {
   Write-Host ""
