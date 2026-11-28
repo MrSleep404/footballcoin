@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-28",
-  "generatedAt": "2026-11-28T11:32:30+08:00",
+  "generatedAt": "2026-11-28T18:58:39+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "promptVersion": "2026-11-28-c",
@@ -840,8 +840,8 @@
       "prediction": {
         "prob": {
           "home": 54,
-          "draw": 26,
-          "away": 20
+          "draw": 27,
+          "away": 19
         },
         "score": {
           "home": 2,
@@ -850,19 +850,19 @@
         "confidence": 68,
         "pick": "home",
         "reasons": [
-          "贝蒂斯主场6场场均进2球、失1.33球，巴列卡诺客场6场场均失2.33球，主队攻防优势明显。",
-          "贝蒂斯近5场2胜2平1负，巴列卡诺近5场1胜1平3负，客队状态低迷且客场两连败。",
-          "贝蒂斯缺Ceballos、Lo Celso、Losada三名中场，主胜下调4pp、平局与客胜各上调2pp。",
-          "近2次交手均战平（1-1、0-0），巴列卡诺有韧性，平局概率上调至26%。"
+          "贝蒂斯主场6场场均进2球、失1.33球，巴列卡诺客场6场场均失2.33球，主队进攻与对手客场防守差距明显。",
+          "贝蒂斯近5场2胜2平1负，巴列卡诺近5场1胜1平3负且两场被零封，客队状态与进攻稳定性不足。",
+          "贝蒂斯缺少Ceballos、Lo Celso等3人，主胜概率下调4pp；巴列卡诺缺少Batalla等3人，客胜上调2pp、平局上调2pp。",
+          "近2次交手均战平（1-1、0-0），巴列卡诺有守平能力，但市场主胜60%仍高于模型54%，差异源于主队伤停与交手平局。"
         ],
         "factors": [
-          "主场场均进2球",
-          "客队客场场均失2.33",
-          "客队近5场仅1胜",
-          "贝蒂斯中场三人伤缺",
-          "交手近2次全平"
+          "贝蒂斯主场场均进2球",
+          "巴列卡诺客场场均失2.3",
+          "贝蒂斯排名第4高客队12",
+          "贝蒂斯3人伤停含组织核心",
+          "近2次交手均战平"
         ],
-        "risk": "贝蒂斯3.7天前刚踢欧冠客场，体能存疑；无市场赔率参照。"
+        "risk": "贝蒂斯3.7天前刚踢欧冠客场比赛，赛程消耗可能影响下半场体能；伤停名单无具体位置，调整幅度有限。"
       },
       "degraded": false,
       "result": null,
@@ -873,7 +873,7 @@
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-28T03:31:06Z",
+        "capturedAt": "2026-11-28T10:57:12Z",
         "prob": {
           "home": 60,
           "draw": 22,
@@ -973,9 +973,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 60,
+          "home": 62,
           "draw": 22,
-          "away": 18
+          "away": 16
         },
         "score": {
           "home": 2,
@@ -984,19 +984,18 @@
         "confidence": 72,
         "pick": "home",
         "reasons": [
-          "弗罗西诺内主场6场场均进2.67失1，帕尔马客场5场场均进1失1.8，主队主场攻防优势显著。",
-          "弗罗西诺内赛季进25失20，帕尔马进10失22，主队进攻火力约为客队2.5倍，防守也更稳。",
+          "弗罗西诺内主场6场场均进2.67失1，帕尔马客场5场场均进1失1.8，主队攻防两端占优。",
+          "弗罗西诺内近5场2胜1平2负，帕尔马近5场1胜1平3负，且帕尔马近两场连败共失7球。",
           "弗罗西诺内仅Birligea（大腿伤）缺阵，属轮换级别，主胜概率下调2pp、平局和客胜各上调1pp。",
-          "帕尔马近5场1胜1平3负且两场丢5球和2球，防守漏洞大，客场面对主场强势的主队难保不失。"
+          "市场主胜67%，与模型62%相差5pp，在合理范围内，不改变主胜方向。"
         ],
         "factors": [
-          "主队主场场均进2.67",
-          "客队客场场均失1.8",
-          "主队排名第7对第17",
-          "客队近5场仅1胜",
-          "主队仅1人伤缺"
+          "主场攻防强势",
+          "客队状态低迷",
+          "客队防守漏洞大",
+          "伤停影响轻微"
         ],
-        "risk": "无历史交锋记录；市场赔率已提供，但未提供伤停球员位置细节。"
+        "risk": "无历史交手记录，伤病名单仅1人且无位置信息，样本有限。"
       },
       "degraded": false,
       "result": null,
@@ -1007,11 +1006,11 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-28T03:30:51Z",
+        "capturedAt": "2026-11-28T10:57:19Z",
         "prob": {
-          "home": 64,
-          "draw": 19,
-          "away": 17
+          "home": 67,
+          "draw": 18,
+          "away": 15
         }
       },
       "news": [
@@ -1090,30 +1089,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 39,
-          "draw": 31,
-          "away": 30
+          "home": 34,
+          "draw": 32,
+          "away": 34
         },
         "score": {
           "home": 2,
           "away": 1
         },
-        "confidence": 52,
+        "confidence": 50,
         "pick": "home",
         "reasons": [
-          "科隆本赛事主场5场场均进1.4失1.2，主场防守优于客场，而埃尔弗斯贝格客场5场场均失2球，主队有拿分基础。",
-          "科隆近5场D L D D L不胜，但其中客平拜仁、主平沙尔克，低比分平局多；埃尔弗斯贝格近5场L L W L W，客场0-4负莱比锡、1-2负多特，客场硬仗失球多。",
-          "科隆伤停5人：Castro-Montes、Dallinga、Hubers、Lochoshvili、Rondic，涉及中后场与锋线，受影响一侧主胜下调6pp、平局与客胜各上调3pp。",
-          "交手记录未提供，天气2.6℃、无降水、风速11.9km/h，对比赛影响有限；市场主胜48%高于最终主胜39%，但科隆主场进失球与客队客场防守数据支持主队不败。"
+          "科隆本赛事主场场均进1.4失1.2，但近5场仅3平2负，进攻效率偏低。",
+          "埃尔弗斯贝格客场场均进1失2，近5场2胜3负，客场曾0-4负莱比锡。",
+          "科隆5人伤停含Castro-Montes等，受影响一侧主胜调低8pp、平局调高3pp、客胜调高5pp。",
+          "市场主胜48%高于预测34%，但科隆近5场不胜且伤病多，故不贴合市场。"
         ],
         "factors": [
-          "科隆主场场均进1.4失1",
-          "埃尔弗斯贝格客场场均失2",
-          "科隆5人伤停削弱阵容",
-          "客队近5场胜负交替",
-          "市场主胜48%作参照"
+          "科隆主场攻防一般",
+          "客队客场防守差",
+          "科隆5人伤停",
+          "客队状态略优"
         ],
-        "risk": "无历史交手记录，科隆伤停名单无具体位置，有效样本仅10场。"
+        "risk": "无历史交锋记录，有效样本仅10场。"
       },
       "degraded": false,
       "result": null,
@@ -1124,7 +1122,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-28T03:31:11Z",
+        "capturedAt": "2026-11-28T10:57:10Z",
         "prob": {
           "home": 48,
           "draw": 25,
@@ -1269,9 +1267,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 55,
-          "draw": 26,
-          "away": 19
+          "home": 58,
+          "draw": 25,
+          "away": 17
         },
         "score": {
           "home": 2,
@@ -1280,19 +1278,19 @@
         "confidence": 62,
         "pick": "home",
         "reasons": [
-          "柏林联合本赛事客场4场场均仅进0.25球、失3.5球，近5场2平3负且两场被零封，客战进攻近乎瘫痪。",
-          "美因茨赛季进19球、场均1.9球，近5场虽1胜4负但每场均有进球，主场面对客场失球最多的对手具备破门条件。",
-          "美因茨缺Kohr、Mwene、Silas三人，中后场轮换受损，主胜概率下调3pp、平局上调2pp。",
-          "柏林联合缺Burcu、Juranovic、Khedira、Markgraf、Nsoki共5人，其中后防多人缺阵，客胜仅微调1pp。"
+          "美因茨赛季场均进1.9球，主场场均进1.4球；柏林联合客场场均仅进0.25球、失3.5球，客战攻防俱差。",
+          "近5场美因茨1胜4负，柏林联合3平2负；柏林联合近5场仅进3球，进攻端持续低迷。",
+          "美因茨缺Kohr、Mwene、Silas三人，中后场受损，主胜概率下调4pp、平局与客胜各上调2pp。",
+          "柏林联合缺Burcu、Juranovic、Khedira、Markgraf、Nsoki五人，但客胜概率仍仅17%，市场主胜65%与模型58%差7pp在合理范围。"
         ],
         "factors": [
-          "客队客场场均进0.25失",
-          "主队赛季场均进1.9球",
-          "客队近5场2平3负",
-          "主队3人伤停",
-          "客队5人伤停"
+          "柏林联合客场场均进0.2",
+          "美因茨赛季场均进1.9",
+          "美因茨三人伤停",
+          "柏林联合五人伤停",
+          "市场主胜65%参照"
         ],
-        "risk": "无历史交手以外的市场赔率分歧信息；美因茨主场样本5场偏少，主胜概率置信度受限。"
+        "risk": "无历史交手让球盘口与市场赔率细节，伤停名单无具体位置，有效样本仅10场。"
       },
       "degraded": false,
       "result": null,
@@ -1303,7 +1301,7 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-28T03:31:11Z",
+        "capturedAt": "2026-11-28T10:57:10Z",
         "prob": {
           "home": 65,
           "draw": 20,
@@ -1428,29 +1426,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 42,
-          "draw": 31,
+          "home": 43,
+          "draw": 30,
           "away": 27
         },
         "score": {
-          "home": 2,
-          "away": 1
+          "home": 1,
+          "away": 0
         },
         "confidence": 55,
         "pick": "home",
         "reasons": [
-          "帕德博恩主场5场场均进1.2失1.2，明显优于其客场0.4/1.8，主场攻守更均衡。",
-          "沙尔克04近5场2平3负且仅进1球，赛季场均0.5球，进攻端持续乏力。",
-          "沙尔克04有5人伤停（Becker、Lasme、Schallenberg、Vozar、Wober），客胜概率下调3pp。",
-          "市场主胜37%低于模型42%，但主队主场进失球与客队低迷状态支撑非市场依据。"
+          "帕德博恩主场场均进1.2失1.2，沙尔克客场场均进1失1.6，主队主场攻防略优。",
+          "沙尔克5人伤停（Becker、Lasme、Schallenberg、Vozar、Wober），客胜概率下调3pp。",
+          "帕德博恩仅2人伤停（Gayret、Hoffmeier），阵容完整度优于客队，主胜概率上调3pp。",
+          "近5场帕德博恩1胜3平1负，沙尔克3平2负，主队近期状态相对更稳。"
         ],
         "factors": [
-          "主队主场攻守均衡",
-          "客队进攻乏力",
-          "客队5人伤停",
-          "主队近5场仅1负"
+          "主场攻防略优",
+          "客队伤停严重",
+          "主队状态更稳",
+          "客队客场失球多"
         ],
-        "risk": "无历史交锋记录，且双方本赛事样本仅10场，有效样本偏少。"
+        "risk": "无历史交锋记录，且两队排名接近，预测存在不确定性。"
       },
       "degraded": false,
       "result": null,
@@ -1461,11 +1459,11 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-28T03:31:11Z",
+        "capturedAt": "2026-11-28T10:57:10Z",
         "prob": {
           "home": 37,
-          "draw": 28,
-          "away": 35
+          "draw": 27,
+          "away": 36
         }
       },
       "injuries": {
@@ -1579,9 +1577,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 15,
-          "draw": 20,
-          "away": 65
+          "home": 18,
+          "draw": 22,
+          "away": 60
         },
         "score": {
           "home": 1,
@@ -1590,19 +1588,19 @@
         "confidence": 72,
         "pick": "away",
         "reasons": [
-          "拜仁本赛事场均进3球、失1球，近5场2胜2平1负，进攻端仍明显强于汉堡场均进1球、失2.4球。",
-          "汉堡主场4场场均进1.5球、失1.75球，具备一定主场进球能力，但防守端难以抵挡拜仁客场场均1.8球的持续冲击。",
-          "拜仁伤停含凯恩、穆西亚拉、戴维斯、格纳布里、诺伊尔五名主力，受影响一侧下调5pp，汉堡上调3pp、平局上调2pp。",
-          "近2次交手汉堡0胜1平1负，最近一次2-2战平，说明汉堡主场并非完全没有拿分可能，但拜仁整体实力仍占优。"
+          "拜仁本赛事场均进3球、失1球，客场5场场均进1.8球，进攻效率仍明显高于汉堡主场场均1.5球。",
+          "汉堡本赛事场均失2.4球，近5场有0-4、1-3溃败，防守稳定性不足，难以零封拜仁。",
+          "拜仁凯恩、穆西亚拉、诺伊尔等5名主力伤停，客胜下调5pp、主胜与平局各上调，但仍保持客胜倾向。",
+          "近2次交手拜仁1胜1平，最近汉堡主场2-2逼平拜仁，说明汉堡主场有一定抵抗能力。"
         ],
         "factors": [
-          "拜仁场均进3球失1球",
-          "汉堡场均失2.4球",
-          "拜仁五名主力伤停",
+          "拜仁场均进3球火力强",
+          "汉堡场均失2.4球防守差",
+          "拜仁5名主力伤停",
           "汉堡主场场均进1.5球",
-          "拜仁2.8天前刚踢欧冠"
+          "拜仁2.8天前欧冠客战"
         ],
-        "risk": "拜仁伤停名单未提供球员位置，无法精确评估各位置缺阵影响；无市场赔率以外的其他数据。"
+        "risk": "汉堡伤停5人但无具体位置与角色信息，拜仁伤停影响已按人数与类型评估；无有效市场偏离数据。"
       },
       "degraded": false,
       "result": null,
@@ -1613,11 +1611,11 @@
       },
       "market": {
         "bookmaker": "市场均值（23 家）",
-        "capturedAt": "2026-11-28T03:31:11Z",
+        "capturedAt": "2026-11-28T10:57:10Z",
         "prob": {
-          "home": 11,
-          "draw": 15,
-          "away": 74
+          "home": 12,
+          "draw": 16,
+          "away": 72
         }
       },
       "news": [
@@ -1636,11 +1634,11 @@
           "source": "Get German Football News"
         },
         {
-          "title": "Said El Mala optimistic about blossoming partnership with Mikey Moore",
-          "summary": "Germany international Said El Mala has spoken about his growing understanding with Tottenham loanee Mikey Moore following the Englishman's first Bundesliga goal against Bayern Munich. The Cologne attacker also revealed how their friendship ",
-          "link": "https://www.getfootballnewsgermany.com/2026/mikey-moore-said-el-mala-interview/",
-          "published": "2026-11-27",
-          "source": "Get German Football News"
+          "title": "Bayern Munich made a mistake taking Jamal Musiala's injuries public",
+          "summary": "The uproar over Bayern Munich's callous attitude toward Jamal Musiala's health issues has shown a nasty side of the club when it comes to how they care for their players.",
+          "link": "https://www.espn.com/soccer/story/_/id/50595091/bayern-munich-jamal-musiala-fainting-injuries",
+          "published": "2026-11-26",
+          "source": "ESPN"
         }
       ],
       "injuries": {
@@ -1777,18 +1775,18 @@
         "confidence": 72,
         "pick": "home",
         "reasons": [
-          "利兹联本赛事场均仅失0.82，主场5场场均失0.6，防守端表现稳健。",
-          "考文垂客场5场场均进0.6失2.0，近5场客场两战皆负且共失6球。",
-          "利兹联近5场W W L D D，考文垂W L W L L，状态与排名均主队占优。",
-          "伤病名单未提供，三项调整均为0；市场主胜64%与模型62%基本一致。"
+          "利兹联近5场W W L D D，主场5场场均进1.4失0.6，防守稳固；考文垂客场5场场均进0.6失2，客战乏力。",
+          "考文垂赛季失21球，近5场丢10球，客场对埃弗顿和热刺均1-3落败，防守漏洞明显。",
+          "伤病名单未提供，三项调整均为0；市场主胜64%与预测62%接近，无显著偏离。",
+          "天气降水概率100%且风速20.2km/h，可能影响传控，但利兹联主场防守韧性强，仍占优。"
         ],
         "factors": [
-          "主场防守稳固",
-          "客队客场攻弱",
-          "排名状态占优",
-          "市场主胜一致"
+          "利兹联主场失球少",
+          "考文垂客场进攻弱",
+          "考文垂防守漏洞大",
+          "利兹联排名占优"
         ],
-        "risk": "无双方历史交锋记录，且该日无伤停名单，伤病影响无法量化。"
+        "risk": "无伤停名单、无交手记录，有效样本11场尚可但缺历史交锋参考。"
       },
       "degraded": false,
       "result": null,
@@ -1799,7 +1797,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-28T03:31:04Z",
+        "capturedAt": "2026-11-28T10:57:13Z",
         "prob": {
           "home": 64,
           "draw": 21,
@@ -1884,9 +1882,9 @@
       },
       "prediction": {
         "prob": {
-          "home": 25,
+          "home": 24,
           "draw": 29,
-          "away": 46
+          "away": 47
         },
         "score": {
           "home": 1,
@@ -1895,19 +1893,19 @@
         "confidence": 62,
         "pick": "away",
         "reasons": [
-          "曼联本赛事场均失2.09球，近5场2平3负且出现0-4、0-3惨败，防守漏洞明显。",
-          "布伦特福德场均进1.82失1.00，近5场3胜1平1负，客场场均进1.2球具备拿分能力。",
-          "曼联5人伤停含Baleba、Rashford等主力，受影响一侧下调8pp；布伦特福德5人伤停多为防线，上调6pp。",
-          "曼联2.8天前刚踢欧冠客场，布伦特福德4天内无其他赛事，体能差距放大客队优势。"
+          "曼联本赛事场均失2.09、近5场2平3负，主场场均失2.2，防守持续漏球。",
+          "布伦特福德场均仅失1、客场进1.2，近5场两胜且4-0埃弗顿，攻守更稳。",
+          "曼联5人伤停含拉什福德、乌加特等主力，受影响一侧下调6pp，客队上调4pp。",
+          "曼联2.8天前刚踢欧冠客场，布伦特福德4天内无赛事，体能差距明显。"
         ],
         "factors": [
-          "曼联防守差",
-          "布伦特福德攻防稳",
-          "曼联伤停多",
-          "曼联赛程密集",
+          "曼联防守漏球",
+          "客队失球少",
+          "曼联伤停5人",
+          "曼联欧冠消耗",
           "客队体能占优"
         ],
-        "risk": "无历史交手以外的战术数据；天气恶劣可能增加变数。"
+        "risk": "无市场赔率；交手仅2场样本不足；天气大雨大风或增变数。"
       },
       "degraded": false,
       "result": null,
@@ -1918,11 +1916,11 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-28T03:31:04Z",
+        "capturedAt": "2026-11-28T10:57:13Z",
         "prob": {
-          "home": 43,
+          "home": 42,
           "draw": 25,
-          "away": 32
+          "away": 33
         }
       },
       "news": [
@@ -1934,18 +1932,18 @@
           "source": "ESPN"
         },
         {
-          "title": "Which USMNT players could follow Pochettino to Manchester United?",
-          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
-          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
-          "published": "2026-11-27",
+          "title": "Transfer rumors, news: Fernandes still looking for way out of Man United",
+          "summary": "Manchester United captain Bruno Fernandes is still considering his options despite his contract extension. Transfer Talk has the latest.",
+          "link": "https://www.espn.com/soccer/story/_/id/50619950/transfer-rumors-news-fernandes-manchester-united",
+          "published": "2026-11-28",
           "source": "ESPN"
         },
         {
-          "title": "Man Utd activate Fernandes contract extension clause",
-          "summary": "Manchester United have triggered their 12-month option to extend captain Bruno Fernandes' contract.",
-          "link": "https://www.skysports.com/football/news/11095/13617215/bruno-fernandes-man-utd-activate-captains-12-month-option-to-extend-contract-which-now-ends-in-2028",
-          "published": "2026-11-27",
-          "source": "Sky Sports"
+          "title": "Which USMNT players could follow Pochettino to Manchester United?",
+          "summary": "Man United are a mess, but could Mauricio Pochettino turn to any of his former USMNT players to help pull the Red Devils out of the relegation zone?",
+          "link": "https://www.espn.com/soccer/story/_/id/50573929/usmnt-players-pochettino-manchester-united",
+          "published": "2026-11-28",
+          "source": "ESPN"
         }
       ],
       "injuries": {
@@ -2071,29 +2069,29 @@
       },
       "prediction": {
         "prob": {
-          "home": 15,
-          "draw": 27,
-          "away": 58
+          "home": 20,
+          "draw": 26,
+          "away": 54
         },
         "score": {
           "home": 0,
-          "away": 2
+          "away": 1
         },
         "confidence": 62,
         "pick": "away",
         "reasons": [
-          "马拉加近5场1平4负，本赛事场均失1.85球，主场6场场均失2球，防守漏洞明显。",
-          "毕尔巴鄂本赛事场均进1.25失1，近5场两胜且曾4-0赫塔菲，整体攻防优于主队。",
-          "马拉加5人伤停含Lobete、Ochoa等，受影响一侧下调3pp；毕尔巴鄂4人伤停但深度较好，客胜上调2pp。",
-          "市场客胜55%，与预测58%接近，但主胜15%低于市场20%，依据主队近期连败与主场失球数据。"
+          "马拉加赛季场均失1.85球、主场场均失2球，近5场1平4负且两场主场共失7球，防守崩盘。",
+          "毕尔巴鄂排名第8，赛季场均进1.25失1，整体攻守平衡明显优于垫底的马拉加。",
+          "毕尔巴鄂5人伤停含Vivian等，客胜概率下调3pp、主胜上调2pp，但客队实力仍占优。",
+          "市场客胜55%，与预测54%基本一致，未出现显著偏离。"
         ],
         "factors": [
-          "主队近5场1平4负",
-          "主队场均失1.85球",
-          "客队攻防更均衡",
-          "主队5人伤停"
+          "主队防守极差",
+          "客队排名与攻守占优",
+          "客队伤停5人",
+          "市场客胜55%"
         ],
-        "risk": "无历史交锋记录，样本有限；伤停名单无具体位置，调整幅度受限。"
+        "risk": "无历史交锋记录；毕尔巴鄂伤停名单缺少球员位置信息，调整幅度有限。"
       },
       "degraded": false,
       "result": null,
@@ -2104,7 +2102,7 @@
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-28T03:31:06Z",
+        "capturedAt": "2026-11-28T10:57:12Z",
         "prob": {
           "home": 20,
           "draw": 25,
