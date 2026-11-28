@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-28T11:32:41+08:00",
+  "generatedAt": "2026-11-28T18:58:50+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
   "promptVersion": "2026-11-28-c",
@@ -76,21 +76,21 @@
           "home": 1,
           "away": 2
         },
-        "confidence": 55,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "莱切近5场1平4负，场均失2.08，主场5场场均失2.4，防守持续漏勺。",
-          "亚特兰大近5场2胜3平不败，客场5场进1.2失1.8，攻守略优于主队。",
-          "近2次交手亚特兰大全胜且进7球，往绩碾压，心理优势明显。",
-          "伤病名单未提供，三项调整均为0，预测以近期状态与交手为基准。"
+          "莱切近5场1平4负，本赛事场均失2.08，主场场均失2.4，防守持续低迷。",
+          "亚特兰大近2次交手全胜且总比分7-1，最近客场3-0、主场4-1，心理优势明显。",
+          "亚特兰大客场场均进1.2失1.8，进攻效率一般但莱切主场失球更多，客队有望小胜。",
+          "伤病名单未提供，三项调整均为0，维持基线概率。"
         ],
         "factors": [
-          "莱切防守差",
-          "亚特兰大不败",
-          "交手客队全胜",
-          "客队实力占优"
+          "莱切近5场1平4负",
+          "莱切场均失2.08",
+          "亚特兰大交手两连胜",
+          "亚特兰大客场进1.2"
         ],
-        "risk": "无伤停名单、无跨赛事样本，有效样本仅12场，置信度受限。"
+        "risk": "无伤停名单、无市场赔率以外的缺失数据；有效样本12场尚可。"
       },
       "degraded": false,
       "result": null,
@@ -101,7 +101,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-28T03:30:51Z",
+        "capturedAt": "2026-11-28T10:57:19Z",
         "prob": {
           "home": 24,
           "draw": 25,
@@ -177,30 +177,30 @@
       },
       "prediction": {
         "prob": {
-          "home": 15,
-          "draw": 24,
-          "away": 61
+          "home": 18,
+          "draw": 25,
+          "away": 57
         },
         "score": {
           "home": 0,
           "away": 2
         },
-        "confidence": 72,
+        "confidence": 78,
         "pick": "away",
         "reasons": [
-          "米兰近5场4胜1负，赛季场均进2.33球，进攻火力远胜卡利亚里。",
-          "卡利亚里近5场1胜4负，赛季场均仅进0.83球，主场场均进0.6球。",
-          "卡利亚里主场场均失0.8球尚可，但米兰客场场均进1.67球，客胜概率高。",
-          "双方近2次交手各胜1场，最近米兰1-2客负，但当前状态差距大。"
+          "AC米兰近5场4胜1负，赛季场均进2.33球，进攻火力远超卡利亚里场均0.83球。",
+          "卡利亚里近5场1胜4负，其中3场被零封，主场场均仅进0.6球、失0.8球，进攻乏力。",
+          "米兰客场场均进1.67球、失1球，攻守均衡；卡利亚里主场失球少但进球更少，难以威胁米兰。",
+          "伤病名单该日无记录，三项调整均为0；市场客胜56%与预测57%基本一致。"
         ],
         "factors": [
           "米兰近5场4胜状态佳",
+          "米兰场均进2.33球火力",
           "卡利亚里近5场4负",
-          "米兰场均进2.33球",
-          "卡利亚里主场进攻弱",
-          "交手各胜1场"
+          "卡利亚里场均仅进0.83",
+          "米兰客场场均进1.67球"
         ],
-        "risk": "无伤停名单，无法评估伤停影响；交手样本仅2场，参考有限。"
+        "risk": "无伤停名单、无市场赔率缺失问题；交手记录仅2场样本有限，天气数据完整。"
       },
       "degraded": false,
       "result": null,
@@ -211,7 +211,7 @@
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-28T03:30:51Z",
+        "capturedAt": "2026-11-28T10:57:19Z",
         "prob": {
           "home": 19,
           "draw": 25,
@@ -219,6 +219,13 @@
         }
       },
       "news": [
+        {
+          "title": "PSV call Jashari and consider January offer for Milan midfielder",
+          "summary": "Sky Sports Switzerland reports that PSV Eindhoven have contacted Ardon Jashari’s representatives and are considering...",
+          "link": "https://football-italia.net/psv-call-jashari-consider-offer-milan-midfield/",
+          "published": "2026-11-28",
+          "source": "Football Italia"
+        },
         {
           "title": "Milan renew interest in Fenerbahçe’s English full-back Brown",
           "summary": "Milan have rekindled their interest in Fenerbahçe left-back Archie Brown as they consider their options...",
@@ -230,13 +237,6 @@
           "title": "Ordine slams Milan’s Estupiñán: ‘Terror all over his face’",
           "summary": "Franco Ordine has launched a stinging attack on Pervis Estupiñán, claiming the Milan full-back is...",
           "link": "https://football-italia.net/ordine-slams-milans-estupinan-terror/",
-          "published": "2026-11-27",
-          "source": "Football Italia"
-        },
-        {
-          "title": "What Bruno Fernandes’ new Manchester United contract means for Milan",
-          "summary": "Manchester United have triggered a one-year extension on Bruno Fernandes’ contract, ending Milan’s hopes of...",
-          "link": "https://football-italia.net/bruno-fernandes-manchester-utd-contract-milan/",
           "published": "2026-11-27",
           "source": "Football Italia"
         }
@@ -311,28 +311,28 @@
       "prediction": {
         "prob": {
           "home": 52,
-          "draw": 28,
-          "away": 20
+          "draw": 29,
+          "away": 19
         },
         "score": {
           "home": 1,
           "away": 0
         },
-        "confidence": 60,
+        "confidence": 68,
         "pick": "home",
         "reasons": [
-          "赫塔菲客场6场0进球失2.33球，进攻端完全哑火，防守漏洞明显。",
-          "西班牙人近5场2胜1平2负，主场进1失1.17，状态优于客队近5场1胜1平3负。",
-          "西班牙人赛季场均进1.08失1.08，赫塔菲场均进0.62失1.62，攻防数据主队全面占优。",
-          "伤病名单未提供，三项调整均为0pp；市场主胜46%，主胜概率52%略高但未超8pp。"
+          "赫塔菲客场6场场均进0球失2.33球，近5场客场0-2、0-4连败，客战进攻瘫痪。",
+          "西班牙人近5场2胜1平2负，主场防守尚可，赛季场均进失1.08球，整体状态优于客队。",
+          "西班牙人排名第11高于赫塔菲第18，积分优势明显；赫塔菲赛季场均失1.62球，防守漏洞大。",
+          "伤病无名单，三项调整均为0；市场主胜46%，但赫塔菲客场零进球且失球率高，主胜概率上调至52%。"
         ],
         "factors": [
-          "赫塔菲客场0进球",
-          "主队攻防均衡",
-          "客队防守失2.33球",
-          "主队状态占优"
+          "赫塔菲客场场均进0球",
+          "赫塔菲客场场均失2.33",
+          "西班牙人排名高于赫塔菲",
+          "西班牙人近5场2胜1平2"
         ],
-        "risk": "无伤停名单，无交手记录，无市场赔率。"
+        "risk": "无伤停名单，无市场赔率以外的缺失数据；交手样本仅2场，参考有限。"
       },
       "degraded": false,
       "result": null,
@@ -343,7 +343,7 @@
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-28T03:31:06Z",
+        "capturedAt": "2026-11-28T10:57:12Z",
         "prob": {
           "home": 46,
           "draw": 30,
