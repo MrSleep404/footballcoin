@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26T11:43:05+08:00",
+  "updatedAt": "2026-11-28T10:00:36+08:00",
   "leagues": [
     {
       "code": "PL",
@@ -159,20 +159,20 @@
           "name": "切尔西",
           "tla": "CHE",
           "crest": "https://crests.football-data.org/61.png",
-          "played": 11,
+          "played": 12,
           "won": 5,
           "draw": 1,
-          "lost": 5,
-          "goalsFor": 20,
-          "goalsAgainst": 20,
-          "goalDiff": 0,
+          "lost": 6,
+          "goalsFor": 22,
+          "goalsAgainst": 23,
+          "goalDiff": -1,
           "points": 16,
           "form": [
             "L",
             "L",
-            "W",
             "L",
-            "W"
+            "W",
+            "L"
           ]
         },
         {
@@ -282,6 +282,27 @@
         },
         {
           "rank": 14,
+          "name": "诺丁汉森林",
+          "tla": "NOT",
+          "crest": "https://crests.football-data.org/351.png",
+          "played": 12,
+          "won": 3,
+          "draw": 3,
+          "lost": 6,
+          "goalsFor": 12,
+          "goalsAgainst": 17,
+          "goalDiff": -5,
+          "points": 12,
+          "form": [
+            "W",
+            "L",
+            "W",
+            "L",
+            "D"
+          ]
+        },
+        {
+          "rank": 15,
           "name": "考文垂",
           "tla": "COV",
           "crest": "https://crests.football-data.org/1076.png",
@@ -302,7 +323,7 @@
           ]
         },
         {
-          "rank": 15,
+          "rank": 16,
           "name": "富勒姆",
           "tla": "FUL",
           "crest": "https://crests.football-data.org/63.png",
@@ -323,7 +344,7 @@
           ]
         },
         {
-          "rank": 16,
+          "rank": 17,
           "name": "伊普斯维奇",
           "tla": "IPS",
           "crest": "https://crests.football-data.org/349.png",
@@ -339,27 +360,6 @@
             "L",
             "L",
             "D",
-            "D",
-            "L"
-          ]
-        },
-        {
-          "rank": 17,
-          "name": "诺丁汉森林",
-          "tla": "NOT",
-          "crest": "https://crests.football-data.org/351.png",
-          "played": 11,
-          "won": 2,
-          "draw": 3,
-          "lost": 6,
-          "goalsFor": 9,
-          "goalsAgainst": 15,
-          "goalDiff": -6,
-          "points": 9,
-          "form": [
-            "L",
-            "W",
-            "L",
             "D",
             "L"
           ]
@@ -541,6 +541,27 @@
         },
         {
           "rank": 6,
+          "name": "桑坦德竞技",
+          "tla": "SAN",
+          "crest": "https://crests.football-data.org/5335.png",
+          "played": 14,
+          "won": 6,
+          "draw": 2,
+          "lost": 6,
+          "goalsFor": 23,
+          "goalsAgainst": 33,
+          "goalDiff": -10,
+          "points": 20,
+          "form": [
+            "W",
+            "W",
+            "W",
+            "L",
+            "W"
+          ]
+        },
+        {
+          "rank": 7,
           "name": "塞维利亚",
           "tla": "SEV",
           "crest": "https://crests.football-data.org/559.png",
@@ -555,27 +576,6 @@
           "form": [
             "D",
             "D",
-            "L",
-            "W",
-            "L"
-          ]
-        },
-        {
-          "rank": 7,
-          "name": "桑坦德竞技",
-          "tla": "SAN",
-          "crest": "https://crests.football-data.org/5335.png",
-          "played": 13,
-          "won": 5,
-          "draw": 2,
-          "lost": 6,
-          "goalsFor": 20,
-          "goalsAgainst": 32,
-          "goalDiff": -12,
-          "points": 17,
-          "form": [
-            "W",
-            "W",
             "L",
             "W",
             "L"
@@ -733,20 +733,20 @@
           "name": "莱万特",
           "tla": "LEV",
           "crest": "https://crests.football-data.org/88.png",
-          "played": 13,
+          "played": 14,
           "won": 2,
           "draw": 6,
-          "lost": 5,
-          "goalsFor": 17,
-          "goalsAgainst": 22,
-          "goalDiff": -5,
+          "lost": 6,
+          "goalsFor": 18,
+          "goalsAgainst": 25,
+          "goalDiff": -7,
           "points": 12,
           "form": [
+            "L",
             "D",
             "D",
             "L",
-            "L",
-            "W"
+            "L"
           ]
         },
         {
@@ -1010,6 +1010,27 @@
         },
         {
           "rank": 8,
+          "name": "博洛尼亚",
+          "tla": "BOL",
+          "crest": "https://crests.football-data.org/103.png",
+          "played": 13,
+          "won": 5,
+          "draw": 4,
+          "lost": 4,
+          "goalsFor": 17,
+          "goalsAgainst": 15,
+          "goalDiff": 2,
+          "points": 19,
+          "form": [
+            "D",
+            "D",
+            "W",
+            "W",
+            "W"
+          ]
+        },
+        {
+          "rank": 9,
           "name": "那不勒斯",
           "tla": "NAP",
           "crest": "https://crests.football-data.org/113.png",
@@ -1027,27 +1048,6 @@
             "L",
             "W",
             "D"
-          ]
-        },
-        {
-          "rank": 9,
-          "name": "博洛尼亚",
-          "tla": "BOL",
-          "crest": "https://crests.football-data.org/103.png",
-          "played": 12,
-          "won": 5,
-          "draw": 3,
-          "lost": 4,
-          "goalsFor": 17,
-          "goalsAgainst": 15,
-          "goalDiff": 2,
-          "points": 18,
-          "form": [
-            "D",
-            "W",
-            "W",
-            "W",
-            "W"
           ]
         },
         {
@@ -1241,6 +1241,27 @@
         },
         {
           "rank": 19,
+          "name": "威尼斯",
+          "tla": "VEN",
+          "crest": "https://crests.football-data.org/454.png",
+          "played": 13,
+          "won": 2,
+          "draw": 1,
+          "lost": 10,
+          "goalsFor": 8,
+          "goalsAgainst": 25,
+          "goalDiff": -17,
+          "points": 7,
+          "form": [
+            "D",
+            "L",
+            "W",
+            "L",
+            "L"
+          ]
+        },
+        {
+          "rank": 20,
           "name": "乌迪内斯",
           "tla": "UDI",
           "crest": "https://crests.football-data.org/115.png",
@@ -1257,27 +1278,6 @@
             "L",
             "L",
             "D",
-            "L"
-          ]
-        },
-        {
-          "rank": 20,
-          "name": "威尼斯",
-          "tla": "VEN",
-          "crest": "https://crests.football-data.org/454.png",
-          "played": 12,
-          "won": 2,
-          "draw": 0,
-          "lost": 10,
-          "goalsFor": 8,
-          "goalsAgainst": 25,
-          "goalDiff": -17,
-          "points": 6,
-          "form": [
-            "L",
-            "W",
-            "L",
-            "L",
             "L"
           ]
         }
@@ -1398,20 +1398,20 @@
           "name": "云达不莱梅",
           "tla": "SVW",
           "crest": "https://crests.football-data.org/12.png",
-          "played": 10,
+          "played": 11,
           "won": 5,
-          "draw": 3,
+          "draw": 4,
           "lost": 2,
-          "goalsFor": 21,
-          "goalsAgainst": 15,
+          "goalsFor": 24,
+          "goalsAgainst": 18,
           "goalDiff": 6,
-          "points": 18,
+          "points": 19,
           "form": [
+            "D",
             "W",
             "L",
             "W",
-            "W",
-            "D"
+            "W"
           ]
         },
         {
@@ -1650,20 +1650,20 @@
           "name": "门兴格拉德巴赫",
           "tla": "BMG",
           "crest": "https://crests.football-data.org/18.png",
-          "played": 10,
+          "played": 11,
           "won": 1,
-          "draw": 1,
+          "draw": 2,
           "lost": 8,
-          "goalsFor": 12,
-          "goalsAgainst": 26,
+          "goalsFor": 15,
+          "goalsAgainst": 29,
           "goalDiff": -14,
-          "points": 4,
+          "points": 5,
           "form": [
+            "D",
             "L",
             "L",
             "D",
-            "W",
-            "L"
+            "W"
           ]
         }
       ]
@@ -1699,24 +1699,45 @@
           "name": "巴黎FC",
           "tla": "PFC",
           "crest": "https://crests.football-data.org/1045.png",
-          "played": 11,
+          "played": 12,
           "won": 7,
           "draw": 2,
-          "lost": 2,
+          "lost": 3,
           "goalsFor": 21,
-          "goalsAgainst": 10,
-          "goalDiff": 11,
+          "goalsAgainst": 11,
+          "goalDiff": 10,
           "points": 23,
           "form": [
-            "W",
-            "W",
-            "W",
             "L",
-            "W"
+            "W",
+            "W",
+            "W",
+            "L"
           ]
         },
         {
           "rank": 3,
+          "name": "布雷斯特",
+          "tla": "BRE",
+          "crest": "https://crests.football-data.org/512.png",
+          "played": 12,
+          "won": 6,
+          "draw": 3,
+          "lost": 3,
+          "goalsFor": 20,
+          "goalsAgainst": 12,
+          "goalDiff": 8,
+          "points": 21,
+          "form": [
+            "W",
+            "W",
+            "W",
+            "W",
+            "L"
+          ]
+        },
+        {
+          "rank": 4,
           "name": "里尔",
           "tla": "LIL",
           "crest": "https://crests.football-data.org/521.png",
@@ -1737,7 +1758,7 @@
           ]
         },
         {
-          "rank": 4,
+          "rank": 5,
           "name": "里昂",
           "tla": "LYO",
           "crest": "https://crests.football-data.org/523.png",
@@ -1758,7 +1779,7 @@
           ]
         },
         {
-          "rank": 5,
+          "rank": 6,
           "name": "马赛",
           "tla": "MAR",
           "crest": "https://crests.football-data.org/516.png",
@@ -1776,27 +1797,6 @@
             "W",
             "W",
             "W"
-          ]
-        },
-        {
-          "rank": 6,
-          "name": "布伦特福德",
-          "tla": "BRE",
-          "crest": "https://crests.football-data.org/512.png",
-          "played": 11,
-          "won": 5,
-          "draw": 3,
-          "lost": 3,
-          "goalsFor": 19,
-          "goalsAgainst": 12,
-          "goalDiff": 7,
-          "points": 18,
-          "form": [
-            "W",
-            "W",
-            "W",
-            "L",
-            "D"
           ]
         },
         {
@@ -1929,7 +1929,7 @@
           "rank": 13,
           "name": "勒芒",
           "tla": "LMF",
-          "crest": "https://upload.wikimedia.org/wikipedia/en/5/57/Le_Mans_FC_logo.svg",
+          "crest": "https://crests.football-data.org/535.png",
           "played": 11,
           "won": 2,
           "draw": 5,
