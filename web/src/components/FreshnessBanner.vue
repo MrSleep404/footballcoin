@@ -5,9 +5,10 @@ import { formatGeneratedAt, isStale, relativeHours } from "../utils/format";
 const props = defineProps<{
   generatedAt: string;
   degradedCount?: number;
+  historical?: boolean;
 }>();
 
-const stale = computed(() => isStale(props.generatedAt));
+const stale = computed(() => !props.historical && isStale(props.generatedAt));
 </script>
 
 <template>
@@ -17,8 +18,11 @@ const stale = computed(() => isStale(props.generatedAt));
       <span v-if="stale">
         数据可能未更新：最后生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）
       </span>
+      <span v-else-if="historical">
+        该日预测生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）· 已定稿
+      </span>
       <span v-else>
-        数据生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）· 每日更新，覆盖未来 7 天
+        数据生成于 {{ formatGeneratedAt(generatedAt) }}（{{ relativeHours(generatedAt) }}）· 每日更新，预测覆盖未来 3 天
       </span>
     </div>
     <div class="right">

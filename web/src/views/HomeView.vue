@@ -267,6 +267,7 @@ onUnmounted(() => {
         v-if="day && !loading"
         :generated-at="day.generatedAt"
         :degraded-count="day.degradedCount"
+        :historical="date < bjToday()"
       />
 
       <div v-if="loading" class="groups" aria-busy="true" aria-label="正在加载">
