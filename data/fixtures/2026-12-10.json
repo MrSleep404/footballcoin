@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-10",
+  "generatedAt": "2026-11-28T10:03:29+08:00",
+  "matchCount": 1,
+  "matches": [
+    {
+      "id": "PD-2026-12-10-RAY-ATH",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-09T19:00:00Z",
+      "home": {
+        "name": "巴列卡诺",
+        "crest": "https://crests.football-data.org/87.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "毕尔巴鄂竞技",
+        "crest": "https://crests.football-data.org/77.png",
+        "rank": 0
+      }
+    }
+  ]
+}
