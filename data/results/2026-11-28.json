@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "date": "2026-11-28",
-  "generatedAt": "2026-11-28T10:52:27+08:00",
+  "generatedAt": "2026-11-28T11:23:46+08:00",
   "source": "football-data.org",
   "count": 5,
   "results": [
@@ -12,7 +12,7 @@
       "awayGoals": 3,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-28T10:52:27+08:00"
+      "updatedAt": "2026-11-28T11:23:46+08:00"
     },
     {
       "id": "FL1-2026-11-28-BRE-PFC",
@@ -21,7 +21,7 @@
       "awayGoals": 0,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-28T10:52:27+08:00"
+      "updatedAt": "2026-11-28T11:23:46+08:00"
     },
     {
       "id": "PD-2026-11-28-LEV-SAN",
@@ -30,7 +30,7 @@
       "awayGoals": 3,
       "outcome": "away",
       "status": "FT",
-      "updatedAt": "2026-11-28T10:52:27+08:00"
+      "updatedAt": "2026-11-28T11:23:46+08:00"
     },
     {
       "id": "PL-2026-11-28-NOT-CHE",
@@ -39,7 +39,7 @@
       "awayGoals": 2,
       "outcome": "home",
       "status": "FT",
-      "updatedAt": "2026-11-28T10:52:27+08:00"
+      "updatedAt": "2026-11-28T11:23:46+08:00"
     },
     {
       "id": "SA-2026-11-28-VEN-BOL",
@@ -48,7 +48,7 @@
       "awayGoals": 0,
       "outcome": "draw",
       "status": "FT",
-      "updatedAt": "2026-11-28T10:52:27+08:00"
+      "updatedAt": "2026-11-28T11:23:46+08:00"
     }
   ]
 }
