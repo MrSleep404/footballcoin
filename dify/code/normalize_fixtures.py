@@ -311,7 +311,8 @@ def _pool(matches, league):
 
 def main(league_results: list, mode: str, h2h_cache) -> dict:
     current = datetime.now(timezone.utc)
-    deadline = current + timedelta(days=7)
+    deadline = current + timedelta(days=30)
+    predict_deadline = current + timedelta(days=3)
     cache = _cache_map(h2h_cache)
     pools = {}
     names = {}
@@ -373,6 +374,9 @@ def main(league_results: list, mode: str, h2h_cache) -> dict:
             additions[code] = league_add
 
     flat = []
+    # 赛程按日期分组：Dify 代码节点单个数组输出不能超过 100 个元素，
+    # 30 天 5 个联赛平铺会超限，这里顶层只保留日期（最多 31 个）
+    schedule_days = {}
     for code, league_name, raw_matches, rank_map, forms, finished in pending:
         for match in raw_matches:
             if match.get("status") not in ("SCHEDULED", "TIMED"):
@@ -389,12 +393,36 @@ def main(league_results: list, mode: str, h2h_cache) -> dict:
             bj_date = kickoff.astimezone(BJ).strftime("%Y-%m-%d")
             home = match.get("homeTeam") or {}
             away = match.get("awayTeam") or {}
+            kickoff_utc = kickoff.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            match_id = f"{code}-{bj_date}-{_code(home)}-{_code(away)}"
 
-            flat.append({
-                "id": f"{code}-{bj_date}-{_code(home)}-{_code(away)}",
+            # 30 天赛程：只保留展示所需字段
+            schedule_days.setdefault(bj_date, []).append({
+                "id": match_id,
                 "league": code,
                 "leagueName": league_name,
-                "kickoff": kickoff.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "kickoff": kickoff_utc,
+                "home": {
+                    "name": _team_name(home, code),
+                    "crest": home.get("crest") or "",
+                    "rank": (rank_map.get(home.get("id")) or {}).get("rank") or 0,
+                },
+                "away": {
+                    "name": _team_name(away, code),
+                    "crest": away.get("crest") or "",
+                    "rank": (rank_map.get(away.get("id")) or {}).get("rank") or 0,
+                },
+            })
+
+            # 预测范围只保留未来 3 天，避免无谓的统计、天气与模型调用
+            if kickoff > predict_deadline:
+                continue
+
+            flat.append({
+                "id": match_id,
+                "league": code,
+                "leagueName": league_name,
+                "kickoff": kickoff_utc,
                 "status": "scheduled",
                 "matchday": match.get("matchday"),
                 "venue": match.get("venue") or "",
@@ -408,6 +436,13 @@ def main(league_results: list, mode: str, h2h_cache) -> dict:
             })
 
     flat.sort(key=lambda item: item["kickoff"])
+    schedule = [
+        {
+            "date": date,
+            "matches": sorted(schedule_days[date], key=lambda item: item["kickoff"]),
+        }
+        for date in sorted(schedule_days)
+    ]
 
     tasks = []
     value = (mode or "both").strip().lower()
@@ -422,4 +457,4 @@ def main(league_results: list, mode: str, h2h_cache) -> dict:
             "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
             "commitMessage": f"data: 五大联赛积分榜（{len(tables)} 个联赛）",
         })
-    return {"matches": flat, "syncTasks": tasks, "h2hAdditions": additions, "pools": pools, "names": names}
+    return {"matches": flat, "schedule": schedule, "syncTasks": tasks, "h2hAdditions": additions, "pools": pools, "names": names}

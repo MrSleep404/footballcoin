@@ -2151,7 +2151,9 @@ workflow:
                       additions[code] = league_add
 
               flat = []
-              schedule = []
+              # 赛程按日期分组：Dify 代码节点单个数组输出不能超过 100 个元素，
+              # 30 天 5 个联赛平铺会超限，这里顶层只保留日期（最多 31 个）
+              schedule_days = {}
               for code, league_name, raw_matches, rank_map, forms, finished in pending:
                   for match in raw_matches:
                       if match.get("status") not in ("SCHEDULED", "TIMED"):
@@ -2172,7 +2174,7 @@ workflow:
                       match_id = f"{code}-{bj_date}-{_code(home)}-{_code(away)}"
 
                       # 30 天赛程：只保留展示所需字段
-                      schedule.append({
+                      schedule_days.setdefault(bj_date, []).append({
                           "id": match_id,
                           "league": code,
                           "leagueName": league_name,
@@ -2211,7 +2213,13 @@ workflow:
                       })
 
               flat.sort(key=lambda item: item["kickoff"])
-              schedule.sort(key=lambda item: item["kickoff"])
+              schedule = [
+                  {
+                      "date": date,
+                      "matches": sorted(schedule_days[date], key=lambda item: item["kickoff"]),
+                  }
+                  for date in sorted(schedule_days)
+              ]
 
               tasks = []
               value = (mode or "both").strip().lower()
@@ -4791,10 +4799,11 @@ workflow:
                       predicted.setdefault(date, []).append(match)
 
               fixtures = {}
-              for item in schedule or []:
-                  date = _date_of(item)
-                  if date and date not in predicted:
-                      fixtures.setdefault(date, []).append(item)
+              for day in schedule or []:
+                  date = day.get("date")
+                  if not date or date in predicted:
+                      continue
+                  fixtures.setdefault(date, []).extend(day.get("matches") or [])
 
               result = []
               for date in sorted(predicted.keys()):
