@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-13",
+  "generatedAt": "2026-11-28T10:03:33+08:00",
+  "matchCount": 20,
+  "matches": [
+    {
+      "id": "FL1-2026-12-13-PSG-PFC",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-12-12T16:15:00Z",
+      "home": {
+        "name": "巴黎圣日耳曼",
+        "crest": "https://crests.football-data.org/524.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "巴黎FC",
+        "crest": "https://crests.football-data.org/1045.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-13-USL-SAS",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-12T17:00:00Z",
+      "home": {
+        "name": "莱切",
+        "crest": "https://crests.football-data.org/5890.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "萨索洛",
+        "crest": "https://crests.football-data.org/471.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-13-MCI-CHE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-12T17:30:00Z",
+      "home": {
+        "name": "曼城",
+        "crest": "https://crests.football-data.org/65.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "切尔西",
+        "crest": "https://crests.football-data.org/61.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PD-2026-12-13-MAL-FCB",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-12T17:30:00Z",
+      "home": {
+        "name": "马拉加",
+        "crest": "https://crests.football-data.org/84.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "巴塞罗那",
+        "crest": "https://crests.football-data.org/81.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "BL1-2026-12-13-BMG-SGE",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-12-12T17:30:00Z",
+      "home": {
+        "name": "门兴格拉德巴赫",
+        "crest": "https://crests.football-data.org/18.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "法兰克福",
+        "crest": "https://crests.football-data.org/19.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-13-COM-BOL",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-12T19:45:00Z",
+      "home": {
+        "name": "科莫",
+        "crest": "https://crests.football-data.org/7397.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "博洛尼亚",
+        "crest": "https://crests.football-data.org/103.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "FL1-2026-12-13-NIC-RCL",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-12-12T19:45:00Z",
+      "home": {
+        "name": "尼斯",
+        "crest": "https://crests.football-data.org/522.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "朗斯",
+        "crest": "https://crests.football-data.org/546.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "FL1-2026-12-13-ANG-RC",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-12-12T19:45:00Z",
+      "home": {
+        "name": "昂热",
+        "crest": "https://crests.football-data.org/532.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "斯特拉斯堡",
+        "crest": "https://crests.football-data.org/576.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "FL1-2026-12-13-BRE-ETR",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-12-12T19:45:00Z",
+      "home": {
+        "name": "布雷斯特",
+        "crest": "https://crests.football-data.org/512.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "特鲁瓦",
+        "crest": "https://crests.football-data.org/531.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "FL1-2026-12-13-HAC-LMF",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-12-12T19:45:00Z",
+      "home": {
+        "name": "勒阿弗尔",
+        "crest": "https://crests.football-data.org/533.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "勒芒",
+        "crest": "https://crests.football-data.org/535.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PD-2026-12-13-BET-SAN",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-12T20:00:00Z",
+      "home": {
+        "name": "皇家贝蒂斯",
+        "crest": "https://crests.football-data.org/90.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "桑坦德竞技",
+        "crest": "https://crests.football-data.org/5335.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-13-LAZ-ROM",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-13T11:30:00Z",
+      "home": {
+        "name": "拉齐奥",
+        "crest": "https://crests.football-data.org/110.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "罗马",
+        "crest": "https://crests.football-data.org/100.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PD-2026-12-13-ATL-VAL",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-13T13:00:00Z",
+      "home": {
+        "name": "马德里竞技",
+        "crest": "https://crests.football-data.org/78.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "瓦伦西亚",
+        "crest": "https://crests.football-data.org/95.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-13-SUN-NOT",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-13T14:00:00Z",
+      "home": {
+        "name": "桑德兰",
+        "crest": "https://crests.football-data.org/71.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "诺丁汉森林",
+        "crest": "https://crests.football-data.org/351.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-13-BHA-EVE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-13T14:00:00Z",
+      "home": {
+        "name": "布莱顿",
+        "crest": "https://crests.football-data.org/397.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "埃弗顿",
+        "crest": "https://crests.football-data.org/62.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-13-ARS-BOU",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-13T14:00:00Z",
+      "home": {
+        "name": "阿森纳",
+        "crest": "https://crests.football-data.org/57.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "伯恩茅斯",
+        "crest": "https://crests.football-data.org/bournemouth.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-13-INT-TOR",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-13T14:00:00Z",
+      "home": {
+        "name": "国际米兰",
+        "crest": "https://crests.football-data.org/108.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "都灵",
+        "crest": "https://crests.football-data.org/586.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "FL1-2026-12-13-FCL-LIL",
+      "league": "FL1",
+      "leagueName": "法甲",
+      "kickoff": "2026-12-13T14:00:00Z",
+      "home": {
+        "name": "洛里昂",
+        "crest": "https://crests.football-data.org/525.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "里尔",
+        "crest": "https://crests.football-data.org/521.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "BL1-2026-12-13-M05-SCF",
+      "league": "BL1",
+      "leagueName": "德甲",
+      "kickoff": "2026-12-13T14:30:00Z",
+      "home": {
+        "name": "美因茨",
+        "crest": "https://crests.football-data.org/15.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "弗赖堡",
+        "crest": "https://crests.football-data.org/17.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PD-2026-12-13-DEP-ATH",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-13T15:15:00Z",
+      "home": {
+        "name": "拉科鲁尼亚",
+        "crest": "https://crests.football-data.org/560.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "毕尔巴鄂竞技",
+        "crest": "https://crests.football-data.org/77.png",
+        "rank": 0
+      }
+    }
+  ]
+}

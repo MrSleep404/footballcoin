@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-15",
+  "generatedAt": "2026-11-28T10:03:37+08:00",
+  "matchCount": 4,
+  "matches": [
+    {
+      "id": "SA-2026-12-15-ATA-GEN",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-14T17:30:00Z",
+      "home": {
+        "name": "亚特兰大",
+        "crest": "https://crests.football-data.org/102.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "热那亚",
+        "crest": "https://crests.football-data.org/107.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "SA-2026-12-15-JUV-MON",
+      "league": "SA",
+      "leagueName": "意甲",
+      "kickoff": "2026-12-14T19:45:00Z",
+      "home": {
+        "name": "尤文图斯",
+        "crest": "https://crests.football-data.org/109.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "蒙扎",
+        "crest": "https://crests.football-data.org/5911.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-15-HUL-TOT",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-14T20:00:00Z",
+      "home": {
+        "name": "赫尔城",
+        "crest": "https://crests.football-data.org/322.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "热刺",
+        "crest": "https://crests.football-data.org/73.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PD-2026-12-15-ESP-CEL",
+      "league": "PD",
+      "leagueName": "西甲",
+      "kickoff": "2026-12-14T20:00:00Z",
+      "home": {
+        "name": "西班牙人",
+        "crest": "https://crests.football-data.org/80.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "塞尔塔",
+        "crest": "https://crests.football-data.org/558.png",
+        "rank": 0
+      }
+    }
+  ]
+}

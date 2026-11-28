@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-26",
+  "generatedAt": "2026-11-28T10:03:49+08:00",
+  "matchCount": 5,
+  "matches": [
+    {
+      "id": "PL-2026-12-26-AVL-LEE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T12:30:00Z",
+      "home": {
+        "name": "阿斯顿维拉",
+        "crest": "https://crests.football-data.org/58.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "利兹联",
+        "crest": "https://crests.football-data.org/341.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-26-EVE-SUN",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T15:00:00Z",
+      "home": {
+        "name": "埃弗顿",
+        "crest": "https://crests.football-data.org/62.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "桑德兰",
+        "crest": "https://crests.football-data.org/71.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-26-FUL-BHA",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T15:00:00Z",
+      "home": {
+        "name": "富勒姆",
+        "crest": "https://crests.football-data.org/63.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "布莱顿",
+        "crest": "https://crests.football-data.org/397.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-26-TOT-BOU",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T15:00:00Z",
+      "home": {
+        "name": "热刺",
+        "crest": "https://crests.football-data.org/73.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "伯恩茅斯",
+        "crest": "https://crests.football-data.org/bournemouth.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-26-IPS-BRE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T15:00:00Z",
+      "home": {
+        "name": "伊普斯维奇",
+        "crest": "https://crests.football-data.org/349.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "布伦特福德",
+        "crest": "https://crests.football-data.org/402.png",
+        "rank": 0
+      }
+    }
+  ]
+}

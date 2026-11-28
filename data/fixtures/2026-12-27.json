@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-12-27",
+  "generatedAt": "2026-11-28T10:03:51+08:00",
+  "matchCount": 3,
+  "matches": [
+    {
+      "id": "PL-2026-12-27-HUL-LIV",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T17:30:00Z",
+      "home": {
+        "name": "赫尔城",
+        "crest": "https://crests.football-data.org/322.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "利物浦",
+        "crest": "https://crests.football-data.org/64.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-27-NEW-MCI",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-26T20:00:00Z",
+      "home": {
+        "name": "纽卡斯尔联",
+        "crest": "https://crests.football-data.org/67.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "曼城",
+        "crest": "https://crests.football-data.org/65.png",
+        "rank": 0
+      }
+    },
+    {
+      "id": "PL-2026-12-27-COV-CHE",
+      "league": "PL",
+      "leagueName": "英超",
+      "kickoff": "2026-12-27T14:00:00Z",
+      "home": {
+        "name": "考文垂",
+        "crest": "https://crests.football-data.org/1076.png",
+        "rank": 0
+      },
+      "away": {
+        "name": "切尔西",
+        "crest": "https://crests.football-data.org/61.png",
+        "rank": 0
+      }
+    }
+  ]
+}

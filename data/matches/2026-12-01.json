@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
   "date": "2026-12-01",
-  "generatedAt": "2026-11-26T11:45:00+08:00",
+  "generatedAt": "2026-11-28T10:03:10+08:00",
   "source": "football-data.org",
   "model": "gpt-4o-mini",
+  "promptVersion": "2026-11-26-a",
   "matchCount": 3,
   "degradedCount": 0,
   "matches": [
@@ -75,36 +76,36 @@
           "home": 1,
           "away": 2
         },
-        "confidence": 55,
+        "confidence": 62,
         "pick": "away",
         "reasons": [
-          "莱切近5场1平4负，本赛事场均失2.08球，主场5场场均失2.4球，防守持续不稳。",
-          "亚特兰大近5场2胜3平不败，本赛事场均进1.75球，客场5场场均进1.2球，进攻有保障。",
-          "近2次交手亚特兰大全胜且总比分7-1，心理与实力优势明显，支持客胜方向。",
-          "伤病名单该日无提供，三项调整均为0pp；市场客胜50%与模型52%接近，未做偏离。"
+          "莱切近5场1平4负，本赛事场均失2.08，主场场均失2.4，防守端持续承压。",
+          "亚特兰大近2次交手全胜且总比分7-1，最近一次客场3-0完胜莱切，心理优势明显。",
+          "亚特兰大本赛事场均进1.75，客场场均进1.2，攻击力仍优于莱切场均进1。",
+          "伤病名单该日无提供，三项调整均为0，未对实力评估产生修正。"
         ],
         "factors": [
-          "莱切防守差",
-          "亚特兰大不败",
-          "交手客队全胜",
-          "无伤病调整"
+          "莱切状态低迷",
+          "客队往绩碾压",
+          "客队进攻占优",
+          "无伤病修正"
         ],
-        "risk": "伤病名单未提供，无法评估临场缺阵影响；场地与天气信息有限。"
+        "risk": "伤病名单未提供；无场地信息；市场仅作参照。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 11.2,
-        "precip": 5,
-        "wind": 4.7
+        "temp": 10.1,
+        "precip": 0,
+        "wind": 6.6
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-26T03:43:02Z",
+        "capturedAt": "2026-11-28T02:01:32Z",
         "prob": {
-          "home": 25,
+          "home": 24,
           "draw": 25,
-          "away": 50
+          "away": 51
         }
       },
       "stats": {
@@ -187,55 +188,56 @@
         "confidence": 72,
         "pick": "away",
         "reasons": [
-          "米兰近5场4胜1负，赛季场均进2.33失1.17，客场场均进1.67，进攻火力稳定。",
-          "卡利亚里近5场1胜4负，赛季场均进0.83失1.42，主场场均仅进0.6球，攻击乏力。",
-          "卡利亚里近5场比分0-2、1-0、1-2、2-4、0-2，防守漏洞明显且仅一场零封。",
-          "伤病名单未提供，三项调整均为0，排名与近况差距已足够支撑客胜倾向。"
+          "AC米兰近5场4胜1负，赛季场均进2.33失1.17，客场场均进1.67，攻击力明显占优。",
+          "卡利亚里近5场1胜4负，赛季场均进0.83失1.42，主场场均仅进0.6球，进攻乏力。",
+          "伤停名单未提供，三项调整均为0，不改变实力与状态判断。",
+          "交手近2次各胜1场，最近米兰1-2负，但米兰整体状态与进失球优势更显著。"
         ],
         "factors": [
-          "米兰状态火热",
-          "卡利亚里进攻乏力",
-          "米兰客场稳定",
-          "排名差距明显"
+          "米兰近5场4胜",
+          "卡利亚里主场进球少",
+          "米兰场均进2.33",
+          "卡利亚里近5场1胜",
+          "无伤病名单"
         ],
-        "risk": "伤病名单未提供，无法评估临场伤停影响；场地信息缺失。"
+        "risk": "伤病名单与场地未提供，无法评估临场阵容变化。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 12.2,
-        "precip": 2,
-        "wind": 4.7
+        "temp": 12.3,
+        "precip": 3,
+        "wind": 5.2
       },
       "market": {
         "bookmaker": "市场均值（25 家）",
-        "capturedAt": "2026-11-26T03:43:02Z",
+        "capturedAt": "2026-11-28T02:01:32Z",
         "prob": {
-          "home": 20,
+          "home": 19,
           "draw": 25,
-          "away": 55
+          "away": 56
         }
       },
       "news": [
         {
-          "title": "Amorim: ‘Milan must do well in Europa League and Serie A, only way to be a good team’",
-          "summary": "Ruben Amorim warns Olympiacos are ‘aggressive, especially at home’ in the Europa League, but Milan...",
-          "link": "https://football-italia.net/amorim-milan-must-do-well-in-europa-league/",
-          "published": "2026-11-25",
+          "title": "Milan renew interest in Fenerbahçe’s English full-back Brown",
+          "summary": "Milan have rekindled their interest in Fenerbahçe left-back Archie Brown as they consider their options...",
+          "link": "https://football-italia.net/milan-renew-interest-in-fenerbahce-brown/",
+          "published": "2026-11-27",
           "source": "Football Italia"
         },
         {
-          "title": "Montella: ‘Turkiye ambition, Milan chaos, Roma success and my apology to Capello’",
-          "summary": "Former Turkiye manager Vincenzo Montella looks back over his career, including the ‘chaos’ at Milan...",
-          "link": "https://football-italia.net/montella-turkiye-ambition-milan-chaos-roma/",
-          "published": "2026-11-25",
+          "title": "Ordine slams Milan’s Estupiñán: ‘Terror all over his face’",
+          "summary": "Franco Ordine has launched a stinging attack on Pervis Estupiñán, claiming the Milan full-back is...",
+          "link": "https://football-italia.net/ordine-slams-milans-estupinan-terror/",
+          "published": "2026-11-27",
           "source": "Football Italia"
         },
         {
-          "title": "Report Milan have €70m Endrick offer ready for Real Madrid",
-          "summary": "Spanish reports claim Milan are ready to offer €70m in January for Real Madrid and...",
-          "link": "https://football-italia.net/report-milan-have-e70m-endrick-offer-ready/",
-          "published": "2026-11-25",
+          "title": "What Bruno Fernandes’ new Manchester United contract means for Milan",
+          "summary": "Manchester United have triggered a one-year extension on Bruno Fernandes’ contract, ending Milan’s hopes of...",
+          "link": "https://football-italia.net/bruno-fernandes-manchester-utd-contract-milan/",
+          "published": "2026-11-27",
           "source": "Football Italia"
         }
       ],
@@ -308,62 +310,46 @@
       },
       "prediction": {
         "prob": {
-          "home": 55,
-          "draw": 27,
+          "home": 52,
+          "draw": 30,
           "away": 18
         },
         "score": {
           "home": 1,
           "away": 0
         },
-        "confidence": 62,
+        "confidence": 55,
         "pick": "home",
         "reasons": [
-          "赫塔菲本赛事客场6场0进球、场均失2.33球，客战攻守皆弱，主队主场进1失1.17相对均衡。",
-          "西班牙人近5场2胜1平2负，赫塔菲近5场1胜1平3负，且赫塔菲近两客场0-2、0-4完败。",
-          "伤病名单该日无提供，三项调整均为0，不改变基于进失球的判断。",
-          "市场主胜46%低于我的55%，但赫塔菲客场0进球与失2.33球是非市场事实，支撑主胜倾向。"
+          "西班牙人赛季场均进1.08失1.08，近5场W D W L L，整体状态优于赫塔菲。",
+          "赫塔菲客场6场场均进0失2.33，近5场L L W L D，客场进攻乏力防守漏洞大。",
+          "赫塔菲赛季场均进0.62失1.62，进失球数据全面落后，支持主队不败格局。",
+          "伤病名单未提供，三项调整均为0，预测基于现有排名与进失球数据。"
         ],
         "factors": [
-          "客队客场0进球",
-          "主队主场攻守均衡",
-          "客队近况低迷",
-          "伤病名单未提供"
+          "排名主队占优",
+          "客队客场极弱",
+          "主队主场平稳",
+          "客队防守差"
         ],
-        "risk": "伤病名单未提供，排名与近3场数据完整；赫塔菲客场样本仅6场，主客场拆分可信度一般。"
+        "risk": "伤病名单未提供，无法评估伤停影响；场地信息缺失。"
       },
       "degraded": false,
       "result": null,
       "weather": {
-        "temp": 11.9,
-        "precip": 12,
-        "wind": 3.4
+        "temp": 12.0,
+        "precip": 0,
+        "wind": 5.6
       },
       "market": {
         "bookmaker": "市场均值（21 家）",
-        "capturedAt": "2026-11-26T03:43:00Z",
+        "capturedAt": "2026-11-28T02:01:20Z",
         "prob": {
           "home": 46,
           "draw": 30,
           "away": 24
         }
       },
-      "news": [
-        {
-          "title": "Who are Sabah? Barça's Champions League opponents from near Iranian border",
-          "summary": "Sabah, a club near the Iranian border that didn't exist a decade ago, with a coach who owes his career to a Lithuanian quiz show, are in this season Champions League. How did they make it?",
-          "link": "https://www.espn.com/soccer/story/_/id/49742966/who-champions-league-debutants-sabah-fk-heres-need-know",
-          "published": "2026-11-25",
-          "source": "ESPN"
-        },
-        {
-          "title": "Gordon scores twice in Barca CL win as Bayern lose at Lille",
-          "summary": "",
-          "link": "https://www.skysports.com/football/live-blog/11095/13575723/european-football-news-and-transfers-barcelona-real-madrid-psg-bayern-munich-latest-and-more",
-          "published": "2026-11-25",
-          "source": "Sky Sports"
-        }
-      ],
       "stats": {
         "statsHomeOwn": "本赛事（来源赛事 PD，样本 13 场）：场均进 1.08 / 失 1.08，合计进 14 / 失 14\n  主场 6 场：场均进 1 / 失 1.17\n  客场 7 场：场均进 1.14 / 失 1\n  近 5 场（该队视角：主/客 进球-失球 对手 结果）：2026-11-20 客 1-0 vs 毕尔巴鄂竞技 W；2026-11-07 主 0-0 vs 拉科鲁尼亚 D；2026-10-30 客 1-0 vs 比利亚雷亚尔 W；2026-10-24 客 1-2 vs 桑坦德竞技 L；2026-10-17 主 0-1 vs 马德里竞技 L",
         "statsHomeCross": "跨赛事：暂无该队已结束的场次数据",
