@@ -1,4 +1,4 @@
-import type { IndexFile, MatchDayFile, ResultFile, StandingsFile, StatsFile } from "../types";
+import type { FixtureDayFile, IndexFile, MatchDayFile, ResultFile, StandingsFile, StatsFile } from "../types";
 
 const BASE = `${import.meta.env.BASE_URL}data`;
 
@@ -36,6 +36,17 @@ export async function loadMatchDay(date: string): Promise<MatchDayFile> {
 
 export function loadStats(): Promise<StatsFile> {
   return fetchJson<StatsFile>("/stats.json");
+}
+
+const fixtureCache = new Map<string, FixtureDayFile>();
+
+/** 加载指定日期的赛程（该日期尚未生成预测时使用） */
+export async function loadFixtures(date: string): Promise<FixtureDayFile> {
+  const cached = fixtureCache.get(date);
+  if (cached) return cached;
+  const day = await fetchJson<FixtureDayFile>(`/fixtures/${date}.json`);
+  fixtureCache.set(date, day);
+  return day;
 }
 
 export function loadStandings(): Promise<StandingsFile> {

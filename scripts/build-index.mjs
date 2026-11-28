@@ -10,6 +10,7 @@ const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const DATA = join(ROOT, "data");
 const MATCH_DIR = join(DATA, "matches");
 const RESULT_DIR = join(DATA, "results");
+const FIXTURE_DIR = join(DATA, "fixtures");
 
 const LEAGUES = [
   { code: "PL", name: "英超" },
@@ -42,6 +43,7 @@ function rate(hit, total) {
 
 const dates = listDates(MATCH_DIR);
 const resultDates = listDates(RESULT_DIR);
+const fixtureDates = listDates(FIXTURE_DIR);
 
 if (dates.length === 0) {
   console.warn("警告：data/matches 下没有数据文件");
@@ -54,6 +56,7 @@ const index = {
   earliest: dates[0] ?? "",
   dates,
   resultDates,
+  fixtureDates,
   leagues: LEAGUES,
 };
 

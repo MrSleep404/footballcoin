@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { DataNotFoundError, loadIndex, loadMatchDayWithResults } from "../api/data";
-import type { IndexFile, LeagueCode, Match, MatchDayFile } from "../types";
+import { DataNotFoundError, loadFixtures, loadIndex, loadMatchDayWithResults } from "../api/data";
+import type { FixtureDayFile, FixtureMatch, IndexFile, LeagueCode, Match, MatchDayFile } from "../types";
 import { LEAGUE_COLOR, bjToday, monthDayLabel } from "../utils/format";
 import DateStrip from "../components/DateStrip.vue";
+import FixtureCard from "../components/FixtureCard.vue";
 import FreshnessBanner from "../components/FreshnessBanner.vue";
 import LeagueTabs from "../components/LeagueTabs.vue";
 import MatchCard from "../components/MatchCard.vue";
@@ -22,6 +23,7 @@ const router = useRouter();
 
 const index = ref<IndexFile | null>(null);
 const day = ref<MatchDayFile | null>(null);
+const fixtures = ref<FixtureDayFile | null>(null);
 const league = ref<LeagueCode | "ALL">("ALL");
 const date = ref("");
 const loading = ref(true);
@@ -51,18 +53,71 @@ const groups = computed<Group[]>(() => {
     .filter((group) => league.value === "ALL" || group.code === league.value);
 });
 
-const todayAvailable = computed(() => index.value?.dates.includes(bjToday()) ?? false);
-const shownCount = computed(() => groups.value.reduce((total, group) => total + group.matches.length, 0));
-const dayLeagues = computed(() => new Set((day.value?.matches ?? []).map((item) => item.league)).size);
+const allDates = computed(() => {
+  const set = new Set([...(index.value?.dates ?? []), ...(index.value?.fixtureDates ?? [])]);
+  return [...set].sort();
+});
+
+const todayAvailable = computed(() => allDates.value.includes(bjToday()));
+const shownCount = computed(() =>
+  day.value ? day.value.matches.length : fixtures.value ? fixtures.value.matches.length : 0,
+);
+const dayLeagues = computed(() => {
+  const list = day.value?.matches ?? fixtures.value?.matches ?? [];
+  return new Set(list.map((item) => item.league)).size;
+});
+
+interface FixtureGroup {
+  code: LeagueCode;
+  name: string;
+  matches: FixtureMatch[];
+}
+
+const fixtureGroups = computed<FixtureGroup[]>(() => {
+  if (!fixtures.value) return [];
+  const order = index.value?.leagues.map((item) => item.code) ?? (["PL", "PD", "SA", "BL1", "FL1", "CL"] as LeagueCode[]);
+  const map = new Map<LeagueCode, FixtureGroup>();
+  for (const match of fixtures.value.matches) {
+    if (!map.has(match.league)) {
+      map.set(match.league, { code: match.league, name: match.leagueName, matches: [] });
+    }
+    map.get(match.league)?.matches.push(match);
+  }
+  return order
+    .filter((code) => map.has(code))
+    .map((code) => {
+      const group = map.get(code) as FixtureGroup;
+      return {
+        ...group,
+        matches: group.matches.slice().sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff)),
+      };
+    })
+    .filter((group) => league.value === "ALL" || group.code === league.value);
+});
 
 async function loadDay() {
   if (!date.value) return;
   loading.value = true;
   error.value = "";
+  day.value = null;
+  fixtures.value = null;
+  const predictedDates = index.value?.dates ?? [];
+  const fixtureDates = index.value?.fixtureDates ?? [];
   try {
-    day.value = await loadMatchDayWithResults(date.value, index.value?.resultDates ?? []);
+    if (predictedDates.includes(date.value)) {
+      day.value = await loadMatchDayWithResults(date.value, index.value?.resultDates ?? []);
+    } else if (fixtureDates.includes(date.value)) {
+      fixtures.value = await loadFixtures(date.value);
+    } else {
+      // 兼容历史索引：先尝试预测，不存在再读赛程
+      try {
+        day.value = await loadMatchDayWithResults(date.value, index.value?.resultDates ?? []);
+      } catch (inner) {
+        if (inner instanceof DataNotFoundError) fixtures.value = await loadFixtures(date.value);
+        else throw inner;
+      }
+    }
   } catch (cause) {
-    day.value = null;
     if (!(cause instanceof DataNotFoundError)) {
       error.value = cause instanceof Error ? cause.message : "加载失败";
     }
@@ -102,9 +157,9 @@ async function init() {
     const queryDate = typeof route.query.date === "string" ? route.query.date : "";
     const queryLeague = typeof route.query.league === "string" ? route.query.league : "";
 
-    date.value = data.dates.includes(queryDate)
-      ? queryDate
-      : nearestDate(data.dates, bjToday()) || data.latest;
+    const all = [...new Set([...data.dates, ...(data.fixtureDates ?? [])])].sort();
+    const preferred = data.dates.length ? data.dates : all;
+    date.value = all.includes(queryDate) ? queryDate : nearestDate(preferred, bjToday()) || data.latest || all[0] || "";
     league.value = data.leagues.some((item) => item.code === queryLeague)
       ? (queryLeague as LeagueCode)
       : "ALL";
@@ -169,7 +224,7 @@ onUnmounted(() => {
         <span class="eyebrow">Matchday Predictions</span>
         <h1>五大联赛与欧冠<span>AI 赛前预测</span></h1>
         <p>
-          基于赛程、积分榜与近期状态生成，覆盖五大联赛与欧冠联赛阶段，展示胜平负概率、预测比分与判断依据。
+          赛程覆盖未来 30 天，预测在赛前 3 天内生成，展示胜平负概率、预测比分与判断依据。
           <span class="hero-note">仅供娱乐参考。</span>
         </p>
       </div>
@@ -205,7 +260,7 @@ onUnmounted(() => {
           </span>
         </div>
 
-        <DateStrip v-if="index && index.dates.length" v-model="date" :dates="index.dates" />
+        <DateStrip v-if="index && allDates.length" v-model="date" :dates="allDates" :predicted-dates="index.dates" />
       </div>
 
       <FreshnessBanner
@@ -223,14 +278,14 @@ onUnmounted(() => {
       </div>
 
       <StateEmpty
-        v-else-if="groups.length === 0"
-        title="该日期暂无比赛预测"
+        v-else-if="groups.length === 0 && fixtureGroups.length === 0"
+        title="该日期暂无比赛"
         description="可以切换到其他日期，或等待下一次数据更新。"
       >
         <button v-if="index" type="button" class="btn" @click="jumpToLatest">查看最近有数据的日期</button>
       </StateEmpty>
 
-      <div v-else class="groups">
+      <div v-else-if="day" class="groups">
         <section v-for="group in groups" :key="group.code" class="group">
           <h2 class="league-head">
             <i class="bar" :style="{ background: LEAGUE_COLOR[group.code] }" aria-hidden="true"></i>
@@ -239,12 +294,35 @@ onUnmounted(() => {
             <span class="league-unit">场</span>
           </h2>
           <div class="list">
-            <MatchCard v-for="match in group.matches" :key="match.id" :match="match" :date="day!.date" />
+            <MatchCard v-for="match in group.matches" :key="match.id" :match="match" :date="day.date" />
           </div>
         </section>
 
         <p class="board-note">
           概率为模型给出的相对倾向，非确定结论。数据来源：football-data.org、API-Football、The Odds API、Open-Meteo。
+        </p>
+      </div>
+
+      <div v-else class="groups">
+        <p class="pending-banner">
+          <span>该日期尚未生成预测</span>
+          <span>预测在赛前 3 天内生成，届时可查看概率与理由。</span>
+        </p>
+
+        <section v-for="group in fixtureGroups" :key="group.code" class="group">
+          <h2 class="league-head">
+            <i class="bar" :style="{ background: LEAGUE_COLOR[group.code] }" aria-hidden="true"></i>
+            <span class="league-name">{{ group.name }}</span>
+            <span class="league-count numeric">{{ group.matches.length }}</span>
+            <span class="league-unit">场</span>
+          </h2>
+          <div class="list">
+            <FixtureCard v-for="match in group.matches" :key="match.id" :match="match" />
+          </div>
+        </section>
+
+        <p class="board-note">
+          赛程覆盖未来 30 天，预测覆盖未来 3 天。比赛进入预测窗口后，此页会自动显示完整预测。
         </p>
       </div>
     </template>
@@ -443,6 +521,23 @@ h1 span {
   color: var(--text-dim);
   font-size: 11px;
   text-align: center;
+}
+
+.pending-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.pending-banner span:first-child {
+  color: var(--text-muted);
+  font-weight: 700;
 }
 
 @media (max-width: 720px) {

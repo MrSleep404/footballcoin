@@ -96,6 +96,24 @@ export interface Match {
   news?: NewsItem[];
 }
 
+/** 仅赛程、尚未生成预测的比赛 */
+export interface FixtureMatch {
+  id: string;
+  league: LeagueCode;
+  leagueName: string;
+  kickoff: string;
+  home: Pick<TeamInfo, "name" | "crest" | "rank">;
+  away: Pick<TeamInfo, "name" | "crest" | "rank">;
+}
+
+export interface FixtureDayFile {
+  schemaVersion: number;
+  date: string;
+  generatedAt: string;
+  matchCount: number;
+  matches: FixtureMatch[];
+}
+
 export interface MatchDayFile {
   schemaVersion: number;
   date: string;
@@ -119,6 +137,8 @@ export interface IndexFile {
   earliest: string;
   dates: string[];
   resultDates: string[];
+  /** 仅有赛程、尚未生成预测的日期 */
+  fixtureDates: string[];
   leagues: LeagueOption[];
 }
 

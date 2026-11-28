@@ -1838,6 +1838,7 @@ workflow:
               "FL1": {
                   "PFC": "巴黎FC", "LYO": "里昂", "MAR": "马赛", "REN": "雷恩", "FCL": "洛里昂",
                   "TOU": "图卢兹", "LMF": "勒芒", "ETR": "特鲁瓦", "RC": "斯特拉斯堡", "ANG": "昂热",
+                  "BRE": "布雷斯特",
               },
               "CL": {
                   "BRU": "布鲁日", "SPO": "葡萄牙体育", "LIN": "LASK林茨", "GAL": "加拉塔萨雷",
@@ -2087,7 +2088,8 @@ workflow:
 
           def main(league_results: list, mode: str, h2h_cache) -> dict:
               current = datetime.now(timezone.utc)
-              deadline = current + timedelta(days=7)
+              deadline = current + timedelta(days=30)
+              predict_deadline = current + timedelta(days=3)
               cache = _cache_map(h2h_cache)
               pools = {}
               names = {}
@@ -2149,6 +2151,7 @@ workflow:
                       additions[code] = league_add
 
               flat = []
+              schedule = []
               for code, league_name, raw_matches, rank_map, forms, finished in pending:
                   for match in raw_matches:
                       if match.get("status") not in ("SCHEDULED", "TIMED"):
@@ -2165,12 +2168,36 @@ workflow:
                       bj_date = kickoff.astimezone(BJ).strftime("%Y-%m-%d")
                       home = match.get("homeTeam") or {}
                       away = match.get("awayTeam") or {}
+                      kickoff_utc = kickoff.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+                      match_id = f"{code}-{bj_date}-{_code(home)}-{_code(away)}"
 
-                      flat.append({
-                          "id": f"{code}-{bj_date}-{_code(home)}-{_code(away)}",
+                      # 30 天赛程：只保留展示所需字段
+                      schedule.append({
+                          "id": match_id,
                           "league": code,
                           "leagueName": league_name,
-                          "kickoff": kickoff.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                          "kickoff": kickoff_utc,
+                          "home": {
+                              "name": _team_name(home, code),
+                              "crest": home.get("crest") or "",
+                              "rank": (rank_map.get(home.get("id")) or {}).get("rank") or 0,
+                          },
+                          "away": {
+                              "name": _team_name(away, code),
+                              "crest": away.get("crest") or "",
+                              "rank": (rank_map.get(away.get("id")) or {}).get("rank") or 0,
+                          },
+                      })
+
+                      # 预测范围只保留未来 3 天，避免无谓的统计、天气与模型调用
+                      if kickoff > predict_deadline:
+                          continue
+
+                      flat.append({
+                          "id": match_id,
+                          "league": code,
+                          "leagueName": league_name,
+                          "kickoff": kickoff_utc,
                           "status": "scheduled",
                           "matchday": match.get("matchday"),
                           "venue": match.get("venue") or "",
@@ -2184,6 +2211,7 @@ workflow:
                       })
 
               flat.sort(key=lambda item: item["kickoff"])
+              schedule.sort(key=lambda item: item["kickoff"])
 
               tasks = []
               value = (mode or "both").strip().lower()
@@ -2198,11 +2226,14 @@ workflow:
                       "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
                       "commitMessage": f"data: 五大联赛积分榜（{len(tables)} 个联赛）",
                   })
-              return {"matches": flat, "syncTasks": tasks, "h2hAdditions": additions, "pools": pools, "names": names}
+              return {"matches": flat, "schedule": schedule, "syncTasks": tasks, "h2hAdditions": additions, "pools": pools, "names": names}
         code_language: python3
         desc: ''
         outputs:
           matches:
+            children: null
+            type: array[object]
+          schedule:
             children: null
             type: array[object]
           syncTasks:
@@ -4744,24 +4775,45 @@ workflow:
           BJ = timezone(timedelta(hours=8))
 
 
-          def main(matches: list) -> dict:
-              days = {}
+          def _date_of(item):
+              try:
+                  kickoff = datetime.fromisoformat(str(item.get("kickoff")).replace("Z", "+00:00"))
+              except (TypeError, ValueError):
+                  return ""
+              return kickoff.astimezone(BJ).strftime("%Y-%m-%d")
+
+
+          def main(matches: list, schedule: list) -> dict:
+              predicted = {}
               for match in matches or []:
-                  try:
-                      kickoff = datetime.fromisoformat(str(match.get("kickoff")).replace("Z", "+00:00"))
-                  except (TypeError, ValueError):
-                      continue
-                  date = kickoff.astimezone(BJ).strftime("%Y-%m-%d")
-                  days.setdefault(date, []).append(match)
+                  date = _date_of(match)
+                  if date:
+                      predicted.setdefault(date, []).append(match)
+
+              fixtures = {}
+              for item in schedule or []:
+                  date = _date_of(item)
+                  if date and date not in predicted:
+                      fixtures.setdefault(date, []).append(item)
 
               result = []
-              for date in sorted(days.keys()):
-                  items = sorted(days[date], key=lambda item: item["kickoff"])
+              for date in sorted(predicted.keys()):
+                  items = sorted(predicted[date], key=lambda item: item["kickoff"])
                   result.append({
                       "date": date,
+                      "kind": "prediction",
                       "matches": items,
                       "degradedCount": sum(1 for item in items if item.get("degraded")),
                   })
+              for date in sorted(fixtures.keys()):
+                  items = sorted(fixtures[date], key=lambda item: item["kickoff"])
+                  result.append({
+                      "date": date,
+                      "kind": "fixture",
+                      "matches": items,
+                      "degradedCount": 0,
+                  })
+              result.sort(key=lambda day: day["date"])
               return {"days": result}
         code_language: python3
         desc: ''
@@ -4777,6 +4829,10 @@ workflow:
           - iter_matches
           - output
           variable: matches
+        - value_selector:
+          - code_normalize
+          - schedule
+          variable: schedule
       height: 90
       id: code_group
       position:
@@ -4850,22 +4906,39 @@ workflow:
 
           def main(day: dict, model: str) -> dict:
               date = day.get("date")
+              kind = str(day.get("kind") or "prediction")
               matches = day.get("matches") or []
-              payload = {
-                  "schemaVersion": 1,
-                  "date": date,
-                  "generatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
-                  "source": "football-data.org",
-                  "model": model,
-                  "promptVersion": PROMPT_VERSION,
-                  "matchCount": len(matches),
-                  "degradedCount": sum(1 for item in matches if item.get("degraded")),
-                  "matches": matches,
-              }
+              if kind == "fixture":
+                  payload = {
+                      "schemaVersion": 1,
+                      "date": date,
+                      "generatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
+                      "matchCount": len(matches),
+                      "matches": matches,
+                  }
+                  dir_name = "fixtures"
+                  message = f"data: {date} 赛程（{len(matches)} 场）"
+              else:
+                  payload = {
+                      "schemaVersion": 1,
+                      "date": date,
+                      "generatedAt": datetime.now(BJ).isoformat(timespec="seconds"),
+                      "source": "football-data.org",
+                      "model": model,
+                      "promptVersion": PROMPT_VERSION,
+                      "matchCount": len(matches),
+                      "degradedCount": sum(1 for item in matches if item.get("degraded")),
+                      "matches": matches,
+                  }
+                  dir_name = "matches"
+                  message = f"data: {date} 预测（{len(matches)} 场）"
               text = json.dumps(payload, ensure_ascii=False, indent=2)
               byte_size = len(text.encode("utf-8"))
               return {
                   "date": date,
+                  "kind": kind,
+                  "dir": dir_name,
+                  "path": f"data/{dir_name}/{date}.json",
                   "content": text,
                   "file": {
                       "date": date,
@@ -4873,7 +4946,7 @@ workflow:
                       "byteSize": byte_size,
                   },
                   "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
-                  "commitMessage": f"data: {date} 预测（{len(matches)} 场）",
+                  "commitMessage": message,
                   "byteSize": byte_size,
               }
         code_language: python3
@@ -4882,6 +4955,15 @@ workflow:
         iteration_id: iter_dates
         outputs:
           date:
+            children: null
+            type: string
+          kind:
+            children: null
+            type: string
+          dir:
+            children: null
+            type: string
+          path:
             children: null
             type: string
           content:
@@ -5006,7 +5088,7 @@ workflow:
           write: 30
         title: 读取目录列表
         type: http-request
-        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches?ref={{#env.GH_BRANCH#}}'
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/{{#code_build.dir#}}?ref={{#env.GH_BRANCH#}}'
         variables: []
       height: 113
       id: http_list
@@ -5127,7 +5209,7 @@ workflow:
           write: 30
         title: 读取当天文件
         type: http-request
-        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches/{{#code_build.date#}}.json?ref={{#env.GH_BRANCH#}}'
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/{{#code_build.path#}}?ref={{#env.GH_BRANCH#}}'
         variables: []
       height: 113
       id: http_get_day
@@ -5173,11 +5255,33 @@ workflow:
           PROMPT_VERSION = "2026-11-26-a"
 
 
-          def main(body, content: str, date: str) -> dict:
+          def main(body, content: str, date: str, kind: str) -> dict:
               payload = _as_dict(body)
               sha = str(payload.get("sha") or "")
-              old = _decode(payload.get("content"))
               incoming = _decode(content)
+
+              # 赛程文件整体覆盖，不与历史预测合并
+              if str(kind or "") == "fixture":
+                  matches = sorted(
+                      [m for m in incoming.get("matches") or [] if isinstance(m, dict) and m.get("id")],
+                      key=lambda item: str(item.get("kickoff") or ""),
+                  )
+                  data = {
+                      "schemaVersion": incoming.get("schemaVersion") or 1,
+                      "date": date,
+                      "generatedAt": incoming.get("generatedAt") or "",
+                      "matchCount": len(matches),
+                      "matches": matches,
+                  }
+                  text = json.dumps(data, ensure_ascii=False, indent=2)
+                  return {
+                      "sha": sha,
+                      "contentBase64": base64.b64encode(text.encode("utf-8")).decode("ascii"),
+                      "added": len(matches),
+                      "total": len(matches),
+                  }
+
+              old = _decode(payload.get("content"))
 
               merged = {}
               for match in old.get("matches") or []:
@@ -5239,6 +5343,10 @@ workflow:
           - code_build
           - date
           variable: date
+        - value_selector:
+          - code_build
+          - kind
+          variable: kind
       height: 90
       id: code_merge_day
       parentId: iter_dates
@@ -5279,7 +5387,7 @@ workflow:
           write: 30
         title: 覆盖写入
         type: http-request
-        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches/{{#code_build.date#}}.json'
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/{{#code_build.path#}}'
         variables: []
       height: 113
       id: http_put_update
@@ -5321,7 +5429,7 @@ workflow:
           write: 30
         title: 新建写入
         type: http-request
-        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/data/matches/{{#code_build.date#}}.json'
+        url: 'https://api.github.com/repos/{{#env.GH_OWNER#}}/{{#env.GH_REPO#}}/contents/{{#code_build.path#}}'
         variables: []
       height: 113
       id: http_put_create

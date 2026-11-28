@@ -5,6 +5,8 @@ import { isToday, monthDayLabel, weekdayLabel } from "../utils/format";
 const props = defineProps<{
   dates: string[];
   modelValue: string;
+  /** 已生成预测的日期；未包含的日期在日期条上淡化显示 */
+  predictedDates?: string[];
 }>();
 
 const emit = defineEmits<{
@@ -12,6 +14,12 @@ const emit = defineEmits<{
 }>();
 
 const strip = ref<HTMLElement | null>(null);
+
+function isPending(date: string) {
+  const predicted = props.predictedDates;
+  if (!predicted || predicted.length === 0) return false;
+  return !predicted.includes(date);
+}
 
 function centerActive(behavior: ScrollBehavior) {
   const box = strip.value;
@@ -42,7 +50,7 @@ onMounted(() => {
       type="button"
       role="tab"
       class="day"
-      :class="{ active: date === modelValue }"
+      :class="{ active: date === modelValue, pending: isPending(date) }"
       :aria-selected="date === modelValue"
       @click="emit('update:modelValue', date)"
     >
@@ -112,6 +120,17 @@ onMounted(() => {
   border-color: var(--brand);
   background: var(--brand);
   color: var(--brand-ink);
+}
+
+/* 只有赛程、尚未生成预测的日期 */
+.day.pending:not(.active) {
+  border-style: dashed;
+  color: var(--text-dim);
+  opacity: 0.55;
+}
+
+.day.pending.active {
+  border-style: dashed;
 }
 
 .week {
