@@ -23,8 +23,8 @@ Get-Content -LiteralPath $envFile -Encoding UTF8 | ForEach-Object {
 $base = $conf["DIFY_API_BASE"]
 $key = $conf["DIFY_API_KEY"]
 
-if (-not $base -or -not $key -or $key -match "替换|your|xxx") {
-  Write-Host "workflow.env is not configured: set DIFY_API_BASE and DIFY_API_KEY." -ForegroundColor Red
+if (-not $base -or -not $key -or $key -notmatch "^app-[A-Za-z0-9_-]{8,}$") {
+  Write-Host "workflow.env is not configured: set DIFY_API_BASE and a valid DIFY_API_KEY (app-...)." -ForegroundColor Red
   exit 1
 }
 
